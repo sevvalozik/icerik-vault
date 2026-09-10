@@ -1,0 +1,14 @@
+/* forest-canopy.css — Marp theme (theme-factory: Forest Canopy) */
+/* @theme forest-canopy */
+/* Doğal ve toprak tonları, yoğun orman ilhamlı. En uygun: çevre, sürdürülebilirlik, outdoor, wellness, organik ürünler. */
+section {
+  background: #faf9f6;
+  color: #2d4a2b;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #2d4a2b; font-family: "DejaVu Serif", Georgia, serif; font-weight: 700; }
+p, li { color: #2d4a2b; }
+strong, a { color: #7d8471; }
+.accent-box { background: #a4ac86; color: #2d4a2b; border-radius: 8px; padding: 20px; }
+.accent2 { color: #7d8471; }

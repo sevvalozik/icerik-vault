@@ -1,0 +1,14 @@
+/* ocean-depths.css — Marp theme (theme-factory: Ocean Depths) */
+/* @theme ocean-depths */
+/* Profesyonel ve sakin, denizcilik temalı koyu zemin. En uygun: kurumsal, finansal raporlar, danışmanlık, güven inşa eden içerikler. */
+section {
+  background: #1a2332;
+  color: #f1faee;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #f1faee; font-family: "DejaVu Sans", Arial, sans-serif; font-weight: 700; }
+p, li { color: #a8dadc; }
+strong, a { color: #2d8b8b; }
+.accent-box { background: #2d8b8b; color: #f1faee; border-radius: 8px; padding: 20px; }
+.accent2 { color: #a8dadc; }

@@ -1,0 +1,15 @@
+/* botanical-garden.css — Marp theme (theme-factory: Botanical Garden) */
+/* @theme botanical-garden */
+/* Taze ve organik, canlı bahçe renkleri. En uygun: bahçe/gıda, çiftlik-sofra, botanik, doğal ürünler. */
+section {
+  background: #f5f3ed;
+  color: #4a7c59;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #4a7c59; font-family: "DejaVu Serif", Georgia, serif; font-weight: 700; }
+p, li { color: #4a7c59; }
+strong { color: #b7472a; }
+a { color: #f9a620; }
+.accent-box { background: #f9a620; color: #fff; border-radius: 8px; padding: 20px; }
+.accent2 { color: #b7472a; }

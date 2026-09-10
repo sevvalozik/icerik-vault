@@ -1,0 +1,14 @@
+/* midnight-galaxy.css — Marp theme (theme-factory: Midnight Galaxy) */
+/* @theme midnight-galaxy */
+/* Dramatik ve kozmik, koyu zemin. En uygun: eğlence, oyun, gece hayatı, lüks markalar, kreatif ajanslar. */
+section {
+  background: #2b1e3e;
+  color: #e6e6fa;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #e6e6fa; font-family: "DejaVu Sans", Arial, sans-serif; font-weight: 700; }
+p, li { color: #a490c2; }
+strong, a { color: #4a4e8f; }
+.accent-box { background: #4a4e8f; color: #e6e6fa; border-radius: 8px; padding: 20px; }
+.accent2 { color: #a490c2; }

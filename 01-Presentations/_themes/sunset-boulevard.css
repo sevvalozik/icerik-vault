@@ -1,0 +1,14 @@
+/* sunset-boulevard.css — Marp theme (theme-factory: Sunset Boulevard) */
+/* @theme sunset-boulevard */
+/* Sıcak ve canlı, gün batımı ilhamlı. En uygun: kreatif sunumlar, pazarlama, lifestyle markalar, etkinlik tanıtımları. */
+section {
+  background: #e9c46a;
+  color: #264653;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #264653; font-family: "DejaVu Serif", Georgia, serif; font-weight: 700; }
+p, li { color: #264653; }
+strong, a { color: #e76f51; }
+.accent-box { background: #f4a261; color: #264653; border-radius: 8px; padding: 20px; }
+.accent2 { color: #e76f51; }

@@ -1,0 +1,40 @@
+/* desert-rose.css — Marp theme */
+/* @theme desert-rose */
+/* Nefin Beauty web stratejisi sunumundan (nefin-web-stratejisi.pptx) çıkarılan gerçek renk/font değerleriyle oluşturuldu. Kozmetik/beauty markaları için "clean girl" estetiği: krem zemin, toprak/gül tonu vurgular. */
+
+section {
+  background: #E8D5C4;
+  color: #4A2F27;
+  font-family: "Calibri", "Segoe UI", sans-serif;
+  padding: 60px;
+}
+
+h1, h2, h3 {
+  font-family: "Cambria", Georgia, serif;
+  color: #3A241C;
+  font-weight: 400;
+}
+
+p, li {
+  color: #7D6259;
+}
+
+strong, b {
+  color: #96594A;
+}
+
+a {
+  color: #96594A;
+}
+
+/* vurgu/accent kartları için */
+.accent-box {
+  background: #B87D6D;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+section::after {
+  color: #B87D6D;
+}

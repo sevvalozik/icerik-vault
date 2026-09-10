@@ -1,0 +1,14 @@
+/* golden-hour.css — Marp theme (theme-factory: Golden Hour) */
+/* @theme golden-hour */
+/* Zengin ve sıcak sonbahar paleti. En uygun: restoran, hizmet/otelcilik, sonbahar kampanyaları, zanaat ürünleri. */
+section {
+  background: #d4b896;
+  color: #4a403a;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #4a403a; font-family: "DejaVu Sans", Arial, sans-serif; font-weight: 700; }
+p, li { color: #4a403a; }
+strong, a { color: #f4a900; }
+.accent-box { background: #c1666b; color: #fff; border-radius: 8px; padding: 20px; }
+.accent2 { color: #c1666b; }

@@ -1,0 +1,14 @@
+/* tech-innovation.css — Marp theme (theme-factory: Tech Innovation) */
+/* @theme tech-innovation */
+/* Cesur ve modern, yüksek kontrast. En uygun: tech startuplar, yazılım lansmanları, AI/ML sunumları, dijital dönüşüm. */
+section {
+  background: #1e1e1e;
+  color: #ffffff;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #ffffff; font-family: "DejaVu Sans", Arial, sans-serif; font-weight: 700; }
+p, li { color: #ffffff; }
+strong, a { color: #00ffff; }
+.accent-box { background: #0066ff; color: #fff; border-radius: 8px; padding: 20px; }
+.accent2 { color: #00ffff; }

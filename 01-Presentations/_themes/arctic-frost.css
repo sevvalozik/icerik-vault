@@ -1,0 +1,14 @@
+/* arctic-frost.css — Marp theme (theme-factory: Arctic Frost) */
+/* @theme arctic-frost */
+/* Soğuk ve berrak, kış esintili. En uygun: sağlık, teknoloji, temiz teknoloji, ilaç sunumları. */
+section {
+  background: #fafafa;
+  color: #4a6fa5;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+  padding: 60px;
+}
+h1, h2, h3 { color: #4a6fa5; font-family: "DejaVu Sans", Arial, sans-serif; font-weight: 700; }
+p, li { color: #33475b; }
+strong, a { color: #4a6fa5; }
+.accent-box { background: #d4e4f7; color: #33475b; border-radius: 8px; padding: 20px; }
+.accent2 { color: #c0c0c0; }
