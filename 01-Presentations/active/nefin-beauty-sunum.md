@@ -15,7 +15,7 @@ related: []
 
 `01-Presentations/active/nefin-beauty/` klasöründe:
 
-- `son.key` — final Keynote sunumu (374 MB, orijinal/düzenlenebilir versiyon)
+- `son.key` — final Keynote sunumu (374 MB, orijinal/düzenlenebilir versiyon) — Google Drive: https://drive.google.com/file/d/1cNdx2OCHofq0mOgXdPsu2XMhD7zLgTnJ/view?usp=sharing
 - `son-kucultulmus.key` — Keynote'un "Dosya Büyüklüğünü Azalt" özelliğiyle küçültülmüş versiyon (~91 MB) — git/paylaşım için bunu kullan, son.key'i git'e sokma (GitHub 100 MB limitine çok yakın kalıyor)
 - `nefin-web-stratejisi.pptx` — rakip analizi temelli 10 slaytlık web stratejisi (Desert Rose temalı)
 - `nefin-ilham-benchmarking.pptx` — ilham/benchmarking sunumu
