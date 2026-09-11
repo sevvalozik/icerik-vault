@@ -13,11 +13,10 @@ Web, mobil ve tanıtım sitesi tasarımı için Instagram'da bulunan rehber/örn
 - https://www.instagram.com/reel/Dc_Sba2vlBb/
 - https://www.instagram.com/reel/Dctb9QEidxy/
 
-*(Not: linklerdeki izleme/takip parametrelerini — `?stkn=...&wa_logging_event=...` gibi — temizledim, video değişmiyor, sadece link sadeleşiyor.)*
 
 ## Skill Kaynakları (GitHub / kişisel sayfa)
 
-Üçünü de kontrol ettim, hepsi gerçek ve kaliteli — özellikle Impeccable ve Taste-Skill tam da "AI gibi durmasın" isteğine birebir uyuyor:
+hepsi gerçek ve kaliteli — özellikle Impeccable ve Taste-Skill tam da "AI gibi durmasın" isteğine birebir uyuyor:
 
 - **[emilkowal.ski/skill](https://emilkowal.ski/skill)** — Emil Kowalski'nin (tanınmış bir design engineer, animasyon konusunda uzman) kendi skill seti. UI animasyonu, animasyon kalitesini denetleme, tasarımda "motion" fırsatlarını bulma gibi 9 skill içeriyor. `npx skills add emilkowalski/skill` ile kuruluyor.
 - **[github.com/pbakaus/impeccable](https://github.com/pbakaus/impeccable)** — 67k yıldız. Anthropic'in kendi frontend-design skill'inden geliştirilmiş. AI'ın ürettiği tasarımdaki klişeleri (mor gradyan, iç içe kartlar, hep aynı fontlar vb.) 61 kuralla tespit edip düzeltiyor. Claude Code dahil birçok araçla çalışıyor.
@@ -59,3 +58,12 @@ Mobbin connector'ü aktif — dernek/üyelik platformu tanıtım sitesi için he
 - [Deputy](https://mobbin.com/screens/58047c57-4992-4c27-9974-43c522a5aa42) — soldan dikey adım listesi (Contact details, Resume, Working rights...) + sağda o adımın formu. Çok adımlı üyelik/başvuru formu için iyi bir model.
 
 Not: Bunlar genel SaaS örnekleri, dernek temalı bir marka değiller — ama hero mesaj kurgusu ve çok adımlı form yapısı doğrudan uyarlanabilir.
+
+## Dernek Projesine Özel Referanslar (üye ağı / haberleşme)
+
+Dernek yönetim sistemi (üyelik + haberleşme ağı modülleri) için daha isabetli örnekler:
+
+- [Notion for nonprofits](https://mobbin.com/sites/sections/0758da30-16e2-47f0-9581-8f67f18ff114) — en yakın eşleşen: "501(c)3 kuruluşlara destek" mesajı + altında "Nonprofit Fundraising / Donor Management / Job board" gibi modül sekmeleri. Modül bazlı sunum fikri için iyi örnek.
+- [Circle — Members](https://mobbin.com/screens/f910116a-4239-4186-a38b-e9c79e7211ae) — filtrelenebilir üye kartları (isim, kısa tanıtım, seviye rozeti). "Üye ağı" ekranı için doğrudan kullanılabilir model.
+- [Polywork — Discover Professionals](https://mobbin.com/screens/16e42ada-3c4d-44b2-bbcc-243323cd545b) — konu/lokasyon/kurum filtreli üye keşif sayfası. Haberleşme ağı/üye bulma özelliği için iyi referans.
+- [Qatalog — People/Teams/Org dizini](https://mobbin.com/screens/e22383a1-0ec8-44c0-92a6-43a4a756dd7c) — sade, sekmeli (Kişiler/Takımlar/Kurum) üye dizini.
