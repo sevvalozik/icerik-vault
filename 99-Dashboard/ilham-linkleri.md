@@ -41,3 +41,21 @@ Web/mobil/tanıtım sitesi işleri için araştırdığımız, yıldız sayılar
 ### İleride (site yayına girdikten sonra)
 
 - **[mardab96/landing-pages-claude-skills](https://github.com/mardab96/landing-pages-claude-skills)** (1⭐) — 26 farklı dönüşüm denetimi skill'i (CTA netliği, form sürtünmesi, güven sinyalleri vb.) — ilk sürüm için değil, site canlıya alındıktan sonra optimize etmek için
+
+## Mobbin Referansları (bağlandık, gerçek arama yapıldı)
+
+Mobbin connector'ü aktif — dernek/üyelik platformu tanıtım sitesi için hero ve kayıt (signup) ekranı örnekleri arandı. Görselleri doğrudan indiremedim (ağ kısıtlaması), ama her biri Mobbin linkinden görülüp istenirse ekran görüntüsü olarak ayrıca eklenebilir.
+
+**Hero bölümleri (üyelik/topluluk vurgulu):**
+
+- [Circle](https://mobbin.com/sites/sections/ce25bf3d-4500-4bb1-a8c1-3b25595933ba) — "The all-in-one community platform for community build" başlığı, sağda gerçek ürün görüntüsü + üye avatarları çevresinde dolaşıyor. Topluluk/üyelik hissi güçlü.
+- [Patreon](https://mobbin.com/sites/sections/2c0f332c-ee72-4766-bb86-a92d8c21b535) — "Creativity powered by membership", tek CTA ("Get Started") + altta üye/topluluk galerisi.
+- [Figma — Friends of Figma](https://mobbin.com/sites/sections/d07a48ba-b906-4fac-a94c-4506459d69d1) — "Welcome, Friends." çok sıcak/samimi bir topluluk daveti, canlı renk blokları, net "Sign up" CTA'sı. Dernek havasına iyi örnek.
+- [Apollo](https://mobbin.com/sites/sections/5e409534-a2ac-4bf2-afc8-e85b69a1eabb) — "Ready to join? Thousands of community members are waiting to meet you." + gerçek üye fotoğrafları grid'i (samimiyet/güven için iyi).
+
+**Çok adımlı üye kayıt formu örnekleri (adım göstergeli):**
+
+- [Cohere](https://mobbin.com/screens/918fbf5e-cb6e-4a98-85b4-7b4cde066c2c) — sade, ortalanmış kart, üstte "1 2 3" adım göstergesi, tek soru odaklı.
+- [Deputy](https://mobbin.com/screens/58047c57-4992-4c27-9974-43c522a5aa42) — soldan dikey adım listesi (Contact details, Resume, Working rights...) + sağda o adımın formu. Çok adımlı üyelik/başvuru formu için iyi bir model.
+
+Not: Bunlar genel SaaS örnekleri, dernek temalı bir marka değiller — ama hero mesaj kurgusu ve çok adımlı form yapısı doğrudan uyarlanabilir.
