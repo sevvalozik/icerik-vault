@@ -27,3 +27,17 @@ Web, mobil ve tanıtım sitesi tasarımı için Instagram'da bulunan rehber/örn
 
 - **[Framer Plugin Marketplace](https://www.framer.com/marketplace/plugins/)** — Framer (no-code site oluşturucu) için hazır eklentiler.
 - **[Mobbin](https://mobbin.com/discover/apps/ios/latest)** — gerçek uygulamalardan (iOS/web) ekran görüntüsü arşivi, ilham/referans için. Beğenilen ekranların screenshot'ı alınıp buraya da eklenebilir.
+
+## Skill Depoları (GitHub, daha önce araştırılan)
+
+Web/mobil/tanıtım sitesi işleri için araştırdığımız, yıldız sayılarıyla:
+
+- **[rampstackco/claude-skills](https://github.com/rampstackco/claude-skills)** (502⭐) — tüm site sürecini kapsayan skill paketi: marka kimliği, landing page metni, çok adımlı form tasarımı (üyelik formu için birebir uyuyor)
+- **[nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)** (126k⭐) — en büyük/popüler olan; 79 UI stili, web + mobil (Flutter/SwiftUI dahil) destekliyor
+- **[ryanthedev/design-for-ai](https://github.com/ryanthedev/design-for-ai)** (258⭐) — tipografi/renk/kompozisyon temelleri
+- **[funboy322/avoid-ai-design](https://github.com/funboy322/avoid-ai-design)** (57⭐) — "AI gibi duran" klişeleri (mor gradyan, hep aynı fontlar vb.) denetleyip düzeltiyor
+- **[Koomook/claude-frontend-skills](https://github.com/Koomook/claude-frontend-skills)** (22⭐) — özgün/sıradan olmayan frontend tasarımı için
+
+### İleride (site yayına girdikten sonra)
+
+- **[mardab96/landing-pages-claude-skills](https://github.com/mardab96/landing-pages-claude-skills)** (1⭐) — 26 farklı dönüşüm denetimi skill'i (CTA netliği, form sürtünmesi, güven sinyalleri vb.) — ilk sürüm için değil, site canlıya alındıktan sonra optimize etmek için
