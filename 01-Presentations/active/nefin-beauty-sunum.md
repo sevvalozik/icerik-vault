@@ -47,6 +47,23 @@ Genel UI/UX prensibi: her sayfada bir "kanıt" (INCI/uzman notu) + bir "duygu" (
 5. **Hikaye & blog altyapısı** — *Faz 1-2, sürekli* — Ana sayfada scroll ile ulaşılan kısa bir "Hikayemiz" bölümü (kurucu mektubu tarzı) + düzenli blog takvimi (örn. leke, nem, altın/kolajen bilimi konuları — SEO + güven). İlham: Cosmed'in "1984 yılında başlayan bir kimya yolculuğu..." kurucu mektubu.
 6. **Set / hediye (GWP) kurgusu** — *Faz 2-3* — Mevsimsel "Rutin Kiti" setleri + belirli sepet tutarı üstünde ücretsiz mini ürün; flat-lay set kompozisyonu; GWP eşiği sepette ilerleme çubuğuyla gösterilsin. İlham: Estée Lauder'ın seyahat çantalı hediye/set kurgusu.
 
+## İlham Siteleri (Web Tasarımı Referansları)
+
+Nefin'in web sitesini geliştirirken bakılacak örnek markalar:
+
+- [Cosmed](https://cosmed.com.tr/) — bilim/güven odaklı, INCI şeffaflığı (yukarıdaki Konumlandırma bölümünde de referans)
+- [Aesop](https://www.aesop.com/#tab=floral) — minimalist, apothecary/editoryal estetik, güçlü tipografi
+- [Fenty Beauty](https://fentybeauty.com/) — kapsayıcı (inclusive) ürün gösterimi, cesur renk paleti
+- [Glossier](https://www.glossier.com/) — topluluk/UGC odaklı, sade "no-makeup makeup" estetiği
+- [Merit Beauty](https://www.meritbeauty.com/) — minimal "clean beauty", sade ürün fotoğrafçılığı
+- [Rare Beauty](https://www.rarebeauty.com/) — duygusal/samimi marka anlatımı öne çıkıyor
+- [Summer Fridays](https://summerfridays.com/) — temiz/ferah cilt bakımı estetiği, pastel tonlar
+
+### Mobbin Referansları (gerçek arama yapıldı)
+
+- [Hers — ürün detay sayfası, ingredients/benefits akordeon](https://mobbin.com/screens/a2079902-d602-43e4-84fb-b25aa5bd3686) — PDP akordeon planımıza (Faydalar/Kullanım/İçindekiler) doğrudan örnek
+- [Hims — dermatolog onaylı ürün grid hero](https://mobbin.com/screens/502a37d5-2047-439a-893b-60190dde51e4) — sade, güven odaklı hero + ürün kartları
+
 ## Görsel yön
 
 Gemini ile üretilen erken konseptler (clean-girl paletiyle, bordo/kadife DEĞİL):
