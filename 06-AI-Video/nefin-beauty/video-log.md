@@ -41,6 +41,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 ### "Website hero — model elinde ürün" promptu (16 Eylül 2026)
 
 - **Ürün:** 24K Gold Tonic, model (kadın) elinde tutuyor, pencere kenarı, sabah ışığı, 16:9 web hero
+- **Dosya:** `03-Assets/videos/nefin-beauty/reddedilen/nefin-beauty-gold-tonic-website-hero-reddedilen-v1.mp4` (referans için tutuluyor, üretimde kullanılmaz)
 - **Denenme sayısı:** 2 (ikisinde de aynı sonuç)
 - **Sorun:** Ürün videonun başında (ilk 3-4 saniye) elde/kadrajda hiç yok — model sadece yüzüne dokunuyor, elleri boş. Şişe ancak videonun ortasında (~4-5. saniye) aniden elde beliriyor; nereden geldiği/nasıl ele alındığı görünmüyor — "uçarak geldi ya da bir şekilde ışınlandı" hissi.
 - **Kök neden (muhtemel):** Prompt'ta "the woman gently holds the exact NEFIN 24K GOLD TONIC bottle in her hand" yazıyor ama **"ürün en baştan, ilk karede zaten elinde olmalı"** diye açıkça belirtilmemiş — model bunu "sahneye sonradan girsin" diye yorumluyor.
