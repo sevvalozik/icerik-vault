@@ -34,6 +34,74 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 
 → [[c-vitamini-serum-kampanya-brief]] (4 shot, promptlar hazır). Gerçek ürün fotoğrafı ve logo geldiğinde başlanır.
 
+## Onaylı üretimler (beğenilenler)
+
+| Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt | Puan |
+|---|---|---|---|---|---|---|---|---|
+| `nefin-beauty-gold-tonic-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | var (AAC) | 24K Gold Tonic — sadece ürün (insan/el/yüz yok), makro cam+kapak detayı, altın tanecik dokusu, su damlası, hero açılış/kapanış, ivory/krem zemin, sıcak doğal ışık | Gemini video (muhtemelen Veo) | ↓ "Gold Tonic Hero — Onaylı Master Prompt" (aşağıda) | 5 — beğenildi, marka yönüyle (clean-girl, quiet luxury, no burgundy) tam uyumlu |
+
+### Gold Tonic Hero — Onaylı Master Prompt (16 Eylül 2026)
+
+> Ürün-only hero video şablonu — insan/el/yüz yok, sadece ürün + doku + ışık. Referans görseli değiştirip başka Nefin ürünlerinde de kullanılabilir (product-agnostic yapı). Şevval'in beğendiği, onayladığı ilk video.
+
+```text
+Create a premium cinematic product film for NEFIN Cosmetics using the provided NEFIN skincare product image as the exact product reference.
+
+IMPORTANT:
+Keep the exact NEFIN product packaging from the reference image.
+Do not redesign, replace, simplify or reinterpret the product.
+Preserve the exact bottle/jar shape, proportions, cap, label, logo and packaging details.
+
+The original background of the reference image must be completely ignored.
+Do not use the burgundy/red background from the reference image.
+
+CONCEPT:
+Create a clean, modern, feminine skincare product film inspired by premium contemporary beauty brands such as MERIT Beauty and Face Formula.
+The product itself is the only hero. Do NOT show a woman, face, hands, a person, or a model.
+The entire video should focus exclusively on the NEFIN product and its texture.
+
+VISUAL STYLE:
+Clean girl skincare aesthetic. Quiet luxury. Modern minimal beauty. Fresh and sophisticated.
+Soft natural daylight. Warm ivory and creamy tones. Minimal editorial product photography.
+The visual atmosphere should feel bright, airy, fresh and expensive rather than dark or dramatic.
+
+COLOR PALETTE:
+Warm white, ivory, cream, very pale beige, soft champagne, transparent glass, natural warm gold accents from the product.
+NO burgundy, NO red, NO dark brown background, NO black luxury aesthetic, NO dark dramatic studio background, NO saturated colors.
+
+ENVIRONMENT:
+Place the product on a beautiful minimal warm-white or ivory stone surface. Background very simple and softly blurred.
+Subtle natural materials: matte ivory stone, soft cream ceramic, clear glass, white linen, very subtle water reflections.
+Extremely uncluttered — no flowers, no leaves, no unnecessary decorative objects, no perfume-style props, no excessive luxury decorations.
+
+LIGHTING:
+Soft natural morning daylight from one side, large soft window-like light source, slowly moving across the product.
+Beautiful but subtle highlights on the glass, metallic cap, product texture, packaging edges. Feels like real sunlight in a clean modern bathroom.
+Soft shadows, subtle reflections underneath. NO dramatic spotlight, NO neon, NO strong lens flare, NO excessive glow.
+
+CAMERA AND VIDEO STRUCTURE (cinematic sequence, extremely smooth macro camera movements):
+SHOT 1 — HERO PRODUCT: complete product centered, perfectly sharp, camera slowly pushes in, daylight gradually reveals packaging.
+SHOT 2 — MACRO DETAIL: extreme macro on glass edges, metallic cap, reflections, label texture; slow controlled movement.
+SHOT 3 — PRODUCT TEXTURE: macro of the actual texture (cream = luxurious smooth surface catching soft light; rich, smooth, hydrated, realistic — not artificial/glossy).
+SHOT 4 — WATER/FRESHNESS: extremely subtle water droplets on glass/surface, elegant and minimal, no dramatic splash, doesn't cover product.
+SHOT 5 — GOLD DETAIL: natural gold packaging details catch sunlight, subtle warm golden reflection moving across surface — sophisticated and natural, not glittery/magical/excessive.
+SHOT 6 — FINAL HERO: clean full-product composition, product alone on ivory surface, soft daylight, very slow subtle push-in, ends centered and beautifully lit.
+
+MOTION: everything moves slowly — subtle camera movement, subtle light movement, subtle water movement.
+NO fast cuts, NO aggressive transitions, NO spinning/floating/unnaturally rotating product, NO exaggerated zoom, NO camera shake. Product always feels physically grounded.
+
+CAMERA: high-end cinema camera, macro beauty cinematography, shallow depth of field, very smooth focus transitions, realistic glass/metallic reflections, natural optical characteristics. Feels like it's physically moving around a real product in a professional studio. NOT CGI-looking.
+
+PRODUCT ACCURACY: NEFIN product must remain visually identical to the reference — do not alter logo, brand name, label, typography, proportions, cap design, container shape. Do not invent additional text or replace the logo. Do not create a generic bottle. The reference image is authoritative.
+
+OVERALL FEEL: clean morning skincare ritual + premium editorial beauty photography + quiet luxury + fresh hydrated skin + minimal modern bathroom + cinematic product macro photography. Should look like a real premium skincare campaign for a modern beauty website — sophisticated and expensive without being dark, flashy or overly luxurious.
+
+NO PEOPLE. NO MODEL. NO HANDS. NO FACE. NO BODY.
+NO TEXT OVERLAY. NO CAPTIONS. NO WATERMARK. NO ADDITIONAL LOGOS.
+
+Create a seamless, elegant 10-12 second vertical product video suitable for a modern skincare website hero section.
+```
+
 ## Yeni kayıt şablonu
 
 | Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt (brief'teki shot no) | Seed | Puan |

@@ -17,10 +17,10 @@ text, letters, captions, subtitles, watermark, logo, signature, ui elements, ext
 ## Kozmetik / ürün (Nefin tipi)
 
 ```text
-bottle morphing, label changing, label text, cap changing shape, floating product, product melting, liquid clipping through glass, extra bottles, wrong bottle color, purple tint, neon, burgundy velvet, black background, harsh studio flash, plastic skin, airbrushed face, glitter explosion, sparkles, lens flare, hands with wrong finger count, nail polish chipped, dirty surface
+bottle morphing, label changing, label text, cap changing shape, floating product, product melting, liquid clipping through glass, extra bottles, wrong bottle color, purple tint, neon, burgundy velvet, dark brown background, black background, black luxury nightclub aesthetic, harsh studio flash, dramatic spotlight, excessive glow, plastic skin, airbrushed face, glitter explosion, sparkles, lens flare, hands with wrong finger count, nail polish chipped, dirty surface, unnatural product rotation, exaggerated zoom, camera shake, fast cuts, perfume-style decorative props
 ```
 
-Türkçe not: "sparkles/glitter explosion" özellikle önemli — modeller kozmetik deyince otomatik parıltı efekti basıyor; Nefin'in "clean-girl" dili buna izin vermiyor. Altın tanecik (24K tonik) istiyorsan onu pozitif prompt'ta fiziksel tanımla: `fine gold flakes drifting slowly inside the liquid`.
+Türkçe not (16 Eylül 2026): Nefin 24K Gold Tonic için beğenilen bir "ürün-only hero" video sonrası eklendi (bkz. `06-AI-Video/nefin-beauty/video-log.md` → Onaylı üretimler) — spotlight/glow/dramatik siyah zemin ve kamera sarsıntısı/hızlı kesme gibi maddeler oradaki onaylı promptun "NO" listesinden geldi.\n\nTürkçe not: "sparkles/glitter explosion" özellikle önemli — modeller kozmetik deyince otomatik parıltı efekti basıyor; Nefin'in "clean-girl" dili buna izin vermiyor. Altın tanecik (24K tonik) istiyorsan onu pozitif prompt'ta fiziksel tanımla: `fine gold flakes drifting slowly inside the liquid`.
 
 ## Klinik / psikoloji (Humentis tipi)
 
