@@ -52,6 +52,17 @@ Photorealistic macro skincare photography, ultra-realistic liquid texture, refin
 No text. No typography. No watermark.
 ```
 
+## Reddedilen denemeler
+
+### "Gold Tonic — sabah ritüeli" görseli (16 Eylül 2026)
+
+- **Dosya:** `03-Assets/images/nefin-beauty/reddedilen/nefin-beauty-gold-tonic-ritual-reddedilen-v1.png` (referans için tutuluyor, kullanılmaz)
+- **Şişe/ürün kendisi:** başarılı — referansa sadık, ışık ve zemin marka yönüyle uyumlu
+- **Sorun:** Şişenin yanına konan küçük cam kase/tabak benzeri obje görsel olarak **konuyla alakasız** duruyor — ne işe yaradığı belli değil, ürünle bağlantısı kurulmuyor
+- **Kök neden:** Prompt'ta "a subtle translucent glass element suggesting hydration and freshness" gibi **muğlak** bir prop tarifi var — model bunu rastgele bir cam kaseye çeviriyor. Marka brief'in prop listesinde ("keten kumaş, traverten, terrazzo, ahşap, pamuk ped, portakal dilimi, altın tanecik, pampas otu") cam kase/tabak yok.
+- **Düzeltme:** Prop'u muğlak tarif etme — ya marka brief'teki onaylı prop listesinden somut bir şey seç ("a folded cream linen cloth" gibi) ya da hiç prop ekleme, sadece ürün + zemin + ışık yeterli.
+- **Puan:** 3 — ürün/ışık iyi ama yanındaki obje görseli zayıflatıyor
+
 ## AI üretimi (Gemini)
 
 | Dosya | Boyut / oran | İçerik | Prompt | Kullanım / puan |

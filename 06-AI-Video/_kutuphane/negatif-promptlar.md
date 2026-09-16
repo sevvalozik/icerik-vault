@@ -44,6 +44,14 @@ Türkçe not: Telefon/laptop ekranına AI arayüz çizdirme; `screen is a solid 
 extra fingers, missing fingers, fused fingers, deformed hands, extra limbs, distorted face, asymmetrical eyes, teeth artifacts, plastic skin, uncanny smile, face morphing, identity change between frames, clothing changing, hair changing color, duplicated person
 ```
 
+## Alakasız / muğlak prop'lar (görsel ve video)
+
+Prompt'ta "a subtle glass element", "something suggesting freshness" gibi **muğlak** prop tarifleri model'i rastgele objeler (alakasız cam kase, tabak vb.) üretmeye itiyor. Prop her zaman marka brief'in onaylı listesinden **somut** seçilmeli: keten kumaş, traverten/mermer, terrazzo, ahşap, pamuk ped, portakal dilimi (C vitamini), altın tanecik (24K tonik), pampas otu, seramik vazo. Hiçbiri uymuyorsa prop hiç eklenmesin — sade zemin + ürün + ışık her zaman güvenli seçenek.
+
+Negatif liste eki: `unrelated props, random decorative objects, unexplained glass elements, disconnected dish or bowl props`
+
+Kaynak: Nefin 24K Gold Tonic "sabah ritüeli" görseli, cam kase objesi nedeniyle reddedildi (bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Reddedilen denemeler).
+
 ## Ürün sürekliliği (model elinde ürün olan çekimler)
 
 Model ürünü elinde tutan sahnelerde ürün genelde sahneye "sonradan giriyor" (uçarak/ışınlanarak beliriyor). Bunu önlemek için negatif listeye ek olarak **pozitif cümle** şart:
