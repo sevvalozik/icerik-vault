@@ -54,6 +54,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt | Puan |
 |---|---|---|---|---|---|---|---|---|
 | `nefin-beauty-gold-tonic-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | var (AAC) | 24K Gold Tonic — sadece ürün (insan/el/yüz yok), makro cam+kapak detayı, altın tanecik dokusu, su damlası, hero açılış/kapanış, ivory/krem zemin, sıcak doğal ışık | Gemini video (muhtemelen Veo) | ↓ "Gold Tonic Hero — Onaylı Master Prompt" (aşağıda) | 5 — beğenildi, marka yönüyle (clean-girl, quiet luxury, no burgundy) tam uyumlu |
+| `nefin-beauty-retinol-supreme-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | yok (sessiz) | Retinol Supreme (gece kremi) — kapaklı kavanoz + su damlacıkları (condensation) makro açılış, üstten kremin dokusu, mavi spatula ile krem karıştırma/alma detayı | ❓ Gemini (prompt kaydedilmedi — aşağıda tahmini açıklama) | ↓ "Retinol Supreme Hero — Tahmini Açıklama (prompt orijinali kayıp)" | 5 — beğenildi |
 
 ### Gold Tonic Hero — Onaylı Master Prompt (16 Eylül 2026)
 
