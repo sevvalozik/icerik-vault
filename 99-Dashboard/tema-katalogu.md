@@ -22,6 +22,14 @@ tags: [dashboard, tema]
 | `dark-tech` | #0d1117 (koyu) | #58a6ff | Genel teknoloji/kurumsal (ilk oluşturulan tema) |
 | `client-pitch` | #ffffff | #0066cc | Sade, kurumsal müşteri sunumları |
 
+## Web Tasarım Token Sistemleri (CSS değişkenleri, sunum teması değil)
+
+Yukarıdaki tablo sunum (Marp/Keynote) temaları için. Web projelerinde kullanılan gerçek tasarım token dosyaları ayrı tutuluyor:
+
+| Proje | Dosya | Konum |
+|---|---|---|
+| Humentis | `humentis-tokens.css` | `03-Assets/logos/humentis/` — renk, font, spacing, radius, shadow, motion tokenları, uygulamaya hazır |
+
 ## Kaynak
 
 10 temanın 4'ü (`arctic-frost` → `tech-innovation`) theme-factory skill'inden alındı. `desert-rose`, nefin-beauty projesindeki gerçek sunumdan (`nefin-web-stratejisi.pptx`) çıkarılan renk/font değerleriyle güncellendi, diğerleri skill'in orijinal renk paletini kullanıyor.
@@ -30,8 +38,8 @@ tags: [dashboard, tema]
 
 Yukarıdaki tablo Marp/markdown tabanlı sunumlar için CSS temaları. Gerçek Keynote'ta (.key) çalışırken bunun yerine native Keynote tema dosyaları (.kth) kullanılır — aynı klasörde (`01-Presentations/_themes/`) duruyorlar.
 
-| Tema dosyası | Kaynak | Nasıl kullanılır |
-|---|---|---|
+| Tema dosyası                      | Kaynak                                                                                                          | Nasıl kullanılır                                                                                  |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `nefin-beauty-keynote-sablon.kth` | `son-kucultulmus.key`'den "Dosya → Temayı Kaydet..." ile çıkarıldı — sadece düzen/stil, Nefin'e özel içerik yok | Dosyaya çift tıkla → Keynote Tema Seçici'ye eklenir → "Yeni Belge" açarken bu temayı seçebilirsin |
 
 Yeni bir müşteri için benzer bir görsel dil kullanmak istediğinde, boş bir sunumu bu temayla başlatıp üzerine kendi içeriğini yazman yeterli.
