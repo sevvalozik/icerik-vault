@@ -41,6 +41,10 @@ Repo içinde zaten kurulu bir tasarım sistemi var: `design/` klasöründe `foun
 
 `docs/` klasöründe geniş bir doküman seti var: mimari (`architecture/`), denetimler (`audits/`), geliştirme notları (`development/`), UI/UX (`ui-ux/`), yayın notları (`releases/`) ve tekil konu dosyaları (davet/ödeme akışları, ödeme entegrasyonları vb.). Bilal'e devir notu: `docs/kalan-isler-bilal-devir.md`.
 
+## İkonlar
+
+48 gerçek uygulama ikonu `03-Assets/icons/hemshare/` klasörüne kopyalandı (arayüzde kullanılan gerçek SVG dosyaları — search, home, members, finance, settings vb.).
+
 ## Ekip & Branch Stratejisi
 
 - **Şevval** ve **Bilal** birlikte kodluyor, branch bazlı çalışıyorlar (PR ile main'e merge)

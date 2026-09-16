@@ -60,6 +60,7 @@ Repo'daki `brand/assets/final/` klasöründeki üretim-hazır SVG dosyaları bur
 - `humentis-mark-gradient.svg` / `-mono.svg` — sadece sembol
 - `humentis-favicon.svg` — favicon
 - `humentis-tokens.css` — renk/font/spacing/radius/shadow/motion tokenları (uygulamaya hazır CSS değişkenleri)
+- `03-Assets/icons/humentis/` — arayüzde kullanılan 15 ikonun gerçek SVG'leri (kod içindeki `Icon.tsx` bileşeninden üretildi: arrow-right, calendar, check, chevron, filter, heart, info, language, location, lock, mail, search, shield, video — 24px ızgara, 1.75px stroke, ICON-SYSTEM.md kuralına uygun)
 - `humentis-logo-dikey-mono.pdf` — Şevval'in elle gönderdiği PDF versiyonu (aynı varlığın PDF hali)
 
 Bu SVG + CSS token dosyaları, ileride "bu tasarımdan bir şey oluştur" dediğimizde gerçek/güvenilir girdi olacak — link değil, gerçek dosya.
