@@ -1,0 +1,7 @@
+# Marp CLI ayarları — `marp` komutu bu dosyayı vault kökünden otomatik okur.
+# Böylece sunum notlarındaki `theme: desert-rose` gibi değerler _themes klasöründen bulunur;
+# komuta her seferinde --theme-set yazmak gerekmez.
+themeSet: 01-Presentations/_themes
+allowLocalFiles: true
+inputDir: 01-Presentations/active
+output: 01-Presentations/_export
