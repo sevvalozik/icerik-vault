@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap");
+
+:root {
+  color-scheme: light;
+
+  --hu-ink-950: #102f2c;
+  --hu-ink-900: #163d39;
+  --hu-ink-800: #204b46;
+  --hu-ink-700: #2c5b55;
+  --hu-teal-700: #0f625b;
+  --hu-teal-600: #14736a;
+  --hu-teal-500: #21877d;
+  --hu-teal-100: #dceee8;
+  --hu-sage-300: #afc5b2;
+  --hu-sage-100: #e7efe7;
+  --hu-ivory-100: #f1ecdf;
+  --hu-ivory-50: #f8f5ed;
+  --hu-surface: #fffefa;
+  --hu-gold-500: #bf8844;
+  --hu-gold-100: #f4e7d2;
+  --hu-lilac-100: #ebe6f3;
+  --hu-coral-500: #ce6652;
+  --hu-coral-100: #f7e4df;
+
+  --hu-text: #22302e;
+  --hu-text-muted: #63716d;
+  --hu-border: #d8e0dc;
+  --hu-border-strong: #b8c8c1;
+  --hu-focus: #236fcb;
+
+  /* Context surfaces: one brand, different jobs. */
+  --hu-surface-brand: var(--hu-ivory-50);
+  --hu-surface-transaction: #ffffff;
+  --hu-surface-trust: #f6f9f7;
+  --hu-surface-crisis: #ffffff;
+
+  --hu-success: #267454;
+  --hu-success-soft: #e2f0e8;
+  --hu-info: #2c6c9a;
+  --hu-info-soft: #e2edf5;
+  --hu-warning: #9b651d;
+  --hu-warning-soft: #f7ecd7;
+  --hu-danger: #a93f3f;
+  --hu-danger-soft: #f7e3e3;
+
+  --hu-action-primary: var(--hu-teal-600);
+  --hu-action-primary-hover: var(--hu-teal-700);
+  --hu-action-crisis: var(--hu-danger);
+  --hu-focus-ring: 0 0 0 3px rgb(35 111 203 / 0.34);
+  --hu-target-min: 2.75rem;
+
+  --hu-font-display: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --hu-font-body: "Manrope", "Avenir Next", Avenir, Arial, sans-serif;
+
+  --hu-text-xs: 0.75rem;
+  --hu-text-sm: 0.875rem;
+  --hu-text-md: 1rem;
+  --hu-text-lg: 1.125rem;
+  --hu-text-xl: 1.375rem;
+  --hu-text-2xl: clamp(1.7rem, 2vw, 2.25rem);
+  --hu-text-3xl: clamp(2.15rem, 4vw, 4.75rem);
+
+  --hu-space-1: 0.25rem;
+  --hu-space-2: 0.5rem;
+  --hu-space-3: 0.75rem;
+  --hu-space-4: 1rem;
+  --hu-space-5: 1.25rem;
+  --hu-space-6: 1.5rem;
+  --hu-space-8: 2rem;
+  --hu-space-10: 2.5rem;
+  --hu-space-12: 3rem;
+  --hu-space-16: 4rem;
+  --hu-space-20: 5rem;
+  --hu-space-24: 6rem;
+
+  --hu-radius-sm: 0.5rem;
+  --hu-radius-md: 0.75rem;
+  --hu-radius-lg: 1rem;
+  --hu-radius-xl: 1.25rem;
+  --hu-radius-2xl: 1.75rem;
+  --hu-radius-pill: 999px;
+
+  --hu-shadow-sm: 0 1px 2px rgb(16 47 44 / 0.06);
+  --hu-shadow-md: 0 12px 32px rgb(16 47 44 / 0.10);
+  --hu-shadow-lg: 0 24px 56px rgb(16 47 44 / 0.14);
+
+  --hu-motion-fast: 140ms;
+  --hu-motion-base: 220ms;
+  --hu-motion-slow: 360ms;
+  --hu-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --hu-container: 76rem;
+  --hu-reading: 44rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --hu-motion-fast: 1ms;
+    --hu-motion-base: 1ms;
+    --hu-motion-slow: 1ms;
+  }
+}
