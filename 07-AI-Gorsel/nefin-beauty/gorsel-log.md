@@ -12,6 +12,46 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 
 > `03-Assets/images/nefin-beauty/` kaydı. Boyutlar ölçüldü (16 Eylül 2026). Promptlar kaydedilmemiş (❓); bundan sonra her üretim buraya işlenir.
 
+## Onaylı görseller (beğenilenler)
+
+| Dosya | Boyut / oran | İçerik | Model | Prompt | Puan |
+|---|---|---|---|---|---|
+| `nefin-beauty-gold-tonic-liquid-macro-v1.jpg` | 1696×2528 (~2:3 dikey) | 24K Gold Tonic sıvısının ekstrem makro çekimi — cam kenar, altın tanecikler süspansiyonda, ivory/şeffaf zemin, ürün "malzeme/ingredient" fotoğrafı gibi (şişe kadrajda yok) | Gemini görsel | ↓ "Gold Tonic Liquid Macro — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+
+### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
+
+> Şişe göstermeden, sadece sıvı + içindeki altın tanecikleri konu alan "ingredient photography" tarzı — ürün galerisi / detay görseli için. Malzeme fotoğrafçılığı hissi (bilimsel + lüks bir arada).
+
+```text
+Create a premium macro skincare texture photograph inspired by high-end Scandinavian beauty campaigns.
+
+Use the uploaded NEFIN Cosmetics 24K GOLD TONIC as the exact visual reference for the liquid appearance.
+
+Create an extreme close-up editorial image of the transparent golden tonic liquid.
+
+Show delicate floating 24K-gold-like particles suspended naturally inside the translucent liquid.
+
+The liquid should look fresh, lightweight, hydrated and luminous.
+
+Use a soft warm ivory and transparent glass environment.
+
+Very subtle champagne-gold reflections inside the liquid.
+
+The composition should feel sophisticated, scientific, clean and luxurious at the same time.
+
+Think premium skincare ingredient photography rather than a commercial advertisement.
+
+Extremely realistic liquid physics. Natural suspended particles. Realistic refraction. Subtle highlights. Soft diffused daylight. Clean minimal background.
+
+No bottle dominating the frame. No people. No hands. No skin. No flowers. No leaves. No colorful ingredients. No dark background. No burgundy. No red. No black. No artificial glitter explosion. No fantasy liquid. No excessive gold.
+
+Vertical composition suitable for a product gallery.
+
+Photorealistic macro skincare photography, ultra-realistic liquid texture, refined editorial aesthetic, subtle film grain.
+
+No text. No typography. No watermark.
+```
+
 ## AI üretimi (Gemini)
 
 | Dosya | Boyut / oran | İçerik | Prompt | Kullanım / puan |
