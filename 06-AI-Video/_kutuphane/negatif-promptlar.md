@@ -44,6 +44,18 @@ Türkçe not: Telefon/laptop ekranına AI arayüz çizdirme; `screen is a solid 
 extra fingers, missing fingers, fused fingers, deformed hands, extra limbs, distorted face, asymmetrical eyes, teeth artifacts, plastic skin, uncanny smile, face morphing, identity change between frames, clothing changing, hair changing color, duplicated person
 ```
 
+## Ürün sürekliliği (model elinde ürün olan çekimler)
+
+Model ürünü elinde tutan sahnelerde ürün genelde sahneye "sonradan giriyor" (uçarak/ışınlanarak beliriyor). Bunu önlemek için negatif listeye ek olarak **pozitif cümle** şart:
+
+```text
+The product is already resting in her hand from the very first frame. It does not appear, fly in, teleport, or materialize partway through the shot.
+```
+
+Negatif liste tarafında da ekle: `product appearing mid-shot, product materializing in hand, discontinuous object appearance, product teleporting into frame`
+
+Kaynak: Nefin 24K Gold Tonic "website hero" denemesi, 2 kez aynı hatayla sonuçlandı (bkz. `06-AI-Video/nefin-beauty/video-log.md` → Reddedilen denemeler).
+
 ## Sesli modeller (Veo / Sora) için ses negatifleri
 
 Prompt'a pozitif cümle olarak yaz:

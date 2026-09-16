@@ -34,6 +34,20 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 
 → [[c-vitamini-serum-kampanya-brief]] (4 shot, promptlar hazır). Gerçek ürün fotoğrafı ve logo geldiğinde başlanır.
 
+## Reddedilen denemeler
+
+> Neden reddedildiği açıkça yazılır ki aynı hata tekrar üretilmesin. Dosyalar vault'a eklenmedi (kullanım değeri yok), sadece prompt + hata burada duruyor.
+
+### "Website hero — model elinde ürün" promptu (16 Eylül 2026)
+
+- **Ürün:** 24K Gold Tonic, model (kadın) elinde tutuyor, pencere kenarı, sabah ışığı, 16:9 web hero
+- **Denenme sayısı:** 2 (ikisinde de aynı sonuç)
+- **Sorun:** Ürün videonun başında (ilk 3-4 saniye) elde/kadrajda hiç yok — model sadece yüzüne dokunuyor, elleri boş. Şişe ancak videonun ortasında (~4-5. saniye) aniden elde beliriyor; nereden geldiği/nasıl ele alındığı görünmüyor — "uçarak geldi ya da bir şekilde ışınlandı" hissi.
+- **Kök neden (muhtemel):** Prompt'ta "the woman gently holds the exact NEFIN 24K GOLD TONIC bottle in her hand" yazıyor ama **"ürün en baştan, ilk karede zaten elinde olmalı"** diye açıkça belirtilmemiş — model bunu "sahneye sonradan girsin" diye yorumluyor.
+- **Düzeltme (bir sonraki denemede kullan):** Aksiyon bloğuna şunu ekle: `"The bottle is already resting in her hand from the very first frame — it does not appear, fly in, or materialize partway through the shot."` Ayrıca kompozisyonu "elinde ürünle duruyor" diye sabit bir an olarak tarif et, "ürünü sahneye sokuyor/tanıtıyor" gibi bir aksiyon fiili kullanma.
+- **Diğer gözlemler:** Görsel yön (ışık, mekan, cilt dokusu, palet) marka brief'e tamamen uygun ve başarılı — sadece ürünün elde beliriş anı sorunlu.
+- **Puan:** 2 — görsel yön mükemmel ama ürün sürekliliği (continuity) hatası kullanılamaz kılıyor.
+
 ## Onaylı üretimler (beğenilenler)
 
 | Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt | Puan |
