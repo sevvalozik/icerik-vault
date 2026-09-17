@@ -311,6 +311,15 @@ Square 1:1 composition.
 - **Puan:** 5 — beğenildi, tekrar kullanılabilir stil şablonu olarak kaydedildi.
 - **Bir dahaki sefere:** Bu stili başka bir ürün için üretirken bileşen/fayda listesini o ürünün marka brief'teki gerçek onaylı içerik/iddialarıyla eşleştir (uydurma bileşen/iddia kullanma).
 
+### Jel/Serum Damlası Makro Doku Şablonu — site için düşünülen (17 Eylül 2026)
+
+> Ürün şişesi/ambalajı gösterilmeyen, taş/mermer dokulu açık bej zemin üzerinde altın/amber renkli jel-serum damlasının makro yakın çekimi (içinde küçük hava kabarcıkları, yanında daha küçük ikinci bir damla) kompozisyonu. Prompt paylaşılmadı.
+
+- **Şevval'in değerlendirmesi:** "bunu da ekleyelim bunu da başka ürünler için yapabiliriz"
+- **Claude'un görsel tespiti:** Doku fotoğrafik ve inandırıcı (gerçek bir serum/jel damlası gibi duruyor, yapay/plastik görünmüyor), ışık kırılması ve içindeki hava kabarcıkları detayı tutarlı. Zemin ve ton, "Bileşen Damlası + Fayda Listesi Stil Şablonu" kaydıyla aynı sıcak ivory/amber paletinde — ikisi birlikte kullanılabilecek uyumlu bir "doku/makro" alt-stili oluşturuyor. Ürün şişesi/NEFIN markası görünmüyor — bu yüzden **özel bir ürüne bağlı değil, tekrar kullanılabilir bir doku şablonu** olarak değerlendirildi.
+- **Puan:** 5 — beğenildi, tekrar kullanılabilir stil şablonu olarak kaydedildi.
+- **Bir dahaki sefere:** Başka bir ürün için üretirken damlanın rengini/kesafetini o ürünün gerçek dokusuna göre ayarla (örn. Daily Moisture Cream için beyaz/krem renkli, Vitamin C+ Serum için daha berrak/altın renkli).
+
 ## Karma sonuçlu görseller (kısmen başarılı)
 
 > Bu görseller `03-Assets/images/nefin-beauty/karma/` klasöründe tutulur — onaylı görsellerle (ana klasör) aynı yerde durmasınlar diye ayrı bir alt klasöre taşındı (17 Eylül 2026). Referans/öğrenme amaçlı, doğrudan kullanılmaz; kullanılabilir hale gelmesi için aşağıdaki düzeltmelerin uygulanıp yeniden üretilmesi gerekir.
