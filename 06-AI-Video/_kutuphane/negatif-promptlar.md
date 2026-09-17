@@ -52,6 +52,10 @@ Negatif liste eki: `unrelated props, random decorative objects, unexplained glas
 
 Kaynak: Nefin 24K Gold Tonic "sabah ritüeli" görseli, cam kase objesi nedeniyle reddedildi (bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Reddedilen denemeler).
 
+## Sıkma / pompalama anı ile ürünün görünmesi arasında gecikme
+
+El ile ürün sıkma/pompalama sahnelerinde (losyon, güneş kremi vb.) basma jesti ile kremin pompa ucunda belirmesi arasında hafif senkron kayması olabiliyor. Pozitif takviye: `"the product appears at the exact moment the pump is pressed — no delay between the press gesture and the cream emerging."` Kaynak: `06-AI-Video/nefin-beauty/video-log.md` → Sunscreen parmağa sıkma notu.
+
 ## Pipette / uygulayıcı çubuğu şişeden tam çıkmıyor
 
 Pipette şişeden kaldırılırken şişenin içinde eski çubuğun hayalet/silüet izi kalabiliyor. Ek negatif: `duplicate pipette rod visible inside bottle, ghost rod silhouette, pipette not fully removed from bottle neck`. Pozitif takviye: `"The pipette rod is fully and cleanly removed from the bottle neck — no trace or duplicate remains visible inside the bottle glass."` Kaynak: `06-AI-Video/nefin-beauty/video-log.md` → "Vitamin C Serum — pipette damla makro".

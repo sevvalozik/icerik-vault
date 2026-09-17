@@ -116,7 +116,10 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 | Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt | Puan |
 |---|---|---|---|---|---|---|---|---|
 | `nefin-beauty-gold-tonic-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | var (AAC) | 24K Gold Tonic — sadece ürün (insan/el/yüz yok), makro cam+kapak detayı, altın tanecik dokusu, su damlası, hero açılış/kapanış, ivory/krem zemin, sıcak doğal ışık | Gemini video (muhtemelen Veo) | ↓ "Gold Tonic Hero — Onaylı Master Prompt" (aşağıda) | 5 — beğenildi, marka yönüyle (clean-girl, quiet luxury, no burgundy) tam uyumlu |
+| `nefin-beauty-sunscreen-finger-application-v1.mp4` | 1280×720 (16:9) | Sunscreen (SUN Multi Protect Moisture) elde tutulup parmaga sikiliyor, urun parmak ucunda damlaciık/krem olarak beliriyor — marka brief'in "el + urun odakli, tam yuz yok" yonergesine uygun bir kullanim/how-to sahnesi | ❓ Gemini (prompt kaydedilmedi) | ❓ (prompt yok, sadece video var) | 4 — beğenildi, kucuk bir zamanlama notuyla |
 | `nefin-beauty-retinol-supreme-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | yok (sessiz) | Retinol Supreme (gece kremi) — kapaklı kavanoz + su damlacıkları (condensation) makro açılış, üstten kremin dokusu, mavi spatula ile krem karıştırma/alma detayı | ❓ Gemini (prompt kaydedilmedi — aşağıda tahmini açıklama) | ↓ "Retinol Supreme Hero — Tahmini Açıklama (prompt orijinali kayıp)" | 5 — beğenildi |
+
+**Not — Sunscreen parmağa sıkma (17 Eylül 2026):** Şevval: "6-7. saniyede sıktıktan sonra geliyor güneş kremi, biraz daha senkron olmalı. Onun dışında çok hata göremedim." Şişe sıkma hareketi (basma jesti) ile kremin pompa ucunda görünmesi arasında hafif bir gecikme var — el+ürün kullanım sahnelerinde (sıkma/pompalama anı) bu senkron sorununa dikkat edilmeli, gerekirse prompt'a "the cream appears at the exact moment the pump is pressed, no delay" gibi bir vurgu eklenebilir. Genel olarak beğenildi, ürün prompt'u kayıtlı değil (sadece video var).
 
 ### Gold Tonic Hero — Onaylı Master Prompt (16 Eylül 2026)
 
