@@ -302,6 +302,15 @@ Square 1:1 composition.
 - **Ürün kimliği (Şevval tarafından teyit edildi):** Bu, CC Cream / "Kusursuz Kapatma" ürünü için çekildi — altın/bej krem tonu bu yüzden Daily Moisture Cream'in beyaz krem dokusundan farklı. Marka brief'in "Diğer ürünler (❓ doğrulanacak)" listesindeki CC Cream maddesine görsel referans olarak eklendi.
 - **Puan:** 5 — beğenildi, web sitesi için düşünülüyor.
 
+### Bileşen Damlası + Fayda Listesi Stil Şablonu — site için düşünülen (17 Eylül 2026)
+
+> Ürün şişesi/ambalajı gösterilmeyen, sadece soyut altın/amber serum damlacıkları (makro baloncuklar) + beyaz çiçek (yasemin) aksanı + üstte ince yaprak/logo ikonu + ortada 4 satırlık bileşen/fayda listesi (örn. "Anti-Blemish / Anti-Pigmentation / Alpha Arbutin / Lactic Acid") kompozisyonu. Prompt paylaşılmadı.
+
+- **Şevval'in değerlendirmesi:** "bu tarz görseller de hoşuma gitti site için başka ürünler için oluşturulabilir."
+- **Claude'un görsel tespiti:** Sıcak ivory/krem zemin marka paletiyle uyumlu, altın damlacıkların ışık yansıması fotoğrafik ve inandırıcı (yapay/plastik durmuyor), tipografi net ve okunaklı (yazım hatası yok). Ürün şişesi/NEFIN markası görünmüyor — bu yüzden **özel bir ürüne bağlı değil, tekrar kullanılabilir bir şablon** olarak değerlendirildi: farklı ürünler için bileşen/fayda listesi metni değiştirilerek aynı stilde yeni görseller üretilebilir (örn. Acne-Derm için "Anti-Blemish, Salicylic Acid" gibi kendi bileşenleriyle).
+- **Puan:** 5 — beğenildi, tekrar kullanılabilir stil şablonu olarak kaydedildi.
+- **Bir dahaki sefere:** Bu stili başka bir ürün için üretirken bileşen/fayda listesini o ürünün marka brief'teki gerçek onaylı içerik/iddialarıyla eşleştir (uydurma bileşen/iddia kullanma).
+
 ## Karma sonuçlu görseller (kısmen başarılı)
 
 > Bu görseller `03-Assets/images/nefin-beauty/karma/` klasöründe tutulur — onaylı görsellerle (ana klasör) aynı yerde durmasınlar diye ayrı bir alt klasöre taşındı (17 Eylül 2026). Referans/öğrenme amaçlı, doğrudan kullanılmaz; kullanılabilir hale gelmesi için aşağıdaki düzeltmelerin uygulanıp yeniden üretilmesi gerekir.
