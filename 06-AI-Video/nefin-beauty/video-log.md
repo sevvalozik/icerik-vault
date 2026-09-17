@@ -85,6 +85,17 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 - **Puan:** Karma, 3/5 — konsept ve hareket istenen şekilde ama görsel gerçekçilik (su fiziği) ve etiket yazısı düzeltilmeli.
 - **Bir dahaki sefere:** (1) Su-ürün etkileşimi için prompt'a şunun gibi daha teknik bir talep eklenebilir: `"the water in front of the bottle causes visible optical distortion and light refraction on the label, the product is genuinely submerged, not composited on top of the water"`. (2) Bu ürün için de gerçek bir referans fotoğrafı olmadığından yazı riskli — ya gerçek ürün fotoğrafı sağlanmalı ya da yazı post-prodüksiyonda eklenmeli.
 
+### Vitamin C Serum — pipette damla makro (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-vitamin-c-serum-pipette-drop-karma-v1.mp4`
+- **Prompt:** `prompt-formulu.md`'deki hazır "Veo 3.x / Sora 2" örnek promptu birebir denendi (marka brief'in Vitamin C Serum product sheet'inden üretilmiş master örnek).
+- **Şevval'in değerlendirmesi:** "Hatalı, şişenin içinde çubuğunu çıkarıyor ama çubuk içerde kalıyor. Damlatma kısmı güzel. Sıvının yayılması biraz daha gerçekçi olabilir ama."
+- **Claude'un görsel tespiti:** Doğrulandı — pipette şişeden yukarı kaldırılırken, şişenin camı içinde **aynı pipette çubuğunun silueti/izi hâlâ görünüyor** (0.3-2 sn arası kareler) — sanki gerçek pipette dışarı çıkmış ama bir "hayalet" kopyası şişenin içinde kalmış. Damla oluşumu ve düşüşü (3-7 sn) gerçekten akıcı ve gerçekçi. Sıvının traverten üzerine yayılması (7-8 sn) düzgün bir daire gibi duruyor, gerçek bir sıvının düzensiz/organik kenarları eksik — Şevval'in "biraz daha gerçekçi olabilir" notuyla örtüşüyor.
+- **Kök neden:** Prompt'ta pipette'in şişeden tamamen çıktığı açıkça belirtilmemiş; model muhtemelen "raised just above the bottle mouth" ifadesini şişenin içindeki eski pozisyonu da kısmen koruyarak yorumluyor.
+- **Puan:** Karma, 3.5/5 — damla/düşüş kısmı 5/5, şişe-pipette ayrımı 2/5, sıvı yayılma gerçekçiliği 3.5/5.
+- **Düzeltme (bir dahaki denemede):** Prompt'a ekle: `"The pipette rod is fully and cleanly removed from the bottle neck — no trace, silhouette, or duplicate of the rod remains visible inside the bottle glass."` Sıvı yayılması için: `"the liquid spreads into an organic, slightly irregular ring with natural surface tension, not a perfectly smooth circle."`
+- **Not:** `prompt-formulu.md`'deki master örneğe bu bilinen hata için not düşüldü.
+
 ## Reddedilen denemeler
 
 > Neden reddedildiği açıkça yazılır ki aynı hata tekrar üretilmesin. Dosyalar vault'a eklenmedi (kullanım değeri yok), sadece prompt + hata burada duruyor.

@@ -52,6 +52,10 @@ Negatif liste eki: `unrelated props, random decorative objects, unexplained glas
 
 Kaynak: Nefin 24K Gold Tonic "sabah ritüeli" görseli, cam kase objesi nedeniyle reddedildi (bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Reddedilen denemeler).
 
+## Pipette / uygulayıcı çubuğu şişeden tam çıkmıyor
+
+Pipette şişeden kaldırılırken şişenin içinde eski çubuğun hayalet/silüet izi kalabiliyor. Ek negatif: `duplicate pipette rod visible inside bottle, ghost rod silhouette, pipette not fully removed from bottle neck`. Pozitif takviye: `"The pipette rod is fully and cleanly removed from the bottle neck — no trace or duplicate remains visible inside the bottle glass."` Kaynak: `06-AI-Video/nefin-beauty/video-log.md` → "Vitamin C Serum — pipette damla makro".
+
 ## Su / sıvı içinde ürün — gerçekçilik (compositing hissi)
 
 Ürünü suda/sıvıda yüzerken gösteren promptlarda model, ürünü suyun üstüne **yapıştırılmış (composite) gibi** çiziyor — gerçek kırılma/refraction, suyun ürünü hafif bulanıklaştırması gibi optik etkiler eksik kalıyor, "yapay havuz" hissi veriyor. Sadece "floating in water" demek yetmiyor.

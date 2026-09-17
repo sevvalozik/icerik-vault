@@ -75,6 +75,8 @@ A woman in her 30s with dark hair tied back, wearing a cream linen shirt, sits i
 
 ## Model tarzına göre aynı promptun 3 hali
 
+**⚠️ Bilinen hata (17 Eylül 2026, test edildi):** Bu örnek denendiğinde pipette şişeden kaldırılırken şişenin camı içinde eski pipette'in "hayalet" silüeti kalıyor (bkz. `06-AI-Video/nefin-beauty/video-log.md` → "Vitamin C Serum — pipette damla makro"). Denerken şunu ekle: `"The pipette rod is fully and cleanly removed from the bottle neck — no trace, silhouette, or duplicate of the rod remains visible inside the bottle glass."`
+
 **Veo 3.x / Sora 2 (düzyazı, doğal dil, ses dahil):**
 ```text
 Cinematic skincare commercial, photorealistic. A 30 ml amber glass dropper bottle with a brushed gold collar and white pipette cap, minimal cream label with illegible text, filled with translucent golden-orange serum, stands on cream linen over pale travertine. A single golden drop falls from the raised pipette and lands beside the bottle, spreading into a thin glossy ring. Extreme close-up on a 100mm macro lens, shallow depth of field, the camera is locked off and does not move. Soft warm window light from the left with gentle specular highlights on the glass. Warm cream and amber color grade, low contrast, subtle film grain. Calm and luxurious. Audio: quiet room tone and a soft liquid drip, no music, no dialogue, no subtitles. 9:16, 8 seconds. No text, no logos, no hands, no faces.
