@@ -96,6 +96,16 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 - **Düzeltme (bir dahaki denemede):** Prompt'a ekle: `"The pipette rod is fully and cleanly removed from the bottle neck — no trace, silhouette, or duplicate of the rod remains visible inside the bottle glass."` Sıvı yayılması için: `"the liquid spreads into an organic, slightly irregular ring with natural surface tension, not a perfectly smooth circle."`
 - **Not:** `prompt-formulu.md`'deki master örneğe bu bilinen hata için not düşüldü.
 
+### "Cream Wave" — Daily Moisture Cream'in kremden ortaya çıkışı (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-daily-moisture-cream-wave-reveal-karma-v1.mp4`
+- **Konsept:** 0-5 sn arası salt krem dokusu makro çekimi (ürün yok), sonra kamera geri çekilip ürünün kremin içinden yavaşça ortaya çıkması isteniyor.
+- **Şevval'in değerlendirmesi:** "Videonun ilk kısmı gayet güzel, kullanılabilir ama daha sonra ürün bir anda kremin içinden çıkıyor. Bu çok AI duruyor."
+- **Claude'un görsel tespiti:** 0-5 sn arası krem dalgası gerçekten çok başarılı — pürüzsüz, gerçekçi, marka yönüyle tam uyumlu. Ama ~5.5-6 sn'de ürün **yavaş bir "ortaya çıkma" değil, ani bir "belirme"** ile geliyor — önce sadece altın kapak kremin ortasında beliriyor, hemen ardından (6.5-7 sn) şişenin tamamı zaten kremin üstünde duruyor. Prompt'un istediği "bottle slowly becomes visible from behind the flowing cream" / "naturally emerges" hissi yok, düz bir kesme/pop-up gibi. Etiket yazısı da burada yine hafif bozuk ("Hydration Comfort Nourishment" tam okunmuyor).
+- **Bu, daha önce loglanan "ürün sürekliliği" sorununun bir varyasyonu:** model bir objeyi bir dokunun/ortamın İÇİNDEN kademeli olarak ortaya çıkarmakta zorlanıyor — ya hiç göstermiyor ya da anlık beliriyor, aradaki yumuşak geçişi üretemiyor. Daha önce (bkz. Gold Tonic "model elinde ürün" reddedileni) bu sorun elde tutma bağlamında görülmüştü; burada dokunun içinden çıkma bağlamında tekrarlıyor.
+- **Puan:** Karma, 3.5/5 — krem dokusu kısmı (0-5 sn) tek başına 5/5 ve referans olarak çok değerli; ürün reveal'i 2/5.
+- **Bir dahaki sefere:** (1) Krem dalgası kısmını AYNI prompttan kesip ayrı bir "sadece doku" klip olarak kullan (zaten kendi başına güzel, ürün reveal'iyle uğraşmaya gerek yok). (2) Ürünün kademeli ortaya çıkışı için modelden "kesme/geçiş" istemek yerine iki ayrı klip üretip kurguda (post-prodüksiyon) bir crossfade/wipe geçişiyle birleştirmek daha güvenilir olabilir — model bunu tek çekimde inandırıcı yapamıyor.
+
 ## Reddedilen denemeler
 
 > Neden reddedildiği açıkça yazılır ki aynı hata tekrar üretilmesin. Dosyalar vault'a eklenmedi (kullanım değeri yok), sadece prompt + hata burada duruyor.

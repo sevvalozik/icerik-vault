@@ -80,6 +80,12 @@ Pozitif takviye cümlesi (denenecek): `"The exact same N bottles, identical in s
 
 Kaynak: Nefin Daily Moisture Cream "video-to-video recreation" (COSMED reklamı referans alınarak), bkz. `06-AI-Video/nefin-beauty/video-log.md` → Karma sonuçlu denemeler.
 
+## Ürünün bir dokunun/ortamın içinden kademeli "ortaya çıkması"
+
+Modeller bir objeyi (ürünü) kremin/suyun/kumun içinden yavaşça, inandırıcı şekilde ortaya çıkarmakta zayıf — ya göstermiyor ya da anlık/ani beliriyor ("pop-up" hissi), istenen yumuşak reveal'i üretemiyor. Tek çekimde bunu istemek yerine: (1) doku-only ve ürün-only'yi ayrı klip olarak üret, (2) post-prodüksiyonda crossfade/wipe ile birleştir. Tek çekimde denenecekse pozitif takviye: `"the product's emergence is extremely gradual, continuous and physically smooth — never a sudden appearance or cut."` (garanti değil, teknik olarak tek çekimde zor).
+
+Kaynak: Nefin Daily Moisture Cream "Cream Wave" denemesi, bkz. `06-AI-Video/nefin-beauty/video-log.md`.
+
 ## Ürün sürekliliği (model elinde ürün olan çekimler)
 
 Model ürünü elinde tutan sahnelerde ürün genelde sahneye "sonradan giriyor" (uçarak/ışınlanarak beliriyor). Bunu önlemek için negatif listeye ek olarak **pozitif cümle** şart:
