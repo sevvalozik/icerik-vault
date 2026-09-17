@@ -132,6 +132,26 @@ All circular callout icons must be rendered at exactly the same diameter and ali
 
 Kaynak: Nefin Daily Moisture Cream "cilt uygulama + bileşen-fayda editoryal görseli", bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Karma sonuçlu görseller.
 
+## Küçük alt yazılar ve ikon etiketleri her zaman güvenilmez, başlıklar daha güvenilir
+
+Video/görsel üzerinde büyük/ana başlık metinleri (ör. "GÜN BOYU NEM DESTEĞİ", "SPF 50+ KORUMA") model tarafından genelde doğru ve okunaklı üretiliyor, ama şu iki yer neredeyse her zaman bozuk çıkıyor: (1) ürün etiketinin **küçük alt yazı satırları** (madde/içerik listesi, kullanım talimatı gibi ufak metinler), (2) **bileşen/ikon listelerinin açıklama metinleri** ("Protective" → "Profecttive", "With" → "Withe" gibi anlamsız kelimeler). Bu, prompt'ta o metnin bir referans görselden birebir korunması açıkça istenmediği sürece geçerli.
+
+Negatif liste eki: `garbled small text, fake illegible subtext, invented nonsense words on label, misspelled ingredient captions`
+
+Pozitif takviye cümlesi (denenecek): `"All text, including small label subtext and ingredient captions, must be real, correctly spelled words — copy them exactly from the provided reference, do not invent or approximate any text."` (garanti değil; en güvenlisi küçük alt yazıları kadraj dışı bırakmak ya da post-prodüksiyonda gizlemek.)
+
+Kaynak: Nefin Sunscreen "doğal uygulama" videosu v2, bkz. `06-AI-Video/nefin-beauty/video-log.md` → Onaylı üretimler.
+
+## Tek ürün videosu içinde sahne geçişinde etiket font/stil tutarlılığı
+
+Çoklu ürün sahne-geçişi sorunundan (bkz. yukarıdaki bölüm) farklı olarak, **tek bir ürünün** videosunda bile geniş plandan yakın plana geçerken (ör. "ürün elde tutuluyor" → "pompa yakın çekimi") model logoyu/etiketi farklı bir fontla yeniden çizebiliyor — aynı şişe geniş planda kalın siyah sans-serif logo ile görünüp yakın planda altın renkli script/el yazısı fontla çıkabiliyor.
+
+Negatif liste eki: `logo font changing between shots, inconsistent label typography across cuts within the same video, label style drifting between wide and close-up shots`
+
+Pozitif takviye cümlesi (denenecek): `"The product label, logo and typography must remain pixel-identical across every shot and camera angle in this video — no redesign or font change between the wide shot and the close-up."`
+
+Kaynak: Nefin Sunscreen "doğal uygulama" videosu v1, bkz. `06-AI-Video/nefin-beauty/video-log.md` → Onaylı üretimler.
+
 ## Nasıl kullanılır
 
 1. Genel + sektör listesini birleştir (tekrarları sil).
