@@ -21,6 +21,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | `nefin-beauty-gold-tonic-ingredient-tubes-v1.png` | 1024×1024 (1:1) | 24K Gold Tonic — üç saydam laboratuvar tüpü içinde bileşen görselleştirmesi (24K Altın, Sodyum Hyaluronat, Hamamelis & Aloe Vera), şişe kadrajda yok, tamamen "ingredient science" estetik | Gemini görsel | ↓ "Gold Tonic — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-daily-moisture-cream-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Daily Moisture Cream — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Sodyum Hyaluronat, Pantenol & Sodyum PCA, Argan/Shea/Aloe Vera), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Daily Moisture Cream — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-acne-derm-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Acne-Derm / Akne Karşıtı Krem — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Salisilik Asit, Niasinamid & Pantenol, Azelaik Asit & Çay Ağacı Yağı), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Acne-Derm — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+| `nefin-beauty-retinol-supreme-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Retinol Supreme — aynı üç-tüp şablonuyla bileşen görselleştirmesi (%1,5 Retinol, Niasinamid & Pantenol, Sodyum Hiyaluronat & E Vitamini), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Retinol Supreme — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 
@@ -194,6 +195,52 @@ No people, no faces, no hands, no product bottle, no acne photos, no red skin, n
 Photorealistic premium skincare editorial photography.
 
 Square 1:1 composition.
+```
+
+### Retinol Supreme — Bileşen Tüpleri Infografiği — Onaylı Prompt (17 Eylül 2026)
+
+> Üç-tüp şablonunun dördüncü ürüne (Retinol Supreme) uyarlanmış hali.
+
+- **Şevval'in değerlendirmesi:** "bu da güzel"
+- **Claude'un görsel tespiti:** Doğrulanan — diğer üç ürünle aynı kalitede, tüp boyutları ve tipografi tutarlı. Retinol tüpü (amber/altın renk) diğer iki tüpten (mavimsi, saydam) görsel olarak net ayrışıyor — renk kodlaması bileşen tipini yansıtacak şekilde doğru çalışıyor.
+- **Puan:** 5 — beğenildi. Şablon artık **4/4 üründe** doğrulandı.
+- **Not:** Bu görselde ürün ambalajı/etiketi kadrajda olmadığı için, Retinol Supreme hero videosunda daha önce tespit edilen etiket yazı hatası ("Kegenerating", "Gream" — bkz. `06-AI-Video/nefin-beauty/video-log.md`) burada risk oluşturmadı; üç-tüp şablonunun ambalaj/etiket göstermeme prensibi bu tip yazı hatalarını da dolaylı yoldan önlüyor.
+
+```text
+Create a premium skincare ingredient infographic for NEFIN Cosmetics RETINOL SUPREME.
+
+Do not show the product packaging.
+
+Create THREE tall transparent glass tubes arranged vertically and evenly, following the visual logic of the uploaded reference image.
+
+TUBE 1 — 1.5% RETINOL
+Create a sophisticated translucent amber-golden serum inside the glass tube, with subtle microscopic particles and refined glossy fluid movement.
+Label:
+“%1,5 RETİNOL”
+“Cilt Yenilenmesini Destekler”
+
+TUBE 2 — NIACINAMIDE + PANTENOL
+Create a translucent pale-blue hydrating gel with subtle molecular-inspired structures and delicate water droplets.
+Label:
+“NİASİNAMİD & PANTENOL”
+“Bariyer Desteği”
+
+TUBE 3 — SODYUM HYALURONAT + VITAMIN E
+Create a transparent hydrated gel with delicate water droplets and subtle warm golden antioxidant-inspired details.
+Label:
+“SODYUM HİYALURONAT & E VİTAMİNİ”
+“Nem & Yumuşaklık”
+
+The documented formula also contains Hydrolyzed Collagen, Centella Asiatica, Alpha Arbutin and nourishing ingredients. Do not invent any additional ingredients or claims.
+
+Visual style:
+warm ivory / soft cream background, muted light blue typography, dark blue-gray secondary text, subtle champagne-gold details only where appropriate, bold uppercase editorial headings, thin connector lines, sophisticated clinical-luxury skincare aesthetic.
+
+No people, no faces, no hands, no product packaging, no nighttime scene, no burgundy, no red, no black, no excessive gold.
+
+Photorealistic transparent glass, realistic liquid textures, soft reflections, subtle shadows, clean premium editorial composition.
+
+Square 1:1.
 ```
 
 ## Karma sonuçlu görseller (kısmen başarılı)
