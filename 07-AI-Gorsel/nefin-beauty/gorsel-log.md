@@ -20,6 +20,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | `nefin-beauty-daily-moisture-cream-ecommerce-hero-v1.png` | 687×1024 (~2:3 dikey) | Daily Moisture Cream — tek başına, sade, e-ticaret ürün fotoğrafı; etiket yazısı kusursuz net (kamera çekimi gibi) | Gemini görsel | ↓ "MASTER E-Ticaret Ürün Fotoğrafı Prompt'u" (aşağıda) | 5 — beğenildi, marka için standart ürün fotoğrafı şablonu seçildi |
 | `nefin-beauty-gold-tonic-ingredient-tubes-v1.png` | 1024×1024 (1:1) | 24K Gold Tonic — üç saydam laboratuvar tüpü içinde bileşen görselleştirmesi (24K Altın, Sodyum Hyaluronat, Hamamelis & Aloe Vera), şişe kadrajda yok, tamamen "ingredient science" estetik | Gemini görsel | ↓ "Gold Tonic — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-daily-moisture-cream-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Daily Moisture Cream — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Sodyum Hyaluronat, Pantenol & Sodyum PCA, Argan/Shea/Aloe Vera), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Daily Moisture Cream — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+| `nefin-beauty-acne-derm-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Acne-Derm / Akne Karşıtı Krem — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Salisilik Asit, Niasinamid & Pantenol, Azelaik Asit & Çay Ağacı Yağı), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Acne-Derm — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 
@@ -145,6 +146,52 @@ warm ivory / soft white background, muted powder-light blue typography accents, 
 No people, no faces, no hands, no product packaging, no unnecessary flowers, no laboratory equipment, no burgundy, no red, no black.
 
 Photorealistic glass and liquid textures, subtle reflections, soft natural shadows, clean high-end skincare campaign quality.
+
+Square 1:1 composition.
+```
+
+### Acne-Derm — Bileşen Tüpleri Infografiği — Onaylı Prompt (17 Eylül 2026)
+
+> Üç-tüp şablonunun üçüncü ürüne (Acne-Derm / Akne Karşıtı Krem) uyarlanmış hali. Aynı yapı, sadece ürün adı + bileşen listesi + tüp içeriği tarifi değişti.
+
+- **Şevval'in değerlendirmesi:** "bu da güzel"
+- **Claude'un görsel tespiti:** Doğrulanan — Gold Tonic ve Daily Moisture Cream versiyonlarıyla aynı kalitede: üç tüp eşit boyut/hizada, tipografi tutarlı. Üçüncü tüpteki çay ağacı yaprağı + molekül motifi dengeli, aşırı botanik/klinik karışımı yok.
+- **Puan:** 5 — beğenildi. **Üçüncü üründe de başarıyla tekrar edildi** — şablon artık 3/3 üründe doğrulandı, marka brief'teki "standart bileşen-infografik şablonu" statüsü pekişti.
+- **Not (ürün doğrulaması):** "Acne-Derm / Akne Karşıtı Krem" brief'teki mevcut "Anti-Acne Serum" kartından farklı görünüyor (bu bir krem, ayrı ve daha detaylı bir bileşen listesi var: Salisilik Asit, Niasinamid, Pantenol, Azelaik Asit, Çay Ağacı Yağı, Glikolik Asit, Laktik Asit, B6, B7, Hidrolize Kolajen) — gerçek ürün olup olmadığı teyit edilmedi, brief'in "Diğer ürünler (❓ doğrulanacak)" listesine eklendi.
+
+```text
+Create a premium skincare ingredient infographic for NEFIN Cosmetics ACNE-DERM / AKNE KARŞITI KREM.
+
+Do not show the product packaging.
+
+Create THREE tall transparent glass tubes arranged vertically and evenly, following the visual logic of the uploaded reference image.
+
+TUBE 1 — SALICYLIC ACID
+Create a clear, slightly translucent liquid with refined microscopic exfoliating structures and subtle clean bubbles.
+Label:
+“SALİSİLİK ASİT”
+“Gözenek Arındırma”
+
+TUBE 2 — NIACINAMIDE + PANTENOL
+Create a soft translucent pale-blue/clear serum with elegant molecular-inspired structures and subtle hydration droplets.
+Label:
+“NİASİNAMİD & PANTENOL”
+“Denge & Bariyer Desteği”
+
+TUBE 3 — AZELAIC ACID + TEA TREE OIL
+Create a refined transparent liquid with subtle botanical Tea Tree Oil visual cues and clean molecular-inspired structures.
+Label:
+“AZELAİK ASİT & ÇAY AĞACI YAĞI”
+“Dengeleyici Bakım”
+
+The documented formula also contains Glycolic Acid, Lactic Acid, Pyridoxine B6, Biotin B7, Hydrolyzed Collagen and moisturizing ingredients. Do not invent any additional ingredients.
+
+Visual style:
+same approved NEFIN visual language — warm ivory background, muted light blue accents, dark blue-gray typography, bold uppercase headings, thin connector lines, minimal clinical beauty aesthetic, realistic transparent glass and liquid textures, soft shadows and elegant negative space.
+
+No people, no faces, no hands, no product bottle, no acne photos, no red skin, no medical imagery, no burgundy, no black, no clutter.
+
+Photorealistic premium skincare editorial photography.
 
 Square 1:1 composition.
 ```
