@@ -77,6 +77,8 @@ related: ["[[nefin-beauty-sunum]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06
 
 **Standart ürün fotoğrafı şablonu (16 Eylül 2026):** Tek ürün / sade e-ticaret fotoğrafları için artık sabit bir MASTER prompt var — her yeni üründe referans görseli ve ürün adı değiştirilerek tekrar kullanılacak. Tam prompt: `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → "MASTER E-Ticaret Ürün Fotoğrafı Prompt'u". İlk başarılı örnek: `03-Assets/images/nefin-beauty/nefin-beauty-daily-moisture-cream-ecommerce-hero-v1.png`.
 
+**Standart bileşen-infografik şablonu (17 Eylül 2026):** Ürünün içeriğini anlatan "ingredient science" tarzı görseller için de artık sabit bir şablon var — üç saydam laboratuvar tüpü, her biri bir bileşen grubunu temsil ediyor (ürün ambalajı kadrajda yok), aynı tipografi/renk paleti korunuyor. İki üründe (Gold Tonic, Daily Moisture Cream) sadece ürün adı + bileşen listesi + tüp içeriği tarifi değiştirilerek başarıyla tekrar kullanıldı, ikisi de 5/5 onaylandı. Tam promptlar: `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → "Gold Tonic — Bileşen Tüpleri Infografiği" ve "Daily Moisture Cream — Bileşen Tüpleri Infografiği".
+
 - **Işık:** Yumuşak gün ışığı, sıcak; pencere ışığı ya da havuz kenarı güneşi. Sert stüdyo flaşı yok.
 - **Mekan / doku / props:** krem keten kumaş, traverten/mermer taş, terrazzo, ahşap, pamuk ped, portakal dilimi (C vitamini), altın tanecikler (24K tonik), kurutulmuş pampas otu, seramik vazo.
 - **İnsan var mı? Nasıl?:** Evet, ama **sadece el/omuz/yüz kısmi** — tam yüz sadece gerçek çekimde. AI videoda el + ürün odaklı çekim tercih edilir (yüz tutarlılığı riski).

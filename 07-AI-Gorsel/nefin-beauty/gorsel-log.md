@@ -19,6 +19,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | `nefin-beauty-gold-tonic-liquid-macro-v1.jpg` | 1696×2528 (~2:3 dikey) | 24K Gold Tonic sıvısının ekstrem makro çekimi — cam kenar, altın tanecikler süspansiyonda, ivory/şeffaf zemin, ürün "malzeme/ingredient" fotoğrafı gibi (şişe kadrajda yok) | Gemini görsel | ↓ "Gold Tonic Liquid Macro — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-daily-moisture-cream-ecommerce-hero-v1.png` | 687×1024 (~2:3 dikey) | Daily Moisture Cream — tek başına, sade, e-ticaret ürün fotoğrafı; etiket yazısı kusursuz net (kamera çekimi gibi) | Gemini görsel | ↓ "MASTER E-Ticaret Ürün Fotoğrafı Prompt'u" (aşağıda) | 5 — beğenildi, marka için standart ürün fotoğrafı şablonu seçildi |
 | `nefin-beauty-gold-tonic-ingredient-tubes-v1.png` | 1024×1024 (1:1) | 24K Gold Tonic — üç saydam laboratuvar tüpü içinde bileşen görselleştirmesi (24K Altın, Sodyum Hyaluronat, Hamamelis & Aloe Vera), şişe kadrajda yok, tamamen "ingredient science" estetik | Gemini görsel | ↓ "Gold Tonic — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+| `nefin-beauty-daily-moisture-cream-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Daily Moisture Cream — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Sodyum Hyaluronat, Pantenol & Sodyum PCA, Argan/Shea/Aloe Vera), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Daily Moisture Cream — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 
@@ -99,6 +100,53 @@ bold refined uppercase headings in the same visual character as the provided cre
 No people, no faces, no hands, no product bottle, no extra objects, no burgundy, no red, no black, no colorful laboratory equipment.
 
 Square 1:1 composition, highly realistic luxury skincare editorial photography.
+```
+
+### Daily Moisture Cream — Bileşen Tüpleri Infografiği — Onaylı Prompt (17 Eylül 2026)
+
+> Gold Tonic için onaylanan üç-tüp şablonunun aynı yapıyla Daily Moisture Cream'e uyarlanmış hali — sadece ürün adı ve bileşen listesi değişti, görsel stil/tipografi/kompozisyon mantığı aynı kaldı.
+
+- **Şevval'in değerlendirmesi:** "bu da güzel"
+- **Claude'un görsel tespiti:** Doğrulanan — Gold Tonic versiyonuyla aynı kalitede: üç tüp eşit boyut ve hizada, başlık/alt metin tüm tüplerde tutarlı font/ağırlık/case ile basılmış. Üçüncü tüpteki (Argan/Shea/Aloe Vera) botanik unsurlar "sofistike ve minimal" tutma talimatına uyularak abartısız kalmış.
+- **Puan:** 5 — beğenildi. **Bu, "Gold Tonic bileşen tüp şablonu"nun başka bir ürüne birebir prompt-değişikliğiyle başarıyla taşınabildiğinin doğrulanması** — artık bu format markanın **standart bileşen-infografik şablonu** olarak kabul edilebilir (bkz. marka brief güncellemesi).
+
+```text
+Create a premium skincare ingredient infographic for NEFIN Cosmetics DAILY MOISTURE CREAM.
+
+Do not show the actual product packaging. Create THREE tall, transparent glass tubes arranged vertically and evenly, following the visual logic of the uploaded reference image.
+
+Each tube must represent a different key ingredient group from the actual NEFIN Daily Moisture Cream formula.
+
+TUBE 1 — SODYUM HYALURONAT
+Inside the transparent tube, create a crystal-clear pale-blue hydrated gel with delicate water droplets and elegant fluid structures.
+Label:
+“SODYUM HYALURONAT”
+“Nem Desteği”
+
+TUBE 2 — PANTENOL + SODYUM PCA
+Create a translucent, soft white-to-pale-blue moisturizing gel with tiny suspended hydration droplets and a subtle protective layer effect.
+Label:
+“PANTENOL & SODYUM PCA”
+“Nem Bariyeri Desteği”
+
+TUBE 3 — ARGAN + SHEA + ALOE VERA
+Create an elegant botanical/oil-inspired macro composition inside the transparent tube, using subtle argan oil, shea and aloe vera visual cues. Keep it sophisticated and minimal, not botanical-heavy.
+Label:
+“ARGAN, SHEA & ALOE VERA”
+“Yumuşaklık & Esneklik”
+
+The actual documented formula also contains Kolajen, E Vitamini, Allantoin, Badem and Kalendula, Jojoba Yağı. Do not invent any other ingredients.
+
+Use only these documented ingredients.
+
+Visual style must match the previously approved NEFIN cream infographic:
+warm ivory / soft white background, muted powder-light blue typography accents, dark blue-gray supporting text, bold uppercase editorial headings, thin connector lines, generous negative space, premium clinical-luxury skincare aesthetic.
+
+No people, no faces, no hands, no product packaging, no unnecessary flowers, no laboratory equipment, no burgundy, no red, no black.
+
+Photorealistic glass and liquid textures, subtle reflections, soft natural shadows, clean high-end skincare campaign quality.
+
+Square 1:1 composition.
 ```
 
 ## Karma sonuçlu görseller (kısmen başarılı)
