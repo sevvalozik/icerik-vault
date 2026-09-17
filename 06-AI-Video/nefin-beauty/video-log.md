@@ -38,6 +38,43 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 
 > Bu videolar `03-Assets/videos/nefin-beauty/karma/` klasöründe tutulur — onaylı üretimlerle (ana klasör) aynı yerde durmasınlar diye ayrı bir alt klasöre taşındı (17 Eylül 2026). Referans/öğrenme amaçlı, doğrudan kullanılmaz; kullanılabilir hale gelmesi için aşağıdaki düzeltmelerin uygulanıp yeniden üretilmesi gerekir.
 
+### Sunscreen — parmağa sıkma / el kullanım videosu (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-sunscreen-finger-application-v1.mp4`
+- **Konsept:** Sunscreen (SUN Multi Protect Moisture) elde tutulup parmağa sıkılıyor, ürün parmak ucunda damlacık/krem olarak beliriyor — marka brief'in "el + ürün odaklı, tam yüz yok" yönergesine uygun bir kullanım/how-to sahnesi.
+- **Şevval'in değerlendirmesi:** "6-7. saniyede sıktıktan sonra geliyor güneş kremi, biraz daha senkron olmalı. Onun dışında çok hata göremedim."
+- **Claude'un görsel tespiti:** Şişe sıkma hareketi (basma jesti) ile kremin pompa ucunda görünmesi arasında hafif bir gecikme var — el+ürün kullanım sahnelerinde (sıkma/pompalama anı) bu senkron sorununa dikkat edilmeli.
+- **Puan:** Karma, 4/5 — genel olarak başarılı, tek sorun senkron gecikmesi.
+- **Bir dahaki sefere:** Prompt'a şu vurgu eklenebilir: `"the cream appears at the exact moment the pump is pressed, no delay."` Ürün prompt'u kayıtlı değil (sadece video var).
+
+### Retinol Supreme Hero (16 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-retinol-supreme-hero-v1.mp4`
+- **Konsept:** Retinol Supreme (gece kremi) — kapaklı kavanoz + su damlacıkları (condensation) makro açılış, üstten kremin dokusu, mavi spatula ile krem karıştırma/alma detayı.
+- **Şevval'in değerlendirmesi:** Genel olarak beğenildi, prompt kaydedilmedi.
+- **Claude'un görsel tespiti:** Kavanoz etiketinde yazı hatası var — "Regenerating" yerine "Kegenerating", "Cream" yerine "Gream" basılmış (model gerçek referans etiket olmadan metni uydurmuş). Ayrıca "Retinol Supreme" ürününün gerçek/onaylı bir ürün olduğu teyit edilmedi (marka brief'in "❓ doğrulanacak" listesinde).
+- **Puan:** Karma, 4/5 — görsel yön ve kurgu güçlü, ama etiket yazı hatası ve ürün doğrulanmamışlığı kullanım öncesi çözülmeli.
+- **Bir dahaki sefere:** Gerçek ürün fotoğrafı sağlanıp etiket metni prompt'ta birebir referans olarak verilmeli (bkz. kütüphane: "küçük alt yazılar her zaman güvenilmez" kuralı).
+- **Not:** Prompt orijinali kayıp; tahmini açıklama aşağıda "Retinol Supreme Hero — Tahmini Açıklama" başlığı altında duruyor.
+
+### Sunscreen — doğal uygulama, v1 (yazısız versiyon) (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-sunscreen-natural-application-v1.mp4`
+- **Konsept:** Sunscreen doğal uygulama videosu — ürün tanıtımıyla başlıyor, pompa yakın çekimi, yüze sürülmesi (kademeli, doğal smear hareketi), parlak/nemli cilt kapanışı. Yazı overlay yok.
+- **Şevval'in değerlendirmesi:** Beğenildi (aynı prompttan gelen 2 seçenekten biri).
+- **Claude'un görsel tespiti:** Uygulama hareketi doğal ve kademeli (parmak ucunda damla → yanakta yayılma → tam emilmiş parlak cilt), ekranda metin olmadığı için okunabilir yazı hatası riski yok. **Tek sorun:** ~2. saniyedeki kesmede (ürün tanıtım çekiminden pompa yakın çekimine geçiş) şişe etiketinin font/stili değişiyor — geniş planda "NEFIN" siyah kalın sans-serif ile yazılıyken, yakın çekimde aynı logo altın renkli/el yazısı (script) bir fontla görünüyor.
+- **Puan:** Karma, 4/5 — v2'ye göre daha temiz (okunabilir yazı hatası yok), tek düzeltilecek şey kesme noktasındaki etiket font tutarsızlığı.
+- **Bir dahaki sefere:** `"The product label, logo and typography must remain pixel-identical across every shot and camera angle in this video — no redesign or font change between the wide shot and the close-up."` Ürün prompt'u kayıtlı değil (sadece video var).
+
+### Sunscreen — doğal uygulama, v2 (yazılı versiyon) (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-sunscreen-natural-application-v2.mp4`
+- **Konsept:** Aynı konseptin ikinci varyantı — ürün + model (arka planda bulanık) ile açılıyor, yüze sürümü, ortada "GÜN BOYU NEM DESTEĞİ / SPF 50+ KORUMA" ve bileşen ikonları (Vitamin E vb.) overlay metni var, kapanışta "NEFIN SUN / Doğal ve Güçlü Koruma" yazıyor.
+- **Şevval'in değerlendirmesi:** Beğenildi (aynı prompttan gelen 2 seçenekten diğeri).
+- **Claude'un görsel tespiti:** Ortadaki overlay metinleri ("GÜN BOYU NEM DESTEĞİ", "SPF 50+ KORUMA", kapanıştaki "NEFIN SUN / Doğal ve Güçlü Koruma") doğru yazılmış ve net. Ama **şişe etiketinin alt yazısı baştan sona bozuk/uydurma** — "SUN1 KORUME", "Anzld fanecli propnic", "Free Duraceure", "Fly Clinically Curlincal / Clinical Driaturm" gibi hiçbir dilde anlamlı olmayan sahte kelimeler (video boyunca 3 ayrı karede görünüyor). Ayrıca ortadaki bileşen ikon listesinde de aynı sorun var: "Profecttive" (Protective olmalı), "Withe lightweight I Clinical Oils" (anlamsız), "Natural Sacive" (anlamsız kelime).
+- **Puan:** Karma, 3.5/5 — v1'den daha düşük, çünkü büyük overlay başlıkları doğru olsa da şişe etiketi ve ikon yazıları kullanılamayacak kadar bozuk.
+- **Bir dahaki sefere:** Bu kısımlar kadraj dışı bırakılmalı ya da post-prodüksiyonda gizlenmeli/düzeltilmeli. Genel prensip (kütüphaneye eklendi): model, prompt'ta açıkça "preserve this exact label text, do not invent additional text" denmediği sürece hem ürün etiketindeki küçük alt yazıları hem de ekran üzeri bileşen/ikon etiketlerini genelde bozuyor — büyük/ana başlık metinleri (overlay headline) daha güvenilir çıkıyor, küçük/detay metinler değil.
+
 ### "Video-to-video recreation" — Daily Moisture Cream (17 Eylül 2026)
 
 - **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-daily-moisture-cream-video-to-video-karma-v1.mp4`
@@ -125,22 +162,11 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 
 ## Onaylı üretimler (beğenilenler)
 
+> Bu tabloya sadece **hiçbir görsel/teknik kusuru bulunmayan** üretimler girer. Kusuru olan bir video (yazı hatası, senkron gecikmesi, font tutarsızlığı vb.) beğenilmiş olsa bile "Karma sonuçlu denemeler" bölümüne gider (17 Eylül 2026'da Şevval'in düzeltmesiyle netleşen kural — bkz. aşağıdaki 4 video).
+
 | Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt | Puan |
 |---|---|---|---|---|---|---|---|---|
-| `nefin-beauty-gold-tonic-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | var (AAC) | 24K Gold Tonic — sadece ürün (insan/el/yüz yok), makro cam+kapak detayı, altın tanecik dokusu, su damlası, hero açılış/kapanış, ivory/krem zemin, sıcak doğal ışık | Gemini video (muhtemelen Veo) | ↓ "Gold Tonic Hero — Onaylı Master Prompt" (aşağıda) | 5 — beğenildi, marka yönüyle (clean-girl, quiet luxury, no burgundy) tam uyumlu |
-| `nefin-beauty-sunscreen-finger-application-v1.mp4` | 1280×720 (16:9) | Sunscreen (SUN Multi Protect Moisture) elde tutulup parmaga sikiliyor, urun parmak ucunda damlaciık/krem olarak beliriyor — marka brief'in "el + urun odakli, tam yuz yok" yonergesine uygun bir kullanim/how-to sahnesi | ❓ Gemini (prompt kaydedilmedi) | ❓ (prompt yok, sadece video var) | 4 — beğenildi, kucuk bir zamanlama notuyla |
-| `nefin-beauty-retinol-supreme-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | yok (sessiz) | Retinol Supreme (gece kremi) — kapaklı kavanoz + su damlacıkları (condensation) makro açılış, üstten kremin dokusu, mavi spatula ile krem karıştırma/alma detayı | ❓ Gemini (prompt kaydedilmedi — aşağıda tahmini açıklama) | ↓ "Retinol Supreme Hero — Tahmini Açıklama (prompt orijinali kayıp)" | 5 — beğenildi |
-| `nefin-beauty-sunscreen-natural-application-v1.mp4` | 1280×720 (16:9) | 10 sn | 24 | var (AAC) | Sunscreen (NEFIN SUN multi protect moisture) doğal uygulama videosu — ürün tanıtımıyla başlıyor, pompa yakın çekimi, yüze sürülmesi (kademeli, doğal smear hareketi), parlak/nemli cilt kapanışı. Yazı overlay yok. | ❓ Gemini (prompt kaydedilmedi, iki seçenekten biri) | ❓ (prompt yok, sadece video var) | 4 — beğenildi |
-| `nefin-beauty-sunscreen-natural-application-v2.mp4` | 1280×720 (16:9) | 10 sn | 24 | var (AAC) | Aynı konseptin ikinci varyantı — ürün + model (arka planda bulanık) ile açılıyor, yüze sürümü, ortada "GÜN BOYU NEM DESTEĞİ / SPF 50+ KORUMA" ve bileşen ikonları (Vitamin E vb.) overlay metni var, kapanışta "NEFIN SUN / Doğal ve Güçlü Koruma" yazıyor. | ❓ Gemini (prompt kaydedilmedi, iki seçenekten diğeri) | ❓ (prompt yok, sadece video var) | 4 — beğenildi (ama etiket/ikon yazı hatalarıyla, aşağıdaki nota bak) |
-
-**Not — Sunscreen doğal uygulama, 2 versiyon karşılaştırması (17 Eylül 2026):** Şevval iki videoyu da beğendiğini belirtti (aynı prompttan Gemini'nin sunduğu 2 seçenek). Claude'un bağımsız incelemesi, ikisi arasında önemli bir fark ortaya çıkardı:
-
-- **v1 (yazısız versiyon):** Uygulama hareketi doğal ve kademeli (parmak ucunda damla → yanakta yayılma → tam emilmiş parlak cilt), ekranda hiç metin yok, bu yüzden okunabilir hata riski yok. **Tek sorun:** ~2. saniyedeki kesmede (ürün tanıtım çekiminden pompa yakın çekimine geçiş) şişe etiketinin font/stili değişiyor — geniş planda "NEFIN" siyah kalın sans-serif ile yazılıyken, yakın çekimde aynı logo altın renkli/el yazısı (script) bir fontla görünüyor — tek bir video içinde aynı ürün etiketinin sahne geçişinde tutarsız render edilmesi.
-- **v2 (yazılı versiyon):** Ortadaki overlay metinleri ("GÜN BOYU NEM DESTEĞİ", "SPF 50+ KORUMA", kapanıştaki "NEFIN SUN / Doğal ve Güçlü Koruma") doğru yazılmış ve net. Ama **şişe etiketinin alt yazısı baştan sona bozuk/uydurma** — "SUN1 KORUME", "Anzld fanecli propnic", "Free Duraceure", "Fly Clinically Curlincal / Clinical Driaturm" gibi hiçbir dilde anlamlı olmayan sahte kelimeler (video boyunca 3 ayrı karede görünüyor). Ayrıca ortadaki bileşen ikon listesinde de aynı sorun var: "Profecttive" (Protective olmalı), "Withe lightweight I Clinical Oils" (anlamsız), "Natural Sacive" (anlamsız kelime).
-- **Sonuç / öneri:** v1 kullanım için daha güvenli — tek düzeltilecek şey kesme noktasındaki etiket font tutarsızlığı. v2'nin orta/kapanış metinleri iyi ama şişe etiketi ve ikon yazıları kullanılamayacak kadar bozuk — ya bu kısımlar kadraj dışı bırakılmalı ya da post-prodüksiyonda gizlenmeli/düzeltilmeli.
-- **Genel prensip (kütüphaneye eklendi):** Model, prompt'ta açıkça "preserve this exact label text, do not invent additional text" denmediği sürece hem ürün etiketindeki küçük alt yazıları hem de ekran üzeri bileşen/ikon etiketlerini genelde bozuyor — büyük/ana başlık metinleri (overlay headline) daha güvenilir çıkıyor, küçük/detay metinler değil.
-
-**Not — Sunscreen parmağa sıkma (17 Eylül 2026):** Şevval: "6-7. saniyede sıktıktan sonra geliyor güneş kremi, biraz daha senkron olmalı. Onun dışında çok hata göremedim." Şişe sıkma hareketi (basma jesti) ile kremin pompa ucunda görünmesi arasında hafif bir gecikme var — el+ürün kullanım sahnelerinde (sıkma/pompalama anı) bu senkron sorununa dikkat edilmeli, gerekirse prompt'a "the cream appears at the exact moment the pump is pressed, no delay" gibi bir vurgu eklenebilir. Genel olarak beğenildi, ürün prompt'u kayıtlı değil (sadece video var).
+| `nefin-beauty-gold-tonic-hero-v1.mp4` | 720×1280 (9:16) | 10 sn | 24 | var (AAC) | 24K Gold Tonic — sadece ürün (insan/el/yüz yok), makro cam+kapak detayı, altın tanecik dokusu, su damlası, hero açılış/kapanış, ivory/krem zemin, sıcak doğal ışık | Gemini video (muhtemelen Veo) | ↓ "Gold Tonic Hero — Onaylı Master Prompt" (aşağıda) | 5 — beğenildi, marka yönüyle (clean-girl, quiet luxury, no burgundy) tam uyumlu, hiçbir kusur tespit edilmedi |
 
 ### Gold Tonic Hero — Onaylı Master Prompt (16 Eylül 2026)
 
