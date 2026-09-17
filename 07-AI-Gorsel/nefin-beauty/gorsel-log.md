@@ -22,6 +22,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | `nefin-beauty-daily-moisture-cream-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Daily Moisture Cream — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Sodyum Hyaluronat, Pantenol & Sodyum PCA, Argan/Shea/Aloe Vera), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Daily Moisture Cream — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-acne-derm-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Acne-Derm / Akne Karşıtı Krem — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Salisilik Asit, Niasinamid & Pantenol, Azelaik Asit & Çay Ağacı Yağı), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Acne-Derm — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-retinol-supreme-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Retinol Supreme — aynı üç-tüp şablonuyla bileşen görselleştirmesi (%1,5 Retinol, Niasinamid & Pantenol, Sodyum Hiyaluronat & E Vitamini), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Retinol Supreme — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+| `nefin-beauty-vitamin-c-serum-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Vitamin C+ Serum — aynı üç-tüp şablonuyla bileşen görselleştirmesi (%15 Lipozomal C Vitamini, Hyaluronik Asit, C Vitamini/Antioksidan Etki), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Vitamin C+ Serum — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 
@@ -241,6 +242,54 @@ No people, no faces, no hands, no product packaging, no nighttime scene, no burg
 Photorealistic transparent glass, realistic liquid textures, soft reflections, subtle shadows, clean premium editorial composition.
 
 Square 1:1.
+```
+
+### Vitamin C+ Serum — Bileşen Tüpleri Infografiği — Onaylı Prompt (17 Eylül 2026)
+
+> Üç-tüp şablonunun beşinci ürüne (Vitamin C+ Serum) uyarlanmış hali.
+
+- **Şevval'in değerlendirmesi:** "güzel" (onaylandı). Claude'un sorduğu ek soruya — 1. tüp "%15 Lipozomal C Vitamini" ile 3. tüp "C Vitamini / Antioksidan Etki"nin görsel olarak birbirine çok benzemesi (ikisi de altın/amber renk, benzer kabarcık dokusu) — sorun olarak görülmedi.
+- **Claude'un görsel tespiti:** Tüp boyutları ve tipografi diğer dört ürünle aynı kalitede tutarlı. Tek gözlem: ürün formülünde Vitamin C hem ana etken hem antioksidan olarak iki kez geçtiği için 1. ve 3. tüp neredeyse aynı renk/dokuda çıkmış — Şevval bunu onayladı, yani **formatın aynı bileşeni iki farklı fayda açısından göstermesi kabul edilebilir**, farklı bileşen sayısı azsa/tekrarlıysa bile şablon zorla üç farklı bileşen uydurmuyor.
+- **Puan:** 5 — beğenildi. Şablon artık **5/5 üründe** doğrulandı.
+- **Not (şablon kuralı güncellemesi):** İki tüp aynı bileşeni farklı fayda açısından gösterdiğinde bu bir hata değil — önemli olan her tüpün kendi etiketine sadık, gerçek formülden gelen bir içerik olması.
+
+```text
+Create a premium skincare ingredient infographic for NEFIN Cosmetics VITAMINE C+ SERUM.
+
+Do not show the product packaging.
+
+Create THREE tall transparent glass tubes arranged vertically and evenly, following the visual logic of the uploaded reference image.
+
+TUBE 1 — 15% LIPOSOMAL VITAMIN C
+Create a clear-to-soft golden serum containing numerous tiny translucent liposomal spheres, with subtle luminous reflections and realistic suspended droplets.
+Label:
+“%15 LİPOZOMAL C VİTAMİNİ”
+“Aydınlık & Canlı Görünüm”
+
+TUBE 2 — HYALURONIC ACID
+Create a crystal-clear pale-blue hydrated gel with elegant water droplets and translucent molecular-inspired structures.
+Label:
+“HYALURONİK ASİT”
+“Nem Desteği”
+
+TUBE 3 — VITAMIN C ANTIOXIDANT EFFECT
+Create a refined golden translucent serum with subtle luminous particles and clean antioxidant-inspired visual details.
+Label:
+“C VİTAMİNİ”
+“Antioksidan Etki”
+
+The catalog specifically confirms Vitamin C and Hyaluronic Acid and states that the product is strengthened with 15% Liposomal Vitamin C. Do not add Niacinamide or any other ingredient unless it is explicitly present in the provided product information.
+
+Visual style:
+exactly follow the approved NEFIN visual language — warm ivory / soft white background, muted light blue accents, dark blue-gray typography, bold uppercase editorial headings, thin connector lines, generous negative space, premium clinical-luxury skincare aesthetic.
+
+Use subtle champagne-gold only for the Vitamin C serum visual.
+
+No people, no faces, no hands, no product bottle, no unnecessary decorative elements, no burgundy, no red, no black.
+
+Photorealistic transparent glass, realistic liquid physics, refined macro textures, soft studio reflections and elegant editorial composition.
+
+Square 1:1 composition.
 ```
 
 ## Karma sonuçlu görseller (kısmen başarılı)
