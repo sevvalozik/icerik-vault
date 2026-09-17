@@ -18,6 +18,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 |---|---|---|---|---|---|
 | `nefin-beauty-gold-tonic-liquid-macro-v1.jpg` | 1696×2528 (~2:3 dikey) | 24K Gold Tonic sıvısının ekstrem makro çekimi — cam kenar, altın tanecikler süspansiyonda, ivory/şeffaf zemin, ürün "malzeme/ingredient" fotoğrafı gibi (şişe kadrajda yok) | Gemini görsel | ↓ "Gold Tonic Liquid Macro — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-daily-moisture-cream-ecommerce-hero-v1.png` | 687×1024 (~2:3 dikey) | Daily Moisture Cream — tek başına, sade, e-ticaret ürün fotoğrafı; etiket yazısı kusursuz net (kamera çekimi gibi) | Gemini görsel | ↓ "MASTER E-Ticaret Ürün Fotoğrafı Prompt'u" (aşağıda) | 5 — beğenildi, marka için standart ürün fotoğrafı şablonu seçildi |
+| `nefin-beauty-gold-tonic-ingredient-tubes-v1.png` | 1024×1024 (1:1) | 24K Gold Tonic — üç saydam laboratuvar tüpü içinde bileşen görselleştirmesi (24K Altın, Sodyum Hyaluronat, Hamamelis & Aloe Vera), şişe kadrajda yok, tamamen "ingredient science" estetik | Gemini görsel | ↓ "Gold Tonic — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 
@@ -51,6 +52,53 @@ Vertical composition suitable for a product gallery.
 Photorealistic macro skincare photography, ultra-realistic liquid texture, refined editorial aesthetic, subtle film grain.
 
 No text. No typography. No watermark.
+```
+
+### Gold Tonic — Bileşen Tüpleri Infografiği — Onaylı Prompt (17 Eylül 2026)
+
+> Üç saydam laboratuvar tüpü içinde 24K Gold Tonic'in üç ana bileşen grubunu (24K Altın, Sodyum Hyaluronat, Hamamelis & Aloe Vera) makro/bilimsel bir estetikle gösteren "ingredient science" tarzı infografik. Şişe kadrajda yok, sadece bileşen görselleştirmesi.
+
+- **Şevval'in değerlendirmesi:** "gayet beğendim"
+- **Claude'un görsel tespiti:** Doğrulanan güçlü yönler — üç tüp de aynı boyut/yükseklikte ve tek bir yatay grid'e hizalı (bir önceki Daily Moisture Cream görselindeki boyut uyumsuzluğu burada yok); başlık ("24K ALTIN" vb.) ve alt metin ("Bariyer Desteği & Canlı Görünüm" vb.) tümü üç tüpte aynı font/ağırlık/case ile basılmış — marka brief'e yeni eklenen "tek font ailesi" kuralına tam uyuyor. Her tüpün içeriği (altın tanecik, mavimsi jel, botanik yeşil/sarı) birbirinden net biçimde ayrışıyor, karışmıyor.
+- **Puan:** 5 — beğenildi. Font tutarlılığı ve boyut hizası açısından iyi bir pozitif referans örnek.
+- **Not:** Bu format (tek tür saydam kap + sabit boyut/grid + tek font) diğer ürünlerin bileşen infografikleri için de **yeniden kullanılabilir bir şablon** olarak düşünülebilir — ürün adı ve bileşen listesi değiştirilerek.
+
+```text
+Create a premium skincare ingredient infographic for NEFIN Cosmetics 24K GOLD TONIC.
+
+Use the uploaded NEFIN product image as the exact product reference only for understanding the product identity. Do not show the actual product bottle in the final composition.
+
+Create THREE tall, transparent laboratory-style glass tubes arranged vertically and evenly, inspired by the uploaded reference image. Each tube should contain a different elegant macro representation of one key ingredient or ingredient group from the actual formula.
+
+TUBE 1 — 24K GOLD + HYDRATION
+Visualize suspended microscopic gold particles inside a crystal-clear transparent liquid, combined with subtle hydration droplets.
+Label:
+“24K ALTIN”
+“Bariyer Desteği & Canlı Görünüm”
+
+TUBE 2 — SODYUM HYALURONAT
+Visualize a translucent pale-blue hydrated gel with delicate water molecules and soft glossy fluid structures.
+Label:
+“SODYUM HYALURONAT”
+“Nem Desteği”
+
+TUBE 3 — HAMAMELİS + ALOE VERA
+Create a refined botanical-water macro visual with subtle Hamamelis and Aloe Vera-inspired natural elements suspended in a clear liquid.
+Label:
+“HAMAMELİS & ALOE VERA”
+“Doğal, İpeksi Görünüm”
+
+Use ONLY ingredients documented for the NEFIN 24K GOLD TONIC. The formula also contains Heksapeptid-8, Aesculus Propolis Asetil Özü, Hippocastanum Özü, Kafein, Panthenol, C Vitamini and Laktik Asit, but do not overcrowd the composition.
+
+Visual style:
+warm ivory / soft white background, muted light blue accents, dark blue-gray typography, premium clinical-luxury skincare aesthetic, realistic transparent glass, photorealistic liquid textures, subtle reflections, soft shadows, elegant negative space.
+
+Typography:
+bold refined uppercase headings in the same visual character as the provided cream infographic, muted light blue for emphasis, dark blue-gray for secondary text, thin dark blue-gray connector lines.
+
+No people, no faces, no hands, no product bottle, no extra objects, no burgundy, no red, no black, no colorful laboratory equipment.
+
+Square 1:1 composition, highly realistic luxury skincare editorial photography.
 ```
 
 ## Karma sonuçlu görseller (kısmen başarılı)
