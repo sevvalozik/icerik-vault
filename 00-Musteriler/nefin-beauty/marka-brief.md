@@ -108,7 +108,7 @@ related: ["[[nefin-beauty-sunum]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06
 - **Gerçek fotoğraf:** `03-Assets/images/nefin-beauty/nefin_daily_moisture_cream.jpg`
 
 ### Diğer ürünler (❓ doğrulanacak — sadece AI mockup görsellerinde görüldü)
-- CC Cream / "Kusursuz Kapatma" (video `Bu_görseli_gerçekçi_sinematik (1).mp4` bu ürün içindi)
+- CC Cream / "Kusursuz Kapatma" (video `Bu_görseli_gerçekçi_sinematik (1).mp4` bu ürün içindi) — ayrıca bir krem dokusu editoryal görseli de bu ürün için üretildi ve onaylandı: `03-Assets/images/nefin-beauty/nefin-beauty-cream-texture-editorial-v1.png` (bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md`)
 - Retinol Supreme (gece kremi, "Regenerating and Anti-Aging Night Cream") — beğenilen bir AI hero videosunda geçiyor (`03-Assets/videos/nefin-beauty/nefin-beauty-retinol-supreme-hero-v1.mp4`), ama gerçek ürün olduğu teyit edilmedi, etiket metni AI tarafından hatalı üretilmiş ("Kegenerating", "Gream")
 - Sun Cream SPF 50+, Kolajen Peeling Jel, tek kullanımlık saşeler — WhatsApp mockup görselinde geçiyor, ürün listesi ve fiyatlar **gerçek değil**, teyit edilmeden kullanılmaz.
 - Sun Cream'in etiketi bir AI videosunda net görüldü ("SUN Multi Protect Moisture, SPF 50+, Mineral Filtre UVB+UVA, Vitamin B E & Leke Karşıtı") ama bu da AI üretimi — gerçek ürün/etiket olduğu teyit edilmedi (bkz. `06-AI-Video/nefin-beauty/video-log.md` → "Sunscreen — suda yüzen ürün konsepti").
