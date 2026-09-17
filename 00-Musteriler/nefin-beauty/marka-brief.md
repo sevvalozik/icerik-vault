@@ -135,6 +135,7 @@ related: ["[[nefin-beauty-sunum]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06
 ## 9. Rakipler & İlham
 
 - Rakip/konum: The Purest Solutions, Cosmed, Estée Lauder
+- The Purest'in bileşen/içerik infografik tasarımı gerçek dosya olarak vault'a eklendi (sadece kompozisyon referansı): `03-Assets/images/nefin-beauty/ilham-referanslar/the-purest-ingredient-infographic-referans.png`
 - Web ilhamı: Cosmed, Aesop, Fenty Beauty, Glossier, Merit, Rare Beauty, Summer Fridays (detay: sunum notunda)
 - Mobbin: Hers PDP akordeon, Hims güven odaklı hero
 

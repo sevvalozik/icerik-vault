@@ -60,6 +60,14 @@ El ile ürün sıkma/pompalama sahnelerinde (losyon, güneş kremi vb.) basma je
 
 Pipette şişeden kaldırılırken şişenin içinde eski çubuğun hayalet/silüet izi kalabiliyor. Ek negatif: `duplicate pipette rod visible inside bottle, ghost rod silhouette, pipette not fully removed from bottle neck`. Pozitif takviye: `"The pipette rod is fully and cleanly removed from the bottle neck — no trace or duplicate remains visible inside the bottle glass."` Kaynak: `06-AI-Video/nefin-beauty/video-log.md` → "Vitamin C Serum — pipette damla makro".
 
+## Kompozisyon içinde tutarsız arka plan rengi (çoklu-bölge görseller)
+
+Birden fazla dairesel/bölgesel görsel alanı olan kompozisyonlarda (ingredient story, ürün ailesi vitrini vb.) modeller kompozisyonun farklı yarılarını/bölgelerini farklı zemin tonlarında üretebiliyor — sonuçta görsel "dikişli" görünüyor, tek bir kompozisyon gibi durmuyor.
+
+Pozitif takviye: `"the entire background must be a single continuous [renk] tone across the whole composition — no visible seam, gradient shift, or color difference between sections."`
+
+Kaynak: Nefin Vitamin C+ Serum "ingredient story" denemesi, bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Karma sonuçlu görseller.
+
 ## Su / sıvı içinde ürün — gerçekçilik (compositing hissi)
 
 Ürünü suda/sıvıda yüzerken gösteren promptlarda model, ürünü suyun üstüne **yapıştırılmış (composite) gibi** çiziyor — gerçek kırılma/refraction, suyun ürünü hafif bulanıklaştırması gibi optik etkiler eksik kalıyor, "yapay havuz" hissi veriyor. Sadece "floating in water" demek yetmiyor.

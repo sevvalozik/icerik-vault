@@ -53,6 +53,21 @@ Photorealistic macro skincare photography, ultra-realistic liquid texture, refin
 No text. No typography. No watermark.
 ```
 
+## Karma sonuçlu görseller (kısmen başarılı)
+
+### Vitamin C+ Serum — "ingredient story" bilgi görseli (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/images/nefin-beauty/nefin-beauty-vitamin-c-serum-ingredient-story-v1.png`
+- **Referans görsel (gerçek dosya, rakip marka):** `03-Assets/images/nefin-beauty/ilham-referanslar/the-purest-ingredient-infographic-referans.png` — The Purest markasının bir içerik/bileşen infografiği, sadece kompozisyon/sanat yönü referansı olarak kullanıldı (marka/logo/tipografi kopyalanmadı, brief'te zaten "Rakipler & İlham" bölümünde The Purest geçiyor).
+- **Konsept:** Ürünün etrafında bileşen bilgisi anlatan dairesel makro görsellerle (Liposomal C, Hyaluronic Acid, Niacinamide, Vitamin C+) bilimsel/editoryal bir "ingredient story" kompozisyonu.
+- **Şevval'in değerlendirmesi:** "Bu kısım gayet güzel olmuş. Ama sol taraf ve sağ tarafta arka plan rengi farklı gözüküyor ve benim verdiğim referans görselinden farklılık var. Ürün görselinin olmasını istememiştim ekstra olarak mesela."
+- **Claude'un görsel tespiti:** Doğrulandı — kompozisyonun sol yarısı (Liposomal C + serum dokusu daireleri) sıcak/ivory tonlu bir zemin üzerinde, sağ yarısı (Hyaluronic Acid + Niacinamide daireleri) ise daha soğuk/düz beyaz bir zeminde duruyor — görselin ortasında net bir "dikiş" hissi var, tek bir kompozisyon gibi değil iki yarı birleştirilmiş gibi görünüyor. Referans görsel (The Purest) bu tutarsızlığı içermiyor, tek tip nötr zemin kullanıyor.
+- **Önemli tercih notu:** Şevval, ürün şişesinin kompozisyonun ortasında yer almasını **istemediğini** belirtti — oysa bu deneme promptunda ürün açıkça "hero" olarak isteniyordu. Bu, bundan sonraki "ingredient story" tarzı görsellerde **varsayılan olarak ürün şişesi eklenmemesi gerektiği** şeklinde bir tercih değişikliği/netleşme olarak kaydedildi.
+- **Puan:** Karma, 4/5 — konsept, tipografi ve bileşen dairelerinin kalitesi çok iyi; zemin tutarlılığı ve ürün dahil edilmesi düzeltilmeli.
+- **Bir dahaki sefere:** (1) Prompt'a tüm kompozisyon için **tek, kesintisiz bir arka plan rengi** vurgusu ekle: `"the entire background must be a single continuous warm ivory tone across the whole composition — no visible seam or color shift between left and right halves."` (2) Ürün şişesini kompozisyondan çıkar, sadece bileşen daireleri + tipografi ile dene.
+
+**Kullanılan prompt (özet, kritik kısımlar):** Ürün referans olarak korunacak (birebir), The Purest'in SADECE görsel mantığı/kompozisyon yapısı referans alınacak (marka/logo/tipografi kopyalanmayacak); 4-5 dairesel makro görsel bölgesi (Liposomal C, Hyaluronic Acid, Serum dokusu, Antioksidan/radiance), ince bağlayıcı çizgiler, modern sans-serif tipografi, sıcak ivory + şampanya/amber aksanlar, sadece marka brief'te onaylı iddialar kullanılacak (uydurma yüzde/iddia yok), 16:9, no people/hands/faces, no misspelled text. Tam prompt çok uzun (~500 satır) — orijinali bu konuşmada mevcut, gerekirse tekrar istenebilir.
+
 ## Reddedilen denemeler
 
 ### "Gold Tonic — sabah ritüeli" görseli (16 Eylül 2026)
