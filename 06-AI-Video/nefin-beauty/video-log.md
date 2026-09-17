@@ -36,9 +36,11 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 
 ## Karma sonuçlu denemeler (kısmen başarılı, detaylı analiz)
 
+> Bu videolar `03-Assets/videos/nefin-beauty/karma/` klasöründe tutulur — onaylı üretimlerle (ana klasör) aynı yerde durmasınlar diye ayrı bir alt klasöre taşındı (17 Eylül 2026). Referans/öğrenme amaçlı, doğrudan kullanılmaz; kullanılabilir hale gelmesi için aşağıdaki düzeltmelerin uygulanıp yeniden üretilmesi gerekir.
+
 ### "Video-to-video recreation" — Daily Moisture Cream (17 Eylül 2026)
 
-- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-daily-moisture-cream-video-to-video-karma-v1.mp4`
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-daily-moisture-cream-video-to-video-karma-v1.mp4`
 - **Teknik:** Yeni bir yöntem — başka bir markanın (COSMED) gerçek reklam videosu **referans video** olarak yüklenip, "bu videoyu birebir, shot-by-shot yeniden oluştur, TEK değişken üründür" deniyor. Kamera hareketi, çoklu ürün sayısı/dizilimi, zamanlama, geçişler referans videodan **birebir** isteniyor — text prompt "DO NOT summarize/interpret/simplify, reference is the exact storyboard" diye ısrarla vurguluyor. Bu; önceki "model elinde ürün" reddedilen denemesinden farklı olarak, marka brief'teki "tek ürün hero" değil, **çoklu ürün / reklam filmi** tarzı bir kompozisyon hedefliyor.
 - **Şevval'in saniye saniye gözlemi:**
   - **0-1 sn:** Ekrandaki boşlukların birden "tamamlandığı" bir görsel bug var (muhtemelen krem dokusu iç detaylarında bir tutarsızlık/morph).
@@ -76,7 +78,7 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 
 ### Sunscreen — "suda yüzen ürün" konsepti (17 Eylül 2026)
 
-- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-sunscreen-floating-water-karma-v1.mp4`
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-sunscreen-floating-water-karma-v1.mp4`
 - **Ürün:** NEFIN SUNSCREEN / "SUN Multi Protect Moisture SPF 50+" — marka brief'teki onaylı 4 üründen değil, "diğer ürünler ❓ doğrulanacak" listesindeki "Sun Cream SPF 50+" ile eşleşiyor (etiket bu üründe ilk kez net görüldü).
 - **Konsept:** Ürün berrak suda ağırlıksız süzülüyor/yüzüyor, tek continuous shot, kamera yavaşça yaklaşıp hafif yanlamasına dönüyor.
 - **Şevval'in değerlendirmesi:** "Aşırı gerçekçi gelmedi (yapay bir havuz ve su gibi) ama istediğim şeyi yerine getirmiş — sadece görsel olarak gelişmesi gerekiyor, onun dışında fena değil. Suyun içindeyken ürünün yazılarında hata var."
@@ -87,7 +89,7 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 
 ### Vitamin C Serum — pipette damla makro (17 Eylül 2026)
 
-- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-vitamin-c-serum-pipette-drop-karma-v1.mp4`
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-vitamin-c-serum-pipette-drop-karma-v1.mp4`
 - **Prompt:** `prompt-formulu.md`'deki hazır "Veo 3.x / Sora 2" örnek promptu birebir denendi (marka brief'in Vitamin C Serum product sheet'inden üretilmiş master örnek).
 - **Şevval'in değerlendirmesi:** "Hatalı, şişenin içinde çubuğunu çıkarıyor ama çubuk içerde kalıyor. Damlatma kısmı güzel. Sıvının yayılması biraz daha gerçekçi olabilir ama."
 - **Claude'un görsel tespiti:** Doğrulandı — pipette şişeden yukarı kaldırılırken, şişenin camı içinde **aynı pipette çubuğunun silueti/izi hâlâ görünüyor** (0.3-2 sn arası kareler) — sanki gerçek pipette dışarı çıkmış ama bir "hayalet" kopyası şişenin içinde kalmış. Damla oluşumu ve düşüşü (3-7 sn) gerçekten akıcı ve gerçekçi. Sıvının traverten üzerine yayılması (7-8 sn) düzgün bir daire gibi duruyor, gerçek bir sıvının düzensiz/organik kenarları eksik — Şevval'in "biraz daha gerçekçi olabilir" notuyla örtüşüyor.
@@ -98,7 +100,7 @@ MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate i
 
 ### "Cream Wave" — Daily Moisture Cream'in kremden ortaya çıkışı (17 Eylül 2026)
 
-- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-daily-moisture-cream-wave-reveal-karma-v1.mp4`
+- **Dosya:** `03-Assets/videos/nefin-beauty/karma/nefin-beauty-daily-moisture-cream-wave-reveal-karma-v1.mp4`
 - **Konsept:** 0-5 sn arası salt krem dokusu makro çekimi (ürün yok), sonra kamera geri çekilip ürünün kremin içinden yavaşça ortaya çıkması isteniyor.
 - **Şevval'in değerlendirmesi:** "Videonun ilk kısmı gayet güzel, kullanılabilir ama daha sonra ürün bir anda kremin içinden çıkıyor. Bu çok AI duruyor."
 - **Claude'un görsel tespiti:** 0-5 sn arası krem dalgası gerçekten çok başarılı — pürüzsüz, gerçekçi, marka yönüyle tam uyumlu. Ama ~5.5-6 sn'de ürün **yavaş bir "ortaya çıkma" değil, ani bir "belirme"** ile geliyor — önce sadece altın kapak kremin ortasında beliriyor, hemen ardından (6.5-7 sn) şişenin tamamı zaten kremin üstünde duruyor. Prompt'un istediği "bottle slowly becomes visible from behind the flowing cream" / "naturally emerges" hissi yok, düz bir kesme/pop-up gibi. Etiket yazısı da burada yine hafif bozuk ("Hydration Comfort Nourishment" tam okunmuyor).

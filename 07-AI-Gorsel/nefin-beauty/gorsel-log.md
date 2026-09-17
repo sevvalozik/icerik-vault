@@ -304,9 +304,11 @@ Square 1:1 composition.
 
 ## Karma sonuçlu görseller (kısmen başarılı)
 
+> Bu görseller `03-Assets/images/nefin-beauty/karma/` klasöründe tutulur — onaylı görsellerle (ana klasör) aynı yerde durmasınlar diye ayrı bir alt klasöre taşındı (17 Eylül 2026). Referans/öğrenme amaçlı, doğrudan kullanılmaz; kullanılabilir hale gelmesi için aşağıdaki düzeltmelerin uygulanıp yeniden üretilmesi gerekir.
+
 ### Vitamin C+ Serum — "ingredient story" bilgi görseli (17 Eylül 2026)
 
-- **Dosya:** `03-Assets/images/nefin-beauty/nefin-beauty-vitamin-c-serum-ingredient-story-v1.png`
+- **Dosya:** `03-Assets/images/nefin-beauty/karma/nefin-beauty-vitamin-c-serum-ingredient-story-v1.png`
 - **Referans görsel (gerçek dosya, rakip marka):** `03-Assets/images/nefin-beauty/ilham-referanslar/the-purest-ingredient-infographic-referans.png` — The Purest markasının bir içerik/bileşen infografiği, sadece kompozisyon/sanat yönü referansı olarak kullanıldı (marka/logo/tipografi kopyalanmadı, brief'te zaten "Rakipler & İlham" bölümünde The Purest geçiyor).
 - **Konsept:** Ürünün etrafında bileşen bilgisi anlatan dairesel makro görsellerle (Liposomal C, Hyaluronic Acid, Niacinamide, Vitamin C+) bilimsel/editoryal bir "ingredient story" kompozisyonu.
 - **Şevval'in değerlendirmesi:** "Bu kısım gayet güzel olmuş. Ama sol taraf ve sağ tarafta arka plan rengi farklı gözüküyor ve benim verdiğim referans görselinden farklılık var. Ürün görselinin olmasını istememiştim ekstra olarak mesela."
@@ -319,7 +321,7 @@ Square 1:1 composition.
 
 ### Daily Moisture Cream — cilt uygulama + bileşen-fayda editoryal görseli (17 Eylül 2026)
 
-- **Dosya:** `03-Assets/images/nefin-beauty/nefin-beauty-daily-moisture-cream-ingredient-benefit-editorial-karma-v1.png`
+- **Dosya:** `03-Assets/images/nefin-beauty/karma/nefin-beauty-daily-moisture-cream-ingredient-benefit-editorial-karma-v1.png`
 - **Konsept:** Solda modelin yanağına krem süren eli (cilt uygulama anı), sağda ürün şişesi + krem dokusu büyütülmüş halde, her iki tarafta dairesel bileşen/fayda ikonları ve kısa fayda metinleri (Gün boyu nem desteği, Cildin nem bariyerini güçlendirmeye yardımcı, Esnek/pürüzsüz/doğal görünüm, E Vitamini + Allantoin, Argan/Badem/Kalendula/Shea/Jojoba Yağı + Aloe Vera) ve ürünün doku/his callout'ları (Yumuşak ve hafif doku, Hızlı emilim, Yağlı bir his bırakmaz).
 - **Şevval'in değerlendirmesi:** "Bu gayet güzel olmuş ama ortadaki yağlar, vitaminler vs o kısımdaki yazı fontları farklı. Web sitesinde oluşturulacak tüm görsellerin yazı fontları aynı olmalı bütünlük açısından. Ve yağlar kısmındaki görselleri falan çok beğenemedim. Bir de boyut uyumsuzluğu var yukarıdan aşağıya olan yuvarlakların hepsinde."
 - **Claude'un görsel tespiti:** Doğrulandı, üç ayrı sorun net görünüyor:
