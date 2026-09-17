@@ -74,6 +74,17 @@ PHYSICS: correct proportions/perspective, realistic shadows/reflections/contact/
 MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate its visual sequence as literally as possible. Only change: Cosmed products → NEFIN Daily Moisture Cream, same count or scale relationships. Same overall duration and pacing as reference. Photorealistic, high-end skincare commercial, ultra-realistic macro texture, professional cinematography, natural motion blur, realistic materials/cream physics.
 ```
 
+### Sunscreen — "suda yüzen ürün" konsepti (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-sunscreen-floating-water-karma-v1.mp4`
+- **Ürün:** NEFIN SUNSCREEN / "SUN Multi Protect Moisture SPF 50+" — marka brief'teki onaylı 4 üründen değil, "diğer ürünler ❓ doğrulanacak" listesindeki "Sun Cream SPF 50+" ile eşleşiyor (etiket bu üründe ilk kez net görüldü).
+- **Konsept:** Ürün berrak suda ağırlıksız süzülüyor/yüzüyor, tek continuous shot, kamera yavaşça yaklaşıp hafif yanlamasına dönüyor.
+- **Şevval'in değerlendirmesi:** "Aşırı gerçekçi gelmedi (yapay bir havuz ve su gibi) ama istediğim şeyi yerine getirmiş — sadece görsel olarak gelişmesi gerekiyor, onun dışında fena değil. Suyun içindeyken ürünün yazılarında hata var."
+- **Claude'un görsel tespiti:** Su dokusu tekrar eden/kaplama (tiled) bir doku gibi görünüyor, üründe **gerçek bir su kırılması (refraction) veya optik etkileşim yok** — ürün suyun üzerine yapıştırılmış/composite edilmiş gibi duruyor, suyun İÇİNDEN görünmüyor. Bu yüzden "yapay havuz" hissi veriyor — gerçek su fiziği (ürünün suyla aynı ışıkta kırılması, hafif bulanıklaşması) eksik. Etiketin ikinci satırı ("SLDE AL BIONITE / ALAVTIONT REAELTE" gibi) tamamen anlamsız/bozuk çıkmış.
+- **Kök neden:** Bu ürün için gerçek bir referans fotoğraf yok (marka brief'te "Sun Cream" doğrulanmamış) → model etiket metnini **uyduruyor** (bkz. genel kural: gerçek referans yoksa yazı güvenilmez). Su-ürün optik etkileşiminin eksikliği muhtemelen modelin "floating beneath the surface" tarif edilen sahneyi düz bir compositing olarak yorumlamasından kaynaklanıyor — refraction/distortion için daha açık ve teknik bir talep gerekebilir.
+- **Puan:** Karma, 3/5 — konsept ve hareket istenen şekilde ama görsel gerçekçilik (su fiziği) ve etiket yazısı düzeltilmeli.
+- **Bir dahaki sefere:** (1) Su-ürün etkileşimi için prompt'a şunun gibi daha teknik bir talep eklenebilir: `"the water in front of the bottle causes visible optical distortion and light refraction on the label, the product is genuinely submerged, not composited on top of the water"`. (2) Bu ürün için de gerçek bir referans fotoğrafı olmadığından yazı riskli — ya gerçek ürün fotoğrafı sağlanmalı ya da yazı post-prodüksiyonda eklenmeli.
+
 ## Reddedilen denemeler
 
 > Neden reddedildiği açıkça yazılır ki aynı hata tekrar üretilmesin. Dosyalar vault'a eklenmedi (kullanım değeri yok), sadece prompt + hata burada duruyor.

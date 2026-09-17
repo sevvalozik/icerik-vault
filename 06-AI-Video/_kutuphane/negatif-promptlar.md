@@ -52,6 +52,16 @@ Negatif liste eki: `unrelated props, random decorative objects, unexplained glas
 
 Kaynak: Nefin 24K Gold Tonic "sabah ritüeli" görseli, cam kase objesi nedeniyle reddedildi (bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Reddedilen denemeler).
 
+## Su / sıvı içinde ürün — gerçekçilik (compositing hissi)
+
+Ürünü suda/sıvıda yüzerken gösteren promptlarda model, ürünü suyun üstüne **yapıştırılmış (composite) gibi** çiziyor — gerçek kırılma/refraction, suyun ürünü hafif bulanıklaştırması gibi optik etkiler eksik kalıyor, "yapay havuz" hissi veriyor. Sadece "floating in water" demek yetmiyor.
+
+Pozitif takviye cümlesi (denenecek): `"the water in front of the bottle causes visible optical distortion and light refraction on the label — the product is genuinely submerged in the water, not composited on top of it."`
+
+Negatif liste eki: `flat compositing look, product pasted on top of water, no optical interaction with water, no refraction through liquid, tiled or repeating water texture`
+
+Kaynak: Nefin Sunscreen "suda yüzen ürün" denemesi, bkz. `06-AI-Video/nefin-beauty/video-log.md`.
+
 ## Çoklu ürün sahne-geçişi tutarlılığı (video-to-video recreation)
 
 Referans video ile "shot-by-shot" yeniden üretimde tek ürün → çoklu ürün geçişleri (veya tam tersi) modelin ürün sayısını/boyutunu/etiketini **o an yeniden icat etmesine** yol açıyor — önceki karedeki şişelerle eşleşmiyor (boyut tutarsızlığı, farklı etiket hataları aynı sahnede bir arada). Kamera hareketi ve tek ürün sahneleri bu sorundan etkilenmiyor, sorun özellikle çoklu-obje sahne geçişlerinde çıkıyor.
