@@ -71,6 +71,7 @@ related: ["[[nefin-beauty-sunum]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06
 - **Başlık:** Cambria (serif)
 - **Gövde:** Calibri
 - **Video altyazı / overlay fontu:** Cambria (başlık) + Calibri (alt yazı). Site fontu için ❓ web-safe alternatif (örn. Cormorant Garamond + Inter) müşteriyle netleştirilecek.
+- **⚠️ Kural (17 Eylül 2026):** Web sitesi için üretilecek TÜM AI görsellerinde (ingredient/fayda callout'ları dahil) yazı tipi tek ve tutarlı olmalı — bir kompozisyon içinde farklı bölümler farklı font/ağırlık/case kullanmamalı. Prompt'a her seferinde açıkça yazılmalı: `"Use exactly one typeface family for ALL text in the composition."` Sebep: Daily Moisture Cream ingredient-benefit görselinde üst başlıklar ile alt bileşen listesi farklı fontlarda çıkmıştı, bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Karma sonuçlu görseller.
 
 ### Görsel yön (fotoğraf / video)
 

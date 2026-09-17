@@ -68,6 +68,22 @@ No text. No typography. No watermark.
 
 **Kullanılan prompt (özet, kritik kısımlar):** Ürün referans olarak korunacak (birebir), The Purest'in SADECE görsel mantığı/kompozisyon yapısı referans alınacak (marka/logo/tipografi kopyalanmayacak); 4-5 dairesel makro görsel bölgesi (Liposomal C, Hyaluronic Acid, Serum dokusu, Antioksidan/radiance), ince bağlayıcı çizgiler, modern sans-serif tipografi, sıcak ivory + şampanya/amber aksanlar, sadece marka brief'te onaylı iddialar kullanılacak (uydurma yüzde/iddia yok), 16:9, no people/hands/faces, no misspelled text. Tam prompt çok uzun (~500 satır) — orijinali bu konuşmada mevcut, gerekirse tekrar istenebilir.
 
+### Daily Moisture Cream — cilt uygulama + bileşen-fayda editoryal görseli (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/images/nefin-beauty/nefin-beauty-daily-moisture-cream-ingredient-benefit-editorial-karma-v1.png`
+- **Konsept:** Solda modelin yanağına krem süren eli (cilt uygulama anı), sağda ürün şişesi + krem dokusu büyütülmüş halde, her iki tarafta dairesel bileşen/fayda ikonları ve kısa fayda metinleri (Gün boyu nem desteği, Cildin nem bariyerini güçlendirmeye yardımcı, Esnek/pürüzsüz/doğal görünüm, E Vitamini + Allantoin, Argan/Badem/Kalendula/Shea/Jojoba Yağı + Aloe Vera) ve ürünün doku/his callout'ları (Yumuşak ve hafif doku, Hızlı emilim, Yağlı bir his bırakmaz).
+- **Şevval'in değerlendirmesi:** "Bu gayet güzel olmuş ama ortadaki yağlar, vitaminler vs o kısımdaki yazı fontları farklı. Web sitesinde oluşturulacak tüm görsellerin yazı fontları aynı olmalı bütünlük açısından. Ve yağlar kısmındaki görselleri falan çok beğenemedim. Bir de boyut uyumsuzluğu var yukarıdan aşağıya olan yuvarlakların hepsinde."
+- **Claude'un görsel tespiti:** Doğrulandı, üç ayrı sorun net görünüyor:
+  1. **Font tutarsızlığı:** Üstteki 3 fayda başlığı ("GÜN BOYU NEM DESTEĞİ", "CİLDİN NEM BARİYERİNİ GÜÇLENDİRMEYE YARDIMCI", "ESNEK, PÜRÜZSÜZ VE DOĞAL GÖRÜNÜM") kalın/büyük harf bir sans-serif kullanıyor; hemen altındaki "E Vitamini / Allantoin" ve "Argan Yağı / Badem Yağı / Kalendula / Shea Yağı / Jojoba Yağı / Aloe Vera" listeleri ise farklı bir ağırlıkta/karakterde, büyük harf olmayan bir yazı tipiyle basılmış — tek bir kompozisyon içinde en az 2 farklı font ailesi/ağırlığı bir arada.
+  2. **Yağlar bölümü ikon sorunu:** Sağdaki 7 dairesel ikondan sadece 3'ü (altın damla = muhtemelen bir yağ, turuncu çiçek = Kalendula, aloe yaprakları = Aloe Vera) ilgili bileşene görsel olarak karşılık geliyor; Argan Yağı, Badem Yağı, Shea Yağı, Jojoba Yağı ayrı ayrı listelenmiş olmasına rağmen kendilerine özgü bir ikonları yok — 6 farklı bileşen adına karşı yalnızca birkaç jenerik/örtüşen görsel var. Bu, ikonların "beğenilmeme" sebebinin sadece estetik değil, bileşen-ikon eşleşmesinin eksik/tutarsız olması olduğunu gösteriyor.
+  3. **Boyut uyumsuzluğu:** Dairesel callout görselleri yukarıdan aşağıya gözle görülür şekilde farklı çaplarda — üstteki su damlası ve dokusal daireler birbirine yakın boyutta iken, alttaki yağ/aloe daireleri hem kendi aralarında hem üsttekilere göre büyüklük tutmuyor; tek bir dikey grid hizası yok.
+- **Puan:** Karma, 3/5 — ana kompozisyon (model + ürün + genel layout) güçlü ama tipografi tutarlılığı, ikon-bileşen eşleşmesi ve daire boyutlandırması düzeltilmeden kullanılabilir değil.
+- **Bir dahaki sefere:**
+  1. Prompt'a tek tipografi vurgusu ekle: `"Use exactly one typeface family for ALL text in the composition — headlines and ingredient labels must share the same font, weight, and case (all caps or all title case, never mixed)."`
+  2. Her bileşen için ayrı, o bileşene özgü somut ikon tarifi ver (jenerik "oil drop" yerine): `"Argan Yağı: a single amber argan oil drop with a visible argan nut fragment. Badem Yağı: a few whole almonds with one split open. Shea Yağı: a small ivory shea butter knob. Jojoba Yağı: a jojoba seed pod. Kalendula: a marigold/calendula flower. Aloe Vera: a cut aloe leaf showing the gel."` — 6 farklı bileşen, 6 farklı somut görsel referans, jenerik/tekrar eden ikon yok.
+  3. Daire boyutu için: `"All circular ingredient callout icons must be rendered at exactly the same diameter and aligned to a single vertical grid — no size variation between them."`
+- **Genel marka kuralı (brief'e eklendi):** "Web sitesi için üretilecek tüm AI görsellerinde yazı tipi tek ve tutarlı olmalı" — bkz. marka brief → Tipografi.
+
 ## Reddedilen denemeler
 
 ### "Gold Tonic — sabah ritüeli" görseli (16 Eylül 2026)

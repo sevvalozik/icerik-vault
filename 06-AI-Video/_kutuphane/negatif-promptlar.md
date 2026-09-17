@@ -113,6 +113,25 @@ Prompt'a pozitif cümle olarak yaz:
 No background music. No narration. No subtitles. No on-screen text. Only ambient room tone and the described sound effect.
 ```
 
+## Çoklu-öğeli kompozisyonlarda tipografi ve ikon tutarlılığı (bileşen/fayda callout görselleri)
+
+Birden fazla metin bloklu (başlık + alt liste + callout) ve birden fazla dairesel/ikon öğeli kompozit görsellerde modeller üç ayrı tutarlılık hatası yapıyor:
+
+1. **Font karışıklığı:** Kompozisyonun farklı bölgeleri (ör. üst başlıklar vs. alt bileşen listesi) farklı font ailesi/ağırlık/case (büyük harf vs. normal) ile basılıyor — tek bir marka görseli gibi değil, birden fazla parçanın birleştirilmişi gibi duruyor.
+2. **Jenerik/eşleşmeyen ikonlar:** Birden çok farklı bileşen/madde ismi listelendiğinde model genelde 2-3 jenerik ikonu tekrar kullanıyor veya birbirine çok benzer görseller üretiyor — her isim kendine özgü, tanınabilir bir görsele sahip olmuyor.
+3. **Boyut/hizalama tutarsızlığı:** Aynı tipteki tekrarlayan öğeler (daireler, ikon kutuları) kompozisyon boyunca farklı çap/boyutta çıkıyor, tek bir grid'e oturmuyor.
+
+Negatif liste eki: `inconsistent typography across composition, mixed font families in one image, mismatched text case, generic repeated icons, inconsistent icon sizing, unaligned circular elements, varying circle diameters`
+
+Pozitif takviye cümleleri (denenecek):
+```text
+Use exactly one typeface family for ALL text in the composition — every headline and label must share the same font, weight, and case (all caps or all title case, never mixed).
+Each labeled item must have its own distinct, recognizable icon — no generic or repeated icon reused across different ingredient/benefit names.
+All circular callout icons must be rendered at exactly the same diameter and aligned to a single consistent grid — no size variation between them.
+```
+
+Kaynak: Nefin Daily Moisture Cream "cilt uygulama + bileşen-fayda editoryal görseli", bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Karma sonuçlu görseller.
+
 ## Nasıl kullanılır
 
 1. Genel + sektör listesini birleştir (tekrarları sil).
