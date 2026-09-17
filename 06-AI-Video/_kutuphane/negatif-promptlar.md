@@ -52,6 +52,16 @@ Negatif liste eki: `unrelated props, random decorative objects, unexplained glas
 
 Kaynak: Nefin 24K Gold Tonic "sabah ritüeli" görseli, cam kase objesi nedeniyle reddedildi (bkz. `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → Reddedilen denemeler).
 
+## Çoklu ürün sahne-geçişi tutarlılığı (video-to-video recreation)
+
+Referans video ile "shot-by-shot" yeniden üretimde tek ürün → çoklu ürün geçişleri (veya tam tersi) modelin ürün sayısını/boyutunu/etiketini **o an yeniden icat etmesine** yol açıyor — önceki karedeki şişelerle eşleşmiyor (boyut tutarsızlığı, farklı etiket hataları aynı sahnede bir arada). Kamera hareketi ve tek ürün sahneleri bu sorundan etkilenmiyor, sorun özellikle çoklu-obje sahne geçişlerinde çıkıyor.
+
+Negatif liste eki: `inconsistent product scale between cuts, product count changing between shots, re-generated duplicate objects, mismatched label text across identical copies`
+
+Pozitif takviye cümlesi (denenecek): `"The exact same N bottles, identical in size and label, must persist across every cut — do not regenerate or resize them per shot."`
+
+Kaynak: Nefin Daily Moisture Cream "video-to-video recreation" (COSMED reklamı referans alınarak), bkz. `06-AI-Video/nefin-beauty/video-log.md` → Karma sonuçlu denemeler.
+
 ## Ürün sürekliliği (model elinde ürün olan çekimler)
 
 Model ürünü elinde tutan sahnelerde ürün genelde sahneye "sonradan giriyor" (uçarak/ışınlanarak beliriyor). Bunu önlemek için negatif listeye ek olarak **pozitif cümle** şart:

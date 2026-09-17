@@ -34,6 +34,46 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 
 → [[c-vitamini-serum-kampanya-brief]] (4 shot, promptlar hazır). Gerçek ürün fotoğrafı ve logo geldiğinde başlanır.
 
+## Karma sonuçlu denemeler (kısmen başarılı, detaylı analiz)
+
+### "Video-to-video recreation" — Daily Moisture Cream (17 Eylül 2026)
+
+- **Dosya:** `03-Assets/videos/nefin-beauty/nefin-beauty-daily-moisture-cream-video-to-video-karma-v1.mp4`
+- **Teknik:** Yeni bir yöntem — başka bir markanın (COSMED) gerçek reklam videosu **referans video** olarak yüklenip, "bu videoyu birebir, shot-by-shot yeniden oluştur, TEK değişken üründür" deniyor. Kamera hareketi, çoklu ürün sayısı/dizilimi, zamanlama, geçişler referans videodan **birebir** isteniyor — text prompt "DO NOT summarize/interpret/simplify, reference is the exact storyboard" diye ısrarla vurguluyor. Bu; önceki "model elinde ürün" reddedilen denemesinden farklı olarak, marka brief'teki "tek ürün hero" değil, **çoklu ürün / reklam filmi** tarzı bir kompozisyon hedefliyor.
+- **Şevval'in saniye saniye gözlemi:**
+  - **0-1 sn:** Ekrandaki boşlukların birden "tamamlandığı" bir görsel bug var (muhtemelen krem dokusu iç detaylarında bir tutarsızlık/morph).
+  - **~3 sn:** Kamera çoklu ürünün etrafında dönüyor — **bu kısım sorunsuz, güzel**, hata yok.
+  - **~5 sn:** Çoklu şişeden aniden tek şişeye geçiliyor — **bu istenen/beğenilen bir davranış** (çoklu → tek ürün hero geçişi).
+  - **~8 sn:** Diğer kremler aniden geri "ışınlanıyor" (tek üründen tekrar çoklu ürüne dönüş ani ve fiziksel bir geçiş/mantık olmadan oluyor) — bu bizi **gerçeklikten uzaklaştırıyor**, AI videoların "gerçek kamerayla çekilmiş gibi" durması hedefiyle çelişiyor.
+  - **8-10 sn:** Kremler geri geldikten sonra ana ürünle yanındaki diğer şişeler arasında **boyut/ölçek tutarsızlığı** oluşuyor, 10. saniyede net görülüyor (bazı kapaklar/şişeler belirgin şekilde farklı boyda).
+- **Ek gözlem (Claude, görsel inceleme):** Şişeler tekrar çoğaldığında etiket yazısı da her kopyada farklı şekilde bozuluyor ("Hydration Comfort Nourishment" doğru kalan kopyalar var, ama "Hydrallen Comllon Noulthment" gibi hatalı kopyalar da aynı sahnede bir arada — yani tutarsızlık hem boyutta hem yazıda).
+- **Kök neden (olası):** Referans videoda "aynı ürünün N kopyası" sahne geçişleri arasında obje kalıcılığı (object permanence) koruyordu (gerçek çekim); model bunu NEFIN ürününe uygularken sahne geçişlerinde (özellikle tek→çoklu dönüşünde) ürün sayısını/boyutunu/etiketini yeniden "icat ediyor", önceki karedeki tam haliyle eşleştiremiyor.
+- **Puan:** Karma — kamera koreografisi ve çoklu-ürün-etrafında-dönme kısmı 5/5; sahne geçişlerinde obje kalıcılığı (ürün sayısı/boyut/etiket tutarlılığı) 2/5. Genel: 3/5, referans olarak tutulmaya değer (özellikle kamera hareketi + tek→çoklu geçiş kısmı için).
+- **Bir dahaki sefere:** Bu teknik (referans video ile shot-by-shot recreation) tek ürün hero çekimlerinde iyi çalışıyor gibi duruyor (bkz. 5-8 sn arası); çoklu ürün sahnelerinde obje sayısı/boyut tutarlılığı için ek bir "kesin sayı ve tutarlı boyut" vurgusu prompt'a eklenmeli (ör. "the exact same 6 bottles, same relative sizes, must persist identically across every cut — do not regenerate them per shot").
+
+**Kullanılan tam prompt:**
+```text
+RECREATE THE UPLOADED REFERENCE VIDEO AS CLOSELY AND LITERALLY AS POSSIBLE.
+The uploaded video is the MASTER REFERENCE. I do NOT want a new skincare advertisement inspired by the reference. I want the SAME VIDEO recreated.
+The only creative substitution is: REPLACE THE COSMED PRODUCT WITH NEFIN COSMETICS DAILY MOISTURE CREAM. EVERYTHING ELSE MUST FOLLOW THE REFERENCE VIDEO.
+
+IMPORTANT: The reference video contains MULTIPLE COPIES OF THE SAME COSMED PRODUCT at the same time. Do NOT replace the entire sequence with one single NEFIN product. Where the reference shows multiple identical Cosmed tubes, recreate the SAME NUMBER OF PRODUCT COPIES using multiple identical NEFIN DAILY MOISTURE CREAM bottles — same relative positions, arrangement, scale relationships, overlap, perspective and movement.
+
+PRODUCT REPLACEMENT: Use the uploaded NEFIN DAILY MOISTURE CREAM image as the exact reference. Preserve exactly: white cylindrical bottle, exact geometry/proportions, metallic gold cap, NEFIN logo, label, typography, text, colors. Do not redesign, change the cap/label/logo, or create different versions — all copies visually identical.
+
+SHOT-BY-SHOT: Scene 1 cream texture macro (reference composition/timing). Scene 2 cream/tool interaction, same scale/movement/timing, cream behaves like real skincare not food. Scene 3 (CRITICAL) multi-product reveal — match reference count, arrangement, overlap, scale, depth, perspective. Scene 4 multi-product movement — same horizontal/camera/product movement, overlap, scale changes, motion blur; do not make bottles static/symmetrical. Scene 5 extreme product close-up, same frame percentage, realistic reflections, label physically consistent, no AI text distortion. Scene 6 return to cream texture, same visual language. Scene 7 second multi-product sequence, same count/arrangement/scale/movement. Scene 8 final texture/product movement following reference ending exactly.
+
+CAMERA: match reference distance, height, perspective, push-in/pull-back, lateral/macro movement, framing, crop, speed, motion blur. No generic movements, no 360 rotation, no dramatic orbit, no random zooms, no floating product.
+
+LIGHTING: bright soft white cream, gold cap realistic subtle highlights, no dramatic/blue/pink/burgundy lighting.
+
+BACKGROUND: minimal cream-based environment only; white cream + multiple identical NEFIN bottles. No people, hands, faces, flowers, leaves, fruit, stones, water, bathroom, lab equipment, extra products, decorative props.
+
+PHYSICS: correct proportions/perspective, realistic shadows/reflections/contact/overlap/depth/motion blur. No morphing, melting, stretching, bending, duplicated labels, changing logo/typography, product transformation between shots — same bottle visually consistent throughout.
+
+MOST IMPORTANT: do not summarize/interpret/simplify the reference — recreate its visual sequence as literally as possible. Only change: Cosmed products → NEFIN Daily Moisture Cream, same count or scale relationships. Same overall duration and pacing as reference. Photorealistic, high-end skincare commercial, ultra-realistic macro texture, professional cinematography, natural motion blur, realistic materials/cream physics.
+```
+
 ## Reddedilen denemeler
 
 > Neden reddedildiği açıkça yazılır ki aynı hata tekrar üretilmesin. Dosyalar vault'a eklenmedi (kullanım değeri yok), sadece prompt + hata burada duruyor.
