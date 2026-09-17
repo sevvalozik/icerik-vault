@@ -17,6 +17,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | Dosya | Boyut / oran | İçerik | Model | Prompt | Puan |
 |---|---|---|---|---|---|
 | `nefin-beauty-gold-tonic-liquid-macro-v1.jpg` | 1696×2528 (~2:3 dikey) | 24K Gold Tonic sıvısının ekstrem makro çekimi — cam kenar, altın tanecikler süspansiyonda, ivory/şeffaf zemin, ürün "malzeme/ingredient" fotoğrafı gibi (şişe kadrajda yok) | Gemini görsel | ↓ "Gold Tonic Liquid Macro — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+| `nefin-beauty-daily-moisture-cream-ecommerce-hero-v1.png` | 687×1024 (~2:3 dikey) | Daily Moisture Cream — tek başına, sade, e-ticaret ürün fotoğrafı; etiket yazısı kusursuz net (kamera çekimi gibi) | Gemini görsel | ↓ "MASTER E-Ticaret Ürün Fotoğrafı Prompt'u" (aşağıda) | 5 — beğenildi, marka için standart ürün fotoğrafı şablonu seçildi |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 

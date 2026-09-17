@@ -73,6 +73,9 @@ related: ["[[nefin-beauty-sunum]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06
 - **Video altyazı / overlay fontu:** Cambria (başlık) + Calibri (alt yazı). Site fontu için ❓ web-safe alternatif (örn. Cormorant Garamond + Inter) müşteriyle netleştirilecek.
 
 ### Görsel yön (fotoğraf / video)
+
+**Standart ürün fotoğrafı şablonu (16 Eylül 2026):** Tek ürün / sade e-ticaret fotoğrafları için artık sabit bir MASTER prompt var — her yeni üründe referans görseli ve ürün adı değiştirilerek tekrar kullanılacak. Tam prompt: `07-AI-Gorsel/nefin-beauty/gorsel-log.md` → "MASTER E-Ticaret Ürün Fotoğrafı Prompt'u". İlk başarılı örnek: `03-Assets/images/nefin-beauty/nefin-beauty-daily-moisture-cream-ecommerce-hero-v1.png`.
+
 - **Işık:** Yumuşak gün ışığı, sıcak; pencere ışığı ya da havuz kenarı güneşi. Sert stüdyo flaşı yok.
 - **Mekan / doku / props:** krem keten kumaş, traverten/mermer taş, terrazzo, ahşap, pamuk ped, portakal dilimi (C vitamini), altın tanecikler (24K tonik), kurutulmuş pampas otu, seramik vazo.
 - **İnsan var mı? Nasıl?:** Evet, ama **sadece el/omuz/yüz kısmi** — tam yüz sadece gerçek çekimde. AI videoda el + ürün odaklı çekim tercih edilir (yüz tutarlılığı riski).
