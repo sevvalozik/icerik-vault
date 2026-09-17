@@ -23,6 +23,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 | `nefin-beauty-acne-derm-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Acne-Derm / Akne Karşıtı Krem — aynı üç-tüp şablonuyla bileşen görselleştirmesi (Salisilik Asit, Niasinamid & Pantenol, Azelaik Asit & Çay Ağacı Yağı), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Acne-Derm — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-retinol-supreme-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Retinol Supreme — aynı üç-tüp şablonuyla bileşen görselleştirmesi (%1,5 Retinol, Niasinamid & Pantenol, Sodyum Hiyaluronat & E Vitamini), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Retinol Supreme — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
 | `nefin-beauty-vitamin-c-serum-ingredient-tubes-v1.png` | 1024×1024 (1:1) | Vitamin C+ Serum — aynı üç-tüp şablonuyla bileşen görselleştirmesi (%15 Lipozomal C Vitamini, Hyaluronik Asit, C Vitamini/Antioksidan Etki), ürün ambalajı kadrajda yok | Gemini görsel | ↓ "Vitamin C+ Serum — Bileşen Tüpleri Infografiği — Onaylı Prompt" (aşağıda) | 5 — beğenildi |
+| `nefin-beauty-cream-texture-editorial-v1.png` | 1024×1536 (~2:3 dikey) | Krem/föndoten dokusu makro swatch (altın/bej ton, parlak, dalgalı swirl), sağ altta italik serif başlık "Pürüzsüz ve doğal görünüm" + alt metin "Cildinle uyum sağlayan hafif ve ipeksi doku.", ürün ambalajı/şişe kadrajda yok | ❓ Gemini görsel (prompt kaydedilmedi) | ❓ (prompt yok, sadece görsel var) | 5 — beğenildi, site için düşünülüyor |
 
 ### Gold Tonic Liquid Macro — Onaylı Prompt (16 Eylül 2026)
 
@@ -291,6 +292,15 @@ Photorealistic transparent glass, realistic liquid physics, refined macro textur
 
 Square 1:1 composition.
 ```
+
+### Krem Dokusu Editoryal Görseli — site için düşünülen (17 Eylül 2026)
+
+> Ürün şişesi/ambalajı gösterilmeyen, sadece krem/föndoten dokusunun makro swatch'ı + zarif italik serif başlık kompozisyonu. Prompt paylaşılmadı.
+
+- **Şevval'in değerlendirmesi:** "bu görselin promptu yok ama. bunu da beğendim site için olabilir"
+- **Claude'un görsel tespiti:** Doku fotoğrafik ve inandırıcı (gerçek bir krem sw" "atch'ı gibi duruyor, yapay/plastik görünmüyor), yumuşak ivory zemin marka paletiyle uyumlu. Başlık tipografisi ("Pürüzsüz ve doğal görünüm") **italik serif** — marka brief'teki "Başlık: Cambria (serif)" yönergesiyle uyumlu bir aile, bileşen tüpleri şablonundaki kalın büyük harf sans-serif'ten kasıtlı olarak farklı — bu, aynı tür içerik (ingredient/callout) için değil, farklı bir kullanım (editoryal/hero metin) için tasarlandığından tutarsızlık sayılmaz.
+- **Açık soru (ürün kimliği):** Krem rengi (altın/bej ton) mevcut Daily Moisture Cream görsellerindeki beyaz krem tonundan farklı — föndoten/CC Cream gibi bir ürün dokusu olabilir mi, yoksa Daily Moisture Cream'in farklı bir aydınlatmada çekimi mi belli değil (şişe/ambalaj kadrajda olmadığı için anlamı yok). Hangi ürün/sayfa için kullanılacağı netleştirilince marka brief'teki ilgili ürün kartına bağlanabilir.
+- **Puan:** 5 — beğenildi, web sitesi için düşünülüyor.
 
 ## Karma sonuçlu görseller (kısmen başarılı)
 
