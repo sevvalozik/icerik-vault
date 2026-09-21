@@ -14,6 +14,17 @@ WHERE type = "sosyal-medya-icerik"
 SORT date DESC
 ```
 
+## Instagram feed önizlemeleri
+
+```dataview
+TABLE client, username, followers, status, date
+FROM "04-Sosyal-Medya-Icerik"
+WHERE type = "instagram-feed"
+SORT client ASC
+```
+
+Stüdyo: `node scripts/instagram-studio.js <slug>` · Müşteri dosyası: `node scripts/build-instagram.js <slug>`
+
 ## Kod projeleri (sadece özet notlar; kod vault dışında)
 
 ```dataview

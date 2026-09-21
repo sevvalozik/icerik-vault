@@ -14,15 +14,15 @@ Ajansın müşteri işlerini (sunum, website, sosyal medya metni, AI video/görs
 - `01-Presentations/` — sunumlar (`_templates`, `_themes` [12 Marp CSS + Keynote .kth], `active`, `archive`)
 - `02-Websites/` — website notları (`_templates`, `projects/<slug>/`, `snippets`, `dist` — build sonrası)
 - `03-Assets/{images,logos,videos}/<slug>/` — gerçek dosyalar: logolar, ürün fotoğrafları, üretilen klipler
-- `04-Sosyal-Medya-Icerik/<slug>/` — reels/post metinleri, çekim notları (`_templates` içinde zaman kodlu şablon)
+- `04-Sosyal-Medya-Icerik/<slug>/` — reels/post metinleri, çekim notları (`_templates` içinde zaman kodlu şablon) ve `instagram-feed.md` (yayın öncesi profil önizlemesi; `dist/` build çıktısı)
 - `05-Kod-Projeleri/<slug>/` — kod projelerinin **özet notu**; kod vault'a konmaz
 - `06-AI-Video/` — AI video üretim sistemi: `_kutuphane/` (prompt formülü, kamera/ışık sözlüğü, model rehberi, negatif promptlar, tutarlılık rehberi, sektör reçeteleri, kalite kontrol), `_templates/video-brief-template.md`, `<slug>/` brief'ler + `video-log.md`
 - `07-AI-Gorsel/` — aynı yapı görsel için (`gorsel-prompt-formulu.md`, `gorsel-brief-template.md`, `<slug>/gorsel-log.md`)
 - `99-Dashboard/` — Dataview katalogları (müşteri, sunum, website, video, içerik, tema), çalışma prensipleri, bulut depolama, ilham linkleri
 - `_templater/` — Templater komutları: **Yeni Müşteri · Yeni Video Brief · Yeni Görsel Brief · Yeni Sosyal Medya İçeriği · Yeni Kod Projesi · Yeni Sunum · Yeni Website**
-- `scripts/` — `build-site.js` (site notlarını HTML'e derler), `vault-check.js` (frontmatter + büyük dosya kontrolü)
+- `scripts/` — `build-site.js` (site notlarını HTML'e derler), `vault-check.js` (frontmatter + büyük dosya + kırık görsel kontrolü), `instagram-studio.js` (Instagram profil önizleme stüdyosu), `build-instagram.js` (müşteriye gönderilecek tek dosya HTML), `lib/` (ortak yardımcılar), `instagram/` (önizleme arayüzü)
 - `CLAUDE.md` / `AGENTS.md` — AI ajanları için talimat (Claude Code otomatik okur; Cowork'te ilk mesajda "CLAUDE.md'yi oku" de)
-- `.claude/skills/` — Claude Code komutları: `/video-brief`, `/gorsel-brief`, `/icerik-paketi`
+- `.claude/skills/` — Claude Code komutları: `/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme`
 
 ## Kurulum (bir kereye mahsus)
 
@@ -70,6 +70,15 @@ node scripts/build-site.js
 ```
 
 `02-Websites/projects/` altındaki (alt klasörler dahil) `type: website` notlarını `02-Websites/dist/` altına HTML olarak derler. Marka brief'inde `slug` eşleşiyorsa paletteki zemin/metin renklerini CSS değişkeni olarak sayfaya yazar.
+
+Instagram profil önizlemesi (yayınlamadan önce feed'i görmek ve müşteriye göstermek):
+
+```
+node scripts/instagram-studio.js nefin-beauty     # stüdyo: 127.0.0.1:4180
+node scripts/build-instagram.js nefin-beauty      # müşteri dosyası: 04-Sosyal-Medya-Icerik/dist/
+```
+
+Stüdyoda görsel **ve videoları** (jpg · png · webp · mp4 · mov) telefon önizlemesine sürükle → `03-Assets/images/<slug>/instagram/` altına yazılır, sıra/caption/tarih `04-Sosyal-Medya-Icerik/<slug>/instagram-feed.md` notunda tutulur. Logoyu değiştirmek için önizlemedeki avatara tıkla ya da üstüne dosya bırak. Videolara ffmpeg ile otomatik poster karesi üretilir (`<ad>-poster.jpg`), böylece ızgarada anında görünürler; export'ta videolar 1080p'ye sıkıştırılır, ses korunur. Izgarada sürükleyerek sırala; bir gönderiye tıklayınca tek gönderi görünümü açılır (video **sesiyle** oynar, altında sonraki gönderiler akar). Takvim sekmesinde yayın gününü belirle. "Müşteri dosyası üret" tek dosya HTML çıkarır: görseller gömülü, internet gerekmez, WhatsApp/e-posta ile gönderilir. Not Obsidian'dan da düzenlenebilir; stüdyo açıkken dışarıdan değişiklik olursa üzerine yazmaz, uyarır.
 
 Vault kontrolü:
 

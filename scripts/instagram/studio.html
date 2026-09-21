@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<title>Instagram Önizleme Stüdyosu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/preview.css" />
+<link rel="stylesheet" href="/calendar.css" />
+<link rel="stylesheet" href="/studio.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Instagram Önizleme Stüdyosu</div>
+  <select id="clientSelect" class="input" title="Müşteri"></select>
+  <div class="viewtabs">
+    <button class="viewtab on" data-view="grid">Izgara</button>
+    <button class="viewtab" data-view="calendar">Takvim</button>
+  </div>
+  <span id="saveState" class="savestate">—</span>
+  <button id="exportBtn" class="btn btn-accent">Müşteri dosyası üret</button>
+</header>
+
+<main class="layout">
+  <aside class="panel panel-left">
+    <h3>Profil</h3>
+    <label>Kullanıcı adı<input id="f_username" class="input" /></label>
+    <label>Ad (bio başlığı)<input id="f_profileName" class="input" /></label>
+    <label>Bio (satır satır)<textarea id="f_bio" class="input" rows="4"></textarea></label>
+    <div class="row3">
+      <label>Gönderi<input id="f_postsCount" class="input" type="number" placeholder="oto" /></label>
+      <label>Takipçi<input id="f_followers" class="input" type="number" /></label>
+      <label>Takip<input id="f_following" class="input" type="number" /></label>
+    </div>
+    <label>Logo / avatar<div class="filerow"><input id="f_avatar" class="input" placeholder="03-Assets/..." /><button id="avatarPick" class="btn" title="Dosya seç">Değiştir</button></div></label>
+    <label>Öne çıkanlar (virgülle)<input id="f_highlights" class="input" placeholder="Rutin, SSS" /></label>
+    <label>Balon yazısı (opsiyonel)<input id="f_bubble" class="input" placeholder="Popüler olmayan g…" /></label>
+    <div class="row3">
+      <label>Saat<input id="f_time" class="input" placeholder="19:28" /></label>
+      <label>Tema<select id="f_theme" class="input"><option value="dark">Koyu</option><option value="light">Açık</option></select></label>
+      <label>Oran<select id="f_ratio" class="input"><option value="4:5">4:5</option><option value="1:1">1:1</option></select></label>
+    </div>
+    <div class="checks">
+      <label class="chk"><input type="checkbox" id="f_private" /> Gizli hesap</label>
+      <label class="chk"><input type="checkbox" id="f_verified" /> Mavi tik</label>
+      <label class="chk"><input type="checkbox" id="f_states" checked /> Durum rozetleri</label>
+      <label class="chk"><input type="checkbox" id="f_lock" /> Yayınlananları kilitle</label>
+    </div>
+    <h3>Ekle</h3>
+    <div id="dropzone" class="dropzone">
+      Görsel / video buraya sürükle<br /><span>jpg · png · webp · mp4 — telefon önizlemesine de bırakabilirsin. Logo için avatara tıkla ya da üstüne bırak.</span>
+    </div>
+    <button id="addSlot" class="btn full">+ Boş slot ekle</button>
+    <p class="note" id="feedPath"></p>
+  </aside>
+
+  <section class="stage">
+    <div id="phone"></div>
+    <div id="calendar" class="calendar-stage"></div>
+  </section>
+
+  <aside class="panel panel-right">
+    <h3>Gönderi <span id="postIndex" class="dim"></span></h3>
+    <div id="postEditor" class="hidden">
+      <div class="thumbrow"><img id="p_thumb" alt="" /><div><div id="p_file" class="dim small"></div>
+        <button id="p_replace" class="btn small">Görseli değiştir</button></div></div>
+      <label>Başlık / dosya adı<input id="p_title" class="input" /></label>
+      <label>Caption<textarea id="p_caption" class="input" rows="6" placeholder="metni sen yazacaksın"></textarea></label>
+      <div class="row3">
+        <label>Tarih<input id="p_date" class="input" type="date" /></label>
+        <label>Saat<input id="p_time" class="input" type="time" /></label>
+        <label>Tür<select id="p_type" class="input"><option value="post">post</option><option value="reels">reels</option><option value="carousel">carousel</option></select></label>
+      </div>
+      <div class="row3">
+        <label>Durum<select id="p_status" class="input"><option value="taslak">taslak</option><option value="planlandi">planlandı</option><option value="yayinlandi">yayınlandı</option></select></label>
+        <label>Beğeni<input id="p_likes" class="input" type="number" /></label>
+        <label>Yorum<input id="p_comments" class="input" type="number" /></label>
+      </div>
+      <label>Alt metin / not<input id="p_alt" class="input" /></label>
+      <div class="row3">
+        <label>Beğenen (ad)<input id="p_likedby" class="input" placeholder="asllyb" /></label>
+        <label>Yorum yazan<input id="p_cuser" class="input" placeholder="onurkokteen" /></label>
+        <label>Yorum metni<input id="p_ctext" class="input" /></label>
+      </div>
+      <label>Ek görseller (carousel, virgülle)<input id="p_extra" class="input" /></label>
+      <div class="btnrow">
+        <button id="p_open" class="btn">Detayı aç</button>
+        <button id="p_delete" class="btn btn-danger">Sil</button>
+      </div>
+    </div>
+    <p id="noPost" class="note">Izgaradan bir gönderi seç. Sürükleyerek sırayı değiştirebilirsin; çift tıklama detay görünümünü açar.</p>
+  </aside>
+</main>
+
+<input type="file" id="filePicker" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple hidden />
+<div id="toast" class="toast"></div>
+
+<script src="/icons.js"></script>
+<script src="/preview.js"></script>
+<script src="/calendar.js"></script>
+<script src="/studio.js"></script>
+</body>
+</html>

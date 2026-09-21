@@ -1,0 +1,216 @@
+/* preview.css — Instagram profil önizleme render çekirdeği.
+   Hem stüdyoda hem dışa aktarılan tek dosya HTML'de aynen kullanılır. */
+
+.ig-phone {
+  --ig-bg: #000;
+  --ig-fg: #fff;
+  --ig-dim: #a8a8a8;
+  --ig-line: #262626;
+  --ig-btn: #363636;
+  --ig-blue: #0095f6;
+  --ig-red: #ff3040;
+  --ig-tile-gap: 1.5px;
+
+  width: 390px;
+  height: 844px;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  background: var(--ig-bg);
+  color: var(--ig-fg);
+  border-radius: 38px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .45), 0 0 0 10px #1b1b1d, 0 0 0 11px #3a3a3e;
+}
+.ig-phone.ig-light {
+  --ig-bg: #fff;
+  --ig-fg: #000;
+  --ig-dim: #737373;
+  --ig-line: #dbdbdb;
+  --ig-btn: #efefef;
+}
+.ig-phone.ig-flat { border-radius: 0; box-shadow: none; }
+.ig-phone * { box-sizing: border-box; }
+.ig-ico { display: inline-flex; }
+.ig-ico svg { width: 100%; height: 100%; display: block; }
+
+/* --- durum çubuğu --- */
+.ig-status {
+  height: 54px; flex: none; display: flex; align-items: flex-end; justify-content: space-between;
+  padding: 0 24px 6px; font-size: 15px; font-weight: 600; letter-spacing: .2px;
+}
+.ig-status-right { display: flex; align-items: center; gap: 5px; }
+.ig-status-right .ig-ico { height: 13px; }
+.ig-status-right .ig-ico:first-child { width: 20px; }
+.ig-status-right .ig-ico:last-child { width: 26px; }
+.ig-status-net { font-size: 12.5px; font-weight: 600; }
+
+/* --- üst bar --- */
+.ig-topbar { height: 48px; flex: none; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; gap: 10px; }
+.ig-topbar-left .ig-ico { width: 26px; height: 26px; }
+.ig-topbar-name { display: flex; align-items: center; gap: 6px; font-size: 20px; font-weight: 700; letter-spacing: -.2px; flex: 1; justify-content: center; }
+.ig-topbar-name .ig-ico { width: 17px; height: 17px; }
+.ig-topbar-name .ig-chev { width: 15px; height: 15px; stroke-width: 2.4; }
+.ig-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ig-red); flex: none; }
+.ig-topbar-right { display: flex; align-items: center; gap: 16px; }
+.ig-topbar-right .ig-ico { width: 25px; height: 25px; }
+
+/* --- kaydırılan gövde --- */
+.ig-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; }
+.ig-scroll::-webkit-scrollbar { display: none; }
+
+/* --- header --- */
+.ig-header { padding: 6px 16px 0; }
+.ig-header-top { display: flex; align-items: center; gap: 22px; }
+.ig-avatar-wrap { position: relative; flex: none; }
+.ig-avatar {
+  width: 86px; height: 86px; border-radius: 50%; object-fit: cover; display: block;
+  background: #2a2a2a; border: 1px solid var(--ig-line);
+}
+.ig-avatar-wrap.ig-ring { padding: 3px; background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); border-radius: 50%; }
+.ig-avatar-wrap.ig-ring .ig-avatar { border: 3px solid var(--ig-bg); width: 92px; height: 92px; }
+.ig-avatar-add {
+  position: absolute; right: -2px; bottom: -2px; width: 26px; height: 26px; border-radius: 50%;
+  background: #fff; color: #000; display: flex; align-items: center; justify-content: center;
+  border: 2.5px solid var(--ig-bg);
+}
+.ig-avatar-add .ig-ico { width: 15px; height: 15px; stroke-width: 2.6; }
+.ig-bubble {
+  position: absolute; left: 4px; top: -30px; max-width: 165px; background: #2c2c2e; color: #fff;
+  font-size: 12.5px; line-height: 1.25; padding: 7px 11px; border-radius: 16px; z-index: 3;
+  white-space: pre-line;
+}
+.ig-bubble::after { content: ""; position: absolute; left: 22px; bottom: -5px; width: 12px; height: 12px; background: #2c2c2e; border-radius: 2px; transform: rotate(45deg); }
+
+.ig-stats { flex: 1; display: flex; justify-content: space-around; text-align: center; }
+.ig-stat-num { font-size: 19px; font-weight: 700; letter-spacing: -.3px; }
+.ig-stat-label { font-size: 13.5px; color: var(--ig-fg); margin-top: 1px; }
+
+.ig-bio { margin-top: 14px; font-size: 14px; line-height: 1.42; white-space: pre-line; }
+.ig-bio-name { font-weight: 600; }
+.ig-bio a, .ig-tag { color: #e0f1ff; }
+.ig-phone.ig-light .ig-bio a, .ig-phone.ig-light .ig-tag { color: #00376b; }
+
+.ig-banner {
+  margin-top: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px;
+  border: 1px solid var(--ig-line); border-radius: 10px; font-size: 13.5px; font-weight: 500; color: var(--ig-fg);
+}
+.ig-banner .ig-ico { width: 14px; height: 14px; stroke-width: 2.2; }
+
+.ig-actions { display: flex; gap: 7px; margin: 14px 0 6px; }
+.ig-btn {
+  flex: 1; height: 34px; border-radius: 9px; background: var(--ig-btn); color: var(--ig-fg);
+  display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;
+}
+.ig-btn.ig-btn-primary { background: var(--ig-blue); color: #fff; }
+.ig-btn-sq { flex: none; width: 42px; }
+.ig-btn-sq .ig-ico { width: 19px; height: 19px; }
+
+/* --- öne çıkanlar --- */
+.ig-highlights { display: flex; gap: 18px; padding: 16px 16px 6px; overflow-x: auto; scrollbar-width: none; }
+.ig-highlights::-webkit-scrollbar { display: none; }
+.ig-hl { width: 64px; flex: none; text-align: center; }
+.ig-hl-circle {
+  width: 64px; height: 64px; border-radius: 50%; background: #1c1c1e; border: 1px solid var(--ig-line);
+  overflow: hidden; display: flex; align-items: center; justify-content: center; color: #4a4a4a;
+}
+.ig-hl-circle img { width: 100%; height: 100%; object-fit: cover; }
+.ig-hl-circle .ig-ico { width: 22px; height: 22px; }
+.ig-hl-label { font-size: 12px; margin-top: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* --- sekmeler --- */
+.ig-tabs { display: flex; border-top: 1px solid var(--ig-line); margin-top: 10px; position: relative; }
+.ig-tab { flex: 1; height: 44px; display: flex; align-items: center; justify-content: center; color: #6e6e6e; cursor: pointer; }
+.ig-tab .ig-ico { width: 24px; height: 24px; }
+.ig-tab.ig-active { color: var(--ig-fg); box-shadow: inset 0 -1.5px 0 0 var(--ig-fg); }
+
+/* --- ızgara --- */
+.ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--ig-tile-gap); padding-bottom: 8px; }
+.ig-tile { position: relative; overflow: hidden; background: #121212; cursor: pointer; }
+.ig-phone.ig-light .ig-tile { background: #f1f1f1; }
+.ig-tile::before { content: ""; display: block; padding-top: 125%; }
+.ig-grid[data-ratio="1:1"] .ig-tile::before { padding-top: 100%; }
+.ig-grid[data-ratio="9:16"] .ig-tile::before { padding-top: 177.7%; }
+.ig-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ig-tile-empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: #5a5a5a; font-size: 10.5px; text-align: center; padding: 6px; }
+.ig-tile-empty .ig-ico { width: 20px; height: 20px; }
+.ig-tile-badge { position: absolute; top: 7px; right: 7px; color: #fff; filter: drop-shadow(0 1px 2px rgba(0,0,0,.5)); }
+.ig-tile-badge .ig-ico { width: 18px; height: 18px; }
+.ig-tile-views { position: absolute; left: 7px; bottom: 6px; display: flex; align-items: center; gap: 3px; color: #fff; font-size: 12px; font-weight: 600; filter: drop-shadow(0 1px 2px rgba(0,0,0,.55)); }
+.ig-tile-views .ig-ico { width: 13px; height: 13px; }
+.ig-tile-state { position: absolute; left: 0; top: 0; padding: 2px 6px; font-size: 9.5px; font-weight: 700; letter-spacing: .3px; text-transform: uppercase; border-bottom-right-radius: 6px; }
+.ig-state-taslak { background: rgba(120,120,120,.9); color: #fff; }
+.ig-state-planlandi { background: rgba(0,149,246,.92); color: #fff; }
+.ig-state-yayinlandi { background: rgba(46,160,67,.92); color: #fff; }
+.ig-tile.ig-selected { outline: 2.5px solid var(--ig-blue); outline-offset: -2.5px; }
+.ig-tile.ig-dragging { opacity: .35; }
+.ig-tile.ig-drop-target { outline: 2.5px dashed #fff; outline-offset: -3px; }
+
+.ig-empty-state { padding: 48px 24px; text-align: center; color: var(--ig-dim); font-size: 13.5px; line-height: 1.6; }
+
+/* --- alt navigasyon --- */
+.ig-bottomnav {
+  height: 52px; flex: none; display: flex; align-items: center; justify-content: space-around;
+  border-top: 1px solid var(--ig-line); padding: 0 6px 4px;
+}
+.ig-bottomnav .ig-ico { width: 26px; height: 26px; }
+.ig-nav-item { position: relative; display: flex; align-items: center; }
+.ig-nav-item .ig-dot { position: absolute; right: -3px; top: -1px; width: 7px; height: 7px; }
+.ig-nav-avatar { width: 27px; height: 27px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--ig-fg); background: #2a2a2a; }
+
+/* --- gönderi detayı (tek gönderi görünümü) --- */
+.ig-detail { position: absolute; top: 54px; left: 0; right: 0; bottom: 52px; background: var(--ig-bg); display: flex; flex-direction: column; z-index: 10; }
+.ig-detail-top { height: 52px; flex: none; display: flex; align-items: center; padding: 0 12px; border-bottom: 1px solid var(--ig-line); }
+.ig-detail-top .ig-detail-back { width: 26px; height: 26px; cursor: pointer; flex: none; }
+.ig-detail-top .ig-detail-pad { width: 26px; flex: none; }
+.ig-detail-title { flex: 1; text-align: center; line-height: 1.15; }
+.ig-detail-title > div:first-child { font-size: 16px; font-weight: 700; }
+.ig-detail-sub { font-size: 12.5px; color: var(--ig-fg); opacity: .92; }
+.ig-detail-body { flex: 1; overflow-y: auto; scrollbar-width: none; }
+.ig-detail-body::-webkit-scrollbar { display: none; }
+
+.ig-post { padding-bottom: 6px; }
+.ig-post-head { display: flex; align-items: center; gap: 10px; padding: 9px 12px; }
+.ig-post-head .ig-post-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; background: #2a2a2a; flex: none; }
+.ig-post-user { font-size: 13.5px; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+.ig-post-user .ig-ico { width: 13px; height: 13px; }
+.ig-post-head .ig-spacer, .ig-post-bar .ig-spacer { flex: 1; }
+.ig-post-menu { width: 22px; height: 22px; flex: none; }
+
+.ig-post-media { width: 100%; background: #0a0a0a; position: relative; display: flex; justify-content: center; }
+.ig-post-media img, .ig-post-media video { width: 100%; display: block; max-height: 560px; object-fit: contain; background: #000; }
+.ig-media-empty { height: 360px; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #5a5a5a; font-size: 12px; }
+.ig-media-empty .ig-ico { width: 26px; height: 26px; }
+.ig-post-dots { position: absolute; left: 0; right: 0; bottom: 8px; display: flex; justify-content: center; gap: 4px; }
+.ig-post-dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.45); }
+.ig-post-dots span.on { background: #fff; }
+
+.ig-post-bar { display: flex; align-items: center; gap: 18px; padding: 11px 13px 6px; }
+.ig-post-bar .ig-ico { width: 25px; height: 25px; }
+.ig-act { display: flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 600; }
+
+.ig-post-meta { padding: 2px 13px 14px; font-size: 13.5px; line-height: 1.45; }
+.ig-post-likes { font-weight: 600; }
+.ig-likedby { display: flex; align-items: center; gap: 8px; font-size: 13.5px; }
+.ig-facepile { display: inline-flex; flex: none; }
+.ig-facepile i { width: 19px; height: 19px; border-radius: 50%; border: 1.5px solid var(--ig-bg); background: linear-gradient(135deg, #4a4a52, #6b6b74); display: block; }
+.ig-facepile i + i { margin-left: -7px; }
+.ig-post-caption { margin-top: 5px; white-space: pre-wrap; word-break: break-word; }
+.ig-post-caption .ig-u { font-weight: 600; }
+.ig-comment-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 4px; }
+.ig-comment-row > span:first-child { flex: 1; word-break: break-word; }
+.ig-comment-heart { width: 17px; height: 17px; color: var(--ig-red); flex: none; margin-top: 3px; }
+.ig-post-comments { color: var(--ig-dim); margin-top: 4px; }
+.ig-post-date { color: var(--ig-dim); font-size: 11px; margin-top: 7px; letter-spacing: .1px; }
+.ig-caption-empty { color: var(--ig-dim); font-style: italic; }
+
+/* ızgarada video döşemesi */
+.ig-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* önizlemede avatarı tıklayıp logo değiştirme */
+.ig-avatar-wrap.ig-clickable { cursor: pointer; }
+.ig-avatar-wrap.ig-drop-hot .ig-avatar { outline: 3px dashed var(--ig-blue); outline-offset: 2px; }

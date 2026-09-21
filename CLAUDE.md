@@ -11,13 +11,13 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | `01-Presentations/` | Marp/Keynote sunumlar; `_themes/` CSS temaları, `active/`, `archive/` | `presentation` |
 | `02-Websites/` | site notları `projects/<slug>/`, `snippets/`, `dist/` (build çıktısı) | `website`, `snippet` |
 | `03-Assets/{images,logos,videos}/<slug>/` | gerçek dosyalar (logo SVG, ürün fotoğrafı, üretilen klipler) | — |
-| `04-Sosyal-Medya-Icerik/<slug>/` | reels/post metinleri, çekim notları | `sosyal-medya-icerik` |
+| `04-Sosyal-Medya-Icerik/<slug>/` | reels/post metinleri, çekim notları, `instagram-feed.md` (profil önizlemesi) | `sosyal-medya-icerik`, `instagram-feed` |
 | `05-Kod-Projeleri/<slug>/` | kod projelerinin **özet notu** (kod vault'ta değil) | `kod-projesi` |
 | `06-AI-Video/` | `_kutuphane/` (prompt formülü, kamera sözlüğü, model rehberi, negatifler, tutarlılık, sektör reçeteleri, QC) · `_templates/` · `<slug>/` brief + `video-log.md` | `video-brief`, `video-log`, `kutuphane` |
 | `07-AI-Gorsel/` | aynı yapı, görsel için | `gorsel-brief`, `gorsel-log` |
 | `99-Dashboard/` | Dataview katalogları, çalışma prensipleri, ilham linkleri | `dashboard`, `readme` |
 | `_templater/` | Obsidian Templater komutları (Yeni Müşteri / Video Brief / Görsel Brief / Sosyal Medya / Kod Projesi / Sunum / Website) | — |
-| `scripts/` | `build-site.js`, `vault-check.js` | — |
+| `scripts/` | `build-site.js`, `vault-check.js`, `instagram-studio.js`, `build-instagram.js`, `lib/`, `instagram/` | — |
 
 ## Bir işe başlamadan önce (sırayla)
 
@@ -47,9 +47,10 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | "X için reels metni yaz" | marka brief (ton + yasaklar) → `sosyal-medya-icerik-template`; Humentis örneğindeki zaman kodlu yapı |
 | "X için sunum" | `theme:` marka paletine en yakın CSS (`99-Dashboard/tema-katalogu.md`) veya müşteriye özel tema; Marp: `marp <dosya> --pptx` (`.marprc.yml` temaları bulur) |
 | "X için site / landing" | marka brief + `02-Websites/_templates/website-template.md` + `snippets/`; Claude Design kullanılacaksa **AI Brief Bloğu**'nu prompt başına yapıştır |
+| "X'in feed'i nasıl duracak / yayın öncesi önizleme / müşteriye göstereceğim" | `node scripts/instagram-studio.js <slug>` (stüdyo) → görsel/video sürükle, sırala, tarih ver, logoyu avatardan değiştir; müşteri dosyası için `node scripts/build-instagram.js <slug>`. Skill: `/instagram-onizleme`. **İçerik üretme**, sadece yerleştir |
 | "yeni müşteri" | `00-Musteriler/<slug>/marka-brief.md` oluştur + `03-Assets/{images,logos,videos}/<slug>/` klasörleri |
 | "vault'u kontrol et" | `node scripts/vault-check.js` |
 
 ## Claude Code skill'leri (`.claude/skills/`)
 
-`/video-brief`, `/gorsel-brief`, `/icerik-paketi` — yukarıdaki akışları tek komutla yürütür; argüman olarak müşteri slug'ı ve kampanya adı alır.
+`/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme` — yukarıdaki akışları tek komutla yürütür; argüman olarak müşteri slug'ı ve kampanya adı alır.

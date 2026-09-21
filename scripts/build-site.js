@@ -14,34 +14,11 @@
 
 const fs = require("fs");
 const path = require("path");
+const { parseFrontmatter, escapeHtml, readPalette, walkMd } = require("./lib/vault.js");
 
 const ROOT = path.join(__dirname, "..");
 const PROJECTS_DIR = path.join(ROOT, "02-Websites", "projects");
-const CLIENTS_DIR = path.join(ROOT, "00-Musteriler");
 const DIST_DIR = path.join(ROOT, "02-Websites", "dist");
-
-function parseFrontmatter(raw) {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
-  if (!match) return { data: {}, content: raw };
-  const [, fmBlock, content] = match;
-  const data = {};
-  fmBlock.split(/\r?\n/).forEach((line) => {
-    const m = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
-    if (!m) return;
-    let [, key, value] = m;
-    value = value.trim();
-    if (value.startsWith("[") && value.endsWith("]")) {
-      data[key] = value.slice(1, -1).split(",").map((s) => s.trim().replace(/^"|"$/g, "")).filter(Boolean);
-    } else {
-      data[key] = value.replace(/^"|"$/g, "");
-    }
-  });
-  return { data, content };
-}
-
-function escapeHtml(s) {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
 
 function inline(text) {
   return escapeHtml(text)
@@ -75,23 +52,6 @@ function simpleMarkdownToHtml(md) {
   return out.join("\n");
 }
 
-/** Marka brief'inden palet tablosunu okur: | Zemin | #hex | ... */
-function readPalette(slug) {
-  if (!slug) return null;
-  const brief = path.join(CLIENTS_DIR, slug, "marka-brief.md");
-  if (!fs.existsSync(brief)) return null;
-  const raw = fs.readFileSync(brief, "utf8");
-  const palette = {};
-  const map = { zemin: "zemin", birincil: "birincil", vurgu: "vurgu", metin: "metin", "başlık": "birincil", "gövde metni": "metin", "vurgu 1": "vurgu" };
-  for (const line of raw.split("\n")) {
-    const m = line.match(/^\|\s*([^|]+?)\s*\|\s*`?(#[0-9A-Fa-f]{6})`?/);
-    if (!m) continue;
-    const key = map[m[1].toLowerCase()];
-    if (key && !palette[key]) palette[key] = m[2];
-  }
-  return Object.keys(palette).length ? palette : null;
-}
-
 function buildPage(data, content) {
   const title = escapeHtml(data.client || "Website");
   const palette = readPalette(data.slug) || {};
@@ -119,15 +79,6 @@ ${simpleMarkdownToHtml(content.trim())}
 </body>
 </html>
 `;
-}
-
-function walkMd(dir, out = []) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walkMd(full, out);
-    else if (entry.name.endsWith(".md")) out.push(full);
-  }
-  return out;
 }
 
 function main() {

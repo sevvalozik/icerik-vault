@@ -29,6 +29,7 @@ const REQUIRED = {
   "video-log": ["client", "slug", "date"],
   "gorsel-brief": ["client", "slug", "kampanya", "status", "date"],
   "gorsel-log": ["client", "slug", "date"],
+  "instagram-feed": ["client", "slug", "status", "date"],
 };
 const SKIP_DIRS = new Set([".git", ".obsidian", "node_modules", "dist", "_export", ".trash"]);
 const WARN_FILE_MB = 90;   // uyarı: GitHub sınırına yaklaşıyor
@@ -56,7 +57,7 @@ function parseFrontmatter(raw) {
 }
 
 const rel = (p) => path.relative(ROOT, p);
-const problems = { frontmatter: [], missingBrief: [], bigFiles: [], unloggedPrompts: [], openQuestions: [] };
+const problems = { frontmatter: [], missingBrief: [], bigFiles: [], unloggedPrompts: [], openQuestions: [], brokenImages: [] };
 
 const briefClients = new Set();
 const seenClients = new Map();
@@ -80,6 +81,13 @@ for (const dir of CONTENT_DIRS) {
       if (q) problems.openQuestions.push(`${rel(file)}: ${q} adet ❓ doğrulanacak alan`);
     } else if (fm.client) {
       seenClients.set(fm.client, rel(file));
+    }
+    if (fm.type === "instagram-feed") {
+      // Feed notundaki görsel yolları diskte var mı?
+      const refs = [...raw.matchAll(/^(?:-[ \t]*(?:görsel|ek görseller)|avatar):[ \t]*([^\n]+)$/gm)]
+        .flatMap((m) => m[1].split(",").map((s2) => s2.trim()).filter(Boolean));
+      const broken = refs.filter((r) => !fs.existsSync(path.join(ROOT, r)));
+      if (broken.length) problems.brokenImages.push(`${rel(file)}: ${broken.length} kırık yol → ${broken.slice(0, 3).join(", ")}${broken.length > 3 ? " …" : ""}`);
     }
     if (/-log\.md$/.test(file)) {
       const rows = raw.split("\n").filter((l) => l.startsWith("|") && l.includes("❓"));
@@ -108,6 +116,7 @@ section("2. Marka brief'i olmayan müşteriler", problems.missingBrief, "Templat
 section("3. Büyük dosyalar (90 MB uyarı / 100 MB hata)", problems.bigFiles, "Google Drive'a taşı, .gitignore'a ekle (99-Dashboard/bulut-depolama.md)");
 section("4. Promptu kaydedilmemiş log satırları", problems.unloggedPrompts, "Mümkünse geriye dönük doldur; yeni üretimlerde zorunlu");
 section("5. Marka brief'lerinde doğrulanacak alanlar", problems.openQuestions, "Müşteriyle teyit et");
+section("6. Instagram feed'lerinde kırık görsel yolu", problems.brokenImages, "Dosyayı 03-Assets altına koy ya da notu güncelle");
 
 const total = Object.values(problems).reduce((n, a) => n + a.length, 0);
 console.log(`\n${total ? total + " bulgu" : "Her şey yolunda"}.`);
