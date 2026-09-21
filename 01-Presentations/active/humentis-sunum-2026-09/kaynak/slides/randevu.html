@@ -1,0 +1,101 @@
+<section id="randevu" data-transition="fade" style="background:#284C51; color:#F6EFDD; font-family:'Manrope', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:48px">
+<p style="font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#CEAB69">Randevu</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif; font-size:64px; font-weight:600; line-height:1.15; color:#F6EFDD; width:1664px">Humentis'ten uzmanın kendi sitesine</h2>
+<div style="display:flex; flex-direction:column; gap:40px; width:640px">
+<div style="display:flex; flex-direction:row; align-items:center; gap:24px">
+<div style="display:flex; align-items:center; justify-content:center; width:72px; height:72px; border-radius:50%; background:#CEAB69"><p style="font-size:32px; font-weight:700; color:#1F2D2E">1</p></div>
+<div style="display:flex; flex-direction:column; gap:4px"><p style="font-size:32px; font-weight:700; line-height:1.2; color:#F6EFDD">Uzmanı seçin</p><p style="font-size:24px; line-height:1.4; color:#D6DDD2">Humentis uzman listesinden</p></div>
+</div>
+<div style="display:flex; flex-direction:row; align-items:center; gap:24px">
+<div style="display:flex; align-items:center; justify-content:center; width:72px; height:72px; border-radius:50%; background:#CEAB69"><p style="font-size:32px; font-weight:700; color:#1F2D2E">2</p></div>
+<div style="display:flex; flex-direction:column; gap:4px"><p style="font-size:32px; font-weight:700; line-height:1.2; color:#F6EFDD">Profili inceleyin</p><p style="font-size:24px; line-height:1.4; color:#D6DDD2">Uzmanın kendi web sitesine yönlenir</p></div>
+</div>
+</div>
+<x-embed style="position:absolute; left:864px; top:344px; width:928px; height:576px"><!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:928px;height:576px;background:transparent;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:#23363A;overflow:hidden}
+.chips{position:absolute;left:0;top:0;width:928px;height:56px;display:flex;gap:12px}
+.chip{flex:1;height:56px;border-radius:28px;background:rgba(246,239,221,.16);color:#D6DDD2;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .4s;white-space:nowrap}
+.chip.on{background:#CEAB69;color:#1F2D2E}
+.win{position:absolute;left:0;top:72px;width:928px;height:504px;background:#F6EFDD;border-radius:20px;border:2px solid #284C51;overflow:hidden}
+.bar{position:absolute;left:0;top:0;width:100%;height:56px;background:#E9E0C6;display:flex;align-items:center;gap:8px;padding:0 20px;border-bottom:1px solid #DDD3B8}
+.dot{width:14px;height:14px;border-radius:7px;background:#B99656}
+.url{margin-left:16px;flex:1;height:36px;border-radius:18px;background:#FCF8EC;font-size:24px;line-height:36px;padding:0 20px;color:#284C51;font-weight:600;transition:opacity .3s}
+.page{position:absolute;left:0;top:56px;width:928px;height:448px;opacity:0;transition:opacity .45s}
+.page.on{opacity:1}
+h1{font-size:32px;color:#284C51;position:absolute;left:32px;top:20px}
+.card{position:absolute;top:80px;width:272px;height:262px;background:#FCF8EC;border:2px solid #DDD3B8;border-radius:16px;padding:16px}
+.ph{height:96px;border-radius:12px;background:linear-gradient(135deg,#557871,#CEAB69);display:flex;align-items:center;justify-content:center;color:#F6EFDD;font-size:32px;font-weight:700}
+.nm{font-size:24px;font-weight:700;color:#284C51;margin-top:12px;line-height:1.2}
+.pill{position:absolute;left:16px;bottom:16px;width:236px;height:52px;border-radius:26px;background:#284C51;color:#F6EFDD;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.pill.press{transform:scale(.93);background:#CEAB69;color:#1F2D2E}
+.nav{position:absolute;left:32px;top:20px;font-size:24px;color:#564E44;display:flex;gap:28px}
+.nav b{color:#284C51}
+.big{position:absolute;left:32px;top:92px;font-size:48px;font-weight:700;color:#284C51;font-family:Georgia,serif;width:520px;line-height:1.1}
+.role{position:absolute;left:32px;top:216px;font-size:24px;color:#564E44;width:520px}
+.btn2{position:absolute;left:32px;top:300px;width:220px;height:60px;border-radius:30px;background:#284C51;color:#F6EFDD;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.btn2.press{transform:scale(.93);background:#CEAB69;color:#1F2D2E}
+.pt{position:absolute;right:48px;top:64px;width:280px;height:280px;border-radius:140px;background:linear-gradient(135deg,#557871,#CEAB69);display:flex;align-items:center;justify-content:center;color:#F6EFDD;font-size:64px;font-weight:700;font-family:Georgia,serif}
+.tag{position:absolute;left:32px;bottom:20px;font-size:24px;color:#7A5C22;font-weight:700}
+.fld{position:absolute;left:32px;width:520px;height:56px;border:2px solid #B99656;border-radius:14px;background:#fff;font-size:24px;line-height:52px;padding:0 20px;color:#23363A}
+.fld i{color:#8A8378;font-style:normal}
+.send{position:absolute;left:32px;top:330px;width:380px;height:60px;border-radius:30px;background:#284C51;color:#F6EFDD;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.send.press{transform:scale(.93);background:#CEAB69;color:#1F2D2E}
+.ok{position:absolute;left:0;top:0;width:928px;height:448px;background:rgba(246,239,221,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0;transition:opacity .4s}
+.ok.on{opacity:1}
+.ck{width:88px;height:88px;border-radius:44px;background:#284C51;display:flex;align-items:center;justify-content:center;transform:scale(0);transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.ok.on .ck{transform:scale(1)}
+.ok p{font-size:32px;font-weight:700;color:#284C51}
+.ok span{font-size:24px;color:#564E44}
+#cur{position:absolute;left:0;top:0;width:36px;height:36px;z-index:9;transition:transform 1s cubic-bezier(.45,0,.25,1);transform:translate(80px,380px)}
+.bar{transition:background .5s}.bar.dark{background:#1F3A3E;border-bottom-color:#315A5F}
+.url.dark{background:#315A5F;color:#F6EFDD}
+.page.dk{background:#284C51}
+.dk .nav{color:#D6DDD2}.dk .nav b{color:#F6EFDD}
+.dk .big{color:#F6EFDD;transform:translateY(24px);opacity:0;transition:all .6s .2s}
+.dk .role{color:#D6DDD2;opacity:0;transition:opacity .6s .5s}
+.dk .btn2{background:#CEAB69;color:#1F2D2E;opacity:0;transition:opacity .6s .8s}
+.dk .pt{transform:scale(.6);opacity:0;transition:all .7s .3s}
+.dk .tag{color:#CEAB69;opacity:0;transition:opacity .6s 1s}
+.dk.on .big{transform:none;opacity:1}.dk.on .role,.dk.on .btn2,.dk.on .tag{opacity:1}.dk.on .pt{transform:none;opacity:1}
+.new{position:absolute;right:32px;top:16px;background:#CEAB69;color:#1F2D2E;font-size:24px;font-weight:700;padding:4px 20px;border-radius:24px;opacity:0;transition:opacity .5s 1.2s}
+.dk.on .new{opacity:1}
+.redir{position:absolute;left:0;top:56px;width:928px;height:448px;background:linear-gradient(90deg,#CEAB69,#E4CD9B);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transform:translateX(-100%);transition:transform .55s cubic-bezier(.6,0,.3,1);z-index:5}
+.redir.in{transform:none}.redir.out{transform:translateX(100%)}
+.redir p{font-size:32px;font-weight:700;color:#1F2D2E}
+.pg{width:420px;height:12px;border-radius:6px;background:rgba(31,45,46,.2);overflow:hidden}
+.pg i{display:block;height:12px;width:0;background:#1F2D2E;transition:width .9s linear}
+.pg.go i{width:100%}
+</style></head><body>
+<div class="chips"><div class="chip" id="c1">1 Uzmanı seçin</div><div class="chip" id="c2">2 Kendi sitesi</div></div>
+<div class="win"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="url" id="url">humentis.com.tr/uzmanlar</div></div>
+<div class="page" id="p1"><h1>Uzmanlarımız</h1>
+<div class="card" style="left:32px"><div class="ph">ES</div><div class="nm">Elif Silav</div><div class="pill">Profili incele</div></div>
+<div class="card" style="left:328px"><div class="ph">AP</div><div class="nm">Aybala Görkem Polat</div><div class="pill">Profili incele</div></div>
+<div class="card" style="left:624px"><div class="ph">BK</div><div class="nm">Barış Can Kolçak</div><div class="pill" id="pl">Profili incele</div></div></div>
+<div class="page dk" id="p2"><div class="nav"><b>Barış Can Kolçak</b><span>Hakkımda</span><span>Yazılar</span><span>Randevu</span></div>
+<div class="big">Barış Can Kolçak</div><div class="role">Psikolojik Danışman, Aile Danışmanı</div><div class="btn2" id="b2">Randevu al</div><div class="pt">BK</div><div class="tag">Humentis çatısı altında</div><div class="new">Uzmanın kendi sitesi</div></div>
+<div class="redir" id="rd"><p>Uzmanın sitesine yönlendiriliyor</p><div class="pg" id="pg"><i></i></div></div>
+<svg id="cur" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#1F2D2E" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+</div>
+<script>
+var $=function(i){return document.getElementById(i)};
+function w(ms){return new Promise(function(r){setTimeout(r,ms)})}
+function mv(x,y){$("cur").style.transform="translate("+x+"px,"+(y)+"px)"}
+function page(n){["p1","p2"].forEach(function(p,i){$(p).classList.toggle("on",i+1==n)});["c1","c2"].forEach(function(c,i){$(c).classList.toggle("on",i+1==n)})}
+async function press(id){$(id).classList.add("press");await w(220);$(id).classList.remove("press")}
+async function loop(){for(;;){
+$("url").textContent="humentis.com.tr/uzmanlar";$("url").classList.remove("dark");document.querySelector(".bar").classList.remove("dark");
+$("rd").className="redir";$("pg").classList.remove("go");
+$("cur").style.transition="none";mv(120,380);$("cur").style.opacity=1;await w(50);$("cur").style.transition="";
+page(1);await w(1200);
+mv(735,346);await w(1300);await press("pl");
+await w(200);$("rd").classList.add("in");await w(650);$("pg").classList.add("go");$("cur").style.opacity=0;await w(500);
+$("url").textContent="uzman-adi.com";$("url").classList.add("dark");document.querySelector(".bar").classList.add("dark");await w(550);
+page(2);$("rd").classList.add("out");await w(700);
+$("cur").style.transition="none";mv(600,330);await w(30);$("cur").style.transition="";$("cur").style.opacity=1;await w(4800)}}
+loop();
+</script></body></html></x-embed>
+<p style="position:absolute; left:128px; bottom:64px; width:1100px; font-size:24px; color:#B9C7C0">Humentis · Psikolog web siteleri ve sosyal medya</p>
+<aside>Canlı animasyon, örnek tasarım. Humentis uzman listesinde uzman seçilir, "Profili incele"ye tıklanınca uzmanın kendi web sitesine yönlenilir. Adres çubuğu ve tasarım değişir: farklı bir siteye geçildiği belli olur. Randevu adımı bu sunumda anlatılmıyor, ayrıca konuşulacak. Şu an Humentis sitesinde buton "Randevu al" adıyla duruyor; kendi siteye yönlendirme bu projenin önerisidir. Adres ve fotoğraf yer tutucu. PDF veya PowerPoint çıktısında animasyon oynamaz.</aside>
+</section>

@@ -1,0 +1,52 @@
+<section id="rapor" data-transition="fade" style="background:#F6EFDD; color:#23363A; font-family:'Manrope', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:row; align-items:center; gap:96px">
+<div style="display:flex; flex-direction:column; gap:32px; width:600px">
+<p style="font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#7A5C22">Raporlama</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif; font-size:64px; font-weight:600; line-height:1.15; color:#284C51">Ne işe yaradığını görün</h2>
+<p style="font-size:32px; line-height:1.4; color:#23363A">Her ay, her uzman için tek sayfalık rapor.</p>
+<p style="font-size:24px; font-weight:600; line-height:1.4; color:#7A5C22">Yalnızca izin veren ziyaretçilerin, kimliksiz verisi.</p>
+</div>
+<x-embed style="position:absolute; left:800px; top:128px; width:992px; height:792px"><!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:992px;height:792px;background:transparent;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;overflow:hidden}
+.card{position:absolute;inset:0;background:#284C51;border-radius:28px;padding:36px 40px;color:#F6EFDD;display:flex;flex-direction:column;gap:20px;box-shadow:0 20px 60px rgba(31,45,46,.25)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:52px}
+.hd b{font-size:32px}
+.tag{background:#CEAB69;color:#1F2D2E;font-size:24px;font-weight:700;padding:6px 22px;border-radius:24px}
+.blk{border-top:1px solid #4A7378;padding-top:16px;height:190px;opacity:0;transform:translateY(20px);transition:all .6s;display:flex;flex-direction:column;gap:12px}
+.blk.on{opacity:1;transform:none}
+.blk h3{font-size:32px;font-weight:700;color:#CEAB69;line-height:1.2}
+.row{display:flex;gap:32px;align-items:center;height:120px}
+.ln{fill:none;stroke-width:6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease-out}
+.on .ln{stroke-dashoffset:0}
+.br{display:flex;align-items:center;gap:16px;height:38px}
+.bl{font-size:24px;width:250px;color:#D6DDD2;white-space:nowrap}
+.tk{flex:1;height:20px;border-radius:10px;background:#315A5F;overflow:hidden}
+.fl{height:20px;width:0;border-radius:10px;background:#CEAB69;transition:width 1.4s ease-out}
+.col{display:flex;flex-direction:column;gap:6px;flex:1}
+.lg{font-size:24px;color:#D6DDD2;display:flex;gap:24px;align-items:center;white-space:nowrap}
+.lg i{display:inline-block;width:28px;height:6px;border-radius:3px;margin-right:8px;vertical-align:middle}
+.big{font-size:24px;color:#D6DDD2}
+</style></head><body><div class="card">
+<div class="hd"><b>Uzman Adı · Aylık rapor</b><span class="tag">Örnek veri</span></div>
+<div class="blk" id="b1"><h3>Kim geldi?</h3><div class="row"><svg width="480" height="120" viewBox="0 0 480 130" preserveAspectRatio="none"><path class="ln" pathLength="1" stroke="#CEAB69" d="M4,110 C60,104 90,80 150,84 S250,52 310,58 S420,24 476,12"/><line x1="0" y1="126" x2="480" y2="126" stroke="#4A7378" stroke-width="2"/></svg><div class="col"><div class="br"><div class="bl">Instagram</div><div class="tk"><div class="fl" data-w="62"></div></div></div><div class="br"><div class="bl">Google</div><div class="tk"><div class="fl" data-w="48"></div></div></div><div class="br"><div class="bl">Doğrudan</div><div class="tk"><div class="fl" data-w="26"></div></div></div></div></div></div>
+<div class="blk" id="b2"><h3>Ne okundu?</h3><div class="row"><div class="col" style="gap:0"><div class="br"><div class="bl">En çok okunan yazı</div><div class="tk"><div class="fl" data-w="86"></div></div></div><div class="br"><div class="bl">En çok izlenen video</div><div class="tk"><div class="fl" data-w="64"></div></div></div><div class="br"><div class="bl">En çok kaydedilen reels</div><div class="tk"><div class="fl" data-w="45"></div></div></div></div></div></div>
+<div class="blk" id="b3"><h3>Nerede görünüyoruz?</h3><div class="row"><svg width="480" height="120" viewBox="0 0 480 130" preserveAspectRatio="none"><path class="ln" pathLength="1" stroke="#F6EFDD" d="M4,96 C80,92 150,84 220,78 S380,64 476,52"/><path class="ln" pathLength="1" stroke="#CEAB69" style="transition-delay:.5s" d="M4,118 C90,116 170,108 240,88 S380,40 476,10"/><line x1="0" y1="126" x2="480" y2="126" stroke="#4A7378" stroke-width="2"/></svg><div class="col"><div class="lg"><span><i style="background:#F6EFDD"></i>Google</span></div><div class="lg"><span><i style="background:#CEAB69"></i>Yapay zeka aramaları</span></div></div></div></div>
+</div><script>
+function $(i){return document.getElementById(i)}
+function w(ms){return new Promise(function(r){setTimeout(r,ms)})}
+async function loop(){for(;;){
+["b1","b2","b3"].forEach(function(i){$(i).classList.remove("on")});
+[].forEach.call(document.querySelectorAll(".fl"),function(f){f.style.transition="none";f.style.width="0"});
+await w(200);[].forEach.call(document.querySelectorAll(".fl"),function(f){f.style.transition=""});
+document.querySelectorAll(".ln").forEach(function(l){l.style.transition="none";l.style.strokeDashoffset="1"});
+await w(60);document.querySelectorAll(".ln").forEach(function(l){l.style.transition="";l.style.strokeDashoffset=""});
+await w(600);
+for(var k=1;k<=3;k++){var b=$("b"+k);b.classList.add("on");
+[].forEach.call(b.querySelectorAll(".fl"),function(f){f.style.width=f.getAttribute("data-w")+"%"});
+await w(2600)}
+await w(3200)}}
+loop();
+</script></body></html></x-embed>
+<p style="position:absolute; left:128px; bottom:64px; width:1100px; font-size:24px; color:#564E44">Humentis · Psikolog web siteleri ve sosyal medya</p><img src="/_blob/ffd67a966a05480744343b8f1e9185a2" alt="Humentis logosu" style="position:absolute; right:128px; bottom:52px; width:174px; height:58px; object-fit:contain">
+<aside>Canlı animasyon, örnek rapor. Grafikler ve yüzdeler örnek veridir, gerçek ölçüm değildir. Aylık raporda üç başlık var: kim geldi (ziyaret ve kaynak), ne okundu (en çok okunan yazı ve videolar) ve nerede görünüyoruz (Google ve yapay zeka aramalarında görünürlük). Kişi listesi tutulmaz: yalnızca çerez onayı veren ziyaretçilerin anonim verisi raporlanır. Onay kayıtları KVKK gereği ayrıca saklanır. PDF veya PowerPoint çıktısında animasyon oynamaz.</aside>
+</section>

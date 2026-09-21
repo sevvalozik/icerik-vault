@@ -1,0 +1,52 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-09-21T09:00:00Z"
+ },
+ "title": "Humentis Psikolog Web Sitesi ve Sosyal Medya Sunumu",
+ "order": [
+  "cover",
+  "fikir",
+  "ekip",
+  "site",
+  "randevu",
+  "seo",
+  "tasarim",
+  "surec",
+  "rapor",
+  "sosyal",
+  "etik",
+  "kapsam",
+  "kapanis"
+ ],
+ "sections": {
+  "s1": {
+   "description": "Fikir: her uzmana ait dijital ofis",
+   "start": "cover"
+  },
+  "s2": {
+   "description": "Uzman kadrosu, site yapısı, randevu ve tasarım dili",
+   "start": "ekip"
+  },
+  "s3": {
+   "description": "Süreç, raporlama, sosyal medya ve etik çerçeve",
+   "start": "surec"
+  },
+  "s4": {
+   "description": "Kapsam ve kapanış",
+   "start": "kapsam"
+  }
+ },
+ "faces": {
+  "source-serif-4": {
+   "family": "Source Serif 4",
+   "href": "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap"
+  },
+  "manrope": {
+   "family": "Manrope",
+   "href": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

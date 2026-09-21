@@ -1,0 +1,64 @@
+<section id="site" data-transition="fade" style="background:#F6EFDD; color:#23363A; font-family:'Manrope', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:48px">
+<p style="font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#7A5C22">Uzman sitesi</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif; font-size:64px; font-weight:600; line-height:1.15; color:#284C51; width:1664px">Her uzman sitesi beş bölümden oluşur</h2>
+<x-embed style="position:absolute; left:128px; top:344px; width:1664px; height:576px"><!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1664px;height:576px;background:transparent;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:#23363A;overflow:hidden}
+.list{position:absolute;left:0;top:52px;width:640px;display:flex;flex-direction:column;gap:28px}
+.row{display:flex;align-items:center;gap:24px;opacity:.5;transition:opacity .4s}
+.row.on{opacity:1}
+.num{width:72px;height:72px;border-radius:36px;background:#DDD3B8;color:#1F2D2E;font-size:32px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background .4s}
+.row.on .num{background:#CEAB69}
+.lab{font-size:32px;font-weight:700;color:#284C51}
+.win{position:absolute;left:736px;top:0;width:928px;height:576px;background:#F6EFDD;border-radius:20px;border:2px solid #284C51;overflow:hidden}
+.bar{position:absolute;left:0;top:0;width:100%;height:56px;background:#1F3A3E;display:flex;align-items:center;gap:8px;padding:0 20px}
+.dot{width:14px;height:14px;border-radius:7px;background:#CEAB69}
+.url{margin-left:16px;flex:1;height:36px;border-radius:18px;background:#315A5F;font-size:24px;line-height:36px;padding:0 20px;color:#F6EFDD;font-weight:600}
+.nav{position:absolute;left:0;top:56px;width:100%;height:56px;background:#FCF8EC;border-bottom:1px solid #DDD3B8;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:3}
+.nav span{font-size:24px;color:#564E44;padding:6px 0;border-bottom:4px solid transparent;transition:all .4s;white-space:nowrap}
+.nav span.on{color:#284C51;font-weight:700;border-bottom-color:#CEAB69}
+.vp{position:absolute;left:0;top:112px;width:928px;height:464px;overflow:hidden}
+.track{position:absolute;left:0;top:0;width:928px;transition:transform .9s cubic-bezier(.6,0,.3,1)}
+.sec{position:relative;width:928px;height:464px;padding:40px 48px}
+.dk{background:#284C51;color:#F6EFDD}
+.h{font-family:Georgia,serif;font-size:44px;font-weight:700;color:#284C51;line-height:1.1}
+.dk .h{color:#F6EFDD}
+.big{position:absolute;left:48px;top:120px;font-family:Georgia,serif;font-size:60px;font-weight:700;color:#F6EFDD;line-height:1.05;width:500px}
+.role{position:absolute;left:48px;top:264px;font-size:24px;color:#D6DDD2;width:500px}
+.cta{position:absolute;left:48px;top:330px;height:60px;padding:0 36px;border-radius:30px;background:#CEAB69;color:#1F2D2E;font-size:24px;font-weight:700;display:flex;align-items:center}
+.pt{position:absolute;right:64px;top:88px;width:260px;height:260px;border-radius:130px;background:linear-gradient(135deg,#557871,#CEAB69);display:flex;align-items:center;justify-content:center;color:#F6EFDD;font-size:72px;font-weight:700;font-family:Georgia,serif}
+.txt{position:absolute;left:48px;top:112px;width:832px;font-size:32px;line-height:1.4;color:#23363A}
+.small{position:absolute;left:48px;top:330px;width:832px;font-size:24px;color:#7A5C22;font-weight:700}
+.grid{position:absolute;left:48px;top:112px;width:832px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tile{background:#FCF8EC;border:2px solid #DDD3B8;border-left:8px solid #CEAB69;border-radius:14px;padding:22px 24px;font-size:24px;font-weight:700;color:#284C51;line-height:1.3;min-height:104px;display:flex;align-items:center}
+.cards{position:absolute;left:48px;top:120px;width:832px;display:flex;gap:20px}
+.cd{flex:1;height:250px;border-radius:14px;background:#315A5F;border:2px solid #4A7378;padding:20px;display:flex;flex-direction:column;gap:14px}
+.th{height:100px;border-radius:10px;background:linear-gradient(135deg,#557871,#CEAB69);display:flex;align-items:center;justify-content:center;color:#F6EFDD;font-size:24px;font-weight:700}
+.cd i{display:block;height:14px;border-radius:7px;background:#4A7378}
+.cd b{font-size:24px;color:#F6EFDD}
+.btns{position:absolute;left:48px;top:132px;display:flex;gap:16px}
+.b{height:64px;padding:0 30px;border-radius:32px;font-size:24px;font-weight:700;display:flex;align-items:center;white-space:nowrap}
+</style></head><body>
+<div class="list"><div class="row" id="r0"><div class="num">1</div><div class="lab">Ana sayfa</div></div><div class="row" id="r1"><div class="num">2</div><div class="lab">Hakkımda</div></div><div class="row" id="r2"><div class="num">3</div><div class="lab">Çalışma alanları</div></div><div class="row" id="r3"><div class="num">4</div><div class="lab">Yazılar ve videolar</div></div><div class="row" id="r4"><div class="num">5</div><div class="lab">Randevu ve iletişim</div></div></div>
+<div class="win"><div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="url">uzman-adi.com</div></div>
+<div class="nav" id="nv"><span>Ana sayfa</span><span>Hakkımda</span><span>Çalışma alanları</span><span>Yazılar</span><span>Randevu</span></div>
+<div class="vp"><div class="track" id="tr">
+<div class="sec dk"><div class="big">Elif Silav</div><div class="role">Kurucu Psikolog &amp; Aile Danışmanı</div><div class="cta">Randevu al</div><div class="pt">ES</div></div>
+<div class="sec"><div class="h">Hakkımda</div><div class="txt">Bilişsel Davranışçı Terapi ekolünü temel alır. Bireysel gelişimi ve sağlıklı ilişkileri destekleyen bir yaklaşımla çalışır.</div><div class="small">Ankara Yıldırım Beyazıt Üniversitesi, Psikoloji</div></div>
+<div class="sec"><div class="h">Çalışma alanları</div><div class="grid"><div class="tile">Kaygı Bozuklukları</div><div class="tile">Çift ve Evlilik Terapisi</div><div class="tile">Bireysel Yetişkin Terapisi</div><div class="tile">Aile Danışmanlığı</div></div></div>
+<div class="sec dk"><div class="h">Yazılar ve videolar</div><div class="cards"><div class="cd"><div class="th">Yazı</div><i style="width:80%"></i><i style="width:55%"></i></div><div class="cd"><div class="th">Video</div><i style="width:70%"></i><i style="width:45%"></i></div><div class="cd"><div class="th">Reels</div><i style="width:85%"></i><i style="width:50%"></i></div></div></div>
+<div class="sec"><div class="h">Randevu ve iletişim</div><div class="btns"><div class="b" style="background:#284C51;color:#F6EFDD">Randevu al</div><div class="b" style="background:#557871;color:#F6EFDD">Ara</div><div class="b" style="background:#CEAB69;color:#1F2D2E">WhatsApp'tan sor</div></div><div class="txt" style="top:250px;font-size:32px">Humentis Ankara · Online · Yüz yüze</div></div>
+</div></div></div>
+<script>
+var n=5,i=0;function $(x){return document.getElementById(x)}
+function w(ms){return new Promise(function(r){setTimeout(r,ms)})}
+function show(k){$("tr").style.transform="translateY("+(-464*k)+"px)";
+for(var j=0;j<n;j++){$("r"+j).classList.toggle("on",j==k)}
+[].forEach.call($("nv").children,function(s,j){s.classList.toggle("on",j==k)})}
+async function loop(){for(;;){for(var k=0;k<n;k++){show(k);await w(k==n-1?4200:2900)}
+$("tr").style.transition="none";show(0);await w(60);$("tr").style.transition="";await w(400)}}
+loop();
+</script></body></html></x-embed>
+<p style="position:absolute; left:128px; bottom:64px; width:1100px; font-size:24px; color:#564E44">Humentis · Psikolog web siteleri ve sosyal medya</p><img src="/_blob/ffd67a966a05480744343b8f1e9185a2" alt="Humentis logosu" style="position:absolute; right:128px; bottom:52px; width:174px; height:58px; object-fit:contain">
+<aside>Canlı animasyon, örnek tasarım. Uzmanın kendi sitesi aşağı kayarak beş bölümü gösterir: ana sayfa, hakkımda, çalışma alanları, yazılar ve videolar, randevu ve iletişim. İçerik Humentis'teki Elif Silav profilinden alındı (unvan, üniversite, çalışma alanları, konum). Fotoğraf ve yazı/video kartları yer tutucu, adres uzman-adi.com örnek. PDF veya PowerPoint çıktısında animasyon oynamaz.</aside>
+</section>

@@ -1,0 +1,53 @@
+<section id="seo" data-transition="fade" style="background:#CEAB69; color:#1F2D2E; font-family:'Manrope', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:row; align-items:center; gap:96px">
+<div style="display:flex; flex-direction:column; gap:32px; width:600px">
+<p style="font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#1F2D2E">SEO</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif; font-size:64px; font-weight:600; line-height:1.15; color:#1F2D2E">Aramada uzmanın sayfası ilk sırada</h2>
+<p style="font-size:32px; line-height:1.4; color:#1F2D2E">Sayfa başlığı, aranan kelimeye göre yazılır.</p>
+</div>
+<x-embed style="position:absolute; left:824px; top:128px; width:968px; height:792px"><!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:968px;height:792px;background:transparent;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:#23363A;overflow:hidden}
+.card{position:absolute;inset:0;background:#FCF8EC;border:2px solid #DDD3B8;border-radius:28px;padding:40px;display:flex;flex-direction:column;gap:28px}
+.bar{display:flex;align-items:center;gap:16px}
+.field{flex:1;height:88px;border:3px solid #284C51;border-radius:44px;background:#fff;display:flex;align-items:center;padding:0 32px;gap:16px;font-size:32px}
+.field svg{flex:none}
+#q{white-space:nowrap}
+.caret{display:inline-block;width:3px;height:36px;background:#284C51;margin-left:2px;vertical-align:middle;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+.btn{height:88px;padding:0 44px;border-radius:44px;background:#284C51;color:#F6EFDD;font-size:32px;font-weight:700;display:flex;align-items:center;transition:transform .15s,background .15s}
+.btn.press{transform:scale(.92);background:#CEAB69;color:#1F2D2E}
+.res{opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s}
+.res.on{opacity:1;transform:none}
+.hum{border:3px solid #284C51;border-radius:20px;background:#fff;padding:28px 32px;display:flex;flex-direction:column;gap:10px;position:relative}
+.hum.glow{box-shadow:0 0 0 10px rgba(206,171,105,.55)}
+.row{display:flex;align-items:center;gap:16px}
+.badge{background:#284C51;color:#F6EFDD;font-size:24px;font-weight:700;padding:6px 20px;border-radius:24px;transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.badge.on{transform:scale(1)}
+.url{font-size:24px;color:#564E44}
+.t{font-size:40px;font-weight:700;color:#284C51;line-height:1.2}
+.s{font-size:24px;line-height:1.4}
+.sk{background:#F0E9D2;border-radius:20px;padding:28px 32px;display:flex;flex-direction:column;gap:16px}
+.sk i{display:block;height:20px;border-radius:10px;background:#DDD3B8}
+.hint{font-size:24px;color:#7A5C22;font-weight:700;height:32px}
+</style></head><body><div class="card">
+<div class="bar"><div class="field"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#284C51" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span id="q"></span><span class="caret"></span></div><div class="btn" id="btn">Ara</div></div>
+<div class="hint" id="hint"></div>
+<div class="res hum" id="r1"><div class="row"><div class="badge" id="bd">Uzmanın sayfası</div><div class="url">humentis.com.tr › uzman-adi</div></div><div class="t">Çift Terapisi Ankara | Uzman Adı</div><div class="s">İlişki ve evlilik danışmanlığı. Randevu için tıklayın.</div></div>
+<div class="res sk" id="r2"><i style="width:340px"></i><i style="width:700px"></i></div>
+<div class="res sk" id="r3"><i style="width:420px"></i><i style="width:620px"></i></div>
+</div><script>
+var W="çift terapisi Ankara",q=document.getElementById("q"),$=function(i){return document.getElementById(i)};
+function w(ms){return new Promise(function(r){setTimeout(r,ms)})}
+async function loop(){for(;;){
+q.textContent="";["r1","r2","r3"].forEach(function(i){$(i).classList.remove("on")});$("bd").classList.remove("on");$("r1").classList.remove("glow");$("hint").textContent="";
+await w(900);
+for(var i=1;i<=W.length;i++){q.textContent=W.slice(0,i);await w(110)}
+await w(600);$("btn").classList.add("press");await w(220);$("btn").classList.remove("press");
+await w(250);$("r2").classList.add("on");$("r3").classList.add("on");await w(500);
+$("r1").classList.add("on");await w(700);$("bd").classList.add("on");$("r1").classList.add("glow");$("hint").textContent="İlk sırada: uzmanın kendi sayfası";
+await w(4200)}}
+loop();
+</script></body></html></x-embed>
+<p style="position:absolute; left:128px; bottom:64px; width:1100px; font-size:24px; color:#1F2D2E">Humentis · Psikolog web siteleri ve sosyal medya</p>
+<aside>Canlı animasyon: arama kutusuna "çift terapisi Ankara" yazılır, Ara'ya basılır, uzmanın sayfası ilk sırada çıkar. Döngüyle tekrar eder. PDF veya PowerPoint çıktısında animasyon oynamaz. Uzman Adı yer tutucudur. Her uzman için hedef kelime, sayfa başlığı ve ana başlık ayrı yazılır.</aside>
+</section>
