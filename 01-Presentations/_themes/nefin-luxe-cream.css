@@ -1,0 +1,46 @@
+/* nefin-luxe-cream.css — Marp theme */
+/* @theme nefin-luxe-cream */
+/* Nefin aylık içerik planı HTML sunumundan (01-Presentations/active/nefin-sunum/build_deck2.py) çıkarılan gerçek değerler. Modern klasik, lüks kozmetik: krem/fildişi/bej + soft altın + espresso. Bordo/kadife yok. */
+/* Fontlar: Bodoni Moda (başlık) + Jost (gövde) — Google Fonts. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #F6EFE4;
+  --sand: #EADBC8;
+  --soft: #CDBBA5;
+  --gold: #D9B36C;
+  --gold-deep: #86622A;
+  --taupe: #6B564B;
+  --dark: #3B2A22;
+  --espresso: #1E1410;
+  --display: 'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  --text: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+}
+
+section {
+  background: #F6EFE4;
+  color: #3B2A22;
+  font-family: var(--text);
+  font-weight: 300;
+  padding: 60px;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  color: #1E1410;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+p, li { color: #6B564B; }
+
+strong, b { color: #86622A; }
+
+section.dark {
+  background: #1E1410;
+  color: #F6EFE4;
+}
+section.dark h1, section.dark h2 { color: #F6EFE4; }
+section.dark p, section.dark li { color: #EADBC8; }
+section.dark strong { color: #D9B36C; }

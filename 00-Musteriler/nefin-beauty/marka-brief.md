@@ -6,7 +6,7 @@ sektor: kozmetik / cilt bakımı
 status: active
 date: 2026-09-16
 tags: [musteri, marka-brief, nefinbeauty, kozmetik]
-related: ["[[nefin-beauty-sunum]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06-AI-Video/nefin-beauty/video-log]]", "[[07-AI-Gorsel/nefin-beauty/gorsel-log]]"]
+related: ["[[nefin-beauty-sunum]]", "[[nefin-sunum]]", "[[aylik-icerik-takvimi]]", "[[c-vitamini-serum-kampanya-brief]]", "[[06-AI-Video/nefin-beauty/video-log]]", "[[07-AI-Gorsel/nefin-beauty/gorsel-log]]"]
 ---
 
 # Nefin Beauty — Marka Brief'i

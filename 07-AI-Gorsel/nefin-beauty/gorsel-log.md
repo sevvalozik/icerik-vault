@@ -397,3 +397,7 @@ Square 1:1 composition.
 | Tarih | Dosya | Model | Prompt (brief → görsel no) | Oran | Kullanım | Puan |
 |---|---|---|---|---|---|---|
 | | `nefin-<kampanya>-kf01.png` | Gemini (Nano Banana Pro) | | 9:16 | video keyframe | |
+
+## Sunum için toplanan görseller (21 Eylül 2026)
+
+Aylık içerik planı sunumunda ([[01-Presentations/active/nefin-sunum]]) kullanılan orijinal görseller `03-Assets/images/nefin-beauty/sunum-kaynak/` altında: ürün fotoğrafları, infografikler, doku görselleri (`gorsel-*`, `adsiz-*`, `gemini-generated-image-*`, `img-975x`) ve `nefin-katalog-turkce-1.pdf` (ürün kataloğu). Model ve prompt ❓ kaydedilmemiş; yeni üretimlerde yukarıdaki şablon kullanılacak.

@@ -218,3 +218,20 @@ Create a seamless, elegant 10-12 second vertical product video suitable for a mo
 | Dosya | Çözünürlük / oran | Süre | fps | Ses | İçerik | Model / sürüm | Prompt (brief'teki shot no) | Seed | Puan |
 |---|---|---|---|---|---|---|---|---|---|
 | `nefin-<kampanya>-s01-v1.mp4` | 1080×1920 | 8 | 24 | yok | | | brief → Shot 1 / Varyant A | | |
+
+
+## Sunum için hazırlanan reels klipleri (21 Eylül 2026)
+
+Aylık içerik planı sunumunda ([[01-Presentations/active/nefin-sunum]]) kullanılan orijinal klipler `03-Assets/videos/nefin-beauty/sunum-kaynak/` altında. Sunumdaki sıkıştırılmış kopyalar `01-Presentations/active/nefin-sunum/` içinde. Model ve prompt ❓ kaydedilmemiş; dosya adları Gemini/Veo çıktısı gibi görünüyor.
+
+| Dosya | Model | Prompt | Puan |
+|---|---|---|---|
+| `transform-the-provided-vertica.mp4` | ❓ | ❓ kaydedilmemiş | ❓ |
+| `use-the-uploaded-image-as-the.mp4` | ❓ | ❓ | ❓ |
+| `use-the-uploaded-product-image.mp4` | ❓ | ❓ | ❓ |
+| `bir-de-yatay-formatta-yapabilr.mp4` (yatay 16:9 istek) | ❓ | ❓ | ❓ |
+| `bu-gorseli-video-haline-getir.mp4` | ❓ | ❓ | ❓ |
+| `gemini-generated-video-13a483c4.mp4` | Gemini | ❓ | ❓ |
+| `gemini-generated-video-ca8f342a.mp4` | Gemini | ❓ | ❓ |
+| `nefin-cream.mp4` | ❓ | ❓ | ❓ |
+| `saniyeden-saniyeye-kada-1.mp4` | ❓ | ❓ | ❓ |

@@ -20,6 +20,7 @@ tags: [dashboard, tema]
 | `sunset-boulevard` | #e9c46a | #e76f51 | Kreatif sunum, pazarlama, lifestyle, etkinlik |
 | `tech-innovation` | #1e1e1e (koyu) | #0066ff | Tech startup, yazılım lansmanı, AI/ML, dijital dönüşüm |
 | `dark-tech` | #0d1117 (koyu) | #58a6ff | Genel teknoloji/kurumsal (ilk oluşturulan tema) |
+| `nefin-luxe-cream` | #f6efe4 | #d9b36c (soft altın) | Lüks kozmetik/cilt bakımı, modern klasik: krem + altın + espresso, Bodoni Moda + Jost (nefin-sunum'dan çıkarıldı) |
 | `client-pitch` | #ffffff | #0066cc | Sade, kurumsal müşteri sunumları |
 
 ## Web Tasarım Token Sistemleri (CSS değişkenleri, sunum teması değil)
