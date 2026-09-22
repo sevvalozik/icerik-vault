@@ -13,7 +13,7 @@ related: ["[[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]]", "[[00-Must
 
 > Kod vault'ta değil: `~/nefin-web`. Plan ve strateji: [[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]].
 
-## Durum: v2 "Berrak" (22 Eylül 2026)
+## Durum: v2 "Berrak" (22 Eylül 2026) — repo `main` @ `80a0101`
 
 Video-öncelikli scroll anlatısı: perde açılışı, sunumdaki iki kampanya hero'su, ışığa çıkış geçişi,
 manifesto, ürün hikâyesi, doku galerisi, rutin çizgisi, cam INCI paneli, ihtiyaç→ürün filtresi,
