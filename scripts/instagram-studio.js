@@ -84,10 +84,10 @@ function serveFile(res, abs) {
 function loadProfile(slug) {
   const existing = readFeed(slug);
   if (existing) {
-    // Eski video gönderilerinin posteri yoksa üret (bir sonraki kayıtta nota yazılır).
-    for (const post of existing.posts) {
-      if (VIDEO_RE.test(post.image || "") && (!post.poster || !fs.existsSync(path.join(ROOT, post.poster)))) {
-        post.poster = ensurePoster(post.image);
+    // Eski video gönderi/hikayelerinin posteri yoksa üret (bir sonraki kayıtta nota yazılır).
+    for (const item of [...existing.posts, ...(existing.stories || [])]) {
+      if (VIDEO_RE.test(item.image || "") && (!item.poster || !fs.existsSync(path.join(ROOT, item.poster)))) {
+        item.poster = ensurePoster(item.image);
       }
     }
     return existing;

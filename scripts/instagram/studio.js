@@ -8,6 +8,7 @@
   let profile = null;
   let palette = null;
   let selected = -1;
+  let storySel = -1;
   let view = "grid";
   let saveTimer = null;
   let saving = false;
@@ -43,13 +44,14 @@
       selectedIndex: selected,
       draggable: true,
       showStates: $("f_states").checked,
-      onSelect: (post, i) => { selected = i; renderAll(); },
+      onSelect: (post, i) => { selected = i; storySel = -1; renderAll(); },
       onReorder: reorder,
       onAvatarClick: () => { $("filePicker").dataset.target = "avatar"; $("filePicker").click(); },
       onAvatarDrop: (file) => uploadSingle(file, "avatar"),
     });
     if (view === "calendar") renderCalendar();
     renderPostEditor();
+    renderStories();
   }
   function pendingUrl(p) { return typeof p === "string" && p.startsWith("blob:") ? p : null; }
 
@@ -60,6 +62,94 @@
       onSelect: (i) => { selected = i; view = "grid"; switchView("grid"); renderAll(); },
       onChange: () => { markDirty(); renderAll(); },
     });
+  }
+
+  function storyThumb(st) {
+    const src = resolveImage(st.poster || st.__localPoster || st.image || "");
+    if (!src) return `<span class="empty">medya yok</span>`;
+    if (window.IGPreview.isVideo(src)) return `<video src="${src}" muted playsinline preload="metadata"></video>`;
+    return `<img src="${src}" alt="" />`;
+  }
+
+  function renderStories() {
+    const list = $("storyList");
+    const stories = profile.stories || [];
+    $("storyCount").textContent = stories.length ? `(${stories.length})` : "";
+    $("storyPlay").disabled = !stories.length;
+    list.innerHTML = stories
+      .map((st, i) => `<li data-i="${i}" draggable="true" class="${i === storySel ? "on" : ""}" title="${(st.title || "").replace(/"/g, "")}">
+        ${storyThumb(st)}<span class="num">${i + 1}</span>
+        ${window.IGPreview.isVideo(st.image) ? '<span class="vid">▶</span>' : ""}
+      </li>`)
+      .join("");
+
+    list.querySelectorAll("li").forEach((li) => {
+      const i = +li.dataset.i;
+      li.addEventListener("click", () => { storySel = i; selected = -1; renderAll(); });
+      li.addEventListener("dragstart", (e) => { e.dataTransfer.effectAllowed = "move"; e.dataTransfer.setData("text/story", String(i)); li.classList.add("dragging"); });
+      li.addEventListener("dragend", () => li.classList.remove("dragging"));
+      li.addEventListener("dragover", (e) => { if (e.dataTransfer.types.includes("text/story")) { e.preventDefault(); li.classList.add("drop"); } });
+      li.addEventListener("dragleave", () => li.classList.remove("drop"));
+      li.addEventListener("drop", (e) => {
+        li.classList.remove("drop");
+        const from = +e.dataTransfer.getData("text/story");
+        if (Number.isNaN(from) || from === i) return;
+        e.preventDefault(); e.stopPropagation();
+        const [moved] = profile.stories.splice(from, 1);
+        profile.stories.splice(i, 0, moved);
+        storySel = i;
+        markDirty(); renderAll();
+      });
+    });
+
+    const st = stories[storySel];
+    $("storyEditor").classList.toggle("hidden", !st);
+    $("postPane").classList.toggle("hidden", !!st);
+    if (!st) return;
+    $("storyIndex").textContent = `${storySel + 1}/${stories.length}`;
+    $("s_thumb").src = resolveImage(st.poster || st.__localPoster || st.image) || "";
+    $("s_file").textContent = st.image || "(medya yok)";
+    $("s_title").value = st.title || "";
+    $("s_text").value = st.text || "";
+    $("s_duration").value = st.duration || 5;
+    $("s_date").value = (String(st.date || "").match(/^\d{4}-\d{2}-\d{2}/) || [""])[0];
+    $("s_status").value = st.status || "taslak";
+    $("s_link").value = st.link || "";
+  }
+
+  function playStories(from = 0) {
+    const phoneEl = phone.querySelector(".ig-phone");
+    if (!phoneEl || !(profile.stories || []).length) return;
+    window.IGPreview.openStoryViewer(phoneEl, profile, { resolveImage: (x) => resolveImage(x) }, from);
+  }
+
+  function addStoryFiles(files) {
+    const list = Array.from(files).filter((f) => /^image\/(jpeg|png|webp)$/.test(f.type) || /^video\/(mp4|quicktime)$/.test(f.type) || /\.(jpe?g|png|webp|mp4|mov)$/i.test(f.name));
+    if (!list.length) { toast("Desteklenen dosya yok (jpg, png, webp, mp4)", true); return; }
+    profile.stories = profile.stories || [];
+    list.forEach((file) => {
+      const base = kebab(file.name.replace(/\.[^.]+$/, "")) || "hikaye";
+      let title = base, i = 2;
+      while (profile.stories.some((x) => x.title === title)) title = `${base}-${i++}`;
+      const key = "s" + Math.random().toString(36).slice(2);
+      const story = {
+        __key: key, id: title, title, image: URL.createObjectURL(file), poster: "",
+        duration: 5, date: "", status: "taslak", text: "", link: "",
+      };
+      pending.set(key, file);
+      profile.stories.push(story);
+      if (/^video\//.test(file.type) || /\.(mp4|mov)$/i.test(file.name)) {
+        captureFrame(file).then((dataUrl) => {
+          if (!dataUrl) return;
+          const target = profile.stories.find((x) => x.__key === key);
+          if (target) { target.__localPoster = dataUrl; renderAll(); }
+        });
+      }
+    });
+    storySel = profile.stories.length - 1;
+    selected = -1;
+    markDirty(); renderAll();
+    toast(`${list.length} hikaye eklendi — kaydediliyor`);
   }
 
   function renderPostEditor() {
@@ -147,7 +237,7 @@
   }
 
   async function uploadPending() {
-    for (const post of profile.posts) {
+    for (const post of [...profile.posts, ...(profile.stories || [])]) {
       const file = pending.get(post.__key);
       if (!file) continue;
       const data = await new Promise((resolve, reject) => {
@@ -261,10 +351,13 @@
     profile = res.profile;
     version = res.version || 0;
     profile.posts.forEach((p) => { p.__key = "k" + Math.random().toString(36).slice(2); });
+    profile.stories = profile.stories || [];
+    profile.stories.forEach((p) => { p.__key = "s" + Math.random().toString(36).slice(2); });
     palette = res.palette;
     if (palette && palette.vurgu) document.documentElement.style.setProperty("--accent", palette.vurgu);
     pending.clear();
     selected = -1;
+    storySel = -1;
     fillProfileForm();
     $("feedPath").textContent = res.saved ? `04-Sosyal-Medya-Icerik/${slug}/instagram-feed.md` : "henüz kaydedilmedi";
     setState(res.saved ? "kaydedildi ✓" : "yeni", res.saved ? "ok" : "");
@@ -337,9 +430,39 @@
         await uploadSingle(files[0], target);
         return;
       }
+      if (target === "story") { addStoryFiles(files); return; }
       addFiles(files);
     });
     $("dropzone").addEventListener("click", () => { $("filePicker").dataset.target = ""; $("filePicker").click(); });
+    $("storyDrop").addEventListener("click", () => { $("filePicker").dataset.target = "story"; $("filePicker").click(); });
+    $("storyPlay").addEventListener("click", () => playStories(0));
+    $("s_play").addEventListener("click", () => playStories(Math.max(0, storySel)));
+
+    const ups = (fn) => () => { const st = profile.stories[storySel]; if (!st) return; fn(st); markDirty(); renderAll(); };
+    $("s_title").addEventListener("input", ups((st) => { st.title = kebab($("s_title").value) || st.title; }));
+    $("s_text").addEventListener("input", ups((st) => { st.text = $("s_text").value; }));
+    $("s_duration").addEventListener("input", ups((st) => { st.duration = Math.min(30, Math.max(1, Number($("s_duration").value) || 5)); }));
+    $("s_link").addEventListener("input", ups((st) => { st.link = $("s_link").value; }));
+    $("s_status").addEventListener("change", ups((st) => { st.status = $("s_status").value; }));
+    $("s_date").addEventListener("change", ups((st) => { st.date = $("s_date").value; }));
+    $("s_delete").addEventListener("click", () => {
+      const st = profile.stories[storySel];
+      if (!st) return;
+      if (!confirm(`"${st.title}" hikayesi kaldırılsın mı?\n(Medya dosyası 03-Assets içinde kalır.)`)) return;
+      pending.delete(st.__key);
+      profile.stories.splice(storySel, 1);
+      storySel = -1;
+      markDirty(); renderAll();
+    });
+
+    const sd = $("storyDrop");
+    sd.addEventListener("dragover", (e) => { if (e.dataTransfer.types.includes("Files")) { e.preventDefault(); e.stopPropagation(); sd.classList.add("hot"); } });
+    sd.addEventListener("dragleave", () => sd.classList.remove("hot"));
+    sd.addEventListener("drop", (e) => {
+      if (!e.dataTransfer.files.length) return;
+      e.preventDefault(); e.stopPropagation(); sd.classList.remove("hot");
+      addStoryFiles(e.dataTransfer.files);
+    });
 
     const dropTargets = [[$("dropzone"), "hot"], [stage, "hot"]];
     dropTargets.forEach(([el, cls]) => {

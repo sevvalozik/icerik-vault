@@ -47,7 +47,7 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | "X için reels metni yaz" | marka brief (ton + yasaklar) → `sosyal-medya-icerik-template`; Humentis örneğindeki zaman kodlu yapı |
 | "X için sunum" | `theme:` marka paletine en yakın CSS (`99-Dashboard/tema-katalogu.md`) veya müşteriye özel tema; Marp: `marp <dosya> --pptx` (`.marprc.yml` temaları bulur) |
 | "X için site / landing" | marka brief + `02-Websites/_templates/website-template.md` + `snippets/`; Claude Design kullanılacaksa **AI Brief Bloğu**'nu prompt başına yapıştır |
-| "X'in feed'i nasıl duracak / yayın öncesi önizleme / müşteriye göstereceğim" | `node scripts/instagram-studio.js <slug>` (stüdyo) → görsel/video sürükle, sırala, tarih ver, logoyu avatardan değiştir; müşteri dosyası için `node scripts/build-instagram.js <slug>`. Skill: `/instagram-onizleme`. **İçerik üretme**, sadece yerleştir |
+| "X'in feed'i nasıl duracak / yayın öncesi önizleme / müşteriye göstereceğim" | `node scripts/instagram-studio.js <slug>` (stüdyo) → görsel/video sürükle, sırala, tarih ver, hikaye ekle; müşteri dosyası için `node scripts/build-instagram.js <slug>`. Skill: `/instagram-onizleme`. **İçerik üretme**, sadece yerleştir |
 | "yeni müşteri" | `00-Musteriler/<slug>/marka-brief.md` oluştur + `03-Assets/{images,logos,videos}/<slug>/` klasörleri |
 | "vault'u kontrol et" | `node scripts/vault-check.js` |
 

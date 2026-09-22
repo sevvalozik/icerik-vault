@@ -21,11 +21,21 @@ const path = require("path");
 const { ROOT, parseFrontmatter, writeFileAtomic, kebab } = require("./vault.js");
 
 const POSTS_HEADING = "## Gönderiler";
-/** Başlığı yalnızca satır başında arar — gövde metninde geçen `## Gönderiler` ifadesi bölümü kesmesin. */
-const HEADING_RE = /^##[ \t]+Gönderiler[ \t]*$/m;
-function headingIndex(text) {
-  const m = text.match(HEADING_RE);
-  return m ? m.index : -1;
+const STORIES_HEADING = "## Hikayeler";
+/** Stüdyonun yönettiği bölümler; bunlar her kayıtta yeniden yazılır, diğerleri korunur. */
+const MANAGED = ["Gönderiler", "Hikayeler"];
+
+/**
+ * Bir `## Başlık` bölümünün gövdesini döndürür. Başlık yalnızca satır başında aranır —
+ * metin içinde geçen `## Gönderiler` ifadesi bölümü kesmesin.
+ */
+function sectionBody(text, title) {
+  const re = new RegExp(`^##[ \\t]+${title}[ \\t]*$`, "m");
+  const m = text.match(re);
+  if (!m) return "";
+  let rest = text.slice(m.index + m[0].length);
+  const next = rest.search(/^##[ \t]+/m);
+  return next === -1 ? rest : rest.slice(0, next);
 }
 const TYPES = ["post", "reels", "carousel"];
 const STATUSES = ["taslak", "planlandi", "yayinlandi"];
@@ -88,6 +98,52 @@ function parsePosts(body) {
   return posts.map((p, i) => ({ ...p, caption: p.caption.trim(), order: i }));
 }
 
+/** `## Hikayeler` bölümünü ayrıştırır. Sıra = story sırası. */
+function parseStories(body) {
+  const stories = [];
+  let cur = null;
+  const push = () => { if (cur) stories.push(cur); cur = null; };
+
+  for (const line of body.split(/\r?\n/)) {
+    const h = line.match(/^###\s+(.*)$/);
+    if (h) {
+      push();
+      const title = h[1].replace(/^\d+\s*[·.\-]\s*/, "").trim();
+      cur = { id: title || `story-${stories.length + 1}`, title, image: "", poster: "", duration: 5, date: "", status: "taslak", text: "", link: "" };
+      continue;
+    }
+    if (!cur) continue;
+    const kv = line.match(/^\s*[-*]\s*([^:]+):\s*(.*)$/);
+    if (!kv) continue;
+    const key = kv[1].trim().toLowerCase();
+    const val = kv[2].replace(/\s+#.*$/, "").trim().replace(/^"|"$/g, "");
+    if (key === "görsel" || key === "gorsel") cur.image = val;
+    else if (key === "poster") cur.poster = val;
+    else if (key === "süre" || key === "sure") cur.duration = Math.min(30, Math.max(1, toInt(val, 5)));
+    else if (key === "tarih") cur.date = val;
+    else if (key === "durum") cur.status = STATUSES.includes(val) ? val : "taslak";
+    else if (key === "metin") cur.text = val;
+    else if (key === "bağlantı" || key === "baglanti") cur.link = val;
+  }
+  push();
+  return stories.map((s, i) => ({ ...s, order: i }));
+}
+
+function serializeStory(story, index) {
+  const title = story.title || story.id || `hikaye-${index + 1}`;
+  const out = [
+    `### ${index + 1} · ${title}`,
+    `- görsel: ${story.image || ""}`,
+    `- poster: ${story.poster || ""}`,
+    `- süre: ${Math.min(30, Math.max(1, toInt(story.duration, 5)))}`,
+    `- tarih: ${story.date || ""}`,
+    `- durum: ${STATUSES.includes(story.status) ? story.status : "taslak"}`,
+    `- metin: ${story.text || ""}`,
+    `- bağlantı: ${story.link || ""}`,
+  ];
+  return out.map((l) => l.replace(/[ \t]+$/, "")).join("\n");
+}
+
 function serializePost(post, index) {
   const title = post.title || post.id || `gonderi-${index + 1}`;
   const out = [`### ${index + 1} · ${title}`];
@@ -110,7 +166,7 @@ function serializePost(post, index) {
 }
 
 /** Frontmatter + gönderiler → uygulamanın kullandığı JSON. */
-function toProfile(data, posts) {
+function toProfile(data, posts, stories = []) {
   return {
     slug: data.slug || "",
     client: data.client || "",
@@ -130,6 +186,7 @@ function toProfile(data, posts) {
     status: data.status || "draft",
     date: data.date || "",
     posts,
+    stories,
   };
 }
 
@@ -138,14 +195,7 @@ function readFeed(slug) {
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = parseFrontmatter(raw);
-  const idx = headingIndex(content);
-  let postsBlock = "";
-  if (idx !== -1) {
-    postsBlock = content.slice(idx + POSTS_HEADING.length);
-    const next = postsBlock.search(/^##[ \t]+/m);   // sonraki ## bölümüne taşma
-    if (next !== -1) postsBlock = postsBlock.slice(0, next);
-  }
-  return toProfile(data, parsePosts(postsBlock));
+  return toProfile(data, parsePosts(sectionBody(content, "Gönderiler")), parseStories(sectionBody(content, "Hikayeler")));
 }
 
 /** Frontmatter bloğunu profil verisinden yeniden üretir; bilinmeyen alanlar korunur. */
@@ -213,17 +263,22 @@ function writeFeed(profile) {
   }
   segments.push({ title: lastTitle, text: prevBody.slice(last) });
 
-  const isPosts = (t) => t !== null && t.replace(/\s+$/, "") === "Gönderiler";
-  let insertAt = segments.findIndex((seg) => isPosts(seg.title));
-  const kept = segments.filter((seg) => !isPosts(seg.title));
+  const isManaged = (t) => t !== null && MANAGED.includes(t.replace(/\s+$/, ""));
+  let insertAt = segments.findIndex((seg) => isManaged(seg.title));
+  const kept = segments.filter((seg) => !isManaged(seg.title));
   if (insertAt === -1) insertAt = kept.length;
-  else insertAt = segments.slice(0, insertAt).filter((seg) => !isPosts(seg.title)).length;
+  else insertAt = segments.slice(0, insertAt).filter((seg) => !isManaged(seg.title)).length;
 
-  let before = kept.slice(0, insertAt).map((seg) => seg.text.trimEnd()).filter(Boolean).join("\n\n");
+  const before = kept.slice(0, insertAt).map((seg) => seg.text.trimEnd()).filter(Boolean).join("\n\n");
   const after = kept.slice(insertAt).map((seg) => seg.text.trimEnd()).filter(Boolean).join("\n\n");
 
   const postsBlock = (profile.posts || []).map(serializePost).join("\n\n");
-  const parts = [serializeFrontmatter(profile, previousRaw), "", before, "", POSTS_HEADING, "", postsBlock || "_Henüz gönderi yok._"];
+  const storiesBlock = (profile.stories || []).map(serializeStory).join("\n\n");
+  const parts = [
+    serializeFrontmatter(profile, previousRaw), "", before, "",
+    STORIES_HEADING, "", storiesBlock || "_Henüz hikaye yok._", "",
+    POSTS_HEADING, "", postsBlock || "_Henüz gönderi yok._",
+  ];
   if (after) parts.push("", after);
   const out = parts.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd() + "\n";
   writeFileAtomic(file, out);
@@ -243,7 +298,7 @@ function emptyProfile(client) {
     theme: "dark",
     grid_ratio: "4:5",
     date: new Date().toISOString().slice(0, 10),
-  }, []);
+  }, [], []);
 }
 
-module.exports = { readFeed, writeFeed, feedPath, emptyProfile, toProfile, parsePosts, serializePost, POSTS_HEADING, TYPES, STATUSES };
+module.exports = { readFeed, writeFeed, feedPath, emptyProfile, toProfile, parsePosts, serializePost, parseStories, serializeStory, sectionBody, POSTS_HEADING, STORIES_HEADING, TYPES, STATUSES };

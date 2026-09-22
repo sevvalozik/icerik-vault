@@ -31,6 +31,35 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 
 -
 
+## Hikayeler
+
+### 1 · hikaye-1
+- görsel: 03-Assets/images/nefin-beauty/instagram/hikaye-1.jpeg
+- poster:
+- süre: 5
+- tarih: 2026-09-22
+- durum: planlandi
+- metin: Yeni rutin yayında
+- bağlantı:
+
+### 2 · hikaye-video
+- görsel: 03-Assets/images/nefin-beauty/instagram/hikaye-video.mp4
+- poster: 03-Assets/images/nefin-beauty/instagram/hikaye-video-poster.jpg
+- süre: 5
+- tarih: 2026-09-22
+- durum: planlandi
+- metin:
+- bağlantı: Ürünü gör
+
+### 3 · hikaye-2
+- görsel: 03-Assets/images/nefin-beauty/instagram/hikaye-2.jpeg
+- poster:
+- süre: 5
+- tarih: 2026-09-22
+- durum: taslak
+- metin:
+- bağlantı:
+
 ## Gönderiler
 
 ### 1 · gemini-generated-video-13a483c4

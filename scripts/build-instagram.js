@@ -114,6 +114,11 @@ function buildHtml(profile, opts = {}) {
   if (options.statuses && options.statuses.length) data.posts = data.posts.filter((p) => options.statuses.includes(p.status));
   data.avatar = toDataUri(data.avatar, options, cache, report);
   data.highlights = (data.highlights || []).map((h) => (typeof h === "string" ? h : { label: h.label, cover: toDataUri(h.cover, options, cache, report) }));
+  data.stories = (data.stories || []).map((st) => ({
+    ...st,
+    poster: st.poster ? toDataUri(st.poster, options, cache, report) : "",
+    image: toDataUri(st.image, options, cache, report),
+  })).filter((st) => st.image);
   data.posts.forEach((p) => {
     if (p.poster) p.poster = toDataUri(p.poster, options, cache, report);
     p.image = toDataUri(p.image, options, cache, report);
@@ -166,7 +171,7 @@ ${read("calendar.css")}
 </div>
 <div class="stage"><div id="phone"></div></div>
 <div id="calendar"></div>
-<div class="hint">Gönderiye dokun → detay görünümü. Bu bir önizlemedir; içerikler henüz yayınlanmadı.</div>
+<div class="hint">Gönderiye dokun → detay görünümü. Profil fotoğrafına dokun → hikayeler. Bu bir önizlemedir; içerikler henüz yayınlanmadı.</div>
 <script>${read("icons.js")}</script>
 <script>${read("preview.js")}</script>
 <script>${read("calendar.js")}</script>
@@ -201,7 +206,7 @@ function buildSlug(slug, options) {
   fs.mkdirSync(DIST_DIR, { recursive: true });
   const out = path.join(DIST_DIR, `${slug}-instagram.html`);
   fs.writeFileSync(out, html, "utf8");
-  return { out, size: Buffer.byteLength(html), report, posts: profile.posts.length };
+  return { out, size: Buffer.byteLength(html), report, posts: profile.posts.length, stories: (profile.stories || []).length };
 }
 
 function main() {
@@ -225,7 +230,7 @@ function main() {
     const res = buildSlug(slug, options);
     if (!res) { console.log(`✗ ${slug}: instagram-feed.md yok`); continue; }
     const mb = (res.size / 1048576).toFixed(1);
-    console.log(`✓ ${slug} → ${path.relative(ROOT, res.out)} (${res.posts} gönderi, ${mb} MB)`);
+    console.log(`✓ ${slug} → ${path.relative(ROOT, res.out)} (${res.posts} gönderi, ${res.stories} hikaye, ${mb} MB)`);
     if (res.report.missing.length) console.log(`  ! eksik görsel: ${res.report.missing.join(", ")}`);
     if (res.report.videoBytes > 1048576) console.log(`  i ${(res.report.videoBytes / 1048576).toFixed(1)} MB video gömüldü${res.report.noFfmpeg ? " (ffmpeg yok — sıkıştırılamadı)" : " (1080p'ye sıkıştırıldı, ses korundu)"}.`);
     if (res.report.saved > 1048576) console.log(`  i sıkıştırmayla kazanılan: ${(res.report.saved / 1048576).toFixed(1)} MB`);

@@ -47,8 +47,178 @@
     return Object.assign({
       username: "kullaniciadi", profileName: "", bio: "", avatar: "", posts: [],
       postsCount: null, followers: 0, following: 0, verified: false, private: false,
-      gridRatio: "4:5", theme: "dark", highlights: [], statusBarTime: "19:28", bubble: "",
+      gridRatio: "4:5", theme: "dark", highlights: [], statusBarTime: "19:28", bubble: "", stories: [],
     }, p || {});
+  }
+
+
+  /* ------------------------------------------------------------------ *
+   * Hikaye görüntüleyici — gerçek Instagram davranışı:
+   * üstte segmentli ilerleme çubukları, sağa dokun → sonraki, sola → önceki,
+   * basılı tut → duraklat, videolar sesiyle oynar ve süreyi kendi belirler.
+   * ------------------------------------------------------------------ */
+  function openStoryViewer(phone, profile, options, startAt) {
+    const p = defaults(profile);
+    const o = Object.assign({ resolveImage: (x) => x, onClose: null }, options || {});
+    const stories = p.stories || [];
+    if (!stories.length) return null;
+
+    const existing = phone.querySelector(".ig-story");
+    if (existing) existing.remove();
+
+    const root = document.createElement("div");
+    root.className = "ig-story";
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-label", "Hikayeler");
+    root.tabIndex = -1;
+    phone.appendChild(root);
+
+    let index = Math.max(0, Math.min(stories.length - 1, startAt || 0));
+    let raf = 0;
+    let elapsed = 0;
+    let lastFrame = 0;
+    let paused = false;
+    let media = null;
+
+    const close = () => {
+      cancelAnimationFrame(raf);
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("visibilitychange", onVisibility);
+      root.remove();
+      o.onClose?.();
+    };
+
+    function segmentsHtml() {
+      return stories
+        .map((_, i) => `<i class="${i < index ? "ig-done" : ""}"><b style="width:${i < index ? 100 : 0}%"></b></i>`)
+        .join("");
+    }
+
+    function draw() {
+      const st = stories[index];
+      const src = o.resolveImage(st.image || "");
+      const poster = o.resolveImage(st.poster || "");
+      const video = isVideo(src);
+      root.innerHTML = `
+        <div class="ig-story-bars">${segmentsHtml()}</div>
+        <div class="ig-story-head">
+          ${p.avatar ? `<img class="ig-story-avatar" src="${esc(o.resolveImage(p.avatar))}" alt="" />` : `<span class="ig-story-avatar"></span>`}
+          <span class="ig-story-user">${esc(p.username)}</span>
+          <span class="ig-story-time">${esc(storyAge(st.date))}</span>
+          <span class="ig-spacer"></span>
+          ${icon("menu2", "ig-story-more")}
+          ${icon("close", "ig-story-close")}
+        </div>
+        <div class="ig-story-media">
+          ${src
+            ? video
+              ? `<video src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ""} playsinline autoplay preload="auto"></video>`
+              : `<img src="${esc(src)}" alt="${esc(st.text || "")}" />`
+            : `<div class="ig-story-empty">${icon("image")}<span>medya eklenmedi</span></div>`}
+        </div>
+        ${st.text ? `<div class="ig-story-text">${captionHtml(st.text)}</div>` : ""}
+        ${st.link ? `<div class="ig-story-link">${icon("chevronDown")}<span>${esc(st.link)}</span></div>` : ""}
+        <button class="ig-story-nav ig-story-prev" aria-label="Önceki hikaye"></button>
+        <button class="ig-story-nav ig-story-next" aria-label="Sonraki hikaye"></button>
+      `;
+
+      media = root.querySelector("video");
+      if (media) {
+        media.muted = false;
+        media.volume = 1;
+        media.play().catch(() => {
+          // Tarayıcı sesli otomatik oynatmayı engellerse sessiz başlat.
+          media.muted = true;
+          media.play().catch(() => {});
+        });
+      }
+
+      root.querySelector(".ig-story-close").addEventListener("click", (e) => { e.stopPropagation(); close(); });
+      root.querySelector(".ig-story-prev").addEventListener("click", (e) => { e.stopPropagation(); go(-1); });
+      root.querySelector(".ig-story-next").addEventListener("click", (e) => { e.stopPropagation(); go(1); });
+
+      elapsed = 0;
+      lastFrame = 0;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(tick);
+    }
+
+    function fill(ratio) {
+      const bar = root.querySelectorAll(".ig-story-bars i")[index]?.firstElementChild;
+      if (bar) bar.style.width = `${Math.min(100, ratio * 100)}%`;
+    }
+
+    function tick(now) {
+      raf = requestAnimationFrame(tick);
+      // Kare farkı toplanır; sekme arkada kalıp rAF durduğunda tek karede
+      // bütün hikayelerin atlanmaması için fark 250 ms ile sınırlanır.
+      const dt = lastFrame ? Math.min(250, now - lastFrame) : 0;
+      lastFrame = now;
+      if (paused) return;
+      const st = stories[index];
+      let ratio;
+      if (media && media.duration && isFinite(media.duration) && media.duration > 0) {
+        ratio = media.currentTime / media.duration;
+      } else {
+        elapsed += dt;
+        ratio = elapsed / (Math.max(1, st.duration || 5) * 1000);
+      }
+      fill(ratio);
+      if (ratio >= 1) go(1);
+    }
+
+    function go(dir) {
+      const next = index + dir;
+      if (next < 0) { draw(); return; }
+      if (next >= stories.length) { close(); return; }
+      index = next;
+      draw();
+    }
+
+    function onKey(e) {
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowRight") go(1);
+      else if (e.key === "ArrowLeft") go(-1);
+    }
+    document.addEventListener("keydown", onKey);
+
+    const onVisibility = () => {
+      if (document.hidden) { paused = true; media?.pause(); }
+      else { lastFrame = 0; paused = false; media?.play().catch(() => {}); }
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+
+    // basılı tut → duraklat
+    let holdAt = 0;
+    root.addEventListener("pointerdown", () => { holdAt = performance.now(); paused = true; media?.pause(); });
+    const release = () => {
+      if (!paused) return;
+      paused = false;
+      media?.play().catch(() => {});
+      holdAt = 0;
+    };
+    root.addEventListener("pointerup", release);
+    root.addEventListener("pointercancel", release);
+    root.addEventListener("pointerleave", release);
+
+    draw();
+    root.focus();
+    // Dışa aktarılan sayfada telefon çerçevesi sayfanın ortasında olabilir;
+    // hikaye açılınca tam görünür hâle gelsin.
+    try { phone.scrollIntoView({ block: "center", behavior: "smooth" }); } catch { /* yok sayılır */ }
+    return { close, go };
+  }
+
+  /** "3s", "1g" gibi Instagram tarzı kısa yaş etiketi. */
+  function storyAge(date) {
+    const d = parseDate(date);
+    if (!d) return "şimdi";
+    const diff = Date.now() - d.getTime();
+    if (diff < 0) return "planlandı";
+    const h = Math.floor(diff / 3600000);
+    if (h < 1) return `${Math.max(1, Math.floor(diff / 60000))}d`;
+    if (h < 24) return `${h}s`;
+    return `${Math.floor(h / 24)}g`;
   }
 
   function render(container, profileRaw, options) {
@@ -151,6 +321,7 @@
       </div>`;
     }
 
+    const hasStories = (p.stories || []).length > 0;
     const bioLines = String(p.bio || "").split("\n").filter((l) => l.length);
     const html = `<div class="ig-phone${p.theme === "light" ? " ig-light" : ""}${o.flat ? " ig-flat" : ""}">
       <div class="ig-status">
@@ -165,7 +336,7 @@
       <div class="ig-scroll">
         <div class="ig-header">
           <div class="ig-header-top">
-            <div class="ig-avatar-wrap${o.onAvatarClick ? " ig-clickable" : ""}" title="${o.onAvatarClick ? "Logoyu değiştir" : ""}">
+            <div class="ig-avatar-wrap${hasStories ? " ig-ring" : ""}${hasStories || o.onAvatarClick ? " ig-clickable" : ""}" title="${hasStories ? "Hikayeleri izle" : o.onAvatarClick ? "Logoyu değiştir" : ""}">
               ${p.bubble ? `<div class="ig-bubble">${esc(p.bubble)}</div>` : ""}
               ${avatarEl("ig-avatar")}
               ${o.mode === "studio" || o.mode === "self" ? `<span class="ig-avatar-add">${icon("plus")}</span>` : ""}
@@ -217,8 +388,13 @@
     }));
 
     const avatarWrap = container.querySelector(".ig-avatar-wrap");
-    if (avatarWrap && o.onAvatarClick) {
-      avatarWrap.addEventListener("click", (e) => { e.stopPropagation(); o.onAvatarClick(); });
+    if (avatarWrap && (hasStories || o.onAvatarClick)) {
+      avatarWrap.addEventListener("click", (e) => {
+        e.stopPropagation();
+        // Gerçek Instagram gibi: hikaye varsa profil fotoğrafı hikayeleri açar.
+        if (hasStories) openStoryViewer(container.querySelector(".ig-phone"), profileRaw, { resolveImage: o.resolveImage }, 0);
+        else o.onAvatarClick?.();
+      });
       if (o.onAvatarDrop) {
         avatarWrap.addEventListener("dragover", (e) => { if (e.dataTransfer.types.includes("Files")) { e.preventDefault(); e.stopPropagation(); avatarWrap.classList.add("ig-drop-hot"); } });
         avatarWrap.addEventListener("dragleave", () => avatarWrap.classList.remove("ig-drop-hot"));
@@ -257,5 +433,5 @@
     return container;
   }
 
-  root.IGPreview = { render, trNum, compact, formatDate, parseDate, captionHtml, esc, AYLAR, isVideo };
+  root.IGPreview = { render, openStoryViewer, trNum, compact, formatDate, parseDate, captionHtml, esc, AYLAR, isVideo };
 })(typeof window !== "undefined" ? window : globalThis);

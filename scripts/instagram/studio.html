@@ -50,6 +50,14 @@
       Görsel / video buraya sürükle<br /><span>jpg · png · webp · mp4 — telefon önizlemesine de bırakabilirsin. Logo için avatara tıkla ya da üstüne bırak.</span>
     </div>
     <button id="addSlot" class="btn full">+ Boş slot ekle</button>
+
+    <h3>Hikayeler <span id="storyCount" class="dim"></span></h3>
+    <div id="storyDrop" class="dropzone dropzone--sm">
+      Hikaye görseli / videosu sürükle<br /><span>profil fotoğrafına tıklayınca sırayla oynar</span>
+    </div>
+    <ul id="storyList" class="storylist"></ul>
+    <button id="storyPlay" class="btn full">Hikayeleri izle</button>
+
     <p class="note" id="feedPath"></p>
   </aside>
 
@@ -59,6 +67,25 @@
   </section>
 
   <aside class="panel panel-right">
+    <div id="storyEditor" class="hidden">
+      <h3>Hikaye <span id="storyIndex" class="dim"></span></h3>
+      <div class="thumbrow"><img id="s_thumb" alt="" /><div><div id="s_file" class="dim small"></div></div></div>
+      <label>Başlık / dosya adı<input id="s_title" class="input" /></label>
+      <label>Ekran metni<textarea id="s_text" class="input" rows="3" placeholder="hikayenin üstünde görünecek yazı"></textarea></label>
+      <div class="row3">
+        <label>Süre (sn)<input id="s_duration" class="input" type="number" min="1" max="30" /></label>
+        <label>Tarih<input id="s_date" class="input" type="date" /></label>
+        <label>Durum<select id="s_status" class="input"><option value="taslak">taslak</option><option value="planlandi">planlandı</option><option value="yayinlandi">yayınlandı</option></select></label>
+      </div>
+      <label>Bağlantı etiketi (opsiyonel)<input id="s_link" class="input" placeholder="Daha fazla" /></label>
+      <div class="btnrow">
+        <button id="s_play" class="btn">Buradan izle</button>
+        <button id="s_delete" class="btn btn-danger">Sil</button>
+      </div>
+      <p class="note">Video hikayeler kendi süresi kadar oynar; süre alanı yalnızca fotoğraflar için geçerlidir.</p>
+    </div>
+
+    <div id="postPane">
     <h3>Gönderi <span id="postIndex" class="dim"></span></h3>
     <div id="postEditor" class="hidden">
       <div class="thumbrow"><img id="p_thumb" alt="" /><div><div id="p_file" class="dim small"></div>
@@ -88,6 +115,7 @@
       </div>
     </div>
     <p id="noPost" class="note">Izgaradan bir gönderi seç. Sürükleyerek sırayı değiştirebilirsin; çift tıklama detay görünümünü açar.</p>
+    </div>
   </aside>
 </main>
 

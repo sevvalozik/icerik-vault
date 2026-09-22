@@ -56,3 +56,21 @@ textarea.input { resize:vertical; line-height:1.45; }
 
 .stage.hot .ig-phone { box-shadow:0 0 0 3px var(--accent), 0 30px 70px rgba(0,0,0,.45); }
 @media (max-width:1200px) { .layout { grid-template-columns:1fr; } .panel { position:static; max-height:none; } }
+
+/* --- hikaye listesi --- */
+.dropzone--sm { padding: 13px 10px; font-size: 12px; }
+.storylist { list-style: none; margin: 8px 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.storylist li {
+  position: relative; width: 52px; height: 86px; border-radius: 7px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--panel2); cursor: pointer;
+}
+.storylist li.on { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.storylist li.dragging { opacity: .4; }
+.storylist li.drop { border-style: dashed; border-color: var(--accent); }
+.storylist img, .storylist video { width: 100%; height: 100%; object-fit: cover; }
+.storylist .num {
+  position: absolute; left: 3px; top: 3px; font-size: 9px; padding: 1px 4px;
+  background: rgba(0,0,0,.6); border-radius: 4px; color: #fff;
+}
+.storylist .vid { position: absolute; right: 3px; bottom: 3px; font-size: 9px; color: #fff; text-shadow: 0 1px 3px #000; }
+.storylist .empty { display: grid; place-items: center; height: 100%; color: var(--dim); font-size: 9px; text-align: center; padding: 4px; }

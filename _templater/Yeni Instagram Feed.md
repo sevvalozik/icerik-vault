@@ -41,6 +41,10 @@ related: ["[[00-Musteriler/<% slug %>/marka-brief]]"]
 
 - 
 
+## Hikayeler
+
+_Henüz hikaye yok — stüdyodaki Hikayeler bölümüne görsel/video sürükle._
+
 ## Gönderiler
 
 _Henüz gönderi yok — stüdyoda görsel/video sürükleyip bırak._

@@ -9,7 +9,7 @@ Argümanlar: `<musteri-slug>` (örn. `nefin-beauty`), opsiyonel `--export` (sade
 
 ## Ne yapar / yapmaz
 
-- **Yapar:** kullanıcının verdiği görsel ve videoları profil ızgarasında gösterir, sıralar, caption/tarih/durum alanlarını saklar, takvime yerleştirir, tek dosya HTML üretir. Tek gönderi görünümünde video sesiyle oynar.
+- **Yapar:** kullanıcının verdiği görsel ve videoları profil ızgarasında gösterir, sıralar, caption/tarih/durum alanlarını saklar, takvime yerleştirir, tek dosya HTML üretir. Tek gönderi görünümünde video sesiyle oynar. **Hikaye (story)** desteği var: profil fotoğrafına tıklayınca sırayla oynar.
 - **Yapmaz:** caption, hashtag, görsel veya kampanya fikri üretmez. Metin gerekiyorsa `/icerik-paketi`'ne yönlendir. Takipçi sayısı gibi gerçek verileri **uydurma** — kullanıcıdan al, bilinmiyorsa 0 bırak.
 
 ## Adımlar
@@ -23,6 +23,10 @@ Argümanlar: `<musteri-slug>` (örn. `nefin-beauty`), opsiyonel `--export` (sade
 5. Videolar: yüklenirken `<ad>-poster.jpg` üretilir (ffmpeg gerekir; yoksa ızgarada `<video>` elemanına düşer, yavaş görünebilir). Export'ta 1080p/CRF 28/AAC'ye sıkıştırılır — ses korunur, dosya ~3× küçülür.
 6. `--export` verildiyse (veya kullanıcı "müşteriye göndereceğim" dediyse): `node scripts/build-instagram.js <slug>` → `04-Sosyal-Medya-Icerik/dist/<slug>-instagram.html`. Dosya boyutunu ve eksik görselleri raporla. 20 MB üstündeyse `--status=planlandi,yayinlandi` ile daralt.
 7. `node scripts/vault-check.js` çalıştırıp kırık görsel yolu var mı bak (6. bölüm).
+
+## Hikaye alanları (`## Hikayeler` bölümü)
+
+`- görsel:` (foto veya video) · `- poster:` (video ilk karesi, otomatik) · `- süre:` (saniye, 1–30; video kendi süresini kullanır) · `- tarih:` · `- durum:` · `- metin:` (ekranda görünen yazı) · `- bağlantı:` (alt taraftaki link etiketi). Sıra = oynatma sırası.
 
 ## Gönderi alanları
 

@@ -214,3 +214,119 @@
 /* önizlemede avatarı tıklayıp logo değiştirme */
 .ig-avatar-wrap.ig-clickable { cursor: pointer; }
 .ig-avatar-wrap.ig-drop-hot .ig-avatar { outline: 3px dashed var(--ig-blue); outline-offset: 2px; }
+
+/* --- hikaye görüntüleyici --- */
+.ig-story {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  border-radius: inherit;
+  overflow: hidden;
+  user-select: none;
+  outline: none;
+}
+.ig-story-bars {
+  position: absolute;
+  top: 10px; left: 8px; right: 8px;
+  display: flex;
+  gap: 3px;
+  z-index: 3;
+}
+.ig-story-bars i {
+  flex: 1;
+  height: 2.5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.34);
+  overflow: hidden;
+}
+.ig-story-bars i b {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #fff;
+  border-radius: 2px;
+}
+.ig-story-bars i.ig-done b { width: 100%; }
+
+.ig-story-head {
+  position: absolute;
+  top: 22px; left: 10px; right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  z-index: 3;
+  color: #fff;
+  padding: 6px 2px;
+}
+.ig-story-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  object-fit: cover; background: #3a3a3a; flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.ig-story-user { font-size: 13.5px; font-weight: 600; }
+.ig-story-time { font-size: 12.5px; color: rgba(255, 255, 255, 0.7); }
+.ig-story-head .ig-spacer { flex: 1; }
+.ig-story-more, .ig-story-close { width: 22px; height: 22px; cursor: pointer; flex: none; }
+.ig-story-close { width: 20px; height: 20px; margin-left: 12px; }
+
+.ig-story-media { position: absolute; inset: 0; background: #000; }
+.ig-story-media img, .ig-story-media video {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.ig-story-media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.42), transparent 22%, transparent 74%, rgba(0, 0, 0, 0.42));
+  pointer-events: none;
+}
+.ig-story-empty {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; color: #5c5c5c; font-size: 12px;
+}
+.ig-story-empty .ig-ico { width: 30px; height: 30px; }
+
+.ig-story-text {
+  position: absolute;
+  left: 18px; right: 18px; bottom: 96px;
+  z-index: 3;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: center;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+  white-space: pre-line;
+}
+.ig-story-link {
+  position: absolute;
+  left: 50%; bottom: 34px;
+  translate: -50% 0;
+  z-index: 3;
+  display: flex; align-items: center; gap: 5px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 12.5px;
+  backdrop-filter: blur(6px);
+}
+.ig-story-link .ig-ico { width: 13px; height: 13px; rotate: 180deg; }
+
+.ig-story-nav {
+  position: absolute;
+  top: 60px; bottom: 0;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.ig-story-prev { left: 0; width: 32%; }
+.ig-story-next { right: 0; width: 68%; }
+
+/* profil fotoğrafındaki hikaye halkası tıklanabilir */
+.ig-avatar-wrap.ig-clickable { cursor: pointer; }
