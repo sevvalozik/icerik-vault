@@ -4,14 +4,14 @@ client: "Nefin Beauty"
 slug: nefin-beauty
 status: active
 date: 2026-09-21
-repo: "~/nefin-web (yerel; GitHub reposu henüz açılmadı)"
+repo: "https://github.com/fsumbul/nefin-web (özel; sevvalozik yazma yetkisiyle davetli)"
 tags: [kod-projesi, website, 3d, nextjs, nefinbeauty]
 related: ["[[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]]", "[[00-Musteriler/nefin-beauty/marka-brief]]", "[[nefin-sunum]]"]
 ---
 
 # Nefin Beauty — 3D Web Sitesi (kod projesi özeti)
 
-> Kod vault'ta değil: `~/nefin-web`. Plan ve strateji: [[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]].
+> Kod vault'ta değil: `~/nefin-web` → https://github.com/fsumbul/nefin-web (özel repo). Plan ve strateji: [[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]].
 
 ## Durum: Faz 1 tamam
 
