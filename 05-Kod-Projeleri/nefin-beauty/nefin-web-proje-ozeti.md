@@ -13,15 +13,17 @@ related: ["[[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]]", "[[00-Must
 
 > Kod vault'ta değil: `~/nefin-web`. Plan ve strateji: [[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]].
 
-## Durum: Faz 1 tamam
+## Durum: v2 "Berrak" (22 Eylül 2026)
 
-Marka sitesi ayakta — 3D scroll hero, 13 ürünlük katalog, ürün detay sayfaları. Sepet/ödeme yok;
-"Satın al" mevcut mağazaya gidiyor.
+Video-öncelikli scroll anlatısı: perde açılışı, sunumdaki iki kampanya hero'su, ışığa çıkış geçişi,
+manifesto, ürün hikâyesi, doku galerisi, rutin çizgisi, cam INCI paneli, ihtiyaç→ürün filtresi,
+nefin + you, koyu kapanış. Plan ve geçiş promptu: [[02-Websites/projects/nefin-beauty/nefin-web-v2-berrak-plani]].
+Sepet/ödeme yok; "Satın al" mevcut mağazaya gidiyor. 3D şişe hero'dan çıktı (kod PDP için duruyor).
 
 ## Yığın
 
-Next.js 16 (App Router) · TypeScript · React Three Fiber + drei · Lenis · sharp/ffmpeg (varlık
-hazırlığı). Harici UI kütüphanesi ve CSS framework'ü yok; tasarım sistemi CSS değişkenleri.
+Next.js 16 (App Router) · TypeScript · GSAP ScrollTrigger + Lenis · React Three Fiber (yalnızca
+PDP için saklı) · sharp/ffmpeg (varlık hazırlığı). Harici UI kütüphanesi ve CSS framework'ü yok; tasarım sistemi CSS değişkenleri.
 
 ## Tasarım sistemi
 
@@ -35,6 +37,9 @@ hazırlığı). Harici UI kütüphanesi ve CSS framework'ü yok; tasarım sistem
 | 13 ürün: ad, fiyat, faydalar, kullanım, INCI | canlı nefinbeauty.com | `python3 scripts/scrape-catalog.py` |
 | Hakkımızda, cilt endişeleri | nefinbeauty.com/hakkimizda | `content/site.ts` (elle) |
 | Videolar, editoryal görseller | `03-Assets/{images,videos}/nefin-beauty/` | `node scripts/prepare-assets.mjs` |
+| 14 klip + 27 packshot (sunum) | `01-Presentations/active/nefin-sunum/` | aynı script, `deck` bölümü |
+| Hook cümleleri, aktifler, hero metinleri | [[aylik-icerik-takvimi]], [[nefin-sunum]] | `content/hooks.ts` (birebir) |
+| Instagram mozaiği | [[04-Sosyal-Medya-Icerik/nefin-beauty/instagram-feed]] | `node scripts/sync-instagram.mjs` |
 
 Fiyatlar canlı siteyle birebir doğrulandı (ürünün kendi sepet bloğundan okunuyor; mega-menüdeki
 benzer ürün fiyatlarıyla karışmaması için).
@@ -63,6 +68,10 @@ fotoğrafı gösterilir.
 - Tarayıcı paneli gizliyken rAF durduğu için 3D hiç çizilmiyor — hata sanılabilir, değil.
 - Videolarda `autoPlay`, `preload="none"` olsa bile dosyayı ilk yükte indiriyor. Görünürlükle
   yükleyen `LazyVideo` ilk yükü 1,1 MB'tan 559 KB'a indirdi.
+
+- **GSAP yPercent + CSS translateY çakışması:** CSS'teki `translateY(110%)` GSAP tarafından piksel `y`
+  olarak okunup korunuyor; satır-maske tween'inde `y: 0` açıkça verilmeli (v2'de bulundu).
+- Reveal tetikleyicisi IntersectionObserver; gizli sekmede beklemesi normal, hata değil.
 
 ## Sıradaki (plandaki Faz 2–3)
 
