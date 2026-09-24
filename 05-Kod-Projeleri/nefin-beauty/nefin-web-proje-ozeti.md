@@ -13,7 +13,7 @@ related: ["[[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]]", "[[00-Must
 
 > Kod vault'ta değil: `~/nefin-web`. Plan ve strateji: [[02-Websites/projects/nefin-beauty/nefin-web-3d-plani]].
 
-## Durum: v2 "Berrak" (22 Eylül 2026) — repo `main` @ `80a0101`
+## Durum: v2 "Berrak" (22 Eylül 2026) — repo `main` @ `b3056c1`
 
 Video-öncelikli scroll anlatısı: perde açılışı, sunumdaki iki kampanya hero'su, ışığa çıkış geçişi,
 manifesto, ürün hikâyesi, doku galerisi, rutin çizgisi, cam INCI paneli, ihtiyaç→ürün filtresi,
@@ -72,6 +72,14 @@ fotoğrafı gösterilir.
 - **GSAP yPercent + CSS translateY çakışması:** CSS'teki `translateY(110%)` GSAP tarafından piksel `y`
   olarak okunup korunuyor; satır-maske tween'inde `y: 0` açıkça verilmeli (v2'de bulundu).
 - Reveal tetikleyicisi IntersectionObserver; gizli sekmede beklemesi normal, hata değil.
+- **Layout'ta yaşayan gözlemciler sayfa geçişini görmez.** `.reveal` bir kez taranınca istemci
+  tarafı geçişte yeni sayfanın içeriği hiç görünmüyordu → MutationObserver şart.
+- **Durum ile bildirim aynı öznitelik olmamalı.** Tema body[data-theme]'e yazılınca
+  `closest('[data-theme]')` body'ye tırmanıp eski değeri okuyordu → body[data-header-theme].
+- **Tema yalnızca header'ı etkilesin.** Gövde zemini temaya bağlıyken tek bir yanlış
+  hesap tüm sayfayı okunmaz yapıyordu.
+- **StrictMode çift efekt:** "bir kez çalış" ref'i zamanlayıcıyı yutuyordu; efekt idempotent
+  yazılmalı, kalıcı bayrak iş BİTİNCE yazılmalı.
 
 ## Sıradaki (plandaki Faz 2–3)
 
