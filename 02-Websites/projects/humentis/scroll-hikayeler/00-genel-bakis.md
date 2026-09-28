@@ -33,7 +33,7 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[panik-ve-sosyal-kaygi]] | Boş Ekran (video bekleniyor) | Sıra Bende, Kapının Önü |
 | [[aile-danismanligi]] | Sofra (video bekleniyor) | — |
 | [[yas-ve-kayip]] | Çay Bardağı (video bekleniyor) | Yarım Kalan Fincan |
-| [[uyku-ve-stres]] | — | Saat 04:12 |
+| [[uyku-ve-stres]] | 04:12, Mutfak Işığı (video bekleniyor) | Saat 04:12 (eski fikir) |
 | [[ozguven]] | Fotoğraf, Kıyafetler, Mikrofon, Dans Pisti (video bekleniyor) | Ayna |
 
 **Tam hikâye** = sahne sahne scroll senaryosu, geçiş tarifi, açılan sayfanın metni ve görsel listesi hazır; Furkan Bey doğrudan kurabilir.

@@ -18,6 +18,8 @@ Gece yarısı bölünen uyku. Filmin gece estetiğine en doğal uyan konu.
 
 | Hikâye | Durum | Ana geçiş | Açıldığı yer |
 |---|---|---|---|
+| [[saat-0412]] | ✅ Tam hikâye (video bekleniyor), yazısız | Perde aralığındaki şafak ışığına yaklaşma | "Gece zihniniz susmuyorsa" |
+| [[mutfak-isigi]] | ✅ Tam hikâye (video bekleniyor), yazısız | Koridor boyunca mutfak ışığına ilerleme | "Herkes uyurken siz uyanıksanız" |
 | Saat 04:12 | 💡 Fikir | Saat rakamları dağılır, sabah ışığı olur | Blog: "Uykunuz neden gece yarısı bölünüyor?" |
 
 ## Fikir aşamasındaki hikâyeler
