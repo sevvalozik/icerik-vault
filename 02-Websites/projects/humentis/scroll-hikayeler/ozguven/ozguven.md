@@ -12,12 +12,16 @@ related: ["[[00-genel-bakis]]", "[[gecisler]]", "[[site-bolumleri]]"]
 
 # Özgüven
 
-Kendine başkasının gözüyle bakmak. Beden algısına kaymadan, "yetmiyorum" hissi üzerinden anlatılır.
+Kendine başkasının gözüyle bakmak, "yetmiyorum" hissi. Dört hikâye var, hepsi yazısız; hoca birini seçer.
 
 ## Hikâyeler
 
 | Hikâye | Durum | Ana geçiş | Açıldığı yer |
 |---|---|---|---|
+| [[fotograf]] | ✅ Tam hikâye (video bekleniyor) | Deklanşör flaşı krem zemine döner | "Hep kadrajın dışında kalıyorsanız" |
+| [[kiyafetler]] | ✅ Tam hikâye (video bekleniyor) | Kıyafet yığınındaki krem kumaşa yaklaşma | "Aynaya her baktığınızda bir kusur buluyorsanız" |
+| [[mikrofon]] | ✅ Tam hikâye (video bekleniyor) | Boş mikrofonun spot ışığına yaklaşma | "Söyleyecek sözünüz varken susuyorsanız" |
+| [[dans-pisti]] | ✅ Tam hikâye (video bekleniyor) | Pist ışıklarına yaklaşma, bokeh krem olur | "Hep kenarda kalmaktan yorulduysanız" |
 | Ayna | 💡 Fikir | Kıyafetler katlanır, kumaş dokusu sayfa olur | Blog + randevu |
 
 ## Fikir aşamasındaki hikâyeler

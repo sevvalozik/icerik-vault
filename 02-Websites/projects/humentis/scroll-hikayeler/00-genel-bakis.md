@@ -34,7 +34,7 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[aile-danismanligi]] | Sofra (video bekleniyor) | — |
 | [[yas-ve-kayip]] | Çay Bardağı (video bekleniyor) | Yarım Kalan Fincan |
 | [[uyku-ve-stres]] | — | Saat 04:12 |
-| [[ozguven]] | — | Ayna |
+| [[ozguven]] | Fotoğraf, Kıyafetler, Mikrofon, Dans Pisti (video bekleniyor) | Ayna |
 
 **Tam hikâye** = sahne sahne scroll senaryosu, geçiş tarifi, açılan sayfanın metni ve görsel listesi hazır; Furkan Bey doğrudan kurabilir.
 **Fikir** = kısa anlatım ve geçiş; hoca seçerse tam hikâyeye çevrilecek.
