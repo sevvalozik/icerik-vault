@@ -101,6 +101,7 @@ Kapanış satırı: *Deniz o gece yazıyı sonuna kadar okudu. Sonra ilk kez, ki
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/sinav-ve-performans-kaygisi/ayni-paragraf/`
+- **Görsel promptları:** [[scroll-ayni-paragraf-brief]] (`07-AI-Gorsel/humentis/scroll-ayni-paragraf-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/sinav-ve-performans-kaygisi/ayni-paragraf/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
 - **Toplam uzunluk:** 8 ekran boyu
 - **Müzik:** 30%'da gece parçası başlar, 72%'de sabah parçasına geçiş.

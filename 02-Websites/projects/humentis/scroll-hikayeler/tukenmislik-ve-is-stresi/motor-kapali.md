@@ -102,6 +102,7 @@ Kapanış satırı: *Selim motoru çalıştırmadan önce randevu formunu doldur
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/tukenmislik-ve-is-stresi/motor-kapali/`
+- **Görsel promptları:** [[scroll-motor-kapali-brief]] (`07-AI-Gorsel/humentis/scroll-motor-kapali-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/tukenmislik-ve-is-stresi/motor-kapali/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
 - **Toplam uzunluk:** 8 ekran boyu
 - **Müzik:** 32%'de gece parçası, 78%'de sabah parçasına geçiş.

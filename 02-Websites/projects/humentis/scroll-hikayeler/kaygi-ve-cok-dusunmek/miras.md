@@ -103,6 +103,7 @@ Geçiş, zincirin kırıldığı an. Site o yeni cümlenin devamı gibi açılı
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/kaygi-ve-cok-dusunmek/miras/`
+- **Görsel promptları:** [[scroll-miras-brief]] (`07-AI-Gorsel/humentis/scroll-miras-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/miras/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
 - **Toplam uzunluk:** 9 ekran boyu
 - **Müzik:** 16%'da gece parçası, 72–80 arası ses 0, 90%'da sabah parçası.

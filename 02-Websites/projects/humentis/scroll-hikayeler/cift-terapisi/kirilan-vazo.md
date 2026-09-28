@@ -109,6 +109,7 @@ Promptlar üretime geçerken [[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]'e 
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/cift-terapisi/kirilan-vazo/`
+- **Görsel promptları:** [[scroll-kirilan-vazo-brief]] (`07-AI-Gorsel/humentis/scroll-kirilan-vazo-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/cift-terapisi/kirilan-vazo/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
 - **Toplam uzunluk:** 9 ekran boyu
 - **Müzik:** 86%'da gece parçası → sabah parçası (4 sn). 70%'ten önce müzik yok, sadece oda sesi.

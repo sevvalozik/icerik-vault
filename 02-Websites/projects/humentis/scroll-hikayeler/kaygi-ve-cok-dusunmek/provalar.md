@@ -100,6 +100,7 @@ Geçiş hikâyenin anlamından çıkıyor: prova yapan zihin ile yaşayan kişin
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/kaygi-ve-cok-dusunmek/provalar/`
+- **Görsel promptları:** [[scroll-provalar-brief]] (`07-AI-Gorsel/humentis/scroll-provalar-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/provalar/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
 - **Toplam uzunluk:** 10 ekran boyu
 - **Müzik:** 14%'te gece parçası; 46–58 arasında yoğunlaşır ve 58%'de keskin kesilir (sessizlik); 64%'te sabah parçası.

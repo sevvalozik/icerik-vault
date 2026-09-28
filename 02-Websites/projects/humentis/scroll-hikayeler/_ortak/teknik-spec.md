@@ -35,6 +35,7 @@ Kütüphane gerekmez. İstenirse GSAP ScrollTrigger (cdnjs, sabit sürüm) kulla
 ├── hikaye.js           # sahne verisi (hikâye dosyasının §3 tablosundan üretilir)
 └── README.md           # nasıl açılır, hangi görseller eksik
 ```
+- Görsel promptları: `07-AI-Gorsel/humentis/scroll-<hikaye>-brief.md` (Claude görsel üretmez; görseller bu brief'le Gemini'de üretilip aşağıdaki klasöre konur, site onları adıyla bulur)
 - Görseller: `03-Assets/images/humentis/scroll/<konu>/<hikaye>/<kod>.jpg` (hikâye dosyasının "Kodlama için → Görsel dosyaları" listesi). HTML'den vault köküne göreli yol **6 seviye**: `../../../../../../` (örn. `../../../../../../03-Assets/images/humentis/scroll/<konu>/<hikaye>/`). `hikaye.js` içinde `kok` olarak tanımla.
 - Müzik: `03-Assets/audio/humentis/bulunma-muzik.mp3` (gece) ve `bulunma-sabah-1.mp3` (umut). Başka parça istenmedikçe bunlar.
 - Logo: `03-Assets/logos/humentis/humentis-lockup-horizontal.svg`

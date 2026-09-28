@@ -94,6 +94,7 @@ Her sahne için bir **dışarıdan** bir **içeriden** kare (toplam ~10). Karakt
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/kaygi-ve-cok-dusunmek/her-sey-yolunda/`
+- **Görsel promptları:** [[scroll-her-sey-yolunda-brief]] (`07-AI-Gorsel/humentis/scroll-her-sey-yolunda-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/her-sey-yolunda/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
 - **Toplam uzunluk:** 9 ekran boyu
 - **Müzik:** 36%'da gece parçası çok alçak (ses .3); 82%'de sabah parçasına geçiş.
