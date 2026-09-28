@@ -5,7 +5,7 @@ client: humentis
 slug: humentis-scroll-cocuk-kule
 status: draft
 date: 2026-09-28
-url: ""
+url: "https://claude.ai/artifact/2WXyGvfBRCd9hEP64ayZHA"
 tags: [website, humentis, scroll, hikaye, cocuk-gelisimi, okula-hazirlik]
 related: ["[[00-genel-bakis]]", "[[cocuk-gelisimi-ve-okula-hazirlik]]", "[[teknik-spec]]", "[[scroll-kule-brief]]"]
 ---
@@ -13,6 +13,8 @@ related: ["[[00-genel-bakis]]", "[[cocuk-gelisimi-ve-okula-hazirlik]]", "[[tekni
 # Çocuk Gelişimi ve Okula Hazırlık — "Kule"
 
 > Şevval tarafından seçildi (28 Eylül 2026). Bu konunun hocaları: Müge Ertuğrul, Simge Kaya.
+> **Site hazır:** `02-Websites/projects/humentis/scroll-siteler/cocuk-gelisimi-ve-okula-hazirlik/kule/` · Canlı: https://claude.ai/artifact/2WXyGvfBRCd9hEP64ayZHA
+> Sadeleştirildi: tek video, kule dizili başlar ve kaydırdıkça devrilir.
 
 ## 1. Künye
 
@@ -20,14 +22,14 @@ related: ["[[00-genel-bakis]]", "[[cocuk-gelisimi-ve-okula-hazirlik]]", "[[tekni
 |---|---|
 | Karakter | Bir çocuk. Sadece küçük eli ve bileği görünür; yüz, beden ve silüet hiç yok. |
 | Konu | Oyunla gelişim: deneme, düşme, yeniden kurma |
-| Duygusal çekirdek | Kule yıkılıyor ve kimse kurtarmaya koşmuyor. Çocuk yeniden, bu sefer daha yükseğe kuruyor. |
+| Duygusal çekirdek | Kule yıkılıyor ve bu bir felaket değil. Düşen bloklardan biri yeni bir başlangıcın ilk parçası oluyor. |
 | Mekân | Gerçek bir çocuk odası: halı, pencereden gün ışığı, köşede birkaç oyuncak. Alçak, sabit kamera. |
-| Geçiş | Son blok konunca pencere ışığı odayı doldurur, ekran krem zemine erir. |
-| Tahmini uzunluk | **4 ekran boyu** (kısa kesim, ~20 sn) |
+| Geçiş | Kameranın dibine yuvarlanan bloğun ahşap yüzüne yaklaşılır; ahşap ışıkla açılıp krem zemine erir. |
+| Tahmini uzunluk | **3 ekran boyu** (kısa kesim, ~20 sn) |
 
 ## 2. Hikâye
 
-Halıda bir çocuk tahta blokları üst üste koyuyor. Beşinci blok yamuk duruyor, kule sallanıp halıya yıkılıyor. Kimse koşup kurtarmıyor. Biraz sonra kule yeniden kurulmuş, bu sefer tabanı daha geniş ve daha yüksek. Küçük el en üste son bloğu dikkatle koyup çekiliyor.
+Halıda sekiz bloklu bir kule dimdik duruyor. Küçük bir el uzanıp parmağıyla en üstteki bloğa dokunuyor. Kule sallanıp devriliyor, bloklar halıya dağılıyor ve bir tanesi yuvarlanıp kameranın önünde duruyor. El çekiliyor. Ekranda tek satır beliriyor: "Düşmek de oyunun parçası." Sonra o tek bloğa yaklaşıyoruz ve ahşap yüzü sitenin sayfasına dönüşüyor.
 
 ## 3. Kısa kesim (bağlayıcı)
 
@@ -35,12 +37,11 @@ Halıda bir çocuk tahta blokları üst üste koyuyor. Beşinci blok yamuk duruy
 
 | % | Tip | Görsel / klip | Ne oluyor | Yazı |
 |---|---|---|---|---|
-| 0–30 | kurgu | `dizme` 0→son (scrub) | El bloklarla kuleyi dört kata çıkarır | — |
-| 30–50 | kurgu | `yikilma` 0→son (scrub) | Beşinci blok yamuk konur, kule halıya yıkılır | — |
-| 50–62 | durgun | `yikilma` son karesi | Bloklar halıda, kimse gelmiyor | *Düşmek de oyunun parçası.* |
-| 62–66 | kararma | — | Kısa kararma (zaman geçer) | — |
-| 66–88 | kurgu | `son-blok` 0→son (scrub) | Daha geniş tabanlı, yüksek kule; el son bloğu koyup çekilir | — |
-| 88–100 | geçiş | — | Pencere ışığı büyür, krem zemine erime | **Çocuğunuzun gelişimini birlikte izleyelim** |
+| 0–10 | kurgu | `kule` 0 sn (durgun) | Kule dimdik duruyor | — |
+| 10–48 | kurgu | `kule` 0→5.2 sn (scrub) | El dokunur, kule devrilir, bir blok kameraya yuvarlanır | — |
+| 48–70 | kurgu | `kule` 5.2→son (scrub) | Bloklar halıda durulur | *Düşmek de oyunun parçası.* (52–70, üstte) |
+| 70–92 | geçiş | son kare | Öndeki bloğun yüzüne yaklaşma (×12), ışık dolar, bantlar kalkar | — |
+| 86–100 | geçiş | — | Krem zemine erime | **Çocuğunuzun gelişimini birlikte izleyelim** |
 
 Müzik yok ya da çok hafif. Opsiyonel olarak kule yıkılırken tek bir tahta sesi (varsayılan kapalı, ses düğmesiyle açılır).
 
@@ -62,13 +63,14 @@ Müzik yok ya da çok hafif. Opsiyonel olarak kule yıkılırken tek bir tahta s
 
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. Motor [[yarim-adim]] ile aynı: `kurgu` sahne tipi.
 
-- **Toplam uzunluk:** 4 ekran boyu (`#hikaye` 500vh)
+- **Toplam uzunluk:** 3 ekran boyu (`#hikaye` 400vh)
 - **Sahne listesi:** §3 tablosu ile aynı.
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/cocuk-gelisimi-ve-okula-hazirlik/kule/`
-- **Video klasörü:** `03-Assets/images/humentis/scroll/cocuk-gelisimi-ve-okula-hazirlik/kule/` → `dizme.mp4`, `yikilma.mp4`, `son-blok.mp4`
+- **Video klasörü:** `03-Assets/images/humentis/scroll/cocuk-gelisimi-ve-okula-hazirlik/kule/` → `kule.mp4` (1080p, 8 sn, all-intra, scrub), `kule-ilk.jpg` (ilk kare, yüklenene kadar gösterilir), `kf-baslangic.jpg` (Flow başlangıç karesi)
 - **Görsel/video promptları:** [[scroll-kule-brief]]
-- **KURGU:** `[[0,30,"dizme",0,SON],[30,50,"yikilma",0,SON],[50,62,"yikilma",SON,SON],[66,88,"son-blok",0,SON],[88,100,"son-blok",SON,SON]]`. SON değerleri klipler gelince süreye göre yazılır. 62–66 arası kararma ile geçilir.
-- **Yazı:** tek satır, alt orta, serif italik, 50–62.
-- **Geçiş:** 88–95 arası videoya `brightness` + sağ üstten (pencere yönü) sıcak ışık gradyanı, 94'ten sonra krem `#erime` katmanı, başlık 96'da.
+- **KURGU:** `[[0,10,0,0],[10,48,0,5.2],[48,68,5.2,"son"]]` → `[başlangıç %, bitiş %, klip başı sn, klip sonu sn]`.
+- **Yaklaşma hedefi:** son karede öndeki bloğun ön yüzü videonun %49.8 / %76.5 noktasında. `object-fit: cover` hesabıyla ekrandaki piksel yerine çevrilip `transform-origin` yapılır; ölçek 1→12, easeInOut.
+- **Yazı:** tek satır, üst orta (blokla çakışmasın), serif italik, 52–70.
+- **Geçiş:** 78'den itibaren sıcak ışık katmanı, 77–84 sinema bantları ve üst yazı kaybolur, 86–92 krem `#erime`, başlık 91'de.
 - **Üst bant:** mekân `İÇ MEKAN — ÇOCUK ODASI — GÜNDÜZ`, saat yerine boş (ya da `SAHNE 1`).
 - **Kurallar:** Çocuk yüzü, bedeni ve silüeti yok; yalnızca el ve bilek. Marka ya da yazılı oyuncak yok.

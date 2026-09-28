@@ -20,7 +20,7 @@ related: ["[[00-genel-bakis]]", "[[gecisler]]", "[[uzmanlar-ve-konular]]"]
 
 | Hikâye | Durum | Ana geçiş | Açıldığı yer |
 |---|---|---|---|
-| [[kule]] | ✅ Seçildi, tam hikâye (video bekleniyor) | Pencere ışığı odayı doldurur, krem zemine erime | "Çocuğunuzun gelişimini birlikte izleyelim" + gelişimsel değerlendirme |
+| [[kule]] | ✅ Tam + site hazır (1080p video) | Öndeki bloğun ahşap yüzüne yaklaşılır, krem zemine erime | "Çocuğunuzun gelişimini birlikte izleyelim" + gelişimsel değerlendirme |
 | Küçük Ayakkabılar | 💡 Fikir | Bağcıklar scroll ile kendi kendine fiyonk olur; fiyonkun iki halkası açıldıkça arasında sayfa belirir. | "Okula hazır mı? sorusunun cevabı takvimde değil" + gelişimsel değerlendirme randevusu |
 | Boyama Sayfası | 💡 Fikir | Taşan renkler scroll ile sayfanın dışına, masaya, ekranın tamamına yayılır; boyanan alan sayfa olur. | Blog: "Çocuğunuzun gelişimini karşılaştırmadan izlemek" |
 
