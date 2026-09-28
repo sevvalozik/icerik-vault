@@ -28,6 +28,7 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[kaygi-ve-cok-dusunmek]] | Provalar, Her Şey Yolunda, Miras | Ya Olursa? |
 | [[iliskiler-ve-baglanma]] | Üç Nokta, Yarım Adım, Aynı Sahne (siteler hazır) | Okundu, Kusursuz Senaryo |
 | [[ergen-ve-ebeveyn]] | İki Oda, Kapının İki Yüzü (+ Miras) | — |
+| [[cocuk-gelisimi-ve-okula-hazirlik]] | Kule (video bekleniyor) | — |
 | [[aile-danismanligi]] | — | Aynı Sofra |
 | [[yas-ve-kayip]] | — | Yarım Kalan Fincan |
 | [[uyku-ve-stres]] | — | Saat 04:12 |

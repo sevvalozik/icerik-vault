@@ -114,7 +114,7 @@ Durağan fotoğraf + zoom sitede "fotoğraf" gibi algılanıyor; hedef film hiss
 
 ## 7. Değişmez içerik kuralları (marka brief §5, §7)
 
-- Hiçbir görselde yüz yok; çocuk hiçbir şekilde görünmez.
+- Hiçbir görselde yüz yok. Çocuğun yüzü, bedeni ve silüeti görünmez; gerekirse yalnızca küçük eli ve bileği görünebilir (bkz. [[kule]]).
 - Arayüz taklidi yok: **AI görsellerinde** telefon ekranları boş ışık. İstisna: `sohbet` sahne tipi (Şevval onayı, 28 Eylül 2026) mesajlaşma ekranını **kodla** çizer; gerçek bir uygulamanın markası, logosu, yeşili taklit edilmez, Humentis renkleri kullanılır. Arama motoru sonucu gibi başka sahte arayüzler yine yok.
 - Teşhis, tedavi vaadi, dramatik kriz dili yok. Metinler hikâye dosyasından birebir.
 - Sahte randevu formu kurulmaz; CTA şimdilik bağlantı.
