@@ -7,10 +7,10 @@ status: draft
 date: 2026-09-28
 url: ""
 tags: [website, humentis, scroll, hikaye, tukenmislik]
-related: ["[[00-genel-bakis]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
+related: ["[[00-genel-bakis]]", "[[tukenmislik-ve-is-stresi]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
 ---
 
-# Hikâye C — Selim: "Motor Kapalı"
+# Tükenmişlik ve İş Stresi — "Motor Kapalı"
 
 ## 1. Künye
 

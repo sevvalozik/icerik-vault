@@ -7,10 +7,10 @@ status: draft
 date: 2026-09-28
 url: ""
 tags: [website, humentis, scroll, hikaye, cift-terapisi]
-related: ["[[00-genel-bakis]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
+related: ["[[00-genel-bakis]]", "[[cift-terapisi]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
 ---
 
-# Hikâye B — Ece: "Kırılan"
+# Çift Terapisi — "Kırılan Vazo"
 
 ## 1. Künye
 

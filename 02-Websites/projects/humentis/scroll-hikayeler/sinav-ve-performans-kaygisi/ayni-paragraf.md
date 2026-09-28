@@ -7,10 +7,10 @@ status: draft
 date: 2026-09-28
 url: ""
 tags: [website, humentis, scroll, hikaye, sinav-kaygisi]
-related: ["[[00-genel-bakis]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
+related: ["[[00-genel-bakis]]", "[[sinav-ve-performans-kaygisi]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
 ---
 
-# Hikâye A — Deniz: "Aynı Paragraf"
+# Sınav ve Performans Kaygısı — "Aynı Paragraf"
 
 ## 1. Künye
 

@@ -7,26 +7,55 @@ status: draft
 date: 2026-09-28
 url: ""
 tags: [website, humentis, scroll, hikaye, psikolog]
-related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief]]", "[[hikaye-a-deniz-sinav-kaygisi]]", "[[hikaye-b-ece-cift]]", "[[hikaye-c-selim-tukenmislik]]"]
+related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief]]", "[[gecisler]]", "[[site-bolumleri]]", "[[sosyal-medya-ve-sunum]]"]
 ---
 
 # Humentis — Scroll Hikâyeler (genel bakış)
 
 **Ne:** Uzmanların kişisel sitelerinin girişinde, kaydırdıkça ilerleyen kısa bir hikâye. Hikâye bir "geçiş anında" biter ve ziyaretçi kendini sitenin ilgili bölümünde bulur (blog yazısı, hizmet sayfası, randevu).
 
-**Kaynak:** [[humentis-bulunma-hikayesi]] kısa filmindeki üç karakter. Film bir sahne havuzu, buradaki her dosya o karakterlerden birinin uzun ve tek başına duran hikâyesi.
+**Kaynak:** [[humentis-bulunma-hikayesi]] kısa filmi ve hocaların mevcut reels metinleri ([[humentis-klinik-icerikleri]]).
 
-**Sunumda:** Hocalara üç hikâye ve her birinin geçiş seçenekleri gösterilir. Her hoca kendi alanına uyan hikâyeyi ve geçişi seçer. Metinlerdeki "Uzman Adı" ve alan başlıkları o hocaya göre değişir.
+**Düzen: konu bazlı.** Her çalışma alanının kendi klasörü var. Hoca kendi alanının klasörünü açar, oradaki hikâyelerden ve [[gecisler]]'den seçer. Seçimi o konu dosyasının en altındaki tabloya yazılır.
 
-## Hikâyeler
+## Konular
 
-| Dosya | Karakter | Konu | Ana geçiş | Nereye açılır |
-|---|---|---|---|---|
-| [[hikaye-a-deniz-sinav-kaygisi]] | Deniz, 22 | Sınav ve performans kaygısı | Rüzgârla savrulan ders notları | Blog yazısı |
-| [[hikaye-b-ece-cift]] | Ece, 34 | Çift terapisi | Kapı çarpar, raftaki vazo düşüp kırılır | Hizmet sayfası + randevu |
-| [[hikaye-c-selim-tukenmislik]] | Selim, 41 | Tükenmişlik ve iş stresi | Telefon ekranının içine giriş | Kısa öz değerlendirme + ön görüşme |
+| Konu | Tam hikâye | Fikir aşamasında |
+|---|---|---|
+| [[cift-terapisi]] | Kırılan Vazo | Dökülen Kahve, Buğulu Pencere, İki Fırça |
+| [[sinav-ve-performans-kaygisi]] | Aynı Paragraf | Sunumdan Önce |
+| [[tukenmislik-ve-is-stresi]] | Motor Kapalı | Pazar Akşamı, Masadaki Bitki |
+| [[kaygi-ve-cok-dusunmek]] | — | Ya Olursa? |
+| [[iliskiler-ve-baglanma]] | — | Okundu, Kusursuz Senaryo |
+| [[ergen-ve-ebeveyn]] | — | Kapalı Kapı, Okul Çantası |
+| [[aile-danismanligi]] | — | Aynı Sofra |
+| [[yas-ve-kayip]] | — | Yarım Kalan Fincan |
+| [[uyku-ve-stres]] | — | Saat 04:12 |
+| [[ozguven]] | — | Ayna |
 
-Geçişlerin bilerek hepsi farklı: biri nesneyle, biri kırılmayla, biri ekranla. Her dosyada 1–2 alternatif geçiş de var, hoca seçsin diye.
+**Tam hikâye** = sahne sahne scroll senaryosu, geçiş tarifi, açılan sayfanın metni ve görsel listesi hazır; Furkan Bey doğrudan kurabilir.
+**Fikir** = kısa anlatım ve geçiş; hoca seçerse tam hikâyeye çevrilecek.
+
+## Ortak dosyalar (`_ortak/`)
+
+- [[gecisler]]: her hikâyeye takılabilen 10 geçiş (G1–G10)
+- [[site-bolumleri]]: filmden çıkan, sitenin tamamında kullanılabilecek bölümler (pencereler girişi, el yazısı randevu defteri, arama cümleleri duvarı…)
+- [[sosyal-medya-ve-sunum]]: film karelerinden sosyal medya fikirleri ve hocalara sunum önerileri
+
+## Klasör yapısı
+
+```
+scroll-hikayeler/
+├── 00-genel-bakis.md
+├── _ortak/  (gecisler, site-bolumleri, sosyal-medya-ve-sunum)
+├── cift-terapisi/               cift-terapisi.md + kirilan-vazo.md
+├── sinav-ve-performans-kaygisi/ sinav-ve-performans-kaygisi.md + ayni-paragraf.md
+├── tukenmislik-ve-is-stresi/    tukenmislik-ve-is-stresi.md + motor-kapali.md
+└── kaygi-ve-cok-dusunmek/, iliskiler-ve-baglanma/, ergen-ve-ebeveyn/,
+    aile-danismanligi/, yas-ve-kayip/, uyku-ve-stres/, ozguven/
+```
+
+Yeni konu eklerken: klasör + aynı adlı konu dosyası; fikir tam hikâyeye dönüşünce konu klasörüne ayrı dosya olarak eklenir ve konu dosyasındaki tabloda durumu ✅ yapılır.
 
 ## Ortak kurallar (her hikâyede geçerli)
 
@@ -37,7 +66,7 @@ Geçişlerin bilerek hepsi farklı: biri nesneyle, biri kırılmayla, biri ekran
 - **Müzik:** gece bölümünde "emotional piano", geçiş anında "hope piano"ya yumuşak geçiş (film ile aynı mantık, dosyalar `03-Assets/audio/humentis/`).
 - **Yazı:** ekran yazıları film altyazısı gibi, Source Serif 4. Arayüz metinleri Manrope.
 
-## Dosyaların yapısı (Furkan Bey için)
+## Tam hikâye dosyalarının yapısı (Furkan Bey için)
 
 Her hikâye dosyasında aynı bölümler var:
 
