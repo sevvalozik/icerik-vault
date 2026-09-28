@@ -18,7 +18,8 @@ Aynı çatı altında, farklı dünyalarda yaşayan aile. Humentis'in "yetişkin
 
 | Hikâye | Durum | Ana geçiş | Açıldığı yer |
 |---|---|---|---|
-| Aynı Sofra | 💡 Fikir | Telefonlar ters çevrilir, masa örtüsü sayfa olur | Blog + aile görüşmesi |
+| [[sofra]] | ✅ Tam hikâye (video bekleniyor) | Kuşbakışı masa, yemek soğur; ortadaki boş tabağa yaklaşma, krem zemine erime | "Aynı evde, birbirinize uzak mı hissediyorsunuz?" |
+| ~~Aynı Sofra~~ | Yerine [[sofra]] geçti | — | — |
 
 ## Fikir aşamasındaki hikâyeler
 

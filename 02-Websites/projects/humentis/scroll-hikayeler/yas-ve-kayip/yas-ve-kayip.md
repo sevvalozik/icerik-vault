@@ -18,6 +18,7 @@ En hassas konu. Metinler mutlaka hoca ile birlikte yazılır; teselli cümlesi, 
 
 | Hikâye | Durum | Ana geçiş | Açıldığı yer |
 |---|---|---|---|
+| [[cay-bardagi]] | ✅ Tam hikâye (video bekleniyor), yazısız | Tek bardaktan yükselen buhara yaklaşma, krem zemine erime | "Kaybın ardından günler eksik kalıyorsa" |
 | Yarım Kalan Fincan | 💡 Fikir | Fincan rafa kaldırılır, raf kapağında sayfa açılır | Blog + ön görüşme |
 
 ## Fikir aşamasındaki hikâyeler
