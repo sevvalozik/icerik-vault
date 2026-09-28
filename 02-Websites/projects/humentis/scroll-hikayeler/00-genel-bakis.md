@@ -31,6 +31,7 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[cocuk-gelisimi-ve-okula-hazirlik]] | Kule (site hazır) | — |
 | [[dikkat-ve-odaklanma]] | Altyazı (site hazır) | Yarım Kalanlar, Ödev Masası |
 | [[panik-ve-sosyal-kaygi]] | Boş Ekran (video bekleniyor) | Sıra Bende, Kapının Önü |
+| [[mukemmeliyetcilik-ve-erteleme]] | Tuval (video bekleniyor) | — |
 | [[aile-danismanligi]] | Sofra (video bekleniyor) | — |
 | [[yas-ve-kayip]] | Çay Bardağı (video bekleniyor) | Yarım Kalan Fincan |
 | [[uyku-ve-stres]] | 04:12, Mutfak Işığı (video bekleniyor) | Saat 04:12 (eski fikir) |
