@@ -21,7 +21,7 @@ related: ["[[00-genel-bakis]]", "[[kaygi-ve-cok-dusunmek]]", "[[gecisler]]"]
 | Duygusal çekirdek | Kaygı, hiç yaşanmamış şeylerin provasıdır. Nil yarını dün geceden 47 kez yaşadı. |
 | Geçiş | Odayı dolduran "Nil versiyonları" sabah ışığında teker teker kaybolur; geriye tek gerçek an kalır. Site o boşluktan açılır. |
 | Açıldığı yer | Uzmanın kaygı sayfası: "Kaygı, hiç yaşanmamış şeylerin provasıdır" |
-| Tahmini uzunluk | ~10 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye
 
@@ -41,22 +41,23 @@ Kırk saniye sürüyor.
 
 Nil koridorda duruyor. Rahatlaması gerekiyor ama rahatlamıyor. Çünkü bu gece, yarının başka bir şeyi için provalar yeniden başlayacak. Ve ilk kez şunu düşünüyor: *Belki mesele Selin Hanım değil.*
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-| % | Sahne | Görüntü / kamera | Hareket (scroll ile) | Ekran yazısı | Ses |
-|---|---|---|---|---|---|
-| 0–6 | Açılış | Nil'in yatak odası, geniş plan; Nil arkadan, yatağın kenarında oturuyor | Işık yavaşça açılır | *Salı. 23:14.* | Oda tonu, uzakta bir araba |
-| 6–14 | Yarın | Komodinde telefon; takvim bildirimi ışığı (içerik flu) | Işık bir kez yanar, söner | *Yarın 09:00. Beş dakikalık bir görüşme.* | Tek bildirim sesi |
-| 14–22 | İlk cümle | Aynı kadraj, Nil'in omuzları | Ekran yazısı yazılır, silinir, yeniden yazılır (3 varyant) | *"Selin Hanım, bir şey konuşabilir miyiz?"* → *"Kısaca bir şey soracaktım…"* → *"Müsaitseniz…"* | Emotional piano başlar |
-| 22–34 | **Prova 1** | Odanın sol köşesinde yarı saydam ikinci bir Nil belirir (arkadan, ayakta, sanki birinin karşısında) | Belirir; altında küçük yazı | *Prova 1: Sesi titriyor.* | Piyano |
-| 34–46 | **Prova 2–5** | Pencere önünde, kapı eşiğinde, masada… her scroll adımında odanın başka bir köşesinde yeni bir yarı saydam Nil | Her biri belirdikçe bir öncekiler hafif solar ama kaybolmaz | *Prova 2: Hiçbir şey demiyor. Sessizlik daha kötü.* / *Prova 3: Toplantıya başka biri giriyor.* / *Prova 4: Ne diyeceğini unutuyor.* / *Prova 5: Projeden alınıyor.* | Piyano sıklaşır |
-| 46–58 | **Kalabalık oda** | Geniş plan, odada 12–15 yarı saydam Nil; gerçek Nil hâlâ yatağın kenarında, en küçük olan o | Kamera yavaşça geri çekilir; senaryo başlığındaki saat hızla akar: 00:40, 01:55, 03:10 | *Prova 47.* | Piyano en yoğun hali, sonra birden kesilir |
-| 58–64 | Sessizlik | Aynı kadraj, perdeden ilk mavi ışık | Hiçbir şey hareket etmez | — | Tam sessizlik, 2 sn |
-| 64–74 | **Sabah** | Perde aralığından giren ışık odaya yayılır | Işık dokundukça yarı saydam Nil'ler **teker teker** kaybolur, en son yatağın kenarındaki gerçek Nil kalır | *Sonra sabah oldu.* | Hope piano'ya geçiş |
-| 74–82 | Kapı | Ofis koridoru, gündüz; Nil arkadan, kapıyı tıklatıyor | Kapı açılır | — | Ofis sesi |
-| 82–88 | **40 saniye** | Kapıdan içerisi flu; iki replik film yazısıyla | Replikler birer birer | *"Bir hafta daha isteyebilir miyim?"* / *"Tamam, takvimi güncelle yeter."* | Piyano ince |
-| 88–94 | Koridor | Nil koridorda duruyor, sırtı duvara | Hafif push-in | *Dün gece 47 kez yaşadığı konuşma. Gerçekte 40 saniye sürdü.* | — |
-| 94–100 | **GEÇİŞ** | Aşağıda (§4) | | | |
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
+
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–12 | frame | oda-gece | Nil yatağın kenarında | *Yarın 09:00. Beş dakikalık bir görüşme.* |
+| 12–22 | typing | oda-gece | İlk cümle yazılır, silinir, yeniden yazılır (2 varyant) | *"Selin Hanım, bir şey konuşabilir miyiz?"* |
+| 22–34 | ghosts | oda-gece + nil-poz | İlk hayalet belirir | *Prova 1: Sesi titriyor.* |
+| 34–48 | ghosts + clock | nil-poz (hepsi) | Hayaletler hızla çoğalır; saat 00:40 → 03:10 | *Prova 47.* |
+| 48–52 | frame | oda-sabah | Tam sessizlik, müzik 0 | — |
+| 52–64 | ghosts (clear) | oda-sabah | Sabah ışığı soldan sağa hayaletleri siler | — |
+| 64–78 | frame (scrub) | koridor | Kapı tıklatılır | *"Bir hafta daha isteyebilir miyim?" — "Tamam."* |
+| 78–92 | frame | koridor-duvar | Nil duvara yaslanır | *Dün gece 47 kez yaşadığı konuşma. Gerçekte 40 saniye sürdü.* |
+| 92–100 | ghosts (geçiş) | koridor-duvar | Son hayalet gerçek Nil'le birleşir, krem zemin | **Kaygı, hiç yaşanmamış şeylerin provasıdır** |
+
+**Kısaltmada çıkarılanlar:** Prova 2–5 etiketleri, "Sonra sabah oldu." ve "Belki mesele Selin Hanım değil." satırları çıkarıldı.
 
 ## 4. Geçiş anı — "Tek gerçek an"
 
@@ -102,25 +103,12 @@ Geçiş hikâyenin anlamından çıkıyor: prova yapan zihin ile yaşayan kişin
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/kaygi-ve-cok-dusunmek/provalar/`
 - **Görsel promptları:** [[scroll-provalar-brief]] (`07-AI-Gorsel/humentis/scroll-provalar-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/provalar/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
-- **Toplam uzunluk:** 10 ekran boyu
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 - **Müzik:** 14%'te gece parçası; 46–58 arasında yoğunlaşır ve 58%'de keskin kesilir (sessizlik); 64%'te sabah parçası.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–6 | frame | oda-gece | *Salı. 23:14.* | Işık açılır |
-| 2 | 6–14 | frame | oda-gece | *Yarın 09:00. Beş dakikalık bir görüşme.* | Komodinde telefon ışığı bir kez yanar |
-| 3 | 14–22 | typing | oda-gece | *"Selin Hanım, bir şey konuşabilir miyiz?"* → *"Kısaca bir şey soracaktım…"* → *"Müsaitseniz…"* | rewrite ×3; müzik 1 başlar |
-| 4 | 22–34 | ghosts | oda-gece + nil-poz-1 | *Prova 1: Sesi titriyor.* | 1. hayalet sol köşede |
-| 5 | 34–46 | ghosts | nil-poz-2…5 | *Prova 2: Hiçbir şey demiyor. Sessizlik daha kötü.* / *Prova 3: Toplantıya başka biri giriyor.* / *Prova 4: Ne diyeceğini unutuyor.* / *Prova 5: Projeden alınıyor.* | Her adımda yeni hayalet; öncekiler %70'e |
-| 6 | 46–58 | ghosts + clock | nil-poz-1…6 (tekrarlı) | *Prova 47.* | 12–15 hayalet; kamera geri çekilir (scale 1→.9); saat 00:40 → 01:55 → 03:10; sonunda müzik kesilir |
-| 7 | 58–64 | frame | oda-sabah | — | 2 sn tam sessizlik, görüntü sabit |
-| 8 | 64–74 | ghosts (clear) | oda-sabah | *Sonra sabah oldu.* | Işık maskesi soldan sağa; dokunduğu hayalet silinir; müzik 2'ye geçiş |
-| 9 | 74–82 | frame | koridor | — | Kapı tıklatılır |
-| 10 | 82–88 | text + frame | koridor | *"Bir hafta daha isteyebilir miyim?"* / *"Tamam, takvimi güncelle yeter."* | Replikler birer birer |
-| 11 | 88–94 | frame | koridor-duvar | *Dün gece 47 kez yaşadığı konuşma. Gerçekte 40 saniye sürdü.* | Push-in |
-| 12 | 94–100 | ghosts | koridor-duvar + nil-poz-3 | *Belki mesele Selin Hanım değil.* → **Kaygı, hiç yaşanmamış şeylerin provasıdır.** | Geçiş §4: hayalet ile gerçek figür birleşir, krem zemine erir |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

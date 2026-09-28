@@ -16,6 +16,18 @@ related: ["[[00-genel-bakis]]", "[[humentis-bulunma-hikayesi]]", "[[00-Musterile
 
 > **Claude / Claude Code için:** Bir hikâye dosyası (örn. `kaygi-ve-cok-dusunmek/provalar.md`) verildiğinde siteyi bu şartnameye göre kur. Hikâye dosyasındaki scroll senaryosu, geçiş anı, açıldığı site bölümü ve **"Kodlama için"** bölümü bağlayıcıdır. Metinleri birebir kullan, uydurma. Bu dosyayla hikâye dosyası çelişirse hikâye dosyası kazanır.
 
+## 0. Kısalık kuralları (bağlayıcı, 28 Eylül 2026)
+
+Hikâye kapıdaki davetiyedir, kapının kendisi değil. Ziyaretçi çoğunlukla hocayı tanımaya ya da randevu almaya gelir.
+
+- **Uzunluk:** en fazla **5 ekran boyu** scroll (normal kaydırmayla ~20–30 sn). ▶ Oynat hızı buna göre ~25 sn.
+- **Tek an:** her hikâye tek bir duygusal ana dayanır; 3–5 sahne. Tekrar eden yapılar en fazla **2 tekrar** (+ kırılma anı).
+- **Az yazı:** hikâye boyunca toplam **en fazla 8 kısa satır** (senaryo başlığı/saat sayılmaz). Ekranda aynı anda **tek satır**. Görüntü anlatır, yazı sadece anahtar cümleyi taşır.
+- **Hikâyeyi geç:** sağ altta her zaman görünür bir **"Hikâyeyi geç →"** bağlantısı; tıklayınca site bölümüne iner.
+- **İlerleme çizgisi:** ekranın altında ince bir çizgi hikâyenin ne kadarının kaldığını gösterir.
+- **Tekrar ziyaret:** hikâyeyi bir kez sonuna kadar izleyen (ya da geçen) ziyaretçi siteye tekrar geldiğinde sayfa doğrudan site bölümünden açılır (`localStorage`, try/catch ile; erişilemezse hikâye normal oynar).
+- Hikâye dosyalarındaki **§3 Kısa kesim** tablosu bağlayıcıdır; uzun anlatım (§2) sadece okuma içindir.
+
 ## 1. Referans uygulama
 
 `01-Presentations/active/humentis-bulunma-hikayesi/film.html` bu projenin çalışan scroll motorudur. Aynı mimariyi kullan:

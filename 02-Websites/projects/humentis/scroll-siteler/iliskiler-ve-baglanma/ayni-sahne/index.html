@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aynı Sahne — Humentis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&family=Manrope:wght@400;500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --petrol:#284C51; --krem:#F6EFDD; --fildisi:#f8f5ed; --kagit:#f3ecdb; --murekkep:#2a2622; --altin:#CEAB69; --altin-koyu:#7A5C22; --komur:#564E44;
+  --serif:"Source Serif 4", Georgia, serif; --sans:"Manrope", Arial, sans-serif; --mono:"Courier Prime","Courier New",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{padding:0!important}
+html,body{background:#0a1214;color:var(--krem)}
+body{font-family:var(--sans)}
+#hikaye{position:relative;height:600vh}
+#sahne{position:sticky;top:0;height:100vh;overflow:hidden;
+  background:radial-gradient(45% 55% at 50% 45%, rgba(246,225,190,.10), transparent 70%), radial-gradient(130% 100% at 50% 110%, #16292b 0%, #0b1517 60%, #050909 100%)}
+#gren{position:absolute;inset:-50%;pointer-events:none;opacity:.07;mix-blend-mode:overlay;z-index:40;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:gren 1s steps(6) infinite}
+@keyframes gren{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
+
+/* çekim kartı (klaket) */
+#klaket{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:30;text-align:center;opacity:0;pointer-events:none}
+#klaket .ust{font-family:var(--mono);font-size:clamp(12px,1vw,15px);letter-spacing:.35em;color:rgba(246,239,221,.6)}
+#klaket .buyuk{font-family:var(--mono);font-weight:700;font-size:clamp(40px,6vw,96px);letter-spacing:.08em;color:var(--krem);margin:.15em 0}
+#klaket .alt{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.5vw,24px);color:rgba(246,239,221,.75)}
+
+/* senaryo sayfaları */
+#masa{position:absolute;left:50%;top:50%;width:min(620px,90vw);height:min(62vh,600px);transform:translate(-50%,-50%);z-index:10}
+#perde{position:absolute;inset:0;background:#070d0e;opacity:0;z-index:28;pointer-events:none}
+.sayfa{position:absolute;inset:0;background:var(--kagit);color:var(--murekkep);border-radius:2px;padding:clamp(22px,4vh,44px) clamp(22px,4.5vw,56px);
+  box-shadow:0 20px 60px rgba(0,0,0,.45);font-family:var(--mono);font-size:clamp(13px,1.05vw,16px);line-height:1.55;overflow:hidden;opacity:0;will-change:transform,opacity}
+.sayfa:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 30%, transparent 60%, rgba(120,95,60,.12) 100%)}
+.sayfa .no{position:absolute;right:clamp(18px,3vw,40px);top:clamp(14px,2.4vh,24px);font-size:.85em;color:rgba(42,38,34,.55)}
+.sayfa .yil{position:absolute;left:clamp(18px,3vw,40px);top:clamp(14px,2.4vh,24px);font-size:.85em;letter-spacing:.2em;color:rgba(42,38,34,.55)}
+.sayfa .mekan{font-weight:700;margin-top:1.6em;margin-bottom:1em;text-transform:uppercase}
+.sayfa .yon{font-style:italic;margin:0 0 1em;color:rgba(42,38,34,.8)}
+.sayfa .rep{margin:0 0 .9em;opacity:0}
+.sayfa .kim{display:block;margin-left:36%;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.sayfa .soz{display:inline-block;max-width:70%;margin-left:18%}
+.sayfa .rep.selin .soz{background:linear-gradient(transparent 60%, rgba(206,171,105,0) 60%);transition:background .5s}
+.sayfa .rep.selin.isaret .soz{background:linear-gradient(transparent 58%, rgba(206,171,105,.45) 58%)}
+.imlec{display:inline-block;width:.55em;height:1.05em;background:var(--murekkep);vertical-align:-.15em;animation:yan 1s steps(1) infinite}
+@keyframes yan{50%{opacity:0}}
+.el{font-family:"Source Serif 4",serif;font-style:italic}
+
+.anl{position:absolute;z-index:32;left:50%;bottom:5vh;transform:translateX(-50%);width:min(92vw,900px);text-align:center;font-family:var(--serif);font-size:clamp(18px,1.9vw,30px);color:#fff8ec;opacity:0;text-shadow:0 1px 16px rgba(0,0,0,.7)}
+.anl.ust{bottom:auto;top:5vh}
+@media (min-width:1100px){.anl.yan{left:4vw;bottom:auto;top:50%;transform:translateY(-50%);width:calc(50vw - 310px - 7vw);text-align:right}}
+
+#erime{position:absolute;inset:0;z-index:60;background:var(--fildisi);opacity:0;display:flex;align-items:center;justify-content:center;padding:0 16px;pointer-events:none}
+#erime h1{font-family:var(--serif);font-weight:400;color:var(--petrol);font-size:clamp(32px,4.6vw,80px);line-height:1.12;text-align:center;opacity:0;max-width:18ch}
+#erime .etiket{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--altin-koyu);text-align:center;margin-bottom:1.4em;opacity:0}
+
+#site{background:var(--fildisi);color:var(--komur);padding-block:4vh 14vh;padding-inline:20px}
+#site .ic{max-width:44rem;margin:0 auto}
+#site p{font-family:var(--serif);font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:#2f3a38}
+#site .not{margin-top:2.4em;font-family:var(--sans);font-size:14px;color:#8a8478;font-style:italic}
+#site .btn{display:inline-block;margin-top:2.4em;padding:14px 22px;border-radius:999px;background:var(--petrol);color:var(--fildisi);text-decoration:none;font-weight:600}
+
+#kontrol{position:fixed;right:16px;bottom:14px;z-index:90}
+#kontrol button{all:unset;cursor:pointer;padding:7px 14px;border:1px solid rgba(246,239,221,.3);border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:rgba(246,239,221,.85);background:rgba(0,0,0,.45)}
+#kontrol button:focus-visible{outline:2px solid var(--altin);outline-offset:2px}
+body.sitede #kontrol button{color:var(--petrol);border-color:rgba(40,76,81,.35);background:rgba(248,245,237,.85)}
+#ipucu{position:fixed;left:50%;bottom:2vh;transform:translateX(-50%);z-index:80;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:rgba(246,239,221,.55);transition:opacity .6s}
+@media (prefers-reduced-motion:reduce){#gren{animation:none}}
+#site h2{font-family:var(--serif);font-weight:500;color:var(--petrol);font-size:clamp(20px,2vw,28px);margin:2em 0 .4em}
+</style>
+</head>
+<body>
+
+<section id="hikaye" aria-label="Aynı Sahne — kısa hikâye">
+  <div id="sahne">
+    <div id="masa"></div>
+    <div id="perde"></div>
+    <div id="klaket"><div class="ust" id="kUst"></div><div class="buyuk" id="kBuyuk"></div><div class="alt" id="kAlt"></div></div>
+    <div id="yazilar"></div>
+    <div id="gren"></div>
+    <div id="erime"><div><div class="etiket">İlişkiler ve bağlanma</div><h1>Aynı hikâye neden tekrar ediyor?</h1></div></div>
+  </div>
+</section>
+<section id="site">
+  <div class="ic">
+    <p>Bazen partnerler değişir ama kavga aynı kalır. Aynı cümleler, aynı kırgınlık, aynı kapanan kapı. Bu bir şanssızlık ya da "hep yanlış insanı seçmek" değil; geçmişte öğrendiğimiz ilişki biçimlerinin, bugün farkında olmadan yeniden sahnelenmesidir. Terapide o sahneyi birlikte okur, repliği değiştirmenin yolunu ararız.</p>
+    <a class="btn" href="#site">Ön görüşme için randevu al</a>
+    <h2>Aynı kavga neden farklı ilişkilerde tekrar eder?</h2>
+    <p class="not">Bu bölümün metni uzmanla birlikte yazılacak.</p>
+    <h2>Bağlanma örüntüleri ve tekrar zorlantısı</h2>
+    <p class="not">Bu bölümün metni uzmanla birlikte yazılacak.</p>
+    <h2>Repliği değiştirmek: terapide neler yapıyoruz?</h2>
+    <p class="not">Bu bölümün metni uzmanla birlikte yazılacak.</p>
+  </div>
+</section>
+<div id="ipucu">KAYDIRIN · YA DA ▶ OYNAT</div>
+<div id="kontrol"><button id="oynat">▶ OYNAT</button></div>
+
+<script>
+(() => {
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const pen=(p,a,b,f=1)=>clamp((p-a)/f)*clamp((b-p)/f);
+const SELIN=["Yine mi geç kaldın?","Yazdın. Tek kelime.","Sen beni hiç önemsemiyorsun."];
+// her çekim: [yıl, karşı taraf, karşı taraf replikleri(2), sayfa no, başlangıç %, bitiş %]
+const CEKIM=[
+  {yil:"2019", o:"CAN",   ol:["Toplantı uzadı, yazdım ya."], no:"1.", a:4,  b:30},
+  {yil:"2022", o:"BARIŞ", ol:["Trafik vardı. Mesaj attım."], no:"1.", a:33, b:52},
+];
+const masa=document.getElementById("masa");
+function sayfaKur(c,i){
+  const s=document.createElement("div"); s.className="sayfa";
+  const replik=[["SELİN",SELIN[0],1],[c.o,c.ol[0],0],["SELİN",SELIN[2],1]];
+  s.innerHTML=`<div class="yil">ÇEKİM ${i+1} · ${c.yil}</div><div class="no">${c.no}</div>
+    <div class="mekan">İÇ MEKAN — MUTFAK — GECE</div>
+    <div class="yon">Masada iki kupa. Biri çoktan soğumuş.</div>`+
+    replik.map(([k,t,sel])=>`<div class="rep${sel?" selin":""}"><span class="kim">${k}</span><span class="soz" data-t="${t}"></span></div>`).join("")+
+    `<div class="yon kapi" style="opacity:0">Kapı kapanır.</div>`;
+  masa.appendChild(s); c.el=s; c.reps=[...s.querySelectorAll(".rep")]; c.kapi=s.querySelector(".kapi");
+}
+CEKIM.forEach(sayfaKur);
+// 3. çekim: yarıda kalan
+const son={yil:"BUGÜN", a:55, b:86};
+(()=>{ const s=document.createElement("div"); s.className="sayfa";
+  s.innerHTML=`<div class="yil">ÇEKİM 3 · BUGÜN</div><div class="no">1.</div>
+  <div class="mekan">İÇ MEKAN — MUTFAK — GECE</div>
+  <div class="yon">Masada iki kupa. Biri çoktan soğumuş.</div>
+  <div class="rep selin"><span class="kim">SELİN</span><span class="soz" data-t="${SELIN[0]}"></span></div>
+  <div class="rep"><span class="kim">KAAN</span><span class="soz" data-t="Kusura bakma, işten çıkamadım."></span></div>
+  <div class="rep selin"><span class="kim">SELİN</span><span class="soz" data-t="Sen beni hiç…"></span></div>
+  <div class="yon fark" style="opacity:0">Selin susar. Bu repliği daha önce söylediğini fark eder.</div>`;
+  masa.appendChild(s); son.el=s; son.reps=[...s.querySelectorAll(".rep")]; son.fark=s.querySelector(".fark"); })();
+
+const Y=document.getElementById("yazilar");
+function an(cls,html){const d=document.createElement("div");d.className="anl "+cls;d.innerHTML=html;Y.appendChild(d);return d;}
+const A=[
+  [48,52, an("yan","Aynı mutfak değil. Aynı sahne.")],
+];
+const kl=document.getElementById("klaket"), kU=document.getElementById("kUst"), kB=document.getElementById("kBuyuk"), kA=document.getElementById("kAlt");
+const KLAKET=[
+  [0,4,  "SAHNE 12","ÇEKİM 1","2019 · Selin ve Can"],
+  [30,33,"SAHNE 12","ÇEKİM 2","2022 · Selin ve Barış"],
+  [52,55,"SAHNE 12","ÇEKİM 3","Bugün · Selin ve Kaan"],
+];
+
+function yazdir(el,t){ // daktilo
+  const m=el.dataset.t, n=Math.round(m.length*clamp(t));
+  el.innerHTML=m.slice(0,n)+(t>0&&t<1?'<span class="imlec"></span>':"");
+}
+const H=document.getElementById("hikaye");
+function sayfa(c,p,i,toplam){
+  const yerel=(p-c.a)/(c.b-c.a);
+  // görünürlük ve yığın: aktif sayfa önde; sonrakiler geldikçe geri itilir
+  const giris=clamp((p-c.a+1.5)/1.5);
+  const kac=CEKIM.concat([son]).filter(x=>p>=x.a && x!==c && x.a>c.a).length; // üstüne gelen sayfa sayısı
+  const rot=[-3,2.5,-1.5,0][i]||0;
+  c.el.style.opacity = giris*(kac? Math.max(.25,.7-kac*.15):1) * (1-clamp((p-88)/3));
+  c.el.style.transform = `translate(${kac*-3}%, ${kac*-2.5}%) rotate(${kac?rot:0}deg) scale(${1-kac*.04})`;
+  c.el.style.zIndex = 10+i;
+  c.el.style.filter = kac? `blur(${Math.min(2,kac*.8)}px)` : "none";
+  // replikler sırayla
+  const reps=c.reps, n=reps.length, basla=.05, bit=.82;
+  reps.forEach((r,k)=>{
+    const a=basla+(bit-basla)*k/n, b=basla+(bit-basla)*(k+.8)/n;
+    const t=clamp((yerel-a)/(b-a));
+    r.style.opacity = yerel>=a ? 1 : 0;
+    yazdir(r.querySelector(".soz"),t);
+    // önceki sayfalarda Selin'in aynı cümlesi altın çizgiyle işaretlenir
+  });
+  if(c.kapi) c.kapi.style.opacity=clamp((yerel-.86)/.05);
+}
+function ciz(){
+  const p=clamp(scrollY/(H.offsetHeight-innerHeight))*100;
+  CEKIM.forEach((c,i)=>sayfa(c,p,i));
+  sayfa(son,p,2);
+  if(son.fark) son.fark.style.opacity=clamp((p-(son.a+(son.b-son.a)*.78))/1.5);
+  // aynı cümle eşleşmesi: 2. çekimden itibaren Selin'in tekrar eden cümlesi yazılır yazılmaz altın çizgiyle işaretlenir
+  const tum=CEKIM.concat([son]);
+  tum.forEach((c,i)=>{ c.reps.forEach(r=>{ if(!r.classList.contains("selin")) return;
+    const el=r.querySelector(".soz"); const tam=el.textContent.length>=el.dataset.t.length;
+    r.classList.toggle("isaret", i>0 && tam && el.dataset.t!=="Sen beni hiç…");
+  }); });
+  // klaket
+  const k=KLAKET.find(x=>p>=x[0]&&p<x[1]);
+  if(k){ kU.textContent=k[2]; kB.textContent=k[3]; kA.textContent=k[4]; kl.style.opacity=pen(p,k[0],k[1],.8); } else kl.style.opacity=0;
+  document.getElementById("perde").style.opacity = k ? .92*pen(p,k[0],k[1],.8) : 0;
+  A.forEach(([a,b,e])=>e.style.opacity=pen(p,a,b,.8));
+  const er=document.getElementById("erime");
+  er.style.opacity=clamp((p-89)/3); er.querySelector("h1").style.opacity=clamp((p-91.5)/2); er.querySelector(".etiket").style.opacity=clamp((p-92)/2);
+  document.getElementById("ipucu").style.opacity=p<1.5?1:0;
+  document.body.classList.toggle("sitede",p>=92);
+}
+addEventListener("scroll",ciz,{passive:true}); addEventListener("resize",ciz); ciz();
+
+let oyn=false,son2=0; const b=document.getElementById("oynat");
+function tog(){oyn=!oyn;b.textContent=oyn?"❚❚ DURAKLAT":"▶ OYNAT";if(oyn){son2=performance.now();requestAnimationFrame(ak);}}
+function ak(t){if(!oyn)return;const dt=(t-son2)/1000;son2=t;scrollTo(0,scrollY+.2*innerHeight*dt);if(scrollY>=H.offsetHeight-innerHeight-2){tog();return;}requestAnimationFrame(ak);}
+b.onclick=tog; addEventListener("keydown",e=>{if(e.key==="p"||e.key==="P")tog();});
+})();
+</script>
+<style>
+#gec{all:unset;cursor:pointer;padding:7px 14px;border:1px solid rgba(246,239,221,.3);border-radius:999px;font-family:"Courier Prime","Courier New",monospace;font-size:11px;letter-spacing:.12em;color:rgba(246,239,221,.85);background:rgba(0,0,0,.45);margin-right:8px;transition:opacity .4s}
+#gec:focus-visible{outline:2px solid #CEAB69;outline-offset:2px}
+body.sitede #gec{opacity:0;pointer-events:none}
+#ilerle{position:fixed;left:0;bottom:0;height:2px;width:0;background:rgba(206,171,105,.75);z-index:95;transition:opacity .4s}
+#yeniden{display:inline-block;margin-bottom:2em;font-family:"Manrope",Arial,sans-serif;font-size:13px;letter-spacing:.06em;color:#7A5C22;text-decoration:none;border-bottom:1px solid rgba(122,92,34,.35)}
+#yeniden:focus-visible{outline:2px solid #CEAB69;outline-offset:3px}
+#ilerleme{display:none}
+</style>
+<div id="ilerle"></div>
+<script>
+(() => {
+  const H=document.getElementById("hikaye"), S=document.getElementById("site"), c=document.getElementById("ilerle");
+  const kontrol=document.getElementById("kontrol");
+  const g=document.createElement("a"); g.id="gec"; g.href="#site"; g.textContent="HİKÂYEYİ GEÇ →"; kontrol.insertBefore(g,kontrol.firstChild);
+  const ic=S.querySelector(".ic")||S; const y=document.createElement("a"); y.id="yeniden"; y.href="#hikaye"; y.textContent="↺ Hikâyeyi yeniden izle"; ic.insertBefore(y,ic.firstChild);
+  const son=()=>H.offsetTop+H.offsetHeight-innerHeight;
+  const K="humentis-izlendi:"+location.pathname;
+  const bitti=()=>{ try{ localStorage.setItem(K,"1"); }catch(e){} };
+  try{ if(localStorage.getItem(K)==="1") requestAnimationFrame(()=>scrollTo(0,son())); }catch(e){}
+  g.addEventListener("click",e=>{ e.preventDefault(); bitti(); scrollTo({top:son(),behavior:"smooth"}); });
+  y.addEventListener("click",e=>{ e.preventDefault(); try{ localStorage.removeItem(K); }catch(err){} scrollTo(0,0); });
+  const f=()=>{ const p=Math.max(0,Math.min(1,scrollY/(H.offsetHeight-innerHeight))); c.style.width=(p*100)+"%"; c.style.opacity=p<.995?1:0; if(p>=.97) bitti(); };
+  addEventListener("scroll",f,{passive:true}); addEventListener("resize",f); f();
+})();
+</script>
+</body>
+</html>

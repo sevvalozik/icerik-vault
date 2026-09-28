@@ -18,7 +18,7 @@
 :root{padding:0!important}
 html,body{background:#000;color:var(--krem)}
 body{font-family:var(--sans)}
-#hikaye{position:relative;height:1300vh}
+#hikaye{position:relative;height:600vh}
 #sahne{position:sticky;top:0;height:100vh;overflow:hidden;background:#000}
 video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
 #karart{position:absolute;inset:0;background:#000;opacity:0;z-index:5}
@@ -94,37 +94,27 @@ let hazir=0; Object.values(V).forEach(v=>v.addEventListener("loadeddata",()=>{ i
 
 // kurgu: [başlangıç %, bitiş %, klip, klip başı sn, klip sonu sn]
 const KURGU=[
-  [0, 7,  "adim", 0.0, 0.0],
-  [7, 17, "adim", 0.6, 3.6],     // Ela adım atar
-  [18,27, "geri", 0.0, 3.4],     // Kerem geri çekilir
-  [29,37, "adim", 0.6, 3.6],
-  [38,47, "geri", 0.0, 3.4],
-  [49,57, "adim", 0.6, 3.6],
-  [58,67, "geri", 0.0, 3.4],
-  [67,72, "geri", 3.4, 3.4],     // mesafe hiç değişmedi
-  [74,80, "adim", 0.6, 3.6],     // anahtar
-  [80,84, "adim", 3.6, 3.6],     // "yine geri çekilecekti"
-  [84,93, "yaklas", 0.0, 3.9],   // bu sefer ona yürür
-  [93,100,"yaklas", 3.9, 3.9],
+  [0, 10, "adim", 0.0, 0.0],
+  [10,17, "adim", 0.6, 3.6],     // Ela adım atar
+  [17,25, "geri", 0.0, 3.4],     // Kerem geri çekilir
+  [28,36, "adim", 0.6, 3.6],
+  [36,45, "geri", 0.0, 3.4],
+  [48,62, "adim", 0.6, 3.6],     // anahtar
+  [62,88, "yaklas", 0.0, 3.9],   // bu sefer ona yürür
+  [88,100,"yaklas", 3.9, 3.9],
 ];
-const AY=[[0,"MART"],[28,"NİSAN"],[48,"HAZİRAN"],[73,"EKİM"]];
+const AY=[[0,"MART"],[27,"NİSAN"],[47,"EKİM"]];
 const Y=document.getElementById("yazilar");
 function y(cls,html){const d=document.createElement("div");d.className="y "+cls;d.innerHTML=html;Y.appendChild(d);return d;}
 const T=[
-  [0.5,6.5,y("buyuk","Ela ile Kerem bir yıldır birlikte.")],
-  [8,17,  y("rep ela","“Bu gece kalsana.”")],
-  [19,27, y("rep kerem","“Yarın erken kalkacağım.”")],
-  [27.2,29, y("gecis","NİSAN")],
-  [30,37, y("rep ela","“Seni seviyorum.”")],
-  [39,47, y("rep kerem","“…Ben de. Bugün çok yoruldum.”")],
-  [47.2,49, y("gecis","HAZİRAN")],
-  [50,57, y("rep ela","“Annemle tanışır mısın?”")],
-  [59,67, y("rep kerem","“Bu ara iş çok yoğun.”")],
-  [67,72.5, y("anl","Aradaki mesafe hiç değişmedi.")],
-  [72.2,74, y("gecis","EKİM")],
-  [75,80, y("rep ela","“Evin anahtarı. İstersen.”")],
-  [80,84.5, y("anl","Kerem yine geri çekilecekti.")],
-  [87,93, y("anl","Bu sefer çekilmedi.")],
+  [10.5,17, y("rep ela","“Bu gece kalsana.”")],
+  [18,25,   y("rep kerem","“Yarın erken kalkacağım.”")],
+  [25.2,28, y("gecis","NİSAN")],
+  [29,36,   y("rep ela","“Seni seviyorum.”")],
+  [37,45,   y("rep kerem","“…Bugün çok yoruldum.”")],
+  [45.2,48, y("gecis","EKİM")],
+  [50,61,   y("rep ela","“Evin anahtarı. İstersen.”")],
+  [74,88,   y("anl","Bu sefer çekilmedi.")],
 ];
 const kar=document.getElementById("karart"), H=document.getElementById("hikaye");
 function ciz(){
@@ -141,16 +131,43 @@ function ciz(){
   T.forEach(([a,b,e])=>{ e.style.opacity=pen(p,a,b,.8); });
   document.getElementById("ay").textContent=[...AY].reverse().find(s=>p>=s[0])[1];
   const er=document.getElementById("erime");
-  er.style.opacity=clamp((p-94)/3); er.querySelector("h1").style.opacity=clamp((p-96)/2); er.querySelector(".etiket").style.opacity=clamp((p-96.5)/2);
+  er.style.opacity=clamp((p-90)/3); er.querySelector("h1").style.opacity=clamp((p-92.5)/2); er.querySelector(".etiket").style.opacity=clamp((p-93)/2);
   document.getElementById("ipucu").style.opacity=p<1.5?1:0;
-  document.body.classList.toggle("sitede",p>=97);
+  document.body.classList.toggle("sitede",p>=93);
 }
 addEventListener("scroll",ciz,{passive:true}); addEventListener("resize",ciz); ciz();
 
 let oyn=false,son=0; const b=document.getElementById("oynat");
 function tog(){oyn=!oyn;b.textContent=oyn?"❚❚ DURAKLAT":"▶ OYNAT";if(oyn){son=performance.now();requestAnimationFrame(ak);}}
-function ak(t){if(!oyn)return;const dt=(t-son)/1000;son=t;scrollTo(0,scrollY+.16*innerHeight*dt);if(scrollY>=H.offsetHeight-innerHeight-2){tog();return;}requestAnimationFrame(ak);}
+function ak(t){if(!oyn)return;const dt=(t-son)/1000;son=t;scrollTo(0,scrollY+.2*innerHeight*dt);if(scrollY>=H.offsetHeight-innerHeight-2){tog();return;}requestAnimationFrame(ak);}
 b.onclick=tog; addEventListener("keydown",e=>{if(e.key==="p"||e.key==="P")tog();});
+})();
+</script>
+
+<style>
+#gec{all:unset;cursor:pointer;padding:7px 14px;border:1px solid rgba(246,239,221,.3);border-radius:999px;font-family:"Courier Prime","Courier New",monospace;font-size:11px;letter-spacing:.12em;color:rgba(246,239,221,.85);background:rgba(0,0,0,.45);margin-right:8px;transition:opacity .4s}
+#gec:focus-visible{outline:2px solid #CEAB69;outline-offset:2px}
+body.sitede #gec{opacity:0;pointer-events:none}
+#ilerle{position:fixed;left:0;bottom:0;height:2px;width:0;background:rgba(206,171,105,.75);z-index:95;transition:opacity .4s}
+#yeniden{display:inline-block;margin-bottom:2em;font-family:"Manrope",Arial,sans-serif;font-size:13px;letter-spacing:.06em;color:#7A5C22;text-decoration:none;border-bottom:1px solid rgba(122,92,34,.35)}
+#yeniden:focus-visible{outline:2px solid #CEAB69;outline-offset:3px}
+#ilerleme{display:none}
+</style>
+<div id="ilerle"></div>
+<script>
+(() => {
+  const H=document.getElementById("hikaye"), S=document.getElementById("site"), c=document.getElementById("ilerle");
+  const kontrol=document.getElementById("kontrol");
+  const g=document.createElement("a"); g.id="gec"; g.href="#site"; g.textContent="HİKÂYEYİ GEÇ →"; kontrol.insertBefore(g,kontrol.firstChild);
+  const ic=S.querySelector(".ic")||S; const y=document.createElement("a"); y.id="yeniden"; y.href="#hikaye"; y.textContent="↺ Hikâyeyi yeniden izle"; ic.insertBefore(y,ic.firstChild);
+  const son=()=>H.offsetTop+H.offsetHeight-innerHeight;
+  const K="humentis-izlendi:"+location.pathname;
+  const bitti=()=>{ try{ localStorage.setItem(K,"1"); }catch(e){} };
+  try{ if(localStorage.getItem(K)==="1") requestAnimationFrame(()=>scrollTo(0,son())); }catch(e){}
+  g.addEventListener("click",e=>{ e.preventDefault(); bitti(); scrollTo({top:son(),behavior:"smooth"}); });
+  y.addEventListener("click",e=>{ e.preventDefault(); try{ localStorage.removeItem(K); }catch(err){} scrollTo(0,0); });
+  const f=()=>{ const p=Math.max(0,Math.min(1,scrollY/(H.offsetHeight-innerHeight))); c.style.width=(p*100)+"%"; c.style.opacity=p<.995?1:0; if(p>=.97) bitti(); };
+  addEventListener("scroll",f,{passive:true}); addEventListener("resize",f); f();
 })();
 </script>
 

@@ -21,7 +21,7 @@ related: ["[[00-genel-bakis]]", "[[ergen-ve-ebeveyn]]", "[[teknik-spec]]", "[[sc
 | Duygusal çekirdek | Aynı şeyi hissediyorlar, aynı anda yazıyorlar, ikisi de göndermiyor. Aralarında sadece bir duvar var. |
 | Geçiş | Kamera evin kesitinden geri çekilir; iki odayı ayıran duvar büyür ve sayfaya dönüşür |
 | Açıldığı yer | Ergen–ebeveyn sayfası: "Aynı evde, iki ayrı dünya" |
-| Tahmini uzunluk | ~9 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye
 
@@ -37,20 +37,19 @@ Gül telefonu ters çeviriyor, başını duvara yaslıyor. Öbür tarafta lamba 
 
 Kimse bir şey göndermiyor. Ama ikisi de aynı duvarın iki yanında, aynı cümleyi kuramamanın ağırlığıyla oturuyor.
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-| % | Sahne | Görüntü / kamera | Hareket (scroll ile) | Ekran yazısı | Ses |
-|---|---|---|---|---|---|
-| 0–8 | Açılış | Evin kesiti (bebek evi gibi), gece; iki yan yana oda, ikisinde de ışık | Işık açılır | *Salı. 23:40.* | Uzak şehir sesi |
-| 8–18 | Yemek (hatıra) | Aynı kesit; kamera yavaşça yemek odasına kayar (boş masa, itilmiş bir tabak) | Pan | *"Telefonu bırak artık."* / *"Sen beni hiç anlamıyorsun."* | Sandalye sesi, kapı kapanması |
-| 18–26 | Gül | Kamera Gül'ün odasına yaklaşır; Gül arkadan yatağın kenarında, telefon elinde | Push-in | — | Emotional piano başlar |
-| 26–40 | **İki ekran** | Kesitte iki oda yan yana, aradaki duvar ekranın tam ortasında | Solda Gül'ün, sağda Arda'nın cümleleri aynı anda yazılır ve silinir (typing, iki taraf) | sol: *"Bugün sana bağırdığım için…"* · sağ: *"Ben de öyle demek istemedim…"* | Tuş sesi yok |
-| 40–52 | İkinci deneme | Aynı kadraj | Yine iki taraf eşzamanlı | sol: *"Seni seviyorum ama…"* · sağ: *"Anne uyudun mu?"* | — |
-| 52–60 | Ters çevirmek | Gül telefonu ters çevirir; sağda telefon ışığı söner | — | *İkisi de göndermedi.* | Piyano incelir |
-| 60–70 | **Duvar** | Yakın plan: Gül başını duvara yaslamış (arkadan) | Işık yavaşça değişir | *Aralarında on beş santimlik bir duvar vardı.* | — |
-| 70–78 | Lamba | Kesite geri dönüş: sağ odada lamba söner… 1 sn sonra yeniden yanar | Scroll ile söner/yanar | *Öbür tarafta da kimse uyumuyordu.* | Tek klik sesi |
-| 78–90 | Geri çekilme | Kamera kesitten yavaşça geri çekilir; iki oda küçülür, ortadaki duvar kadrajda uzar | Zoom out | — | Hope piano'ya geçiş |
-| 90–100 | **GEÇİŞ** | Aşağıda (§4) | | *Bazen aradaki mesafe bir duvar kadardır.* | Hope piano |
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
+
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–18 | kesit | kesit | Evin kesiti, iki oda ışıklı | *"Sen beni hiç anlamıyorsun."* (akşamdan kalan) |
+| 18–45 | kesit + typing | iki-oda | İki tarafta aynı anda yazılıp silinir (tek tur) | sol: *"Bugün sana bağırdığım için…"* · sağ: *"Ben de öyle demek istemedim…"* |
+| 45–60 | kesit | iki-oda | İki telefon da kararır | *İkisi de göndermedi.* |
+| 60–75 | kesit | iki-oda-lamba-kapali → iki-oda | Sağ odada lamba söner, 1 sn sonra yeniden yanar | — |
+| 75–100 | kesit (geçiş) | kesit | Kamera geri çekilir; duvar şeridi büyüyüp krem zemin olur | *Bazen aradaki mesafe bir duvar kadardır.* → **Aynı evde, iki ayrı dünya** |
+
+**Kısaltmada çıkarılanlar:** Yemek odası hatırası, Gül'ün yakın planları ve ikinci yazma turu çıkarıldı; `gul-oda`, `duvar-gul` kullanılmıyor.
 
 ## 4. Geçiş anı
 
@@ -84,23 +83,12 @@ Bkz. [[scroll-iki-oda-brief]] (promptlar ve video promptları).
 - **Görsel promptları:** [[scroll-iki-oda-brief]] (`07-AI-Gorsel/humentis/scroll-iki-oda-brief.md`)
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/ergen-ve-ebeveyn/iki-oda/`
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/ergen-ve-ebeveyn/iki-oda/`
-- **Toplam uzunluk:** 9 ekran boyu
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 - **Müzik:** 18%'de gece parçası; 78%'de sabah parçasına geçiş.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–8 | kesit | kesit | *Salı. 23:40.* | Tek büyük kesit görseli; kamera tüm evi gösterir |
-| 2 | 8–18 | kesit | kesit | *"Telefonu bırak artık."* / *"Sen beni hiç anlamıyorsun."* | Kamera yemek odası odak noktasına pan |
-| 3 | 18–26 | frame | gul-oda | — | Push-in |
-| 4 | 26–40 | kesit + typing | iki-oda | sol ve sağ eşzamanlı typing (rewrite) | Duvar ekranın ortasında; iki metin bloğu duvarın iki yanında |
-| 5 | 40–52 | kesit + typing | iki-oda | sol: *"Seni seviyorum ama…"* · sağ: *"Anne uyudun mu?"* | Aynı |
-| 6 | 52–60 | kesit | iki-oda | *İkisi de göndermedi.* | Sağdaki telefon ışığı (CSS radial glow) söner |
-| 7 | 60–70 | frame | duvar-gul | *Aralarında on beş santimlik bir duvar vardı.* | — |
-| 8 | 70–78 | kesit | iki-oda / iki-oda-lamba-kapali | *Öbür tarafta da kimse uyumuyordu.* | İki görsel arasında sert geçiş: kapalı → 1 sn → açık |
-| 9 | 78–90 | kesit | kesit | — | Zoom out (scale 1.3 → 1.0), odalar kararır |
-| 10 | 90–100 | text | — | *Bazen aradaki mesafe bir duvar kadardır.* → **Aynı evde, iki ayrı dünya** | Geçiş §4 |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

@@ -21,7 +21,7 @@ related: ["[[00-genel-bakis]]", "[[kaygi-ve-cok-dusunmek]]", "[[ergen-ve-ebeveyn
 | Duygusal çekirdek | Bazı kaygılar bize ait değildir. Bizden önce başlar. |
 | Geçiş | Aynı kapı, aynı cümle, üç kuşak. Son sahnede Elif farklı bir cümle kurar; zincir kırılır ve site o yeni cümleden açılır. |
 | Açıldığı yer | Uzmanın kaygı / ebeveyn sayfası: "Bazı kaygılar bize ait değildir." |
-| Tahmini uzunluk | ~9 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 | Uyduğu konular | Kaygı · Ergen ve ebeveyn · Aile danışmanlığı |
 
 ## 2. Hikâye
@@ -42,22 +42,20 @@ Ertesi sabah kapıda yine duruyor. Kızı ayakkabısını bağlıyor, çantasın
 
 Kapı kapanıyor. Elif'in eli titriyor ama söyledi.
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-Üç kuşak aynı kadrajla çekilir: bir kapı, içeriden, bir kadının arkası, kapı aralığından giren sabah ışığı. Sadece dönem detayları değişir (kapı, ışık, renk).
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
 
-| % | Sahne | Görüntü / kamera | Hareket (scroll ile) | Ekran yazısı | Ses |
-|---|---|---|---|---|---|
-| 0–8 | **Bugün** | Modern bir apartman kapısı, içeriden; Elif arkadan; kapı aralık, dışarıda sabah | Işık açılır | *Pazartesi. 07:50.* | Asansör sesi, uzakta servis kornası |
-| 8–16 | Cümle | Aynı kadraj; kapı kapanmak üzere | Kapı scroll ile kapanır | *"Dikkat et!"* | Kapının kapanma sesi |
-| 16–24 | Kalmak | Elif kapının önünde, eli kapı kolunda | Hafif push-in | *Kendi sesi değildi sanki.* | Emotional piano |
-| 24–40 | **1994** | Aynı kadraj, 90'lar: boyalı ahşap kapı, dantel perde, sıcak sarı ışık; Elif'in annesi arkadan | Görüntü bir önceki kareden **erir** (kapı aynı yerde kalır, çevre değişir) | *"Dikkat et."* · küçük: *1994* | Eski bir radyo, çok alçak |
-| 40–48 | Pencere | Annenin arkası, pencerenin önünde, servisi izliyor | — | *Her sabah, servis köşeyi dönene kadar.* | — |
-| 48–62 | **1963** | Aynı kadraj, 60'lar: kalın ahşap çift kanatlı kapı, taş zemin, soluk ışık; anneanne arkadan, başörtülü | Yine erir | *"Aman dikkat et, kızım."* · küçük: *1963* | Uzakta bir kuş, rüzgâr |
-| 62–72 | **Üç kapı** | Ekran üçe bölünür: 1963, 1994, bugün yan yana; üç kadın aynı pozda | Üç kare aynı anda hafifçe nefes alır | *Üç kadın. Üç kapı. Aynı iki kelime.* | Piyano en yoğun |
-| 72–80 | Soru | Üç kare kaybolur, sadece bugünün kapısı | — | *Bu korku gerçekten benim mi?* | Tam sessizlik |
-| 80–90 | **Ertesi sabah** | Bugünün kapısı, bir öncekinden daha aydınlık; küçük bir çanta kapıdan çıkıyor (sadece çantanın kenarı) | Elif'in eli kapı kolunda; duraksama | *…* (üç nokta scroll ile yanıp söner) | Nefes |
-| 90–100 | **GEÇİŞ** | Aşağıda (§4) | | | Hope piano |
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–18 | frame | kapi-bugun | Kapı kapanır | *"Dikkat et!"* |
+| 18–36 | era | kapi-1994 | Bugünden 1994'e erime | *"Dikkat et."* · etiket 1994 |
+| 36–54 | era | kapi-1963 | 1994'ten 1963'e erime | *"Aman dikkat et, kızım."* · etiket 1963 |
+| 54–70 | triptych | üç kapı | Üç kare yan yana nefes alır | *Üç kadın. Aynı iki kelime.* |
+| 70–90 | frame | kapi-bugun-sabah2 | Ertesi sabah; Elif duraksar | *"İyi eğlen."* (altın) |
+| 90–100 | geçiş | — | Eski "Dikkat et"ler silik görünüp solar | **Bazı kaygılar bize ait değildir. Bizden önce başlar.** |
+
+**Kısaltmada çıkarılanlar:** Pencere sahnesi ve "Kendi sesi değildi sanki" / "Bu korku gerçekten benim mi?" satırları çıkarıldı; `pencere-1994` kullanılmıyor.
 
 ## 4. Geçiş anı — "Yeni cümle"
 
@@ -105,23 +103,12 @@ Geçiş, zincirin kırıldığı an. Site o yeni cümlenin devamı gibi açılı
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/kaygi-ve-cok-dusunmek/miras/`
 - **Görsel promptları:** [[scroll-miras-brief]] (`07-AI-Gorsel/humentis/scroll-miras-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/miras/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
-- **Toplam uzunluk:** 9 ekran boyu
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 - **Müzik:** 16%'da gece parçası, 72–80 arası ses 0, 90%'da sabah parçası.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–8 | frame | kapi-bugun | *Pazartesi. 07:50.* | Işık açılır |
-| 2 | 8–16 | frame | kapi-bugun | *"Dikkat et!"* | Kapı scroll ile kapanır (klip ya da CSS) |
-| 3 | 16–24 | frame | kapi-bugun | *Kendi sesi değildi sanki.* | Push-in; müzik 1 başlar |
-| 4 | 24–40 | era | kapi-1994 | *"Dikkat et."* · etiket: *1994* | Bugünden 1994'e erime |
-| 5 | 40–48 | frame | pencere-1994 | *Her sabah, servis köşeyi dönene kadar.* | — |
-| 6 | 48–62 | era | kapi-1963 | *"Aman dikkat et, kızım."* · etiket: *1963* | 1994'ten 1963'e erime |
-| 7 | 62–72 | triptych | kapi-1963 / kapi-1994 / kapi-bugun | *Üç kadın. Üç kapı. Aynı iki kelime.* | Üç panel nefes alır |
-| 8 | 72–80 | text + frame | kapi-bugun | *Bu korku gerçekten benim mi?* | Tam sessizlik |
-| 9 | 80–90 | frame | kapi-bugun-sabah2 | *…* | Üç nokta yanıp söner |
-| 10 | 90–100 | frame | kapi-bugun-sabah2 | *"İyi eğlen."* (altın) → **Bazı kaygılar bize ait değildir. Bizden önce başlar.** | Geçiş §4; eski "Dikkat et"ler silik görünüp solar; müzik 2'ye geçiş |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

@@ -21,10 +21,10 @@ related: ["[[00-genel-bakis]]", "[[iliskiler-ve-baglanma]]", "[[teknik-spec]]", 
 |---|---|
 | Karakterler | Zeynep, 29 · Emre (hiç görünmez; sadece mesajları) |
 | Konu | Kaygılı bağlanma; cevap beklerken zihnin boşluğu felaketle doldurması |
-| Duygusal çekirdek | Yapmadığı bir şey için dört özür taslağı yazmıştı. |
+| Duygusal çekirdek | Yapmadığı bir şey için üç özür taslağı yazmıştı. |
 | Geçiş | Telefon küçülüp kaybolur; ekran krem zemine erir; başlık "Cevap gelene kadar…" |
 | Açıldığı yer | İlişkiler ve bağlanma sayfası |
-| Tahmini uzunluk | ~11 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye
 
@@ -40,25 +40,22 @@ Mesaj kutusuna bir özür yazıyor, siliyor. Bir tane daha. Dört taslak.
 
 22:03. Yeniden "yazıyor…". Ve cevap: *"Pardon, metrodaydım, şarjım da bitmek üzereydi 🙂"* · *"Ben de çok güzel buldum. Cumartesi yine?"*
 
-Zeynep rahatlıyor. Sonra fark ediyor: yapmadığı bir şey için dört özür taslağı yazmıştı.
+Zeynep rahatlıyor. Sonra fark ediyor: yapmadığı bir şey için üç özür taslağı yazmıştı.
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-Ekranın ortasında çerçevesiz bir telefon ekranı (mesajlaşma uygulaması, Humentis renklerinde, markasız). Telefonun dışı karanlık oda; düşünceler ve anlatım orada.
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
 
-| % | Telefonun içinde | Telefonun dışında | Işık |
-|---|---|---|---|
-| 0–4.5 | (telefon henüz yok) | ortada: *Salı. 21:02. / Üç haftadır görüşüyorlar.* | Gece odası |
-| 4–11 | Eski mesajlar görünür; mesaj kutusunda *"Bu akşam çok güzeldi, teşekkür ederim 🙂"* harf harf yazılır; 11'de gönderilir | — | — |
-| 11–22 | Tek tik → çift tik (13) → okundu (21); başlıkta "yazıyor…" + zıplayan üç nokta balonu (14–20), sonra "son görülme bugün 21:04" | — | — |
-| 22–30 | "Görüldü 21:04" | *Görmüş.* | Oda kararmaya başlar |
-| 30–48 | Saat 21:10 → 21:47; hiçbir şey olmaz | Düşünceler, sırayla, sol ve sağda: *Sıkıldı. / Fazla mı yazdım? / Emoji koymasaydım. / Başka biri var. / Zaten hep böyle oluyor. / Ben fazlayım.* | Kararma sürer |
-| 48–58 | Mesaj düzenlenir: *"Bu akşam güzeldi."* (50) → *"İyi geceler."* (54), balonda "düzenlendi" | *Mesajını iki kez düzenledi. Daha umursamaz görünsün diye.* | — |
-| 56–70 | Mesaj kutusunda 4 özür taslağı yazılıp silinir | Telefonun altında: *TASLAK 1…4* | En karanlık |
-| 72–76 | Başlıkta "yazıyor…", üç nokta balonu | — | — |
-| 76–82 | Cevap 1 (76), cevap 2 (80) | — | Oda aydınlanır |
-| 86–93 | — | *Yapmadığı bir şey için dört özür taslağı yazmıştı.* | Sıcak ışık |
-| 92–100 | Telefon küçülür ve kaybolur | Krem zemin; **Cevap gelene kadar…** | — |
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–8 | sohbet | — | Telefon belirir; eski mesajlar | *Salı. 21:02.* |
+| 8–25 | sohbet | — | Mesaj yazılır, gönderilir; tik, çift tik, okundu; "yazıyor…" belirip kaybolur | — |
+| 25–45 | sohbet | oda-gece | Saat 21:10 → 21:47; oda kararır; dışarıda düşünceler | *Sıkıldı.* → *Fazla mı yazdım?* → *Başka biri var.* |
+| 45–65 | sohbet | — | Mesaj bir kez düzenlenir ("İyi geceler."); 3 özür taslağı yazılıp silinir | — |
+| 65–82 | sohbet | — | "yazıyor…" → cevap | *"Pardon, metrodaydım 🙂 Cumartesi yine?"* |
+| 82–100 | sohbet (geçiş) | — | Telefon küçülüp kaybolur | *Yapmadığı bir şey için üç özür taslağı yazmıştı.* → **Cevap gelene kadar…** |
+
+**Kısaltmada çıkarılanlar:** "Görmüş.", "Mesajını iki kez düzenledi…" satırları, 3 düşünce ve 1 taslak çıkarıldı; iki cevap balonu teke indi.
 
 ## 4. Açıldığı site bölümü
 
@@ -74,6 +71,8 @@ Ekranın ortasında çerçevesiz bir telefon ekranı (mesajlaşma uygulaması, H
 **CTA:** Ön görüşme için randevu al
 
 ## Kodlama için
+
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. **Uygulaması hazır:** yeni bir şey kurmak yerine `scroll-siteler/iliskiler-ve-baglanma/uc-nokta/index.html` kullanılır.
 

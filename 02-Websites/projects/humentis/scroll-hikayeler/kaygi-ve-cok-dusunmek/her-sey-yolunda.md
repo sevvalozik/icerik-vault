@@ -21,7 +21,7 @@ related: ["[[00-genel-bakis]]", "[[kaygi-ve-cok-dusunmek]]", "[[gecisler]]"]
 | Duygusal çekirdek | Dışarıdan kimse fark etmiyor. Ama o biliyor. |
 | Geçiş | Ekran baştan sona ikiye bölünmüş: solda dışarıdan görünen, sağda içeriden yaşanan. Sonunda orta çizgi kapanır, iki yarı birleşir, site açılır. |
 | Açıldığı yer | Uzmanın kaygı sayfası: "Dışarıdan kimse fark etmiyor. Ama siz biliyorsunuz." |
-| Tahmini uzunluk | ~9 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye
 
@@ -35,21 +35,18 @@ Gece eve dönerken annesi arıyor. "İyi misin oğlum, sesin yorgun geliyor." Ca
 
 Can kendi içinde neler olduğunu biliyor. Bilmediği şey, bunu birine anlatmanın mümkün olduğu.
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-Ekran boyunca ortada ince bir dikey çizgi var (krem, 1px). **Sol yarı: "Dışarıdan"**, **sağ yarı: "İçeriden"**. Her iki yarı aynı anı gösterir; ses sağ yarıdan gelir.
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
 
-| % | Sol — Dışarıdan | Sağ — İçeriden | Ekran yazısı (sol / sağ) | Ses |
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
 |---|---|---|---|---|
-| 0–8 | Siyah, sol yarıda yavaşça ışık: toplantı salonu | Siyah, sağ yarıda aynı anda ışık: aynı salon, biraz daha karanlık | Üstte ortada: *Perşembe. 10:30.* | Salon uğultusu |
-| 8–20 | Can arkadan, sunum yapıyor; ekran ışığı, dinleyenler flu | Aynı kadraj ama kamera Can'ın eline yakın: kürsüyü sıkan parmaklar | *"…ve bu yüzden üçüncü çeyrekte…"* / *Kalp: 112.* | Sol sessiz; sağda nabız |
-| 20–30 | **Alkış.** Can hafifçe eğiliyor | Tuvalet; kilitli kapı, lavabonun kenarına dayanmış iki el | *Alkış.* / *İki dakika. Sadece nefes.* | Alkış (sol) ile nefes (sağ) üst üste |
-| 30–36 | Koridor, Can gülümseyerek dönüyor (arkadan, omuzları rahat) | Aynı koridor, Can'ın ıslak elleri pantolona siliniyor | — / — | — |
-| 36–50 | **Doğum günü.** Can pastanın mumlarını yakıyor, etrafında kahkaha (eller, bardaklar) | Aynı an; masanın altında telefon ekranı yanıyor (içerik flu), başparmak | *Herkes gülüyor.* / *Yarınki mail geldi mi?* | Sol: müzik, kahkaha · Sağ: tek bildirim sesi |
-| 50–58 | Kadeh kalkıyor | Saat: 21:40, 22:00, 22:20 (her kontrol) | — / *Her yirmi dakikada bir.* | — |
-| 58–72 | **Araba, gece.** Can direksiyonda, arkadan; telefon hoparlörde | Aynı an; yakın plan direksiyonu tutan el, eklemleri beyazlamış | *"İyiyim anne, her şey yolunda."* / *—* | Anne sesi (film yazısı olarak): *"Sesin yorgun geliyor."* |
-| 72–82 | Kırmızı ışıkta duruyor | Sağ yarı yavaşça sol yarıya **yaklaşır**: orta çizgi incelir | — / *Kimse fark etmiyor.* | Piyano incelir |
-| 82–100 | **GEÇİŞ** | | Aşağıda (§4) | Hope piano'ya geçiş |
+| 0–30 | split | alkis-dis / alkis-ic | Solda alkış, sağda kilitli tuvalette iki el | sol: *Alkış.* · sağ: *İki dakika. Sadece nefes.* |
+| 30–55 | split | parti-dis / parti-ic | Solda mumlar ve kahkaha, sağda masanın altında telefon | sol: *Herkes gülüyor.* · sağ: *Yarınki mail geldi mi?* |
+| 55–80 | split (merge başlar) | araba-dis / araba-ic | Solda direksiyonda rahat, sağda beyazlamış eklemler | sol: *"İyiyim anne, her şey yolunda."* |
+| 80–100 | split (merge) | araba-dis + araba-ic | İki yarı üst üste biner | *Ama o biliyor.* → **Dışarıdan kimse fark etmiyor. Ama siz biliyorsunuz.** |
+
+**Kısaltmada çıkarılanlar:** Sunum ve koridor sahneleri çıkarıldı; `sunum-*` ve `koridor-*` kareleri kullanılmıyor.
 
 ## 4. Geçiş anı — "İki yarı birleşir"
 
@@ -96,22 +93,12 @@ Her sahne için bir **dışarıdan** bir **içeriden** kare (toplam ~10). Karakt
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/kaygi-ve-cok-dusunmek/her-sey-yolunda/`
 - **Görsel promptları:** [[scroll-her-sey-yolunda-brief]] (`07-AI-Gorsel/humentis/scroll-her-sey-yolunda-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/her-sey-yolunda/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
-- **Toplam uzunluk:** 9 ekran boyu
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 - **Müzik:** 36%'da gece parçası çok alçak (ses .3); 82%'de sabah parçasına geçiş.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–8 | split | sunum-dis / sunum-ic | *Perşembe. 10:30.* | İki panel aynı anda açılır |
-| 2 | 8–20 | split | sunum-dis / sunum-ic | sol: *"…ve bu yüzden üçüncü çeyrekte…"* · sağ: *Kalp: 112.* | Sağ panelden nabız sesi |
-| 3 | 20–30 | split | alkis-dis / alkis-ic | sol: *Alkış.* · sağ: *İki dakika. Sadece nefes.* | Alkış + nefes sesi üst üste |
-| 4 | 30–36 | split | koridor-dis / koridor-ic | — | — |
-| 5 | 36–50 | split | parti-dis / parti-ic | sol: *Herkes gülüyor.* · sağ: *Yarınki mail geldi mi?* | Müzik 1 çok alçak başlar |
-| 6 | 50–58 | split + clock | parti-dis / parti-ic | sağ: *Her yirmi dakikada bir.* | Sağ panelde saat 21:40 → 22:00 → 22:20 |
-| 7 | 58–72 | split | araba-dis / araba-ic | sol: *"İyiyim anne, her şey yolunda."* · anne: *"Sesin yorgun geliyor."* | — |
-| 8 | 72–82 | split (merge başlar) | araba-dis / araba-ic | sağ: *Kimse fark etmiyor.* | Orta çizgi incelir, paneller yaklaşır |
-| 9 | 82–100 | split (merge) | araba-dis + araba-ic | *Ama o biliyor.* → **Dışarıdan kimse fark etmiyor. Ama siz biliyorsunuz.** | Geçiş §4; müzik 2'ye geçiş; orta çizgi başlığın altındaki yatay hatta döner |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

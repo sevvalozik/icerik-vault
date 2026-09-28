@@ -20,7 +20,7 @@ related: ["[[00-genel-bakis]]", "[[tukenmislik-ve-is-stresi]]", "[[humentis-bulu
 | Konu | Tükenmişlik ve iş stresi |
 | Ana geçiş | Telefon ekranının içine giriş: iş e-postasının ışığı büyür, uzmanın sayfasına dönüşür |
 | Açıldığı yer | Kısa öz değerlendirme ("Bu yorgunluk sizin için ne kadar tanıdık?") + ön görüşme |
-| Tahmini uzunluk | ~8 ekran boyu scroll |
+| Tahmini uzunluk | **4 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye (düz anlatım)
 
@@ -36,18 +36,18 @@ Telefonu eline alıyor. E-postayı açmak yerine, başparmağı tarayıcıya gid
 
 Ekranın ışığı yüzünü değil, sadece ellerini aydınlatıyor. Ve bir an, o ışık büyüyor.
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-| % | Sahne | Görüntü / kamera | Hareket (scroll ile) | Ekran yazısı | Ses |
-|---|---|---|---|---|---|
-| 0–10 | Açılış | Arka koltuktan, Selim'in ensesi, elleri direksiyonda (film c1) | Sokak lambası ışığı ön camda yavaşça kayar | *21:05. Motor kapalı.* | Yağmur çiselemesi, dış ortam |
-| 10–22 | Gün | Aynı kadraj, üst üste binen kısa yazılar | Her scroll adımında bir satır, öncekiler solar | *3 toplantı.* / *2 kriz.* / *1 "yarına yetişir mi?"* / *Hepsi yetişti.* | Her satırda hafif bir "tık" |
-| 22–32 | E-posta | Ön konsolda yanan telefon, flu | Telefon ışığı nabız gibi bir kez parlar | *"Yarın 08:00 — kısa bir değerlendirme."* | Bildirim sesi (yumuşak) |
-| 32–46 | Hatırlamak | Ön camda yağmur damlaları, arkasında otopark; kamera yavaşça cama odaklanır | Her damla bir cümle taşır gibi, cümleler damlalarla aşağı kayar | *Pazar akşamları o ağırlık.* / *Üç kez ertelenen alarm.* / *Eskiden sevdiği iş.* | Emotional piano |
-| 46–56 | Karar | Selim'in eli telefonu alır (film c2) | Telefon kameraya doğru yükselir | *Kimseye söylemedi. Söylenecek büyük bir şey yok gibi.* | — |
-| 56–68 | Yazmak | Omuz üstü; başparmak yazıyor, ekran flu ışık | Arama cümlesi yazılır, silinir, yeniden yazılır | *her sabah işe gitmek istememek* | Tuş sesi yok |
-| 68–78 | Işık | Ekranın ışığı ellerini aydınlatır | Kamera ekrana doğru push-in başlar | — | Piyano incelir |
-| 78–100 | **GEÇİŞ** | Ekranın içine giriş | Aşağıda (§4) | **Tükenmişlik ve iş stresi** | Hope piano'ya geçiş |
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
+
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–25 | frame | arka-koltuk | Işık ön camda kayar | *3 toplantı. 2 kriz. Hepsi yetişti.* |
+| 25–45 | frame | konsol | Telefon ışığı bir kez parlar | *"Yarın 08:00 — kısa bir değerlendirme."* |
+| 45–65 | typing | el-telefon | Yaz → sil → yaz | *her sabah işe gitmek istememek* |
+| 65–100 | dive (geçiş) | el-telefon | Ekran ışığı → damla → altın ölçek | **Bu yorgunluk size ne kadar tanıdık?** |
+
+**Kısaltmada çıkarılanlar:** Ön camdaki yağmurla hatırlama sahnesi çıkarıldı; `cam` karesi kullanılmıyor.
 
 ## 4. Geçiş anı — "Ekranın içine"
 
@@ -104,21 +104,12 @@ Kapanış satırı: *Selim motoru çalıştırmadan önce randevu formunu doldur
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/tukenmislik-ve-is-stresi/motor-kapali/`
 - **Görsel promptları:** [[scroll-motor-kapali-brief]] (`07-AI-Gorsel/humentis/scroll-motor-kapali-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/tukenmislik-ve-is-stresi/motor-kapali/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
-- **Toplam uzunluk:** 8 ekran boyu
+- **Toplam uzunluk:** 4 ekran boyu (kısa kesim)
 - **Müzik:** 32%'de gece parçası, 78%'de sabah parçasına geçiş.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–10 | frame | arka-koltuk | *21:05. Motor kapalı.* | Filmdeki c1 kullanılabilir; ön camda ışık kayar |
-| 2 | 10–22 | text + frame | arka-koltuk | *3 toplantı.* / *2 kriz.* / *1 "yarına yetişir mi?"* / *Hepsi yetişti.* | Satırlar üst üste, öncekiler solar |
-| 3 | 22–32 | frame | konsol | *"Yarın 08:00 — kısa bir değerlendirme."* | Telefon ışığı bir kez nabız gibi parlar |
-| 4 | 32–46 | frame | cam | *Pazar akşamları o ağırlık.* / *Üç kez ertelenen alarm.* / *Eskiden sevdiği iş.* | Her cümle bir damlayla aşağı kayar; müzik 1 başlar |
-| 5 | 46–56 | frame | el-telefon | *Kimseye söylemedi. Söylenecek büyük bir şey yok gibi.* | Filmdeki c2 kullanılabilir |
-| 6 | 56–68 | typing | el-telefon | *her sabah işe gitmek istememek* | rewrite: yaz → sil → yeniden yaz |
-| 7 | 68–78 | dive | el-telefon | — | Push-in başlar |
-| 8 | 78–100 | dive | — | **Tükenmişlik ve iş stresi** | Işık → damla → altın nokta → ölçek (§4); müzik 2'ye geçiş |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

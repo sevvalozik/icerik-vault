@@ -21,7 +21,7 @@ related: ["[[00-genel-bakis]]", "[[cift-terapisi]]", "[[humentis-bulunma-hikayes
 | Konu | Çift terapisi / iletişim kopukluğu |
 | Ana geçiş | Kapı sertçe kapanır, raftaki vazo kendi kendine düşüp kırılır, parçalar sayfaya dönüşür |
 | Açıldığı yer | Uzmanın "Çift terapisi" hizmet sayfası + ön görüşme randevusu |
-| Tahmini uzunluk | ~9 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye (düz anlatım)
 
@@ -41,21 +41,20 @@ Ece parçaların başına çömeliyor. İlk parçayı eline aldığında bir şe
 
 Parçaları toplarken telefonu yanında duruyor. Ekranda yarım kalmış bir arama var, üç gün önce yazıp silmediği: "evliliğimizde artık konuşamıyoruz".
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-| % | Sahne | Görüntü / kamera | Hareket (scroll ile) | Ekran yazısı | Ses |
-|---|---|---|---|---|---|
-| 0–8 | Açılış | Siyah. Yavaşça yemek masası, üstten | Işık yavaşça açılır | *Salı. 21:14.* (senaryo başlığı, köşede) | Oda tonu, uzakta TV |
-| 8–18 | İki tabak | Masa detayı: bir tabak yenmiş, biri dolu. Kenarda ters telefon | Kamera masada soldan sağa kayar; telefon ekranı bir kez yanar | *İki tabak. Biri hiç soğumadı, çünkü hiç ısınmadı.* | Telefonun titreşimi |
-| 18–28 | Hazırlık | Ece arkadan, elleri masada, parmakları birbirine kenetli | Hafif push-in | *Günlerdir bu cümleyi hazırlıyor.* | Nefes |
-| 28–40 | Konuşma | Aynı kadraj; Mert'in eli kadrajın kenarında, telefonu alıyor | Diyalog satırları sırayla belirir, her biri bir öncekini hafif soldurur | "Seninle bir şey konuşmak istiyorum." / "Yine mi?" / "Beni hiç dinlemiyorsun." / "Ben de yoruldum." | Müzik neredeyse yok, sadece oda |
-| 40–48 | Koridor | Koridor, sıcak-soğuk karışık ışık; Mert'in gölgesi duvarda uzaklaşır | Gölge scroll ile yürür | — | Adımlar |
-| 48–55 | **Kapı** | Çalışma odasının kapısı, orta plan | Kapı scroll ile kapanır; son %2'de hızlanır (tek sert an) | — | Kapı sesi, kesik |
-| 55–63 | **Vazo** | Raf detayı, vazo kadrajın ortasında | Vazo titrer (scroll ile), kenara kayar, düşme anında kamera **yavaşlar** | — | İnce bir tıngırtı |
-| 63–70 | Kırılma | Yerde vazo, parçalar | Parçalar yavaş çekimde ayrılır ve **havada asılı kalır** (scroll durunca durur) | — | Kırılma sesi, sonra tam sessizlik |
-| 70–78 | Çömelme | Ece'nin elleri parçaların arasında, bir parçayı alıyor | Parçaya yakınlaşma | *Kızgın değil. Sadece çok yorgun.* | Müzik girer: emotional piano |
-| 78–86 | Arama | Yerde telefon, ekranı yarım kalmış arama ile yanar | Arama cümlesi harf harf yazılır | *evliliğimizde artık konuşamıyoruz* | Tuş sesi yok, sadece piyano |
-| 86–100 | **GEÇİŞ** | Parçalar havada; içlerinden biri döner ve iç yüzünde krem bir sayfa görünür | Aşağıda (§4) | Parça üstünde: **Çift terapisi** | Hope piano'ya geçiş |
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
+
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–15 | frame | masa | Işık açılır; telefon bir kez yanar | *İki tabak. Biri hiç ısınmadı.* |
+| 15–35 | frame | eller | Ece'nin kenetli elleri; replikler sırayla | *"Seninle bir şey konuşmak istiyorum."* → *"Yine mi?"* |
+| 35–45 | frame (scrub) | kapi | Kapı kapanır | — |
+| 45–55 | frame (scrub) | vazo | Vazo titrer, düşer (yavaşlar) | — |
+| 55–75 | shards / frame | kirik → parca-el | Parçalar havada asılı; Ece bir parçayı alır | *Kızgın değil. Sadece çok yorgun.* |
+| 75–100 | shards (geçiş) | — | Parçalar kintsugi çizgisiyle birleşip sayfa olur | **Aynı evde iki yabancı gibi hissediyorsanız** |
+
+**Kısaltmada çıkarılanlar:** Koridor gölgesi ve yarım kalmış arama sahnesi çıkarıldı; `koridor` karesi üretilmese de olur.
 
 ## 4. Geçiş anı — "Parçalar sayfa olur"
 
@@ -111,24 +110,12 @@ Promptlar üretime geçerken [[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]'e 
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/cift-terapisi/kirilan-vazo/`
 - **Görsel promptları:** [[scroll-kirilan-vazo-brief]] (`07-AI-Gorsel/humentis/scroll-kirilan-vazo-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/cift-terapisi/kirilan-vazo/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
-- **Toplam uzunluk:** 9 ekran boyu
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 - **Müzik:** 86%'da gece parçası → sabah parçası (4 sn). 70%'ten önce müzik yok, sadece oda sesi.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–8 | frame | masa | *Salı. 21:14.* (senaryo başlığı) | Işık siyahtan açılır |
-| 2 | 8–18 | frame | masa | *İki tabak. Biri hiç soğumadı, çünkü hiç ısınmadı.* | Kamera soldan sağa pan; telefon ekranı bir kez parlar (CSS glow) |
-| 3 | 18–28 | frame | eller | *Günlerdir bu cümleyi hazırlıyor.* | Push-in |
-| 4 | 28–40 | frame | eller | "Seninle bir şey konuşmak istiyorum." / "Yine mi?" / "Beni hiç dinlemiyorsun." / "Ben de yoruldum." | Replikler sırayla, her yenisi öncekini %40'a soldurur |
-| 5 | 40–48 | frame | koridor | — | Gölge scroll ile sola kayar |
-| 6 | 48–55 | frame | kapi | — | Kapı klibi scroll'a bağlı oynar (video.currentTime = t×süre); son %2 hızlanır |
-| 7 | 55–63 | frame | vazo | — | Vazo klibi scroll'a bağlı; düşme anında scroll çarpanı 0.4 (yavaşlama) |
-| 8 | 63–70 | shards | kirik | — | Parçalar havalanır ve asılı kalır |
-| 9 | 70–78 | frame | parca-el | *Kızgın değil. Sadece çok yorgun.* | Müzik 1 başlar |
-| 10 | 78–86 | typing | kirik | *evliliğimizde artık konuşamıyoruz* | Yerde telefon ışığı |
-| 11 | 86–100 | shards | — | **Çift terapisi** (parça üstünde) | Geçiş §4; müzik 2'ye geçiş |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

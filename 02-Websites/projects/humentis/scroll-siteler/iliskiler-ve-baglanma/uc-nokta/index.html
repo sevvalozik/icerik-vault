@@ -18,7 +18,7 @@
 :root{padding:0!important}
 html,body{background:#000;color:var(--krem)}
 body{font-family:var(--sans)}
-#hikaye{position:relative;height:1200vh}
+#hikaye{position:relative;height:600vh}
 #sahne{position:sticky;top:0;height:100vh;overflow:hidden;
   background:radial-gradient(50% 60% at 50% 55%, rgba(130,185,190,.20), transparent 70%), radial-gradient(130% 100% at 50% 120%, #133034 0%, #0a1a1d 55%, #040a0b 100%)}
 #karanlik{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;z-index:2}
@@ -168,28 +168,24 @@ const ANA="Bu akşam çok güzeldi, teşekkür ederim 🙂";
 const benim=balon("ben",ANA,"21:02",TEK);
 const gor=document.createElement("div"); gor.className="gorundu"; gor.textContent="Görüldü 21:04"; akis.appendChild(gor);
 const yazBalon=document.createElement("div"); yazBalon.className="yaz"; yazBalon.innerHTML="<i></i><i></i><i></i>"; akis.appendChild(yazBalon);
-const cevap1=balon("o","Pardon, metrodaydım, şarjım da bitmek üzereydi 🙂","22:03");
-const cevap2=balon("o","Ben de çok güzel buldum. Cumartesi yine?","22:03");
+const cevap1=balon("o","Pardon, metrodaydım 🙂 Cumartesi yine?","22:03");
 
 /* ——— telefonun dışındaki yazılar ——— */
 const Y=document.getElementById("yazilar");
 function y(cls,html,stil){const d=document.createElement("div");d.className="y "+cls;d.innerHTML=html;if(stil)Object.assign(d.style,stil);Y.appendChild(d);return d;}
 const dis=[
-  {a:.3,b:4.5,e:y("anlatim ust","Salı. 21:02.<br>Üç haftadır görüşüyorlar.")},
-  {a:24,b:30,e:y("anlatim","Görmüş.")},
-  {a:48,b:58,e:y("anlatim","Mesajını iki kez düzenledi. Daha umursamaz görünsün diye.")},
-  {a:86,b:93,e:y("anlatim","Yapmadığı bir şey için<br>dört özür taslağı yazmıştı.")},
+  {a:.3,b:4,e:y("anlatim ust","Salı. 21:02.")},
+  {a:82,b:91,e:y("anlatim","Yapmadığı bir şey için<br>üç özür taslağı yazmıştı.")},
 ];
-const dusunce=[["Sıkıldı.",30,16,30],["Fazla mı yazdım?",33,84,26],["Emoji koymasaydım.",36,15,70],["Başka biri var.",39,85,68],["Zaten hep böyle oluyor.",42,17,48],["Ben fazlayım.",45,83,48]]
-  .map(([t,a,x,yy])=>({a,b:48,e:y("dusunce",t,{left:x+"%",top:yy+"%"})}));
-const sayac=[1,2,3,4].map(i=>({i,e:y("sayac",`TASLAK ${i}`,{left:"50%",top:"calc(50% + min(380px, 50vh - 28px) + 14px)"})}));
+const dusunce=[["Sıkıldı.",26,16,30],["Fazla mı yazdım?",31,84,26],["Başka biri var.",36,17,66]]
+  .map(([t,a,x,yy])=>({a,b:45,e:y("dusunce",t,{left:x+"%",top:yy+"%"})}));
+const sayac=[1,2,3].map(i=>({i,e:y("sayac",`TASLAK ${i}`,{left:"50%",top:"calc(50% + min(380px, 50vh - 28px) + 14px)"})}));
 
 /* ——— zaman çizelgesi ——— */
-const SAAT=[[0,"21:02"],[22,"21:04"],[30,"21:10"],[36,"21:25"],[42,"21:39"],[47,"21:47"],[58,"21:52"],[65,"21:58"],[72,"22:03"]];
+const SAAT=[[0,"21:02"],[21,"21:04"],[28,"21:10"],[34,"21:25"],[40,"21:39"],[46,"21:47"],[52,"21:52"],[58,"21:58"],[66,"22:03"]];
 const TASLAK=[
   "Kusura bakma, rahatsız ettiysem…",
   "Yoğunsan hiç sorun değil, ben sadece…",
-  "Özür dilerim, fazla şey yazdım galiba.",
   "Unut gitsin 🙂",
 ];
 function yazim(metin,t){ // 0→1 yaz, 1→ sabit
@@ -199,37 +195,36 @@ function ciz(){
   const H=document.getElementById("hikaye");
   const p=clamp(scrollY/(H.offsetHeight-innerHeight))*100;
 
-  // 5–11: mesajı yaz → gönder
+  // 4–10: mesajı yaz → gönder
   let kutuMetin="", imlec=false;
-  if(p>=5&&p<11){ kutuMetin=yazim(ANA,(p-5)/5.2); imlec=true; }
-  // 56–70: taslaklar: her biri yaz → sil
-  const tp=(p-56)/14;
-  if(tp>=0&&tp<1){ const i=Math.min(3,Math.floor(tp*4)), l=tp*4-i; const k=l<.62? l/.62 : 1-(l-.62)/.38; kutuMetin=yazim(TASLAK[i],k); imlec=true;
+  if(p>=4&&p<10){ kutuMetin=yazim(ANA,(p-4)/5.2); imlec=true; }
+  // 50–64: üç taslak: her biri yaz → sil
+  const tp=(p-50)/14;
+  if(tp>=0&&tp<1){ const i=Math.min(2,Math.floor(tp*3)), l=tp*3-i; const k=l<.62? l/.62 : 1-(l-.62)/.38; kutuMetin=yazim(TASLAK[i],k); imlec=true;
     sayac.forEach(s=>s.e.style.opacity = s.i===i+1 ? 1 : 0); } else sayac.forEach(s=>s.e.style.opacity=0);
-  if(p>=70&&p<72){ imlec=true; }
+  if(p>=64&&p<66){ imlec=true; }
   kutu.innerHTML=kutuMetin+(imlec?'<span class="imlec"></span>':"");
-  gonder.classList.toggle("bas",p>=10.6&&p<11.4);
+  gonder.classList.toggle("bas",p>=9.6&&p<10.4);
 
   // gönderilen mesaj + tikler + düzenleme
-  benim.classList.toggle("goster",p>=11);
+  benim.classList.toggle("goster",p>=10);
   const tk=benim.querySelector(".tk"), duz=benim.querySelector(".duz"), txt=benim.querySelector(".t");
-  if(p<13) tk.innerHTML=TEK; else if(p<21) tk.innerHTML=CIFT; else tk.innerHTML=CIFT.replace('class="tik"','class="tik okundu"');
-  if(p<50){ txt.textContent=ANA; duz.textContent=""; }
-  else if(p<54){ txt.textContent="Bu akşam güzeldi."; duz.textContent="düzenlendi"; }
+  if(p<12) tk.innerHTML=TEK; else if(p<15) tk.innerHTML=CIFT; else tk.innerHTML=CIFT.replace('class="tik"','class="tik okundu"');
+  if(p<46){ txt.textContent=ANA; duz.textContent=""; }
   else { txt.textContent="İyi geceler."; duz.textContent="düzenlendi"; }
-  gor.classList.toggle("goster",p>=22&&p<76);
+  gor.classList.toggle("goster",p>=21&&p<71);
 
   // üst başlık durumu + "yazıyor" balonu
   let d="çevrimiçi", yaziyor=false;
-  if(p>=14&&p<20){ d="yazıyor…"; yaziyor=true; }
-  else if(p>=20&&p<72){ d="son görülme bugün 21:04"; }
-  else if(p>=72&&p<76){ d="yazıyor…"; yaziyor=true; }
-  else if(p>=76){ d="çevrimiçi"; }
+  if(p>=16&&p<20){ d="yazıyor…"; yaziyor=true; }
+  else if(p>=20&&p<66){ d="son görülme bugün 21:04"; }
+  else if(p>=66&&p<71){ d="yazıyor…"; yaziyor=true; }
+  else if(p>=71){ d="çevrimiçi"; }
   durum.textContent=d; durum.classList.toggle("yaziyor",yaziyor);
   yazBalon.classList.toggle("goster",yaziyor);
 
   // cevap
-  cevap1.classList.toggle("goster",p>=76); cevap2.classList.toggle("goster",p>=80);
+  cevap1.classList.toggle("goster",p>=71);
 
   // saat
   saat.textContent=[...SAAT].reverse().find(s=>p>=s[0])[1];
@@ -239,8 +234,8 @@ function ciz(){
   dusunce.forEach(o=>o.e.style.opacity=pen(p,o.a,o.b,1)*.9);
 
   // ışık: bekledikçe oda kararır, telefon ışığı kalır; cevapla açılır
-  document.getElementById("karanlik").style.opacity = p<76 ? .7*clamp((p-22)/50) : .7*(1-clamp((p-76)/6));
-  document.getElementById("aydinlik").style.opacity = pen(p,76,95,3);
+  document.getElementById("karanlik").style.opacity = p<71 ? .7*clamp((p-21)/44) : .7*(1-clamp((p-71)/6));
+  document.getElementById("aydinlik").style.opacity = pen(p,71,95,3);
 
   // son: telefon küçülür, "yazıyor" noktaları başlığa dönüşür
   const tel=document.getElementById("tel"), s=clamp((p-92)/5);
@@ -254,10 +249,35 @@ addEventListener("scroll",ciz,{passive:true}); addEventListener("resize",ciz); c
 
 let oyn=false,son=0; const b=document.getElementById("oynat");
 function tog(){oyn=!oyn;b.textContent=oyn?"❚❚ DURAKLAT":"▶ OYNAT";if(oyn){son=performance.now();requestAnimationFrame(ak);}}
-function ak(t){if(!oyn)return;const dt=(t-son)/1000;son=t;const H=document.getElementById("hikaye");scrollTo(0,scrollY+.18*innerHeight*dt);if(scrollY>=H.offsetHeight-innerHeight-2){tog();return;}requestAnimationFrame(ak);}
+function ak(t){if(!oyn)return;const dt=(t-son)/1000;son=t;const H=document.getElementById("hikaye");scrollTo(0,scrollY+.2*innerHeight*dt);if(scrollY>=H.offsetHeight-innerHeight-2){tog();return;}requestAnimationFrame(ak);}
 b.onclick=tog; addEventListener("keydown",e=>{if(e.key==="p"||e.key==="P")tog();});
 })();
 </script>
-
+<style>
+#gec{all:unset;cursor:pointer;padding:7px 14px;border:1px solid rgba(246,239,221,.3);border-radius:999px;font-family:"Courier Prime","Courier New",monospace;font-size:11px;letter-spacing:.12em;color:rgba(246,239,221,.85);background:rgba(0,0,0,.45);margin-right:8px;transition:opacity .4s}
+#gec:focus-visible{outline:2px solid #CEAB69;outline-offset:2px}
+body.sitede #gec{opacity:0;pointer-events:none}
+#ilerle{position:fixed;left:0;bottom:0;height:2px;width:0;background:rgba(206,171,105,.75);z-index:95;transition:opacity .4s}
+#yeniden{display:inline-block;margin-bottom:2em;font-family:"Manrope",Arial,sans-serif;font-size:13px;letter-spacing:.06em;color:#7A5C22;text-decoration:none;border-bottom:1px solid rgba(122,92,34,.35)}
+#yeniden:focus-visible{outline:2px solid #CEAB69;outline-offset:3px}
+#ilerleme{display:none}
+</style>
+<div id="ilerle"></div>
+<script>
+(() => {
+  const H=document.getElementById("hikaye"), S=document.getElementById("site"), c=document.getElementById("ilerle");
+  const kontrol=document.getElementById("kontrol");
+  const g=document.createElement("a"); g.id="gec"; g.href="#site"; g.textContent="HİKÂYEYİ GEÇ →"; kontrol.insertBefore(g,kontrol.firstChild);
+  const ic=S.querySelector(".ic")||S; const y=document.createElement("a"); y.id="yeniden"; y.href="#hikaye"; y.textContent="↺ Hikâyeyi yeniden izle"; ic.insertBefore(y,ic.firstChild);
+  const son=()=>H.offsetTop+H.offsetHeight-innerHeight;
+  const K="humentis-izlendi:"+location.pathname;
+  const bitti=()=>{ try{ localStorage.setItem(K,"1"); }catch(e){} };
+  try{ if(localStorage.getItem(K)==="1") requestAnimationFrame(()=>scrollTo(0,son())); }catch(e){}
+  g.addEventListener("click",e=>{ e.preventDefault(); bitti(); scrollTo({top:son(),behavior:"smooth"}); });
+  y.addEventListener("click",e=>{ e.preventDefault(); try{ localStorage.removeItem(K); }catch(err){} scrollTo(0,0); });
+  const f=()=>{ const p=Math.max(0,Math.min(1,scrollY/(H.offsetHeight-innerHeight))); c.style.width=(p*100)+"%"; c.style.opacity=p<.995?1:0; if(p>=.97) bitti(); };
+  addEventListener("scroll",f,{passive:true}); addEventListener("resize",f); f();
+})();
+</script>
 </body>
 </html>

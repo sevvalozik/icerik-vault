@@ -21,7 +21,7 @@ related: ["[[00-genel-bakis]]", "[[ergen-ve-ebeveyn]]", "[[teknik-spec]]", "[[sc
 | Duygusal çekirdek | Kapının öbür tarafında babanın hiç tanımadığı bir kız var ve o kız da babasına bir şey söylemeye çalışıyor. |
 | Geçiş | Ekranı ikiye bölen kapı birkaç santim aralanır; iki taraftaki ışık birleşir |
 | Açıldığı yer | Ergen–ebeveyn sayfası: "Ergenle konuşmak: kapıyı zorlamadan" |
-| Tahmini uzunluk | ~9 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye
 
@@ -41,21 +41,19 @@ Murat elini üçüncü kez kaldırıyor. Bu sefer kapıyı çalıyor. Sadece şu
 
 Kapı birkaç santim aralanıyor. Koridordaki sarı ışıkla odanın içindeki beyaz ışık ilk kez aynı yerde birleşiyor.
 
-## 3. Scroll senaryosu
+## 3. Kısa kesim (bağlayıcı)
 
-Ekran boyunca ortada **kapı** var: kapalı bir oda kapısının kenarı dikey bir şerit olarak ekranı ikiye böler. **Sol: koridor (baba)**, **sağ: oda (kimse yok, eşyalar)**.
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
 
-| % | Sol — Koridor | Sağ — Oda | Ekran yazısı | Ses |
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
 |---|---|---|---|---|
-| 0–8 | Koridor, akşam; Murat arkadan kapının önünde | Oda, masa lambası açık, kimse görünmüyor | *Perşembe. 20:15.* | Oda içinden çok hafif müzik |
-| 8–18 | El kalkar… iner | Genel oda: dağınık yatak, kulaklık, masa | sol: *"Nasılsın?" dese "iyi" diyecek.* | — |
-| 18–32 | El yeniden kalkar… iner | **Çizim defteri** yakın plan: çatılar, kedi, masada unutulmuş gözlük | sağ: *Babasının gözlüğünü çizmiş.* | Emotional piano başlar |
-| 32–44 | Murat kapıya yaslanır, başı öne eğik | **Duvarda çerçeve**: resim yarışması ikincilik belgesi | sağ: *Kimseye söylemedi.* | — |
-| 44–58 | Murat saatine bakar, bekler | **Çekmece** aralık; katlanmış kâğıt, üstünde el yazısıyla *Babama,* | sağ: *Üç haftadır orada.* | Piyano incelir |
-| 58–66 | El üçüncü kez kalkar | Oda: lamba, sessizlik | — | Tam sessizlik |
-| 66–74 | Tık tık. | Oda: müzik kesilir | sol: *"Yemek hazır."* | İki vuruş sesi |
-| 74–82 | Murat bekler | Oda: sandalye hafifçe döner (kişi yok) | sağ: *"Geliyorum."* | Sandalye sesi |
-| 82–100 | **GEÇİŞ** | | Aşağıda (§4) | Hope piano |
+| 0–20 | split-kapi | koridor-baba / oda-genel | Babanın eli kalkar, iner | — |
+| 20–40 | split-kapi | koridor-baba / defter | Sağda çizim defteri | sağ: *Babasının gözlüğünü çizmiş.* |
+| 40–58 | split-kapi | koridor-yaslanmis / cekmece | Sağda çekmecede yarım not | sağ: *"Babama,"* · *Üç haftadır orada.* |
+| 58–75 | split-kapi | koridor-baba / oda-genel | Tık tık; kısa sessizlik | sol: *"Yemek hazır."* → sağ: *"Geliyorum."* |
+| 75–100 | split-kapi (acil) | kapi-aralik | Kapı aralanır, iki ışık birleşir | *Kapının öbür tarafını merak ediyorsanız.* → **Ergenle konuşmak: kapıyı zorlamadan** |
+
+**Kısaltmada çıkarılanlar:** Yarışma belgesi sahnesi ve "Nasılsın dese iyi diyecek" satırı çıkarıldı; `belge` kullanılmıyor.
 
 ## 4. Geçiş anı
 
@@ -90,22 +88,12 @@ Bkz. [[scroll-kapinin-iki-yuzu-brief]].
 - **Görsel promptları:** [[scroll-kapinin-iki-yuzu-brief]] (`07-AI-Gorsel/humentis/scroll-kapinin-iki-yuzu-brief.md`)
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/ergen-ve-ebeveyn/kapinin-iki-yuzu/`
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/ergen-ve-ebeveyn/kapinin-iki-yuzu/`
-- **Toplam uzunluk:** 9 ekran boyu
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 - **Müzik:** 18%'de gece parçası; 58–66 tam sessizlik; 82%'de sabah parçası.
 
 ### Sahne listesi
 
-| # | % | Tip | Görsel (sol / sağ) | Metin(ler) | Not |
-|---|---|---|---|---|---|
-| 1 | 0–8 | split-kapi | koridor-baba / oda-genel | *Perşembe. 20:15.* | Ortada kapı şeridi (görsel: `kapi-serit`) |
-| 2 | 8–18 | split-kapi | koridor-baba / oda-genel | sol: *"Nasılsın?" dese "iyi" diyecek.* | Soldaki video: el kalkar, iner |
-| 3 | 18–32 | split-kapi | koridor-baba / defter | sağ: *Babasının gözlüğünü çizmiş.* | — |
-| 4 | 32–44 | split-kapi | koridor-yaslanmis / belge | sağ: *Kimseye söylemedi.* | — |
-| 5 | 44–58 | split-kapi | koridor-yaslanmis / cekmece | sağ: *Üç haftadır orada.* | Nottaki *Babama,* yazısı HTML ile (Caveat), görselde yazı yok |
-| 6 | 58–66 | split-kapi | koridor-baba / oda-genel | — | Ses 0 |
-| 7 | 66–74 | split-kapi | koridor-baba / oda-genel | sol: *"Yemek hazır."* | İki vuruş sesi (kısa ses dosyası ya da Web Audio ile) |
-| 8 | 74–82 | split-kapi | koridor-baba / oda-genel | sağ: *"Geliyorum."* | — |
-| 9 | 82–100 | split-kapi (acil) | kapi-aralik | *Kapının öbür tarafını merak ediyorsanız.* → **Ergenle konuşmak: kapıyı zorlamadan** | Geçiş §4 |
+§3 Kısa kesim tablosu birebir sahne listesidir (yüzde, tip, görsel, yazı).
 
 ### Özel davranışlar
 

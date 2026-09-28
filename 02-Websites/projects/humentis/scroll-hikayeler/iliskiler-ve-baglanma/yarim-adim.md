@@ -24,7 +24,7 @@ related: ["[[00-genel-bakis]]", "[[iliskiler-ve-baglanma]]", "[[teknik-spec]]", 
 | Duygusal çekirdek | Ela her yaklaştığında Kerem yarım adım geri çekiliyor; aradaki mesafe hiç değişmiyor. Sonunda ilk kez çekilmiyor. |
 | Mekân | Alacakaranlıkta açık bir arazi, ufuk çizgisi; sabit geniş plan |
 | Geçiş | Kerem'in Ela'ya yürüdüğü klipten sonra ekran krem zemine erir; başlık "Yakınlaştıkça uzaklaşıyorsanız" |
-| Tahmini uzunluk | ~13 ekran boyu scroll |
+| Tahmini uzunluk | **5 ekran boyu** (kısa kesim, ~25 sn) |
 
 ## 2. Hikâye
 
@@ -34,25 +34,22 @@ Her seferinde Ela yarım adım yaklaşıyor, Kerem yarım adım geri çekiliyor.
 
 Ekimde Ela evin anahtarını uzatıyor: "İstersen." Kerem yine geri çekilecekti. Ama bu sefer çekilmiyor. İlk kez o, Ela'ya doğru yürüyor.
 
-## 3. Scroll senaryosu (kurgu)
+## 3. Kısa kesim (bağlayıcı)
 
-Kamera hiç kıpırdamaz. Her klip scroll'a bağlı oynar; geri kaydırınca hareket geri gider. Aylar arasında kısa kararma.
+> Şartname §0: en fazla 5 ekran, en fazla 8 satır, ekranda tek satır. "Hikâyeyi geç →" ve ilerleme çizgisi her zaman var.
 
-| % | Klip (sn) | Ne oluyor | Yazı |
-|---|---|---|---|
-| 0–7 | adim (0) | İkisi karşılıklı duruyor | ortada: *Ela ile Kerem bir yıldır birlikte.* · köşede **MART** |
-| 7–17 | adim (0.6→3.6) | Ela yarım adım yaklaşır | Ela'nın üstünde: *"Bu gece kalsana."* |
-| 18–27 | geri (0→3.4) | Kerem yarım adım geri çekilir | Kerem'in üstünde: *"Yarın erken kalkacağım."* |
-| 27–29 | — | kararma | **NİSAN** |
-| 29–37 / 38–47 | adim / geri | aynı | *"Seni seviyorum."* / *"…Ben de. Bugün çok yoruldum."* |
-| 47–49 | — | kararma | **HAZİRAN** |
-| 49–57 / 58–67 | adim / geri | aynı | *"Annemle tanışır mısın?"* / *"Bu ara iş çok yoğun."* |
-| 67–72 | geri (son kare) | durgun | alt: *Aradaki mesafe hiç değişmedi.* |
-| 72–74 | — | kararma | **EKİM** |
-| 74–80 | adim (0.6→3.6) | Ela yaklaşır | *"Evin anahtarı. İstersen."* |
-| 80–84 | adim (son kare) | durgun | alt: *Kerem yine geri çekilecekti.* |
-| 84–93 | yaklas (0→3.9) | **Kerem Ela'ya yürür** | alt (87–93): *Bu sefer çekilmedi.* |
-| 94–100 | — | krem zemine erime | **Yakınlaştıkça uzaklaşıyorsanız** |
+| % | Tip | Görsel / klip | Ne oluyor | Yazı |
+|---|---|---|---|---|
+| 0–10 | kurgu | adim (0) | İkisi karşılıklı | köşede **MART** |
+| 10–25 | kurgu | adim 0.6→3.6 · geri 0→3.4 | Ela yaklaşır, Kerem geri çekilir | *"Bu gece kalsana."* → *"Yarın erken kalkacağım."* |
+| 25–28 | kararma | — | — | **NİSAN** |
+| 28–45 | kurgu | adim · geri | Aynı döngü | *"Seni seviyorum."* → *"…Bugün çok yoruldum."* |
+| 45–48 | kararma | — | — | **EKİM** |
+| 48–62 | kurgu | adim 0.6→3.6 | Ela anahtarı uzatır | *"Evin anahtarı. İstersen."* |
+| 62–88 | kurgu | yaklas 0→3.9 | Kerem ilk kez Ela'ya yürür | *Bu sefer çekilmedi.* |
+| 88–100 | geçiş | — | Krem zemine erime | **Yakınlaştıkça uzaklaşıyorsanız** |
+
+**Kısaltmada çıkarılanlar:** Üçüncü döngü (Haziran), giriş cümlesi ve "Aradaki mesafe hiç değişmedi" / "Kerem yine geri çekilecekti" satırları çıkarıldı.
 
 ## 4. Açıldığı site bölümü
 
@@ -68,6 +65,8 @@ Kamera hiç kıpırdamaz. Her klip scroll'a bağlı oynar; geri kaydırınca har
 **CTA:** Ön görüşme için randevu al
 
 ## Kodlama için
+
+- **Toplam uzunluk:** 5 ekran boyu (kısa kesim)
 
 > Bu bölüm [[teknik-spec]] ile birlikte okunur. **Uygulaması hazır:** `scroll-siteler/iliskiler-ve-baglanma/yarim-adim/index.html`.
 
