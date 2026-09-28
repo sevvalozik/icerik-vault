@@ -16,6 +16,8 @@ Amaç: her psikoloğa "kendi siteniz olsun mu?" sorusunu sordurmak. Anlatım kay
 
 ## Nasıl açılır / sunulur
 
+- **Paylaşılabilir web versiyonu:** https://claude.ai/artifact/NVZywoaNEDgUiM6KQkn9jR (varsayılan sabah müziği Hope Piano; linkin sonuna `#sabah2` eklenirse Happy Good Morning). Gizli yayınlandı, paylaşım sayfanın Paylaş menüsünden açılır.
+
 - Dosya: `humentis-bulunma-hikayesi/film.html` → tarayıcıda aç (Chrome önerilir, internet açık olsun: fontlar Google Fonts'tan).
 - **Kaydır** ya da sağ alttaki **▶ OYNAT** (veya `P`) → kendi hızında akar (~3 dk).
 - `→ / boşluk`: sonraki sahne · `←`: önceki · `F`: tam ekran. Fare durunca kontroller kaybolur.
@@ -26,7 +28,7 @@ Amaç: her psikoloğa "kendi siteniz olsun mu?" sorusunu sordurmak. Anlatım kay
 - 14 kare yuvası: `03-Assets/images/humentis/bulunma/humentis-bulunma-<kod>.jpg|png|webp` (aynı adla `.mp4` konursa klip oynar).
 - Kare yoksa film çalışmaya devam eder; o sahnede ışık tonunda bir yer tutucu ve köşede "KARE A1 · görsel bekleniyor" notu görünür.
 - Promptlar, karakter/mekan kartları, dosya adları: [[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]].
-- ⚠️ Marka brief'teki "AI'da danışan görünmez" kuralına **bilinçli istisna**: iç sunum, kurgusal yetişkin karakterler; kamuya açık kanallarda kullanılmaz (gerekçe brief §2'de).
+- Hiçbir karede yüz görünmez: karakterler arkadan, omuz üstünden ya da eller (marka brief'in "arkadan/eller" kuralıyla uyumlu). İç sunum; kareler kamuya açık kanallarda onaysız kullanılmaz.
 
 ## 21 uzmana kişiselleştirme
 
@@ -34,6 +36,13 @@ Amaç: her psikoloğa "kendi siteniz olsun mu?" sorusunu sordurmak. Anlatım kay
 2. İçinde sadece metinleri değiştir: `uzman.ad`, `unvan`, `sitesinden` ("Simge Kaya’nın sitesinden"), üç hikâyenin `alan` / `alinti` / arama cümlesi (uzmanın gerçek çalışma alanlarına göre), `defter.satirlar`.
 3. Aç: `film.html?uzman=simge-kaya`.
 4. Uzmana özel kare gerekirse (farklı alan, farklı karakter) `assetBase`'i `…/bulunma/<uzman-slug>/humentis-bulunma-` yap, sadece değişen kareleri o klasöre koy.
+
+## Sonraki aşama — konu bazlı scroll siteler (28 Eylül 2026)
+
+- Bu film **sahne havuzu** olarak kullanılacak: her hikâye (Deniz / Ece / Selim) tek başına alınıp uzun, detaylı bir olay örgüsüne dönüştürülecek.
+- Şevval olay örgülerini detaylandırıp md olarak vault'a ekleyecek; Furkan Bey bunlardan scroll'lu web siteleri kuracak.
+- Örnek: Ece'nin hikâyesi baştan sona; telefona baktığı sahnede kaydırınca kamera telefonun içine girer ve uzmanın sitesinde ilgili bölüme geçer (blog yazısı, randevu sayfası vb.).
+- Hocalara sunumda seçenekler gösterilecek; her hoca kendi alanına uyan hikâyeyi ve geçiş/animasyon tipini seçecek.
 
 ## Açık noktalar
 

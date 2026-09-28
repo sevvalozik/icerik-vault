@@ -18,6 +18,18 @@ window.FILM = {
   assetBase: "../../../03-Assets/images/humentis/bulunma/humentis-bulunma-",
   logo: "../../../03-Assets/logos/humentis/humentis-lockup-horizontal.svg",
 
+  // Arka plan müziği (tüm uzmanlarda aynı). Dosya yoksa film sessiz oynar.
+  // "sabah": "Sonra sabah oldu." kartında geçilen umutlu parça. Denemek için film.html?sabah=2 → listedeki 2. parça.
+  muzik: {
+    dosya: "../../../03-Assets/audio/humentis/bulunma-muzik.mp3",
+    sabah: [
+      "../../../03-Assets/audio/humentis/bulunma-sabah-1.mp3",   // Hope Piano (atlasaudio)
+      "../../../03-Assets/audio/humentis/bulunma-sabah-2.mp3",   // Happy Good Morning (clavier-music)
+    ],
+    ses: 0.7,
+    gecisSn: 4,
+  },
+
   acilis: {
     mekan: "DIŞ MEKAN — ANKARA — GECE",
     saat: "00:40",

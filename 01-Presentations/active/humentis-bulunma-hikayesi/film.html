@@ -131,7 +131,7 @@ body.idle #ctrl,body.idle #hint{opacity:0}
 <div class="bar top"></div><div class="bar bot"></div>
 <div id="slug"></div><div id="clock"></div>
 <div id="hint">KAYDIRIN &nbsp;·&nbsp; YA DA  ▶ OYNAT</div>
-<div id="ctrl"><span id="count">01 / 01</span><button id="play">▶ OYNAT</button></div>
+<div id="ctrl"><span id="count">01 / 01</span><button id="snd" style="display:none">♪ SES AÇIK</button><button id="play">▶ OYNAT</button></div>
 <div id="progress"></div>
 <div id="err"></div>
 
@@ -230,6 +230,7 @@ function build(F){
       } else loadMedia(F.assetBase + b.code, M, b);
       if(b.dim){ const d=el("div"); d.style.cssText=`position:absolute;inset:0;background:rgba(0,0,0,${b.dim});z-index:2`; L.appendChild(d); b.dimEl=d; }
       const shade = el("div"); shade.style.cssText="position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.45) 100%)"; L.appendChild(shade);
+      if(b.push){ const side = el("div"); side.style.cssText="position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(4,10,12,.72) 0%,rgba(4,10,12,.45) 38%,rgba(4,10,12,0) 62%)"; L.appendChild(side); }
       (b.texts||[]).forEach(t=>{ const e=el("div","t "+t.cls, t.type!=null?"":t.html); t.el=e; L.appendChild(e); });
       if(b.kind==="defter") buildBook(F, b, b.canvas, L);
     } else {
@@ -239,7 +240,11 @@ function build(F){
     }
     stage.appendChild(L);
   });
+  // müzik seviyesi (0–1): gece sakin, bulma ve sabah dolu, dördüncü duvarda sessizlik
+  const VOL = {o1:.55, title:.7, dawncard:1, merge:.85, defter:1, closing:0, final:.6};
+  B.forEach(b=>{ b.vol = VOL[b.code] ?? VOL[b.kind] ?? (b.code ? ({1:.6, 2:.5, 3:.9, 4:1})[b.code.slice(-1)] : .7); });
   BEATS = B; total = start;
+  setupMusic(F);
   document.getElementById("track").style.height = (total*100 + 100) + "vh";
   window.addEventListener("scroll", render, {passive:true});
   window.addEventListener("resize", ()=>{ BEATS.forEach(layoutCanvas); render(); });
@@ -352,6 +357,7 @@ function render(){
       b.alt.style.transform = "translate(-50%,0)";
     }
   });
+  activeIdx = active;
   const A = BEATS[active];
   const sl = document.getElementById("slug"), ck = document.getElementById("clock");
   if(lastSlug !== active){ lastSlug = active; sl.textContent = A.slug||""; ck.textContent = A.clock||""; }
@@ -361,6 +367,41 @@ function render(){
 }
 
 /* ——— sunum kontrolleri: ▶ oynat, boşluk / ok tuşları ——— */
+/* ——— müzik: gece parçası → "Sonra sabah oldu." kartında umutlu parçaya yumuşak geçiş ——— */
+let music = null, music2 = null, musicOn = true, curVol = 0, activeIdx = 0, mix = 0, dawnIdx = 1e9;
+function setupMusic(F){
+  const M = F.muzik; if(!M || !M.dosya) return;
+  const mk = src => { const a = new Audio(src); a.loop = true; a.preload = "auto"; a.volume = 0; a.addEventListener("error", ()=>{ if(a===music) music=null; if(a===music2) music2=null; }); return a; };
+  music = mk(M.dosya);
+  const list = M.sabah || [], pick = Math.max(1, parseInt(qs.get("sabah")||"1",10)) - 1;
+  if(list.length) music2 = mk(list[Math.min(pick, list.length-1)]);
+  dawnIdx = BEATS.findIndex(b=>b.kind==="dawncard"); if(dawnIdx<0) dawnIdx = 1e9;
+  const btn = document.getElementById("snd");
+  music.addEventListener("canplaythrough", ()=>{ btn.style.display = ""; }, {once:true});
+  btn.onclick = ()=>{ musicOn = !musicOn; btn.textContent = musicOn ? "♪ SES AÇIK" : "♪ SES KAPALI"; if(musicOn) startMusic(); else stopAll(); };
+  const max = M.ses ?? .7, XF = M.gecisSn ?? 4;
+  let last = performance.now();
+  (function fade(now){
+    const dt = Math.min(.1, ((now||performance.now()) - last)/1000); last = now||performance.now();
+    const on = music && musicOn && !music.paused;
+    const target = on ? max * (BEATS[activeIdx]?.vol ?? .7) : 0;
+    curVol += (target - curVol) * .035;
+    // geçiş: sabah kartına gelince 2. parça başlar, 1. parça XF saniyede kısılır
+    const want = (music2 && activeIdx >= dawnIdx) ? 1 : 0;
+    if(want && music2.paused && musicOn){ music2.currentTime = 0; music2.play().catch(()=>{}); }
+    mix += Math.sign(want - mix) * Math.min(Math.abs(want - mix), dt / XF);
+    if(!want && mix === 0 && music2 && !music2.paused) music2.pause();
+    const v = Math.max(0, Math.min(1, curVol));
+    if(music) music.volume = v * (1 - mix);
+    if(music2) music2.volume = v * mix;
+    requestAnimationFrame(fade);
+  })();
+  const kick = ()=> startMusic();
+  window.addEventListener("pointerdown", kick); window.addEventListener("keydown", kick); window.addEventListener("wheel", kick, {passive:true});
+}
+function startMusic(){ if(music && musicOn && music.paused) music.play().catch(()=>{}); }
+function stopAll(){ [music, music2].forEach(a=> a && a.pause()); }
+
 let playing = false, raf = null, lastT = 0;
 const SPEED = 0.17; // saniyede ekran yüksekliği (≈ 7-10 sn / sahne)
 function setupControls(){
