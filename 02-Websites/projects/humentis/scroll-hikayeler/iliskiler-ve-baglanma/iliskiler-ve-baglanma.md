@@ -19,7 +19,7 @@ Güven, bağlanma, takıntılı aşk (limerence). Solmaz Şenyüz'ün "Neden kim
 | Hikâye | Durum | Duygusal çekirdek | Geçiş | Açıldığı yer |
 |---|---|---|---|---|
 | [[uc-nokta]] | ✅ Tam + site hazır | Yapmadığı bir şey için dört özür taslağı | Mesajlaşma ekranı küçülüp kaybolur | "Cevap gelene kadar…" |
-| Yarım Adım | 💡 Yön onaylandı | Yaklaştıkça uzaklaşan (kaçıngan bağlanma); koridorda yarım adım koreografisi | Mesafe hiç değişmez; sonunda geri adım atılmaz | — |
+| [[yarim-adim]] | ✅ Tam + site (720p ön gösterim) | Yaklaştıkça uzaklaşan (kaçıngan bağlanma); mesafe hiç değişmez | Kerem ilk kez Ela'ya yürür, krem zemine erime | "Yakınlaştıkça uzaklaşıyorsanız" |
 | Aynı Sahne | 💡 Yön onaylandı | Üç ilişkide aynı kavga, aynı cümle | Dördüncüde cümle yarıda kesilir | "Aynı hikâye neden tekrar ediyor?" |
 | Okundu | 💡 Fikir (ilk tur) | — | — | — |
 | Kusursuz Senaryo | 💡 Fikir (ilk tur) | — | — | — |

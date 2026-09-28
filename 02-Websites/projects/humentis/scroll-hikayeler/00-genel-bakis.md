@@ -26,7 +26,7 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[sinav-ve-performans-kaygisi]] | Aynı Paragraf | Sunumdan Önce |
 | [[tukenmislik-ve-is-stresi]] | Motor Kapalı | Pazar Akşamı, Masadaki Bitki |
 | [[kaygi-ve-cok-dusunmek]] | Provalar, Her Şey Yolunda, Miras | Ya Olursa? |
-| [[iliskiler-ve-baglanma]] | Üç Nokta (site hazır) | Yarım Adım, Aynı Sahne |
+| [[iliskiler-ve-baglanma]] | Üç Nokta, Yarım Adım (siteler hazır) | Aynı Sahne |
 | [[ergen-ve-ebeveyn]] | İki Oda, Kapının İki Yüzü (+ Miras) | — |
 | [[aile-danismanligi]] | — | Aynı Sofra |
 | [[yas-ve-kayip]] | — | Yarım Kalan Fincan |

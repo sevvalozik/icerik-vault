@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarım Adım — Humentis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&family=Manrope:wght@400;500;600&family=Courier+Prime&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --petrol:#284C51; --krem:#F6EFDD; --fildisi:#f8f5ed; --altin:#CEAB69; --altin-koyu:#7A5C22; --komur:#564E44;
+  --serif:"Source Serif 4", Georgia, serif; --sans:"Manrope", Arial, sans-serif; --mono:"Courier Prime","Courier New",monospace;
+  --bant:max(0px, calc((100vh - 100vw / 2.39) / 2));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{padding:0!important}
+html,body{background:#000;color:var(--krem)}
+body{font-family:var(--sans)}
+#hikaye{position:relative;height:1300vh}
+#sahne{position:sticky;top:0;height:100vh;overflow:hidden;background:#000}
+video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+#karart{position:absolute;inset:0;background:#000;opacity:0;z-index:5}
+#gren{position:absolute;inset:-50%;pointer-events:none;opacity:.06;mix-blend-mode:overlay;z-index:40;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:gren 1s steps(6) infinite}
+@keyframes gren{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
+.bant{position:absolute;left:0;right:0;height:var(--bant);background:#000;z-index:45}
+.bant.ust{top:0}.bant.alt{bottom:0}
+#mekan,#ay{position:absolute;z-index:50;top:calc(max(var(--bant) / 2, 22px) - .6em);font-family:var(--mono);font-size:clamp(10px,.85vw,12px);letter-spacing:.14em;color:rgba(246,239,221,.6)}
+#mekan{left:16px}#ay{right:16px}
+@media (min-width:700px){#mekan{left:3vw}#ay{right:3vw}}
+
+.y{position:absolute;z-index:20;opacity:0;will-change:opacity,transform;text-shadow:0 1px 16px rgba(0,0,0,.55)}
+.rep{top:calc(var(--bant) + 9vh);transform:translateX(-50%);width:min(40vw,420px);text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.9vw,32px);line-height:1.3;color:#fff8ec}
+.rep.ela{left:24%}.rep.kerem{left:68%}
+.anl{left:50%;bottom:calc(var(--bant) + 6vh);transform:translateX(-50%);width:min(90vw,900px);text-align:center;font-family:var(--serif);font-size:clamp(20px,2.1vw,34px);color:#fff8ec}
+.buyuk{left:50%;top:50%;transform:translate(-50%,-50%);width:min(90vw,1000px);text-align:center;font-family:var(--serif);font-weight:300;font-size:clamp(26px,3.3vw,56px)}
+.gecis{left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:clamp(12px,1vw,15px);letter-spacing:.3em;color:rgba(246,239,221,.75);z-index:25}
+
+#erime{position:absolute;inset:0;z-index:60;background:var(--fildisi);opacity:0;display:flex;align-items:center;justify-content:center;padding:0 16px;pointer-events:none}
+#erime h1{font-family:var(--serif);font-weight:400;color:var(--petrol);font-size:clamp(32px,4.6vw,80px);line-height:1.12;text-align:center;opacity:0;max-width:20ch}
+#erime .etiket{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--altin-koyu);text-align:center;margin-bottom:1.4em;opacity:0}
+
+#site{background:var(--fildisi);color:var(--komur);padding-block:4vh 14vh;padding-inline:20px}
+#site .ic{max-width:44rem;margin:0 auto}
+#site p{font-family:var(--serif);font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:#2f3a38}
+#site .not{margin-top:2.4em;font-family:var(--sans);font-size:14px;color:#8a8478;font-style:italic}
+#site .btn{display:inline-block;margin-top:2.4em;padding:14px 22px;border-radius:999px;background:var(--petrol);color:var(--fildisi);text-decoration:none;font-weight:600}
+
+#kontrol{position:fixed;right:16px;bottom:14px;z-index:90}
+#kontrol button{all:unset;cursor:pointer;padding:7px 14px;border:1px solid rgba(246,239,221,.3);border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:rgba(246,239,221,.85);background:rgba(0,0,0,.45)}
+#kontrol button:focus-visible{outline:2px solid var(--altin);outline-offset:2px}
+body.sitede #kontrol button{color:var(--petrol);border-color:rgba(40,76,81,.35);background:rgba(248,245,237,.85)}
+#ipucu{position:fixed;left:50%;bottom:calc(var(--bant) + 2vh);transform:translateX(-50%);z-index:80;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:rgba(246,239,221,.55);transition:opacity .6s}
+#yukle{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:rgba(246,239,221,.5);z-index:4}
+@media (max-width:700px){.rep{width:44vw;font-size:16px}.rep.ela{left:26%}.rep.kerem{left:72%}}
+@media (prefers-reduced-motion:reduce){#gren{animation:none}}
+</style>
+
+</head>
+<body>
+<section id="hikaye" aria-label="Yarım Adım — kısa hikâye">
+  <div id="sahne">
+    <div id="yukle">YÜKLENİYOR…</div>
+    <video id="v-adim" src="../../../../../../03-Assets/images/humentis/scroll/iliskiler-ve-baglanma/yarim-adim/adim.mp4" muted playsinline preload="auto"></video>
+    <video id="v-geri" src="../../../../../../03-Assets/images/humentis/scroll/iliskiler-ve-baglanma/yarim-adim/geri.mp4" muted playsinline preload="auto"></video>
+    <video id="v-yaklas" src="../../../../../../03-Assets/images/humentis/scroll/iliskiler-ve-baglanma/yarim-adim/yaklas.mp4" muted playsinline preload="auto"></video>
+    <div id="karart"></div>
+    <div id="yazilar"></div>
+    <div id="gren"></div>
+    <div id="erime"><div><div class="etiket">İlişkiler ve bağlanma</div><h1>Yakınlaştıkça uzaklaşıyorsanız</h1></div></div>
+    <div class="bant ust"></div><div class="bant alt"></div>
+    <div id="mekan">DIŞ MEKAN — AÇIK ARAZİ — ALACAKARANLIK</div><div id="ay">MART</div>
+  </div>
+</section>
+<section id="site">
+  <div class="ic">
+    <p>Bazı insanlar için yakınlık hem en çok istenen hem en çok korkulan şeydir. Biri yaklaştığında içeride bir alarm çalar: iş birden yoğunlaşır, yorgunluk bastırır, "biraz alana ihtiyacım var" cümlesi kendiliğinden gelir. Bu bir sevgisizlik değil, öğrenilmiş bir korunma biçimidir. Terapide o geri adımın ne zaman ve neden atıldığını birlikte fark eder, yerinde kalabilmenin yollarını ararız.</p>
+    <a class="btn" href="#site">Ön görüşme için randevu al</a>
+    <p class="not">Ön gösterim: videolar 720p yer tutucu; 1080p klipler aynı adlarla konunca site onları kullanır.</p>
+  </div>
+</section>
+<div id="ipucu">KAYDIRIN · YA DA ▶ OYNAT</div>
+<div id="kontrol"><button id="oynat">▶ OYNAT</button></div>
+
+<script>
+(() => {
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const pen=(p,a,b,f=1)=>clamp((p-a)/f)*clamp((b-p)/f);
+const V={adim:document.getElementById("v-adim"),geri:document.getElementById("v-geri"),yaklas:document.getElementById("v-yaklas")};
+let hazir=0; Object.values(V).forEach(v=>v.addEventListener("loadeddata",()=>{ if(++hazir===3) document.getElementById("yukle").remove(); ciz(); },{once:true}));
+
+// kurgu: [başlangıç %, bitiş %, klip, klip başı sn, klip sonu sn]
+const KURGU=[
+  [0, 7,  "adim", 0.0, 0.0],
+  [7, 17, "adim", 0.6, 3.6],     // Ela adım atar
+  [18,27, "geri", 0.0, 3.4],     // Kerem geri çekilir
+  [29,37, "adim", 0.6, 3.6],
+  [38,47, "geri", 0.0, 3.4],
+  [49,57, "adim", 0.6, 3.6],
+  [58,67, "geri", 0.0, 3.4],
+  [67,72, "geri", 3.4, 3.4],     // mesafe hiç değişmedi
+  [74,80, "adim", 0.6, 3.6],     // anahtar
+  [80,84, "adim", 3.6, 3.6],     // "yine geri çekilecekti"
+  [84,93, "yaklas", 0.0, 3.9],   // bu sefer ona yürür
+  [93,100,"yaklas", 3.9, 3.9],
+];
+const AY=[[0,"MART"],[28,"NİSAN"],[48,"HAZİRAN"],[73,"EKİM"]];
+const Y=document.getElementById("yazilar");
+function y(cls,html){const d=document.createElement("div");d.className="y "+cls;d.innerHTML=html;Y.appendChild(d);return d;}
+const T=[
+  [0.5,6.5,y("buyuk","Ela ile Kerem bir yıldır birlikte.")],
+  [8,17,  y("rep ela","“Bu gece kalsana.”")],
+  [19,27, y("rep kerem","“Yarın erken kalkacağım.”")],
+  [27.2,29, y("gecis","NİSAN")],
+  [30,37, y("rep ela","“Seni seviyorum.”")],
+  [39,47, y("rep kerem","“…Ben de. Bugün çok yoruldum.”")],
+  [47.2,49, y("gecis","HAZİRAN")],
+  [50,57, y("rep ela","“Annemle tanışır mısın?”")],
+  [59,67, y("rep kerem","“Bu ara iş çok yoğun.”")],
+  [67,72.5, y("anl","Aradaki mesafe hiç değişmedi.")],
+  [72.2,74, y("gecis","EKİM")],
+  [75,80, y("rep ela","“Evin anahtarı. İstersen.”")],
+  [80,84.5, y("anl","Kerem yine geri çekilecekti.")],
+  [87,93, y("anl","Bu sefer çekilmedi.")],
+];
+const kar=document.getElementById("karart"), H=document.getElementById("hikaye");
+function ciz(){
+  const p=clamp(scrollY/(H.offsetHeight-innerHeight))*100;
+  const k=KURGU.find(s=>p>=s[0]&&p<s[1]) || KURGU[KURGU.length-1];
+  const [a,b,ad,t0,t1]=k;
+  Object.entries(V).forEach(([n,v])=>{ v.style.opacity = n===ad ? 1 : 0; });
+  const v=V[ad];
+  if(v.readyState>=2){ const hedef=t0+(t1-t0)*clamp((p-a)/(b-a)); if(Math.abs(v.currentTime-hedef)>.02) v.currentTime=hedef; }
+  // kurgu aralarında karartma (ay geçişleri)
+  let k2=0;
+  KURGU.forEach((s,i)=>{ const n=KURGU[i+1]; if(n && n[0]>s[1]){ k2=Math.max(k2, pen(p,s[1]-.8,n[0]+.8,.8)); } });
+  kar.style.opacity=k2;
+  T.forEach(([a,b,e])=>{ e.style.opacity=pen(p,a,b,.8); });
+  document.getElementById("ay").textContent=[...AY].reverse().find(s=>p>=s[0])[1];
+  const er=document.getElementById("erime");
+  er.style.opacity=clamp((p-94)/3); er.querySelector("h1").style.opacity=clamp((p-96)/2); er.querySelector(".etiket").style.opacity=clamp((p-96.5)/2);
+  document.getElementById("ipucu").style.opacity=p<1.5?1:0;
+  document.body.classList.toggle("sitede",p>=97);
+}
+addEventListener("scroll",ciz,{passive:true}); addEventListener("resize",ciz); ciz();
+
+let oyn=false,son=0; const b=document.getElementById("oynat");
+function tog(){oyn=!oyn;b.textContent=oyn?"❚❚ DURAKLAT":"▶ OYNAT";if(oyn){son=performance.now();requestAnimationFrame(ak);}}
+function ak(t){if(!oyn)return;const dt=(t-son)/1000;son=t;scrollTo(0,scrollY+.16*innerHeight*dt);if(scrollY>=H.offsetHeight-innerHeight-2){tog();return;}requestAnimationFrame(ak);}
+b.onclick=tog; addEventListener("keydown",e=>{if(e.key==="p"||e.key==="P")tog();});
+})();
+</script>
+
+</body>
+</html>

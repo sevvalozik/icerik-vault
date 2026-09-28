@@ -67,6 +67,7 @@ Hikâye dosyalarında geçen tipler. `hikaye.js` içinde her sahne bir `tip` al�
 | `kesit` | Tek büyük (3:2) görsel üzerinde kamera yolu: odak noktaları `{x%, y%, ölçek}` arasında scroll ile pan/zoom | İki Oda |
 | `split-kapi` | `split` gibi; ortadaki ayırıcı kapı kenarı görseli (`kapi-serit.png`); `acil` seçeneğinde şerit açılır, iki panelin ışığı ortada birleşir | Kapının İki Yüzü |
 | `sohbet` | Çerçevesiz telefon ekranında markasız mesajlaşma arayüzü: mesaj kutusunda yazma/silme, gönderme, tek/çift/okundu tik, "yazıyor…" balonu, "düzenlendi", "Görüldü", durum çubuğunda ilerleyen saat. Telefonun dışında film yazıları | Üç Nokta |
+| `kurgu` | Sabit kamerada birden çok kısa video klibin scroll'a bağlı art arda oynatılması: `[başlangıç %, bitiş %, klip, klip başı sn, klip sonu sn]`; klipler arası kısa kararma; replikler figürlerin üstünde | Yarım Adım |
 
 Yeni bir hikâye yeni bir tip gerektirirse hikâye dosyasının "Kodlama için" bölümünde tarif edilir.
 
@@ -80,6 +81,8 @@ Durağan fotoğraf + zoom sitede "fotoğraf" gibi algılanıyor; hedef film hiss
   - **scrub:** `video.currentTime = sahneİlerlemesi × süre`; kaydırdıkça ilerler, geri kaydırınca geri gider (kapı kapanır, vazo düşer, ışık odaya yayılır).
 - Mod ve hareket promptu her kare için görsel brief'inde (`07-AI-Gorsel/humentis/scroll-<hikaye>-brief.md` → "Hareket (video) promptları").
 - **Kodlama şartı:** scrub akıcı olsun diye videolar her karesi anahtar kare olacak şekilde yeniden kodlanır: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`. Loop videolar da aynı komutla küçültülür.
+- **Çözünürlük:** videolar en az **1080p**. Gemini uygulamasının 720p çıktısı sadece ön gösterim içindir; final için Google Flow (Veo) 1080p ya da yapay zekâ büyütme (Topaz vb.). ffmpeg ile büyütme detay eklemez, kullanılmaz.
+- **Hareket kuralı:** bir klipte sadece bir kişi hareket eder; sıralı hareketler ayrı kliplere bölünür ve her klip bir öncekinin son karesinden başlatılır. Ters oynatma geri adım için kullanılabilir.
 - Video yoksa bile sahne ölü durmaz: hayaletler/figürler CSS ile hafif süzülür (`suzul` animasyonu), ışıklar gradient ile hareket eder.
 
 ## 5. Tasarım tokenları
