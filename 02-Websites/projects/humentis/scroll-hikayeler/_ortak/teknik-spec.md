@@ -64,6 +64,8 @@ Hikâye dosyalarında geçen tipler. `hikaye.js` içinde her sahne bir `tip` al�
 | `shards` | Kırık parçaların (6–9 SVG poligon) havalanıp altın çizgiyle birleşmesi | Kırılan Vazo |
 | `pages` | Kâğıtların 3D dönüşümle savrulup tek sayfada birleşmesi | Aynı Paragraf |
 | `dive` | Ekran ışığına push-in, ışığın tüm kadrajı doldurması | Motor Kapalı |
+| `kesit` | Tek büyük (3:2) görsel üzerinde kamera yolu: odak noktaları `{x%, y%, ölçek}` arasında scroll ile pan/zoom | İki Oda |
+| `split-kapi` | `split` gibi; ortadaki ayırıcı kapı kenarı görseli (`kapi-serit.png`); `acil` seçeneğinde şerit açılır, iki panelin ışığı ortada birleşir | Kapının İki Yüzü |
 
 Yeni bir hikâye yeni bir tip gerektirirse hikâye dosyasının "Kodlama için" bölümünde tarif edilir.
 
