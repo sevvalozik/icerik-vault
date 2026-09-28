@@ -66,6 +66,7 @@ Hikâye dosyalarında geçen tipler. `hikaye.js` içinde her sahne bir `tip` al�
 | `dive` | Ekran ışığına push-in, ışığın tüm kadrajı doldurması | Motor Kapalı |
 | `kesit` | Tek büyük (3:2) görsel üzerinde kamera yolu: odak noktaları `{x%, y%, ölçek}` arasında scroll ile pan/zoom | İki Oda |
 | `split-kapi` | `split` gibi; ortadaki ayırıcı kapı kenarı görseli (`kapi-serit.png`); `acil` seçeneğinde şerit açılır, iki panelin ışığı ortada birleşir | Kapının İki Yüzü |
+| `sohbet` | Çerçevesiz telefon ekranında markasız mesajlaşma arayüzü: mesaj kutusunda yazma/silme, gönderme, tek/çift/okundu tik, "yazıyor…" balonu, "düzenlendi", "Görüldü", durum çubuğunda ilerleyen saat. Telefonun dışında film yazıları | Üç Nokta |
 
 Yeni bir hikâye yeni bir tip gerektirirse hikâye dosyasının "Kodlama için" bölümünde tarif edilir.
 
@@ -99,7 +100,7 @@ Durağan fotoğraf + zoom sitede "fotoğraf" gibi algılanıyor; hedef film hiss
 ## 7. Değişmez içerik kuralları (marka brief §5, §7)
 
 - Hiçbir görselde yüz yok; çocuk hiçbir şekilde görünmez.
-- Arayüz taklidi yok: telefon ekranları boş ışık, sahte uygulama/arama sonucu çizilmez.
+- Arayüz taklidi yok: **AI görsellerinde** telefon ekranları boş ışık. İstisna: `sohbet` sahne tipi (Şevval onayı, 28 Eylül 2026) mesajlaşma ekranını **kodla** çizer; gerçek bir uygulamanın markası, logosu, yeşili taklit edilmez, Humentis renkleri kullanılır. Arama motoru sonucu gibi başka sahte arayüzler yine yok.
 - Teşhis, tedavi vaadi, dramatik kriz dili yok. Metinler hikâye dosyasından birebir.
 - Sahte randevu formu kurulmaz; CTA şimdilik bağlantı.
 

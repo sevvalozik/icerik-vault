@@ -16,10 +16,13 @@ Güven, bağlanma, takıntılı aşk (limerence). Solmaz Şenyüz'ün "Neden kim
 
 ## Hikâyeler
 
-| Hikâye | Durum | Ana geçiş | Açıldığı yer |
-|---|---|---|---|
-| Okundu | 💡 Fikir | Kararan ekranda yansıma netleşir | Blog: "Ben kimseye güvenemiyorum diyorsanız" |
-| Kusursuz Senaryo | 💡 Fikir | Silüet buğulanır, sandalye boş kalır | Blog: "Aşık olduğun kişi gerçekte var mı?" |
+| Hikâye | Durum | Duygusal çekirdek | Geçiş | Açıldığı yer |
+|---|---|---|---|---|
+| [[uc-nokta]] | ✅ Tam + site hazır | Yapmadığı bir şey için dört özür taslağı | Mesajlaşma ekranı küçülüp kaybolur | "Cevap gelene kadar…" |
+| Yarım Adım | 💡 Yön onaylandı | Yaklaştıkça uzaklaşan (kaçıngan bağlanma); koridorda yarım adım koreografisi | Mesafe hiç değişmez; sonunda geri adım atılmaz | — |
+| Aynı Sahne | 💡 Yön onaylandı | Üç ilişkide aynı kavga, aynı cümle | Dördüncüde cümle yarıda kesilir | "Aynı hikâye neden tekrar ediyor?" |
+| Okundu | 💡 Fikir (ilk tur) | — | — | — |
+| Kusursuz Senaryo | 💡 Fikir (ilk tur) | — | — | — |
 
 ## Fikir aşamasındaki hikâyeler
 
