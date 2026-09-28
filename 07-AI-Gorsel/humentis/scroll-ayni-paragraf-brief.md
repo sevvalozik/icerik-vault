@@ -116,3 +116,31 @@ Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir
 | Tarih | Kod | Model | Varyant | Puan | Not |
 |---|---|---|---|---|---|
 | | | | | | |
+
+## Video klipleri (28 Eylül 2026, Google Flow / Veo)
+
+Kodla çizilen uçuşan kâğıtlar gerçekçi bulunmadı; hikâye gerçek videoyla anlatılıyor. Başlangıç karesi: `oda.jpg` (filmdeki a1, Deniz'in karakteri korunur).
+
+### `pencere.mp4` ✅ (10 sn; telefon → kalkar → pencereyi açar)
+```text
+Photorealistic film shot based exactly on the uploaded image. Same small student bedroom at night, same young woman with a ponytail in a grey hoodie sitting at the desk by the window, seen from behind. Her face is never visible; she always keeps her back or the back of her head to the camera.
+Action, one person only:
+0–3 s: the phone on the desk lights up and buzzes. She glances at it, then slowly turns the phone face down on the desk.
+3–6 s: she sits still for a moment, shoulders tense, then pushes the chair back and stands up.
+6–10 s: she steps to the window on the left, turns the handle and opens the window inward. Cold night air comes in; the white curtain begins to stir gently.
+Camera: completely static, locked-off, no pan, no zoom. Night lighting unchanged: desk lamp and laptop glow, city lights outside. Realistic, subtle movement, cinematic, soft filmic grain. No text, no logos, no sound.
+Avoid: showing her face, a second person, camera movement.
+```
+
+### `ruzgar.mp4` ⏳ (üretilecek; kâğıtlar uçuşur)
+İlk denemede rüzgâr esti ama kâğıtlar masadan kalkmadı. Model masadaki kâğıdı sabit nesne sanıyor. En garantili yol: `pencere`'nin son karesini (`pencere-son-kare.jpg`) Nano Banana'da düzenleyip **havada birkaç kâğıt** ekletmek, sonra o görselden video üretmek.
+
+Görsel düzenleme:
+```text
+Edit the uploaded image. Keep everything exactly the same: the room, the woman at the open window with her back to the camera, the desk, the lamp, the laptop, the lighting. Only change: five or six loose white paper sheets from the desk are now caught by the wind, lifting off the desk and floating in mid-air between the desk and the window, some tilted, some curling, at different heights. The curtain billows into the room. 16:9.
+```
+Video (Extend ile devam ettirirken de kullanılabilir):
+```text
+Continue the shot seamlessly. The moment the window opens, a strong gust of cold night wind bursts into the room. The white curtain flaps wildly inward. The wind immediately sweeps across the desk: the loose white paper sheets and notebook pages fly off the desk into the air, one after another, tumbling, fluttering and spinning around the room in the warm lamp light, rising and falling for the rest of the shot. More and more sheets lift off the desk and join them. The young woman in the grey hoodie stays completely still at the open window with her back to the camera; her face is never visible and she does not try to catch the papers. Static camera, no pan, no zoom. Realistic lightweight paper physics, cinematic night lighting, soft filmic grain. No text, no logos, no sound. Avoid: papers staying on the desk, the woman turning around, camera movement.
+```
+Gelince: sitede 26–72 arası `pencere`, ardından `ruzgar`; geçiş perde yerine kameraya süzülen sayfa (ya da bir sayfaya yaklaşma) olur.

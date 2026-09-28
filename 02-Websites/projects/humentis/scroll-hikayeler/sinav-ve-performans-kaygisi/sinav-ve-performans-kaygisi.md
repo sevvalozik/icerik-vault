@@ -18,7 +18,7 @@ related: ["[[00-genel-bakis]]", "[[gecisler]]", "[[site-bolumleri]]"]
 
 | Hikâye | Durum | Ana geçiş | Açıldığı yer |
 |---|---|---|---|
-| [[ayni-paragraf]] | ✅ Tam | Rüzgâr ders notlarını savurur, sayfalar tek sayfa olur | Blog: "Sınav yaklaştıkça nefesiniz daralıyorsa" |
+| [[ayni-paragraf]] | ✅ Tam + site (ara sürüm, rüzgâr klibi bekleniyor) | Rüzgâr ders notlarını savurur, sayfalar tek sayfa olur | Blog: "Sınav yaklaştıkça nefesiniz daralıyorsa" |
 
 ## Fikir aşamasındaki hikâyeler
 

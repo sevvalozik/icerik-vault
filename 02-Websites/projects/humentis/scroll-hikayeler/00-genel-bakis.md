@@ -23,7 +23,7 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | Konu | Tam hikâye | Fikir aşamasında |
 |---|---|---|
 | [[cift-terapisi]] | Kırılan Vazo | Dökülen Kahve, Buğulu Pencere, İki Fırça |
-| [[sinav-ve-performans-kaygisi]] | Aynı Paragraf | Sunumdan Önce |
+| [[sinav-ve-performans-kaygisi]] | Aynı Paragraf (site ara sürüm) | Sunumdan Önce |
 | [[tukenmislik-ve-is-stresi]] | Motor Kapalı | Pazar Akşamı, Masadaki Bitki |
 | [[kaygi-ve-cok-dusunmek]] | Provalar, Her Şey Yolunda, Miras | Ya Olursa? |
 | [[iliskiler-ve-baglanma]] | Üç Nokta, Yarım Adım, Aynı Sahne (siteler hazır) | Okundu, Kusursuz Senaryo |

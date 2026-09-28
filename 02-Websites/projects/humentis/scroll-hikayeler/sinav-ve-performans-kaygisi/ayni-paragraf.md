@@ -5,12 +5,15 @@ client: humentis
 slug: humentis-scroll-hikaye-a
 status: draft
 date: 2026-09-28
-url: ""
+url: "https://claude.ai/artifact/LMgS35cUnshprX1pdSX7Hx"
 tags: [website, humentis, scroll, hikaye, sinav-kaygisi]
 related: ["[[00-genel-bakis]]", "[[sinav-ve-performans-kaygisi]]", "[[humentis-bulunma-hikayesi]]", "[[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]"]
 ---
 
 # Sınav ve Performans Kaygısı — "Aynı Paragraf"
+
+> **Site (ara sürüm) hazır:** `02-Websites/projects/humentis/scroll-siteler/sinav-ve-performans-kaygisi/ayni-paragraf/` · Canlı: https://claude.ai/artifact/LMgS35cUnshprX1pdSX7Hx
+> 28 Eylül 2026: kodla çizilen uçuşan kâğıtlar gerçekçi bulunmadı. Hikâye artık gerçek videoyla anlatılıyor. Şu an `pencere.mp4` (telefon → kalkar → pencereyi açar) var; rüzgârın kâğıtları uçurduğu klip üretilince araya eklenecek. O zamana kadar geçiş savrulan perdeden yapılıyor.
 
 ## 1. Künye
 
@@ -42,13 +45,13 @@ Sayfalar odanın içinde yavaşça dönüyor. Ve bir an, hepsi aynı cümleye d�
 
 | % | Tip | Görsel / klip | Ne oluyor | Yazı |
 |---|---|---|---|---|
-| 0–20 | frame | oda → not | Kalem kenara 9 çizgi çeker | *Aynı paragraf. Dokuzuncu kez.* |
-| 20–40 | frame | telefon-masa | Telefon titrer, ters döner | *"Ben 4. üniteyi de bitirdim."* |
-| 40–55 | frame (scrub) | pencere | Pencere açılır, perde şişer | — |
-| 55–75 | pages | oda-sayfalar | Sayfalar havalanıp savrulur | *İlk kez, bir şeyin elinden kaymasına izin veriyor.* |
-| 75–100 | pages (geçiş) | kagit-doku | Sayfalar tek sayfada birleşir; kenarda 9 çizgi | **Sınav yaklaştıkça nefesiniz daralıyorsa** |
+| 0–8 | kurgu | `pencere` 0→0.3 sn | Gece, Deniz masada, arkası dönük | *Aynı paragraf. Dokuzuncu kez.* |
+| 8–26 | kurgu | `pencere` 0.3→2.4 sn | Telefona bakar, ters çevirip bırakır | Bildirim (kodla): *Sınıf Grubu — Ece: Ben 4. üniteyi de bitirdim, yarın tekrar yapacağım. 👏 3* |
+| 26–72 | kurgu | `pencere` 2.4→son | Kalkar, pencereye gider, açar; perde savrulur | *Nefes almak için kalkıyor.* (48–66) |
+| — | kurgu | `ruzgar` (üretilecek) | Rüzgâr kâğıtları masadan kaldırır, odada uçuşurlar; Deniz tutmaz | *İlk kez, bir şeyin elinden kaymasına izin veriyor.* |
+| 72–100 | geçiş | son kare | **Şimdilik:** savrulan beyaz perdeye yaklaşma (×8, bulanıklık + parlaklık), kumaş krem sayfaya döner. **`ruzgar` gelince:** kameraya süzülen tek sayfa ekranı kaplar. Kenarda 9 çizgi silik iz. | **Sınav yaklaştıkça nefesiniz daralıyorsa** |
 
-**Kısaltmada çıkarılanlar:** Omuz üstü nefes sahnesi çıkarıldı; `omuz` karesi kullanılmıyor.
+**Kısaltmada çıkarılanlar:** Omuz üstü nefes sahnesi ve ders notu yakın planı çıkarıldı. 9 çizgi sadece sondaki sayfanın kenarında kalıyor.
 
 ## 4. Geçiş anı — "Sayfalar tek sayfa olur"
 
@@ -103,7 +106,8 @@ Kapanış satırı: *Deniz o gece yazıyı sonuna kadar okudu. Sonra ilk kez, ki
 - **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/sinav-ve-performans-kaygisi/ayni-paragraf/`
 - **Görsel promptları:** [[scroll-ayni-paragraf-brief]] (`07-AI-Gorsel/humentis/scroll-ayni-paragraf-brief.md`): karakter kartları ve her kare için hazır İngilizce prompt
 - **Görsel klasörü:** `03-Assets/images/humentis/scroll/sinav-ve-performans-kaygisi/ayni-paragraf/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
-- **Toplam uzunluk:** 4 ekran boyu (kısa kesim)
+- **Toplam uzunluk:** 4 ekran boyu (`#hikaye` 500vh)
+- **Video:** `pencere.mp4` (Flow/Veo, 10 sn, 720p → 1080p büyütüldü, all-intra, scrub), başlangıç karesi `oda.jpg`. Promptlar: [[scroll-ayni-paragraf-brief]] "Video klipleri" bölümü.
 - **Müzik:** 30%'da gece parçası başlar, 72%'de sabah parçasına geçiş.
 
 ### Sahne listesi
