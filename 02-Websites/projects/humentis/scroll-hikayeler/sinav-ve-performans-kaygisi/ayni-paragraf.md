@@ -95,3 +95,41 @@ Kapanış satırı: *Deniz o gece yazıyı sonuna kadar okudu. Sonra ilk kez, ki
 | A-pencere | **Yeni** | Pencere kulpunda el, keten perde, dışarıda gece (I2V: pencere açılır, perde şişer) |
 | A-oda-sayfalar | **Yeni** | Geniş: Deniz arkadan pencere önünde, odada havada birkaç sayfa (I2V ile uçuşma) |
 | A-kagit-doku | **Yeni** | Düz, boş krem kâğıt dokusu, yüksek çözünürlük (animasyondaki sayfalar için) |
+
+## Kodlama için
+
+> Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
+
+- **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/sinav-ve-performans-kaygisi/ayni-paragraf/`
+- **Görsel klasörü:** `03-Assets/images/humentis/scroll/sinav-ve-performans-kaygisi/ayni-paragraf/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
+- **Toplam uzunluk:** 8 ekran boyu
+- **Müzik:** 30%'da gece parçası başlar, 72%'de sabah parçasına geçiş.
+
+### Sahne listesi
+
+| # | % | Tip | Görsel | Metin(ler) | Not |
+|---|---|---|---|---|---|
+| 1 | 0–8 | frame | oda | *01:50. Sınava 19 gün.* | Filmdeki a1 karesi kullanılabilir |
+| 2 | 8–20 | frame | not | *Aynı paragraf. Dokuzuncu kez.* | 9 kurşun kalem çizgisi (SVG path) sırayla çizilir |
+| 3 | 20–30 | frame | telefon-masa | *"Ben 4. üniteyi de bitirdim."* | Telefon titreşimi (CSS shake 2px), sonra ters döner |
+| 4 | 30–40 | frame | omuz | *Nefes. Yarım kalıyor.* | Vinyet daralır; müzik 1 başlar |
+| 5 | 40–48 | frame | pencere | — | Pencere klibi scroll'a bağlı |
+| 6 | 48–58 | pages | oda-sayfalar | *İlk kez, bir şeyin elinden kaymasına izin veriyor.* | İlk sayfa havalanır |
+| 7 | 58–72 | pages | oda-sayfalar | — | 8–10 sayfa 3D döner |
+| 8 | 72–86 | pages | kagit-doku | — | Sayfalar kameraya gelir, deste olur; müzik 2'ye geçiş |
+| 9 | 86–100 | pages | kagit-doku | **Sınav ve performans kaygısı** | Geçiş §4; kenarda 9 çizgi silik kalır |
+
+### Özel davranışlar
+
+- `pages`: kâğıtlar `kagit-doku.jpg` arka planlı div'ler; `transform: rotate3d()` + `translateZ` scroll'a bağlı.
+- 9 çizgi aynı SVG, site bölümünde blog yazısının kenarında `opacity .25` ile kalır.
+
+### Görsel dosyaları
+
+- `oda.jpg`: geniş, Deniz arkadan masada (filmdeki a1 kopyalanabilir)
+- `not.jpg`: ders notu yakın plan, kurşun kalem, kenarda boşluk
+- `telefon-masa.jpg`: masada ekranı flu ışık veren telefon, üstten
+- `omuz.jpg`: Deniz omuz üstü (filmdeki a2 kullanılabilir)
+- `pencere.jpg`: pencere kulpunda el, keten perde (klip: açılır)
+- `oda-sayfalar.jpg`: Deniz arkadan pencere önünde, havada birkaç sayfa
+- `kagit-doku.jpg`: boş krem kâğıt dokusu, yüksek çözünürlük

@@ -7,7 +7,7 @@ status: draft
 date: 2026-09-28
 url: ""
 tags: [website, humentis, scroll, konu, kaygi]
-related: ["[[00-genel-bakis]]", "[[gecisler]]", "[[site-bolumleri]]"]
+related: ["[[00-genel-bakis]]", "[[gecisler]]", "[[site-bolumleri]]", "[[provalar]]", "[[her-sey-yolunda]]", "[[miras]]"]
 ---
 
 # Kaygı ve Çok Düşünmek
@@ -16,9 +16,14 @@ Belirsizliği kontrol etmeye çalışan zihin. Solmaz Şenyüz'ün "Neden her ş
 
 ## Hikâyeler
 
-| Hikâye | Durum | Ana geçiş | Açıldığı yer |
-|---|---|---|---|
-| Ya Olursa? | 💡 Fikir | Tavandaki düşünceler yumak olur, yumak çözülür | Blog: "Neden her şeyi bu kadar çok düşünüyorum?" |
+| Hikâye | Durum | Duygusal çekirdek | Geçiş | Açıldığı yer |
+|---|---|---|---|---|
+| [[provalar]] | ✅ Tam | Kaygı, hiç yaşanmamış şeylerin provasıdır | Odayı dolduran "prova" versiyonları sabah ışığında kaybolur, tek gerçek an kalır | "Kaygı, hiç yaşanmamış şeylerin provasıdır" |
+| [[her-sey-yolunda]] | ✅ Tam | Dışarıdan kimse fark etmiyor, ama o biliyor | Baştan sona ikiye bölünmüş ekran (dışarıdan / içeriden) birleşir | "Dışarıdan kimse fark etmiyor. Ama siz biliyorsunuz." |
+| [[miras]] | ✅ Tam | Bazı kaygılar bize ait değildir | Aynı kapı, aynı cümle, üç kuşak; zincir yeni bir cümleyle kırılır | "Bazı kaygılar bize ait değildir. Bizden önce başlar." |
+| Ya Olursa? | 💡 Fikir | — | Tavandaki düşünceler yumak olur | Blog: "Neden her şeyi bu kadar çok düşünüyorum?" |
+
+Üç tam hikâyede de geçiş bir nesnenin sayfaya dönüşmesi değil, hikâyenin anlamının kendisi. Yeni konular bu yaklaşımla yazılacak.
 
 ## Fikir aşamasındaki hikâyeler
 

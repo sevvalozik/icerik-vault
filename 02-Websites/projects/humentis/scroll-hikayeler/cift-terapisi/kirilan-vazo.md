@@ -103,3 +103,43 @@ Kapanış satırı (sayfanın altında, hikâyeye dönüş): *Ece randevu formun
 | B-parca-el | **Yeni** | Ece'nin alyanslı eli bir parçayı alıyor, yakın |
 
 Promptlar üretime geçerken [[07-AI-Gorsel/humentis/bulunma-hikayesi-brief]]'e "Hikâye B" başlığıyla eklenecek (aynı karakter ve mekan kartları).
+
+## Kodlama için
+
+> Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
+
+- **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/cift-terapisi/kirilan-vazo/`
+- **Görsel klasörü:** `03-Assets/images/humentis/scroll/cift-terapisi/kirilan-vazo/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
+- **Toplam uzunluk:** 9 ekran boyu
+- **Müzik:** 86%'da gece parçası → sabah parçası (4 sn). 70%'ten önce müzik yok, sadece oda sesi.
+
+### Sahne listesi
+
+| # | % | Tip | Görsel | Metin(ler) | Not |
+|---|---|---|---|---|---|
+| 1 | 0–8 | frame | masa | *Salı. 21:14.* (senaryo başlığı) | Işık siyahtan açılır |
+| 2 | 8–18 | frame | masa | *İki tabak. Biri hiç soğumadı, çünkü hiç ısınmadı.* | Kamera soldan sağa pan; telefon ekranı bir kez parlar (CSS glow) |
+| 3 | 18–28 | frame | eller | *Günlerdir bu cümleyi hazırlıyor.* | Push-in |
+| 4 | 28–40 | frame | eller | "Seninle bir şey konuşmak istiyorum." / "Yine mi?" / "Beni hiç dinlemiyorsun." / "Ben de yoruldum." | Replikler sırayla, her yenisi öncekini %40'a soldurur |
+| 5 | 40–48 | frame | koridor | — | Gölge scroll ile sola kayar |
+| 6 | 48–55 | frame | kapi | — | Kapı klibi scroll'a bağlı oynar (video.currentTime = t×süre); son %2 hızlanır |
+| 7 | 55–63 | frame | vazo | — | Vazo klibi scroll'a bağlı; düşme anında scroll çarpanı 0.4 (yavaşlama) |
+| 8 | 63–70 | shards | kirik | — | Parçalar havalanır ve asılı kalır |
+| 9 | 70–78 | frame | parca-el | *Kızgın değil. Sadece çok yorgun.* | Müzik 1 başlar |
+| 10 | 78–86 | typing | kirik | *evliliğimizde artık konuşamıyoruz* | Yerde telefon ışığı |
+| 11 | 86–100 | shards | — | **Çift terapisi** (parça üstünde) | Geçiş §4; müzik 2'ye geçiş |
+
+### Özel davranışlar
+
+- `shards`: 7 poligon, iç yüzleri `#F6EFDD`; birleşme çizgileri `stroke: #CEAB69`, `stroke-dasharray` animasyonu.
+- Kapı ve vazo sahneleri klip gerektirir; klip yoksa tek görsel + CSS `rotate`/`translateY` ile taklit.
+
+### Görsel dosyaları
+
+- `masa.jpg`: üstten yemek masası, iki tabak (biri dolu), ters telefon, gece
+- `eller.jpg`: Ece arkadan, masada kenetli eller
+- `koridor.jpg`: koridor, duvarda uzaklaşan erkek gölgesi
+- `kapi.jpg`: çalışma odası kapısı, orta plan (klip: kapanır)
+- `vazo.jpg`: rafta mavi-krem vazo (klip: titreyip düşer)
+- `kirik.jpg`: yerde kırık vazo parçaları, üstten
+- `parca-el.jpg`: Ece'nin alyanslı eli bir parçayı alıyor

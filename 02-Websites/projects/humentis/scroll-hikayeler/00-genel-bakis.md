@@ -32,27 +32,38 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[yas-ve-kayip]] | — | Yarım Kalan Fincan |
 | [[uyku-ve-stres]] | — | Saat 04:12 |
 | [[ozguven]] | — | Ayna |
+| [[cocuk-gelisimi-ve-okula-hazirlik]] | — | Küçük Ayakkabılar, Boyama Sayfası |
+| [[dikkat-ve-odaklanma]] | — | Yarım Kalanlar, Ödev Masası |
+| [[panik-ve-sosyal-kaygi]] | — | Sıra Bende, Kapının Önü |
+| [[evlilik-oncesi-ve-bosanma]] | — | Davetiye Provası, İki Anahtar |
+| [[ayrilik-ve-iliski-sonrasi]] | — | Kazak, Yaka |
+| [[sinir-koyma-ve-ofke]] | — | Tamam, Düdüklü Tencere |
+| [[mukemmeliyetcilik-ve-erteleme]] | — | Buruşuk Kâğıtlar, Yarın Listesi |
+| [[kimlik-ve-yasam-gecisleri]] | — | Koliler, Boş Askı |
+| [[saglik-kaygisi]] | — | Nabız, Belirti Defteri |
+| [[sosyal-medya-bagimliligi]] | — | Başparmak, Şarj %1 |
 
 **Tam hikâye** = sahne sahne scroll senaryosu, geçiş tarifi, açılan sayfanın metni ve görsel listesi hazır; Furkan Bey doğrudan kurabilir.
 **Fikir** = kısa anlatım ve geçiş; hoca seçerse tam hikâyeye çevrilecek.
 
 ## Ortak dosyalar (`_ortak/`)
 
+- [[teknik-spec]]: **siteyi kodlamak için şartname**. Claude'a bir hikâye dosyası + bu dosya verilince site doğrudan kurulur
 - [[gecisler]]: her hikâyeye takılabilen 10 geçiş (G1–G10)
 - [[site-bolumleri]]: filmden çıkan, sitenin tamamında kullanılabilecek bölümler (pencereler girişi, el yazısı randevu defteri, arama cümleleri duvarı…)
 - [[sosyal-medya-ve-sunum]]: film karelerinden sosyal medya fikirleri ve hocalara sunum önerileri
+- [[uzmanlar-ve-konular]]: 17 uzman, çalışma alanları ve hangi konuya hangi hocanın uyduğu
 
 ## Klasör yapısı
 
 ```
 scroll-hikayeler/
 ├── 00-genel-bakis.md
-├── _ortak/  (gecisler, site-bolumleri, sosyal-medya-ve-sunum)
+├── _ortak/  (gecisler, site-bolumleri, sosyal-medya-ve-sunum, uzmanlar-ve-konular)
 ├── cift-terapisi/               cift-terapisi.md + kirilan-vazo.md
 ├── sinav-ve-performans-kaygisi/ sinav-ve-performans-kaygisi.md + ayni-paragraf.md
 ├── tukenmislik-ve-is-stresi/    tukenmislik-ve-is-stresi.md + motor-kapali.md
-└── kaygi-ve-cok-dusunmek/, iliskiler-ve-baglanma/, ergen-ve-ebeveyn/,
-    aile-danismanligi/, yas-ve-kayip/, uyku-ve-stres/, ozguven/
+└── … her konu kendi klasöründe (20 konu, liste yukarıda)
 ```
 
 Yeni konu eklerken: klasör + aynı adlı konu dosyası; fikir tam hikâyeye dönüşünce konu klasörüne ayrı dosya olarak eklenir ve konu dosyasındaki tabloda durumu ✅ yapılır.

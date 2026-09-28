@@ -96,3 +96,37 @@ Kapanış satırı: *Selim motoru çalıştırmadan önce randevu formunu doldur
 | C-cam | **Yeni** | Ön camda yağmur damlaları, arkada flu otopark ışıkları, kişi yok |
 | C-silecek | Alternatif C2 için | Aynı cam, silecek hareketi (I2V) |
 | C-tavan-lamba | Alternatif C3 için | Tavan lambası açık, sıcak ışık (C1'i referans ver) |
+
+## Kodlama için
+
+> Bu bölüm [[teknik-spec]] ile birlikte okunur. Claude bu tabloyu `hikaye.js`'e birebir çevirir.
+
+- **Çıktı klasörü:** `02-Websites/projects/humentis/scroll-siteler/tukenmislik-ve-is-stresi/motor-kapali/`
+- **Görsel klasörü:** `03-Assets/images/humentis/scroll/tukenmislik-ve-is-stresi/motor-kapali/` (dosya adı = aşağıdaki "Görsel" sütunu + `.jpg`; aynı adla `.mp4` varsa klip oynar; yoksa yer tutucu)
+- **Toplam uzunluk:** 8 ekran boyu
+- **Müzik:** 32%'de gece parçası, 78%'de sabah parçasına geçiş.
+
+### Sahne listesi
+
+| # | % | Tip | Görsel | Metin(ler) | Not |
+|---|---|---|---|---|---|
+| 1 | 0–10 | frame | arka-koltuk | *21:05. Motor kapalı.* | Filmdeki c1 kullanılabilir; ön camda ışık kayar |
+| 2 | 10–22 | text + frame | arka-koltuk | *3 toplantı.* / *2 kriz.* / *1 "yarına yetişir mi?"* / *Hepsi yetişti.* | Satırlar üst üste, öncekiler solar |
+| 3 | 22–32 | frame | konsol | *"Yarın 08:00 — kısa bir değerlendirme."* | Telefon ışığı bir kez nabız gibi parlar |
+| 4 | 32–46 | frame | cam | *Pazar akşamları o ağırlık.* / *Üç kez ertelenen alarm.* / *Eskiden sevdiği iş.* | Her cümle bir damlayla aşağı kayar; müzik 1 başlar |
+| 5 | 46–56 | frame | el-telefon | *Kimseye söylemedi. Söylenecek büyük bir şey yok gibi.* | Filmdeki c2 kullanılabilir |
+| 6 | 56–68 | typing | el-telefon | *her sabah işe gitmek istememek* | rewrite: yaz → sil → yeniden yaz |
+| 7 | 68–78 | dive | el-telefon | — | Push-in başlar |
+| 8 | 78–100 | dive | — | **Tükenmişlik ve iş stresi** | Işık → damla → altın nokta → ölçek (§4); müzik 2'ye geçiş |
+
+### Özel davranışlar
+
+- `dive`: ekran ışığı `radial-gradient` ile büyür; damlalar 5 altın noktaya dönüşüp site bölümündeki öz değerlendirmenin 1–5 ölçeğine yerleşir (aynı DOM öğeleri).
+- Öz değerlendirme: 5 soru, 1–5 butonları, sonuç tek sabit metin; hiçbir veri kaydedilmez/gönderilmez.
+
+### Görsel dosyaları
+
+- `arka-koltuk.jpg`: arka koltuktan Selim, sol direksiyon, gece (filmdeki c1)
+- `konsol.jpg`: ön konsolda yanan telefon, flu ekran
+- `cam.jpg`: ön camda yağmur damlaları, arkada flu otopark
+- `el-telefon.jpg`: telefonu tutan el, omuz üstü (filmdeki c2)
