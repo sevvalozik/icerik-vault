@@ -87,6 +87,24 @@ Cinematic film still, photorealistic, 1960s rural Anatolia. The entrance of an o
 - Üç dönem karesi (`kapi-bugun`, `kapi-1994`, `kapi-1963`) **aynı kadrajda** olmalı: kapı ortada, kadın kapının solunda. `kapi-bugun`'u referans yükleyerek üret, yoksa erime geçişi kopuk durur.
 - Hiçbir karede çocuk yok; sadece `kapi-bugun-sabah2`'de çantanın kenarı.
 
+## Hareket (video) promptları
+
+Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir videoya çevrilir (image-to-video). **Önce kareyi yukarıdaki promptla üret, sonra o kareyi başlangıç karesi olarak videoya ver.**
+
+- **Model:** Gemini'deki Veo ("Video" modu, görsel yükle) ya da Kling (image-to-video). Runway'de prompt kısa tutulur.
+- **Ses kapalı**, 16:9, 1080p, kamera hareketi yazılandan fazla olmasın.
+- **Kaydet:** aynı klasöre, aynı adla `.mp4` (örn. `oda-gece.mp4`). Site `.mp4` varsa fotoğraf yerine onu kullanır.
+- **Mod:** `loop` = arka planda sürekli, hafif · `scrub` = scroll'a bağlı: kaydırdıkça ilerler, geri kaydırınca geri gider.
+- **Videoları koyunca Claude'a söyle:** scrub'ın akıcı olması için videoların özel ayarla yeniden kodlanması gerekiyor (her kare anahtar kare). Bunu Claude yapar; elle yapılacaksa: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`
+
+| Kod | Mod | Süre (sn) | Hareket promptu |
+|---|---|---|---|
+| `kapi-bugun` | scrub | 5 | `Static camera. The woman slowly pulls the front door closed until it clicks shut; morning light on the floor narrows to a thin line. The person's face never becomes visible. Nothing else changes. No text. No child appears.` |
+| `kapi-bugun-sabah2` | scrub | 5 | `Static camera. The corner of the small backpack disappears through the doorway; the woman's hand stays on the handle, then she slowly closes the door. The person's face never becomes visible. Nothing else changes. No text. No child appears.` |
+| `kapi-1994` | loop | 5 | `Static camera. The lace curtain on the door window moves slightly in a draught; the woman stands at the half-open door, still. The person's face never becomes visible. Nothing else changes. No text.` |
+| `pencere-1994` | loop | 5 | `Static camera. The woman holds the lace curtain aside; far below the school minibus turns the corner and disappears. The person's face never becomes visible. Nothing else changes. No text.` |
+| `kapi-1963` | loop | 5 | `Static camera. Dust drifts in the pale morning light at the half-open wooden door; the woman's headscarf moves slightly in the breeze. The person's face never becomes visible. Nothing else changes. No text.` |
+
 ## Üretim logu
 
 | Tarih | Kod | Model | Varyant | Puan | Not |

@@ -130,6 +130,29 @@ Cinematic film still, photorealistic, close-up. The left hand of a man in his mi
 - Her sahnenin **dışarıdan** ve **içeriden** karesi aynı anı gösterir; mümkünse `-ic` karelerini `-dis` karesini referans vererek üret, ışık ve kıyafet eşleşsin.
 - Araba **sol direksiyonlu** olmalı (filmdeki Selim kareleriyle aynı hata tekrarlanmasın).
 
+## Hareket (video) promptları
+
+Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir videoya çevrilir (image-to-video). **Önce kareyi yukarıdaki promptla üret, sonra o kareyi başlangıç karesi olarak videoya ver.**
+
+- **Model:** Gemini'deki Veo ("Video" modu, görsel yükle) ya da Kling (image-to-video). Runway'de prompt kısa tutulur.
+- **Ses kapalı**, 16:9, 1080p, kamera hareketi yazılandan fazla olmasın.
+- **Kaydet:** aynı klasöre, aynı adla `.mp4` (örn. `oda-gece.mp4`). Site `.mp4` varsa fotoğraf yerine onu kullanır.
+- **Mod:** `loop` = arka planda sürekli, hafif · `scrub` = scroll'a bağlı: kaydırdıkça ilerler, geri kaydırınca geri gider.
+- **Videoları koyunca Claude'a söyle:** scrub'ın akıcı olması için videoların özel ayarla yeniden kodlanması gerekiyor (her kare anahtar kare). Bunu Claude yapar; elle yapılacaksa: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`
+
+| Kod | Mod | Süre (sn) | Hareket promptu |
+|---|---|---|---|
+| `sunum-dis` | loop | 5 | `Static camera. The man presents calmly, one hand gesturing slowly; the audience nods, the wall screen glows softly. The person's face never becomes visible. Nothing else changes. No text.` |
+| `sunum-ic` | loop | 4 | `Static close-up. The fingers tighten on the lectern edge, relax a little, then tighten again. A slight tremor. The person's face never becomes visible. Nothing else changes. No text.` |
+| `alkis-dis` | scrub | 4 | `Static camera. The audience applauds; the man gives a small nod and steps back from the lectern. The person's face never becomes visible. Nothing else changes. No text.` |
+| `alkis-ic` | loop | 5 | `Static camera. The man, hands braced on the sink, breathes deeply; his back rises and falls slowly twice. The person's face never becomes visible. Nothing else changes. No text.` |
+| `koridor-dis` | scrub | 5 | `Static camera. The man walks away down the corridor with relaxed shoulders. The person's face never becomes visible. Nothing else changes. No text.` |
+| `koridor-ic` | loop | 4 | `Tracking close-up. The damp palms wipe down the sides of the trousers while walking. The person's face never becomes visible. Nothing else changes. No text.` |
+| `parti-dis` | scrub | 5 | `Static camera. The man lights the last candle; friends' hands raise glasses; soft laughter movement. The person's face never becomes visible. Nothing else changes. No text.` |
+| `parti-ic` | loop | 4 | `Static close-up. Under the table the thumb hovers over the glowing phone, taps once, the screen glow flickers. The person's face never becomes visible. Nothing else changes. No text.` |
+| `araba-dis` | loop | 6 | `Static camera from the back seat. The red light glows through the windscreen, rain streaks slowly; the man sits still at the wheel. The person's face never becomes visible. Nothing else changes. No text.` |
+| `araba-ic` | loop | 4 | `Static close-up. The knuckles whiten as the grip on the steering wheel tightens; red light flickers on the skin. The person's face never becomes visible. Nothing else changes. No text.` |
+
 ## Üretim logu
 
 | Tarih | Kod | Model | Varyant | Puan | Not |

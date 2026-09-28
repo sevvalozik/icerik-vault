@@ -32,6 +32,13 @@ Hepsi `03-Assets/images/humentis/scroll/kaygi-ve-cok-dusunmek/provalar/` altına
 
 Görseller gelene kadar ışık tonunda yer tutucu ve silüet figürler görünür.
 
+## Videolar (film hissi için)
+
+Her arka plan karesi aynı adla `.mp4` olarak da konabilir; site fotoğraf yerine videoyu kullanır. Hareket promptları: `07-AI-Gorsel/humentis/scroll-provalar-brief.md`.
+
+- `oda-gece.mp4`: loop · `oda-sabah.mp4`: scrub (ışık kaydırdıkça odaya yayılır) · `koridor.mp4`: scrub (kapıyı tıklatır, kapı açılır) · `koridor-duvar.mp4`: loop
+- Scrub videoları özel ayarla kodlanmalı (her kare anahtar kare), bkz. [[teknik-spec]] §4b.
+
 ## Müzik
 
 `03-Assets/audio/humentis/bulunma-muzik.mp3` (gece) → 64%'te `bulunma-sabah-1.mp3`. 58–64 arası tam sessizlik.

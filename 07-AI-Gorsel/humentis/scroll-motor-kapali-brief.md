@@ -63,6 +63,23 @@ Cinematic film still, photorealistic. View through the windscreen of a parked ca
 - `arka-koltuk` ve `el-telefon` filmden kopyalandı (sol direksiyonlu yenilenmiş hâlleri).
 - Alternatif geçişler seçilirse: silecek klibi `The wiper sweeps once across the windscreen. Nothing else moves.`
 
+## Hareket (video) promptları
+
+Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir videoya çevrilir (image-to-video). **Önce kareyi yukarıdaki promptla üret, sonra o kareyi başlangıç karesi olarak videoya ver.**
+
+- **Model:** Gemini'deki Veo ("Video" modu, görsel yükle) ya da Kling (image-to-video). Runway'de prompt kısa tutulur.
+- **Ses kapalı**, 16:9, 1080p, kamera hareketi yazılandan fazla olmasın.
+- **Kaydet:** aynı klasöre, aynı adla `.mp4` (örn. `oda-gece.mp4`). Site `.mp4` varsa fotoğraf yerine onu kullanır.
+- **Mod:** `loop` = arka planda sürekli, hafif · `scrub` = scroll'a bağlı: kaydırdıkça ilerler, geri kaydırınca geri gider.
+- **Videoları koyunca Claude'a söyle:** scrub'ın akıcı olması için videoların özel ayarla yeniden kodlanması gerekiyor (her kare anahtar kare). Bunu Claude yapar; elle yapılacaksa: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`
+
+| Kod | Mod | Süre (sn) | Hareket promptu |
+|---|---|---|---|
+| `arka-koltuk` | loop | 6 | `Static camera from the back seat. Street lamp light drifts slowly across the windscreen; the man does not move. The person's face never becomes visible. Nothing else changes. No text.` |
+| `konsol` | loop | 4 | `Static close-up. The phone screen in the console lights up with a soft pulse, then dims. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `cam` | loop | 6 | `Static camera focused on the windscreen. Rain droplets slowly gather and run down the glass; car park lights blur behind. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `el-telefon` | scrub | 4 | `Static over-the-shoulder. The hand lifts the phone from the steering wheel toward the camera. The person's face never becomes visible. Nothing else changes. No text.` |
+
 ## Üretim logu
 
 | Tarih | Kod | Model | Varyant | Puan | Not |

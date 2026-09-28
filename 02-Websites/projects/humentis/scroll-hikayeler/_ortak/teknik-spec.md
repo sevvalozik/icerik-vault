@@ -67,6 +67,18 @@ Hikâye dosyalarında geçen tipler. `hikaye.js` içinde her sahne bir `tip` al�
 
 Yeni bir hikâye yeni bir tip gerektirirse hikâye dosyasının "Kodlama için" bölümünde tarif edilir.
 
+## 4b. Hareket: video öncelikli
+
+Durağan fotoğraf + zoom sitede "fotoğraf" gibi algılanıyor; hedef film hissi. Bu yüzden:
+
+- Her arka plan önce **aynı adla `.mp4`** arar, yoksa `.jpg`, o da yoksa yer tutucu (film.html ve Provalar motoru böyle).
+- Sahne verisinde her arka plan için `video: "loop"` ya da `video: "scrub"`:
+  - **loop:** sessiz, döngüde, sahne görünürken oynar (perde kıpırtısı, ekran ışığı, yağmur).
+  - **scrub:** `video.currentTime = sahneİlerlemesi × süre`; kaydırdıkça ilerler, geri kaydırınca geri gider (kapı kapanır, vazo düşer, ışık odaya yayılır).
+- Mod ve hareket promptu her kare için görsel brief'inde (`07-AI-Gorsel/humentis/scroll-<hikaye>-brief.md` → "Hareket (video) promptları").
+- **Kodlama şartı:** scrub akıcı olsun diye videolar her karesi anahtar kare olacak şekilde yeniden kodlanır: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`. Loop videolar da aynı komutla küçültülür.
+- Video yoksa bile sahne ölü durmaz: hayaletler/figürler CSS ile hafif süzülür (`suzul` animasyonu), ışıklar gradient ile hareket eder.
+
 ## 5. Tasarım tokenları
 
 - Renkler (logo paleti): petrol `#284C51`, koyu petrol `#0f2226`, krem `#F6EFDD`, fildişi `#f8f5ed`, altın `#CEAB69`, koyu altın `#7A5C22`, kömür `#564E44`

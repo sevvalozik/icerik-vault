@@ -131,6 +131,25 @@ Cinematic film still, photorealistic. The same calm office corridor in morning d
 - `oda-gece`'de Nil'in etrafında boş zemin kalması önemli: hayaletler oraya yerleşiyor.
 - `oda-sabah` bir düzenleme promptu: `oda-gece`yi yükleyip ver ki aynı oda kalsın.
 
+## Hareket (video) promptları
+
+Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir videoya çevrilir (image-to-video). **Önce kareyi yukarıdaki promptla üret, sonra o kareyi başlangıç karesi olarak videoya ver.**
+
+- **Model:** Gemini'deki Veo ("Video" modu, görsel yükle) ya da Kling (image-to-video). Runway'de prompt kısa tutulur.
+- **Ses kapalı**, 16:9, 1080p, kamera hareketi yazılandan fazla olmasın.
+- **Kaydet:** aynı klasöre, aynı adla `.mp4` (örn. `oda-gece.mp4`). Site `.mp4` varsa fotoğraf yerine onu kullanır.
+- **Mod:** `loop` = arka planda sürekli, hafif · `scrub` = scroll'a bağlı: kaydırdıkça ilerler, geri kaydırınca geri gider.
+- **Videoları koyunca Claude'a söyle:** scrub'ın akıcı olması için videoların özel ayarla yeniden kodlanması gerekiyor (her kare anahtar kare). Bunu Claude yapar; elle yapılacaksa: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`
+
+| Kod | Mod | Süre (sn) | Hareket promptu |
+|---|---|---|---|
+| `oda-gece` | loop | 6 | `Static camera. The woman sits almost still on the edge of the bed, breathing slowly; her shoulders rise and fall once. The phone on the bedside table lights up briefly, then goes dark. City lights flicker faintly outside. The person's face never becomes visible. Nothing else changes. No text.` |
+| `oda-sabah` | scrub | 6 | `Static camera. Pale dawn light slowly widens through the gap in the curtains and sweeps across the floor from left to right toward the woman on the bed. The person's face never becomes visible. Nothing else changes. No text.` |
+| `koridor` | scrub | 4 | `Static camera. The woman knocks twice on the oak door, lowers her hand, and the door opens a few centimetres inward. The person's face never becomes visible. Nothing else changes. No text.` |
+| `koridor-duvar` | loop | 5 | `Very slow push-in. The woman leans against the wall and takes one long slow breath out; her shoulders drop. The person's face never becomes visible. Nothing else changes. No text.` |
+
+`nil-poz-1…6` videoya çevrilmez: şeffaf PNG kalır, hareketi (hafif süzülme, nefes) site kodla verir.
+
 ## Üretim logu
 
 | Tarih | Kod | Model | Varyant | Puan | Not |

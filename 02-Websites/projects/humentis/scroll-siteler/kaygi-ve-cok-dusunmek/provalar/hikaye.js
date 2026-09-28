@@ -17,11 +17,12 @@ window.HIKAYE = {
   },
 
   // Arka planlar: hangi aralıkta hangi görsel (ton: yer tutucunun ışık rengi)
+  // video: aynı adla .mp4 varsa kullanılır. "loop" = sürekli döner, "scrub" = scroll'a bağlı ilerler
   arkaPlan: [
-    { gorsel: "oda-gece",      a: 0,  b: 58, ton: "gece" },
-    { gorsel: "oda-sabah",     a: 58, b: 74, ton: "safak" },
-    { gorsel: "koridor",       a: 74, b: 88, ton: "gun" },
-    { gorsel: "koridor-duvar", a: 88, b: 98, ton: "gun" },
+    { gorsel: "oda-gece",      a: 0,  b: 58, ton: "gece",  video: "loop" },
+    { gorsel: "oda-sabah",     a: 58, b: 74, ton: "safak", video: "scrub" },
+    { gorsel: "koridor",       a: 74, b: 88, ton: "gun",   video: "scrub" },
+    { gorsel: "koridor-duvar", a: 88, b: 98, ton: "gun",   video: "loop" },
   ],
 
   // Gerçek Nil (yer tutucu figür; görsel gelince arka plan görselinin içinde olacak)

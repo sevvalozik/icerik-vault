@@ -90,6 +90,27 @@ Flat top-down photograph of a single blank sheet of warm cream paper with a subt
 - `oda` ve `omuz` filmden kopyalandı; yeniden üretme.
 - `pencere` için klip: `The hand turns the handle and the window opens inward; the curtain billows. Nothing else moves.`
 
+## Hareket (video) promptları
+
+Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir videoya çevrilir (image-to-video). **Önce kareyi yukarıdaki promptla üret, sonra o kareyi başlangıç karesi olarak videoya ver.**
+
+- **Model:** Gemini'deki Veo ("Video" modu, görsel yükle) ya da Kling (image-to-video). Runway'de prompt kısa tutulur.
+- **Ses kapalı**, 16:9, 1080p, kamera hareketi yazılandan fazla olmasın.
+- **Kaydet:** aynı klasöre, aynı adla `.mp4` (örn. `oda-gece.mp4`). Site `.mp4` varsa fotoğraf yerine onu kullanır.
+- **Mod:** `loop` = arka planda sürekli, hafif · `scrub` = scroll'a bağlı: kaydırdıkça ilerler, geri kaydırınca geri gider.
+- **Videoları koyunca Claude'a söyle:** scrub'ın akıcı olması için videoların özel ayarla yeniden kodlanması gerekiyor (her kare anahtar kare). Bunu Claude yapar; elle yapılacaksa: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`
+
+| Kod | Mod | Süre (sn) | Hareket promptu |
+|---|---|---|---|
+| `oda` | loop | 6 | `Static camera. The student sits hunched at the desk, turns one page slowly, then stops. The laptop glow flickers softly. The person's face never becomes visible. Nothing else changes. No text.` |
+| `omuz` | loop | 5 | `Static over-the-shoulder. Thumbs type slowly on the phone, pause, type again. Screen stays a blank glow. The person's face never becomes visible. Nothing else changes. No text.` |
+| `not` | loop | 4 | `Static close-up. The pencil rolls slightly on the page; the phone glow off-frame pulses once. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `telefon-masa` | scrub | 3 | `Static overhead. The phone vibrates twice, sliding a few millimetres on the desk, then its screen goes dark. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `pencere` | scrub | 4 | `Static close shot. The hand turns the handle and the window swings inward; the linen curtain billows. The person's face never becomes visible. Nothing else changes. No text.` |
+| `oda-sayfalar` | loop | 6 | `Static wide camera. The loose sheets drift and turn slowly in the air; the curtain billows; the student stands still. The person's face never becomes visible. Nothing else changes. No text.` |
+
+`kagit-doku` videoya çevrilmez; sayfaların savrulması kodla yapılır.
+
 ## Üretim logu
 
 | Tarih | Kod | Model | Varyant | Puan | Not |

@@ -102,6 +102,26 @@ Cinematic film still, photorealistic, close-up. The hand of a woman in her mid-t
 
 - `kapi` ve `vazo` için I2V klip isteniyorsa: kareyi Kling/Veo'ya başlangıç karesi olarak ver; `kapi`: `The door slowly closes and clicks shut. Nothing else moves.` · `vazo`: `The vase trembles slightly, slides to the edge of the shelf and falls out of frame. Camera stays still.` Klip aynı adla `.mp4` olarak kaydedilir.
 
+## Hareket (video) promptları
+
+Durağan kare sitede fotoğraf gibi duruyor; film hissi için her kare kısa bir videoya çevrilir (image-to-video). **Önce kareyi yukarıdaki promptla üret, sonra o kareyi başlangıç karesi olarak videoya ver.**
+
+- **Model:** Gemini'deki Veo ("Video" modu, görsel yükle) ya da Kling (image-to-video). Runway'de prompt kısa tutulur.
+- **Ses kapalı**, 16:9, 1080p, kamera hareketi yazılandan fazla olmasın.
+- **Kaydet:** aynı klasöre, aynı adla `.mp4` (örn. `oda-gece.mp4`). Site `.mp4` varsa fotoğraf yerine onu kullanır.
+- **Mod:** `loop` = arka planda sürekli, hafif · `scrub` = scroll'a bağlı: kaydırdıkça ilerler, geri kaydırınca geri gider.
+- **Videoları koyunca Claude'a söyle:** scrub'ın akıcı olması için videoların özel ayarla yeniden kodlanması gerekiyor (her kare anahtar kare). Bunu Claude yapar; elle yapılacaksa: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`
+
+| Kod | Mod | Süre (sn) | Hareket promptu |
+|---|---|---|---|
+| `masa` | loop | 5 | `Very slow overhead drift from left to right across the table. The face-down phone vibrates once, its edge glows. The person's face never becomes visible. Nothing else changes. No text.` |
+| `eller` | loop | 5 | `Static camera. The clasped hands tighten slightly, the thumb rubs the wedding ring once. The person's face never becomes visible. Nothing else changes. No text.` |
+| `koridor` | scrub | 4 | `Static camera. The man's shadow on the wall moves away down the hallway and disappears into the study. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `kapi` | scrub | 3 | `Static camera. The study door swings closed firmly and shuts; the line of light along its edge disappears. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `vazo` | scrub | 4 | `Static camera. The vase trembles, slides to the edge of the shelf and tips over, falling out of frame. The person's face never becomes visible. Nothing else changes. No text. No person visible.` |
+| `kirik` | loop | 4 | `Very slow overhead push-in on the broken pieces on the floor. Complete stillness, only a faint light shift. The person's face never becomes visible. Nothing else changes. No text.` |
+| `parca-el` | scrub | 4 | `Static close-up. The hand slowly lifts one piece of the vase from the floor and turns it over. The person's face never becomes visible. Nothing else changes. No text.` |
+
 ## Üretim logu
 
 | Tarih | Kod | Model | Varyant | Puan | Not |

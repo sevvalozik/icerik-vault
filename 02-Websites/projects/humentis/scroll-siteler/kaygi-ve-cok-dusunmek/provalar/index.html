@@ -22,7 +22,9 @@ body{font-family:var(--sans);color:var(--krem);background:#000}
 #hikaye{position:relative}
 #sahne{position:sticky;top:0;height:100vh;overflow:hidden;background:#000}
 .katman{position:absolute;inset:0;opacity:0;will-change:opacity}
-.katman img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.katman img,.katman video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hayalet > *{animation:suzul var(--sure,6s) ease-in-out var(--gecikme,0s) infinite alternate}
+@keyframes suzul{from{transform:translateY(0)}to{transform:translateY(-1.4%)}}
 .yt{position:absolute;inset:0}
 .yt.gece{background:radial-gradient(40% 50% at 62% 40%,rgba(120,170,175,.14),transparent 70%),radial-gradient(130% 90% at 50% 120%,#10292d 0%,#081417 55%,#04090a 100%)}
 .yt.safak{background:radial-gradient(60% 80% at 0% 40%,rgba(230,205,160,.35),transparent 70%),linear-gradient(170deg,#1c3033 0%,#3d4e4a 60%,#6f6a55 100%)}
@@ -135,10 +137,18 @@ const katmanlar = document.getElementById("katmanlar");
 H.arkaPlan.forEach(k => {
   const d = document.createElement("div"); d.className = "katman"; k.el = d;
   const yt = document.createElement("div"); yt.className = "yt " + k.ton; d.appendChild(yt);
-  const im = new Image(); im.alt = "";
-  im.onload = () => { d.appendChild(im); k.gorselVar = true; };
-  im.onerror = () => { const kod = document.createElement("div"); kod.className = "kod"; kod.innerHTML = `<b>KARE ${k.gorsel.toUpperCase()}</b> · görsel bekleniyor`; d.appendChild(kod); };
-  im.src = K(H.gorselKlasoru + k.gorsel + ".jpg");
+  const taban = K(H.gorselKlasoru + k.gorsel);
+  // sıra: .mp4 (video) → .jpg → yer tutucu
+  const v = document.createElement("video");
+  v.muted = true; v.playsInline = true; v.preload = "auto"; v.loop = k.video !== "scrub";
+  v.onloadeddata = () => { if (k.medya) return; d.appendChild(v); k.medya = v; k.sure = v.duration || 5; };
+  v.onerror = () => {
+    const im = new Image(); im.alt = "";
+    im.onload = () => { d.appendChild(im); k.medya = im; };
+    im.onerror = () => { const kod = document.createElement("div"); kod.className = "kod"; kod.innerHTML = `<b>KARE ${k.gorsel.toUpperCase()}</b> · görsel bekleniyor`; d.appendChild(kod); };
+    im.src = taban + ".jpg";
+  };
+  v.src = taban + ".mp4";
   katmanlar.appendChild(d);
 });
 
@@ -151,8 +161,9 @@ function figur(x, y, s, html, cls, en) {
 }
 const G = H.gercekNil;
 const gercek = figur(G.x, G.y + 6, G.olcek, SILUET_OTURAN, "", 12); gercek.id = "gercek";
-H.hayaletler.forEach(h => {
+H.hayaletler.forEach((h, i) => {
   h.el = figur(h.x, h.y, h.s, SILUET_AYAKTA, "hayalet", 11);
+  h.el.style.setProperty("--sure", (5 + (i % 4)) + "s"); h.el.style.setProperty("--gecikme", (-i * .7) + "s");
   const im = new Image(); im.alt = "";
   im.onload = () => { h.el.innerHTML = ""; h.el.appendChild(im); };
   im.src = K(H.gorselKlasoru + "nil-poz-" + h.poz + ".png");
@@ -190,7 +201,15 @@ const mekanEl = document.getElementById("mekan"), saatEl = document.getElementBy
 function ciz(){
   const p = ilerleme();
   // arka planlar: çapraz geçiş
-  H.arkaPlan.forEach(k => { k.el.style.opacity = pencere(p, k.a - 1, k.b + 1, 2); });
+  H.arkaPlan.forEach(k => {
+    const o = pencere(p, k.a - 1, k.b + 1, 2); k.el.style.opacity = o;
+    const v = k.medya; if (!v || v.tagName !== "VIDEO") return;
+    if (k.video === "scrub") {
+      const hedef = clamp((p - k.a) / (k.b - k.a)) * (k.sure - .05);
+      if (Math.abs(v.currentTime - hedef) > .03) v.currentTime = hedef;
+    } else if (o > 0 && v.paused) v.play().catch(()=>{});
+    else if (o === 0 && !v.paused) v.pause();
+  });
   // kamera geri çekilmesi
   const g = H.geriCekilme, gc = clamp((p - g.a) / (g.b - g.a));
   const sc = p < 58 ? 1 - (1 - g.olcek) * gc : 1;
