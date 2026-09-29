@@ -16,6 +16,7 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 > **Kaynaklar (28 Eylül 2026):**
 > 1. [arabam.com/oto-ekspertiz](https://www.arabam.com/oto-ekspertiz): paket tablosu, SSS metinleri ve web renkleri sayfadan birebir okundu. Paket–özellik–garanti eşleşmesi tablo hücrelerinden tek tek doğrulandı.
 > 2. Kullanıcının masaüstündeki `otoekspertiz` klasörü: Eylül post seti PDF'i (10 görsel), 4 reels videosu, video planlaması PDF'i ve Instagram QR kodu. Hepsi vault'a kopyalandı (§8).
+> 3. [Keçiören şube sayfası](https://www.arabam.com/oto-ekspertiz/ankara-kecioren-oto-ekspertiz-836) (aynı sitedeki "Şubeleri gör" bağlantısından): şube adı, adres, çalışma saatleri, telefon, yol tarifi ve şube açıklama metni.
 >
 > Kaynağı olmayan her şey `❓ doğrulanacak`.
 >
@@ -29,14 +30,17 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 |---|---|
 | Vault'taki ad | Otoekspertiz Keçiören (kullanıcının verdiği ad; slug buna göre) |
 | Kamuya görünen marka | **arabam.com** Oto Ekspertiz — Keçiören. Kanıtlar: PDF adı `Arabam.com_Keçiören_Eylül_Ayı`, Instagram hesabı `arabam.com_kecioren`, Eylül'deki bütün post ve videolarda arabam.com logosu. |
+| arabam.com'daki resmi şube adı | **Ankara Keçiören Ovacık Oto Ekspertiz Şubesi**. Sayfa başlığı: "Ankara Keçiören Ovacık Oto Ekspertiz & trink Sat Alım Noktası" |
+| Hizmetler | Oto ekspertiz ve **trink Sat araç alım noktası**. trink Sat, arabam.com'un kullanıcılardan araç satın aldığı hizmet; sitede "Güvenle ve zahmetsizce bize sat", "Paran geldiğin gün cebinde" diye tanıtılıyor. |
 | Ana marka | arabam.com; ekspertiz hizmetini "arabam.com Oto Ekspertiz" adıyla sunuyor. Sayfa altında arabam.com'un bir grup şirketi olduğu yazıyor (logo: ilab). |
-| İşletme modeli | ❓ doğrulanacak. arabam.com ağını "şube ve bayilerimiz" diye anlatıyor. Keçiören noktası arabam.com'a ait bir şube mi, yoksa bayi mi? |
+| İşletme modeli | ❓ doğrulanacak. arabam.com ağını "şube ve bayilerimiz" diye anlatıyor; bu nokta kendi sayfasında "Şubesi" olarak geçiyor. arabam.com'a mı ait, bayi mi? |
 | Resmi ticari unvan (Keçiören işletmesi) | ❓ doğrulanacak |
 | Sektör | Oto ekspertiz. arabam.com SSS: "Şubelerimizde binek, ticari ve filo araçlarına ekspertiz hizmeti sunuluyor." |
-| Konum | Keçiören / Ankara. Açık adres ❓ doğrulanacak |
+| Adres | **Yükseltepe Mah. 2107 Cad. No:3 Keçiören / Ankara** (Ovacık). Yol tarifi: https://eft.li/cnGdJ · koordinat 40.003632, 32.813862 |
+| Çalışma saatleri | Hafta içi **08:30–17:30** · hafta sonu **10:00–16:00** (şube sayfası) |
 | Instagram | [@arabam.com_kecioren](https://www.instagram.com/arabam.com_kecioren). QR koddan çözüldü; QR dosyası `03-Assets/images/otoekspertiz-kecioren/instagram-qr.png` |
-| Web | Şubeye özel sayfa ❓ · genel sayfa: [arabam.com/oto-ekspertiz](https://www.arabam.com/oto-ekspertiz) |
-| Telefon | Şube hattı ❓ · arabam.com müşteri hizmetleri (genel hat): 0850 759 90 00 |
+| Web | Şube sayfası: [arabam.com/oto-ekspertiz/ankara-kecioren-oto-ekspertiz-836](https://www.arabam.com/oto-ekspertiz/ankara-kecioren-oto-ekspertiz-836) · genel sayfa: [arabam.com/oto-ekspertiz](https://www.arabam.com/oto-ekspertiz) |
+| Telefon | Şube sayfasında gösterilen hat: **0850 759 90 00** (arabam.com çağrı merkezi; "Şubeyi ara" butonu da buraya bağlanıyor). Şubenin doğrudan hattı / WhatsApp ❓ (sayfada gösterilmiyor) |
 | Kurucu / karar verici | ❓ doğrulanacak |
 | Ajans tarafı sorumlu | ❓ doğrulanacak |
 
@@ -44,6 +48,7 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 
 - **arabam.com Oto Ekspertiz başlığı (birebir):** "Uzman gözünden detaylı ekspertiz"
 - **Alt metin (birebir):** "arabam.com güvencesi ve tecrübeli ekibimizin deneyimiyle, Türkiye’nin pek çok farklı noktasında sizinleyiz!"
+- **Şube sayfasının açıklaması (birebir):** "Ankara Keçiören Ovacık oto ekspertiz şubemizde aracınızı uzman ekibimize emanet edin, kapsamlı ekspertiz hizmetiyle aracınızın durumunu öğrenin ve değerinde satın!"
 - **Vaat maddeleri (sayfadan birebir):**
   - "Ortalama olarak 35-40 dk süren oto ekspertiz işlemi"
   - "İşlem sonrası rapor sunumu ve raporun basılı olarak teslimi"
@@ -57,7 +62,7 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 ## 3. Hedef Kitle
 
 - **Birincil:** ikinci el araç **alıcısı**. arabam.com SSS: "Oto ekspertiz ücretini, işlemini talep eden kişi (alıcı) ödüyor." Şube postları da alıcıya konuşuyor: "Araç almadan önce 4 kritik soru", "Alım yapmadan önce mutlaka sorgulatın".
-- **İkincil:** aracını satmak isteyenler (SSS: "Aracını satmak isteyen kullanıcılar da satış öncesi aracının değerini belirlemek için oto ekspertiz hizmeti alabiliyor.") ve kurumsal/filo müşterileri (mobil ekspertiz yalnızca kurumsal müşterilere).
+- **İkincil:** aracını satmak isteyenler (SSS: "Aracını satmak isteyen kullanıcılar da satış öncesi aracının değerini belirlemek için oto ekspertiz hizmeti alabiliyor."). Keçiören noktası aynı zamanda **trink Sat alım noktası** olduğu için aracını doğrudan arabam.com'a satmak isteyenler de bu kitleye giriyor. Bir de kurumsal/filo müşterileri var (mobil ekspertiz yalnızca kurumsal müşterilere).
 - **Karar anı:** ikinci el araç almadan hemen önce; ilanda beğenilen araç için randevu alınırken.
 - **Keçiören / Ankara'daki yerel kitlenin profili:** ❓ doğrulanacak
 
@@ -149,21 +154,44 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 | **Mekanik garanti** | – | 1 ay / 1.000 km | 1 ay / 1.000 km | 1 ay / 1.000 km | 3 ay / 5.000 km |
 
 ### Hizmet süreci (arabam.com sayfasından)
-- **Randevu:** Sayfadaki çağrı "Ücretsiz ekspertiz randevunu al". SSS'ye göre randevu çağrı merkezinden ya da web sitesinden alınabiliyor, gün ve saati değiştirilebiliyor.
-- **Süre:** Özellik listesinde "Ortalama olarak 35-40 dk", SSS'de "ortalama 30-45 dk" yazıyor. İçerikte hangi aralığın kullanılacağı ❓.
+- **Randevu:** Sayfadaki çağrı "Ücretsiz ekspertiz randevunu al". Şube sayfasına göre rezervasyon çağrı merkezinden, web sitesinden ya da mobil uygulamadan yapılabiliyor; "ihtiyaç halinde rezervasyonsuz olarak da hizmet alınabilir". Randevunun günü ve saati değiştirilebiliyor.
+- **Süre:** Özellik listesinde ve şube sayfasında "ortalama 35-40 dakika", SSS'de "ortalama 30-45 dk" yazıyor. İçerikte hangi aralığın kullanılacağı ❓ (kaynakların çoğu 35-40 diyor).
 - **Rapor:** İşlemden sonra rapor sunuluyor ve basılı olarak teslim ediliyor. Tespit edilen kusurlar fotoğraflarıyla rapora giriyor.
 - **Ödeme:** İşlem başlamadan alınıyor; rapor, ücreti ödeyen kişiye teslim ediliyor.
 - **Airbag:** Beyinde kayıtlı airbag arızaları yazılı ve sözlü olarak bildiriliyor. "Randevu sayfamızda belirtilen şube ve bayilerimizde" fiziki airbag kontrolü de yapılıyor. Keçiören'de fiziki kontrol var mı ❓.
 - **Mobil ekspertiz:** yalnızca kurumsal müşterilere.
+- **Memnuniyet araması:** Şube sayfasına göre ekspertizden bir gün sonra müşteriyle memnuniyet için iletişime geçiliyor.
+- **Kontrol kapsamı (SSS, birebir):** "Kaporta-Boya Kontrolleri- Motor Mekanik Kontrolleri- İç/Dış Elektronik Kontrolleri- Mekanik Alt Kontrolleri- Araç Sorguları (borç, hasar, kilometre, değişen parça, araç detay sorgulama)- Karbon Kaçak Testi- Diagnostik Test- Dyno Testi- Yol Sürüş Testi- Fren, Süspansiyon ve Yanal Kayma Testi yapılmaktadır." Hangilerinin yapılacağı seçilen pakete bağlı (yukarıdaki tablo).
+
+### Ekspertiz raporundaki kısaltmalar (arabam.com SSS, birebir)
+
+| Kısaltma | Anlamı |
+|---|---|
+| Aİ | Ağır İşlemli |
+| B veya Bİ | Boya İşlemli |
+| D | Değişim |
+| DM | Darbe Hasarı Mevcut |
+| Ç | Çizik |
+| EM | Ezik Mevcut |
+| GM | Göçük Mevcut |
+| K | Kırık |
+| LB | Lokal Boyalı |
+| N | Normal |
+| O | Orijinal |
+| P veya PP | Plastik Parça |
+| ST | Sök-Tak Mevcut |
+| TB | Tamamen Boyalı |
+| Y | Yok |
 
 ### Keçiören'e özel
 - **Videolarda görülen ekipman:** boya kalınlık ölçer (12 Eylül videosu). Video planında "araç lifte" sahnesi geçiyor. Şubenin tam ekipman listesi (lift, dyno, fren/süspansiyon test cihazı, OBD cihazı) ❓.
-- **Şubeye özel kampanya ya da fiyat:** ❓
+- **Paketler:** Şube sayfası "Paketleri incele" bağlantısıyla genel paket tablosuna yönlendiriyor ve 5 paketin hepsini sayıyor. Şubeye özel kampanya ya da fiyat ❓
 
 ### İçerik konu havuzu (mevcut işlerden)
 - **Postlarda işlenen konular:** OBD (3 post), ekspertiz raporu nasıl okunur, airbag (2 post), boyalı araç, hasar/tramer kaydı, araç almadan önce 4 kritik soru, ekspertizin faydaları. Bkz. [[eylul-2026-icerik-seti]].
 - **Reels konuları:** boya ölçümü, tramer kaydı, yağ kaçağı, yokuş kalkış ve kavrama kontrolü.
 - **Planda olup henüz videosu olmayanlar:** süspansiyon testi, motor üflemesi, rot başı boşluğu, amortisör, motor kulağı, disk aşınması, balata. Bkz. [[video-planlamasi-1]].
+- **Öneri (arabam.com SSS'den):** "Ekspertiz raporundaki kısaltmalar ne anlama geliyor?" (Aİ, Bİ, LB, TB…). Eylül'deki "Ekspertiz raporu nasıl okunur?" postunun devamı olabilir.
 
 ## 7. Yasal / Hassas Kurallar
 
@@ -198,9 +226,9 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 ## 10. AI Brief Bloğu (kopyala-yapıştır)
 
 ```text
-BRAND: arabam.com Oto Ekspertiz — Keçiören branch (vault name: Otoekspertiz Keçiören); used-car inspection in Keçiören, Ankara; Instagram @arabam.com_kecioren.
+BRAND: arabam.com Oto Ekspertiz & trink Sat — Ankara Keçiören Ovacık branch (vault name: Otoekspertiz Keçiören); used-car inspection plus an arabam.com car-buying point; Yükseltepe Mah., Keçiören, Ankara; Instagram @arabam.com_kecioren.
 POSITIONING: "Uzman gözünden detaylı ekspertiz" — hidden problems (accident record, paint, OBD faults, airbag) are revealed by a proper inspection, not by eye.
-AUDIENCE: used-car buyers right before purchase (the buyer pays); secondary: sellers pricing their car, fleet/corporate clients.
+AUDIENCE: used-car buyers right before purchase (the buyer pays); secondary: sellers pricing their car or selling it to arabam.com via trink Sat, fleet/corporate clients.
 TONE: educational, calm, myth-busting, short 3–4 item lists, formal "siz" in Turkish. Never: fear-mongering, blaming sellers, absolute claims ("100% accurate"); say "garanti" only with exact package terms.
 PALETTE: brand red #E40030 (logo + web) / post headline red ~#CC3D2E, logo yellow #FFDB4D (shade #FCB724), black #000000 or off-white ~#F5F4F0 backgrounds, text #1A1A1A.
 TYPOGRAPHY (post-production only): headlines in bold condensed all-caps sans, two-tone (white/black + red); body in a clean sans (web: Open Sans).
@@ -219,12 +247,15 @@ PRODUCT SHEET: a handheld paint thickness gauge pressed against a white car door
 - [x] Hitap → şube içeriklerinde "siz" (teyit bekliyor)
 - [x] Ekipman → boya kalınlık ölçer videoda görüldü; video planında lift sahnesi var
 - [x] Logo → arabam.com'un web logoları indirildi (1 SVG + 2 PNG, §5)
+- [x] Şube sayfası ve resmi şube adı → "Ankara Keçiören Ovacık Oto Ekspertiz Şubesi" (§1)
+- [x] Açık adres, çalışma saatleri, yol tarifi → şube sayfasından (§1)
 
 **Kalan:**
-- [ ] İşletme modeli (arabam.com'a ait şube mi, bayi mi?) ve resmi ticari unvan
-- [ ] Açık adres, çalışma saatleri, şube telefonu / WhatsApp, Google Maps linki
+- [ ] İşletme modeli (arabam.com'a ait şube mi, bayi mi? sayfada "Şubesi" yazıyor) ve resmi ticari unvan
+- [ ] Şubenin doğrudan telefonu / WhatsApp (sayfada yalnızca çağrı merkezi numarası var)
+- [ ] trink Sat (araç alım) tarafı için de içerik üretilecek mi?
 - [ ] Karar verici ve ajans tarafı muhatap
-- [ ] 5 paketin ve çevrimiçi indirimin Keçiören'de geçerli olup olmadığı; şubeye özel kampanya
+- [ ] Şubeye özel kampanya ya da fiyat var mı? (şube sayfası genel paket tablosuna yönlendiriyor)
 - [ ] Şubenin ekipman listesi (lift, dyno, fren/süspansiyon test cihazı, OBD) ve fiziki airbag kontrolü yapılıp yapılmadığı
 - [ ] TSE Hizmet Yeterlilik Belgesi (TS 12047) ve diğer belgeler
 - [ ] arabam.com kurumsal kimlik kılavuzu, baskı kalitesinde logo dosyaları (web logoları var; oto ekspertiz kilidinin vektörü ve koyu zemin sürümü yok) ve içerik onay süreci
