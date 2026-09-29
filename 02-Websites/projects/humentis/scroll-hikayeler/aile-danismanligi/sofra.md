@@ -5,7 +5,7 @@ client: humentis
 slug: humentis-scroll-aile-sofra
 status: draft
 date: 2026-09-28
-url: ""
+url: "https://claude.ai/artifact/JA6qPca6YyueSojgzk2gr9"
 tags: [website, humentis, scroll, hikaye, aile-danismanligi, iletisim]
 related: ["[[00-genel-bakis]]", "[[aile-danismanligi]]", "[[teknik-spec]]", "[[scroll-sofra-brief]]"]
 ---
@@ -13,7 +13,7 @@ related: ["[[00-genel-bakis]]", "[[aile-danismanligi]]", "[[teknik-spec]]", "[[s
 # Aile Danışmanlığı — "Sofra"
 
 > Şevval tarafından seçildi (28 Eylül 2026). Telefonları bırakma sahnesi özellikle çıkarıldı: hikâye bir çözüm göstermiyor, sadece durumu gösteriyor. Hocalar: aile danışmanlarının hepsi (özellikle Beliz Kafalı, Barış Can Kolçak).
-> **Durum:** Video henüz üretilmedi. Promptlar: [[scroll-sofra-brief]].
+> **Durum (29 Eylül 2026):** Site hazır: `02-Websites/projects/humentis/scroll-siteler/aile-danismanligi/sofra/`. Video: `sofra.mp4` (Flow/Veo, 1080p, 8 sn). Flow, çocuk/ergen elleri tarif edilince "ihlal" verdi; dört yetişkin olarak üretildi. Buhar çıkarıldı. Geçiş, Şevval'in seçimiyle **tepedeki sarkıt lambaya** yükselme (ortadaki tabak/kapak değil).
 
 ## 1. Künye
 
@@ -23,7 +23,7 @@ related: ["[[00-genel-bakis]]", "[[aile-danismanligi]]", "[[teknik-spec]]", "[[s
 | Konu | Aile içi iletişim: aynı masada ama birbirinden uzak |
 | Duygusal çekirdek | Kimse kavga etmiyor, kimse bir şey yapmıyor. Yemek soğuyor. |
 | Mekân | Akşam, ev mutfağı ya da salon; kuşbakışı (tam üstten) çekilmiş yemek masası |
-| Geçiş | Ortadaki dokunulmamış beyaz tabağa yaklaşma; tabak krem zemine döner. |
+| Geçiş | Kamera masanın üstündeki sarkıt lambaya yükselir; lambanın ışığı krem zemine döner. |
 | Tahmini uzunluk | **3 ekran boyu** (~20 sn) |
 
 ## 2. Hikâye
@@ -35,8 +35,8 @@ Akşam yemeği hazır. Masada sıcak bir tencere, dört tabak. Masanın dört ya
 | % | Tip | Görsel / klip | Ne oluyor | Yazı |
 |---|---|---|---|---|
 | 0–15 | kurgu | `sofra` 0 sn | Kuşbakışı masa: tencereden buhar, dört el telefonda | — |
-| 15–70 | kurgu | `sofra` 0→son (scrub) | Başparmaklar kayar, buhar azalıp kaybolur, ışık hafifçe kararır | *Aynı masada, dört ayrı oda.* (30–60) |
-| 70–100 | geçiş | son kare | Ortadaki boş beyaz tabağa yaklaşma, parlaklık artar, krem zemine erime | **Aynı evde, birbirinize uzak mı hissediyorsunuz?** |
+| 12–68 | kurgu | `sofra` 0→son (scrub) | Başparmaklar kayar, kimse yemeğe dokunmaz | *Aynı masada, dört ayrı oda.* (28–60) |
+| 64–100 | geçiş | son kare | Tepedeki sarkıt lambaya yaklaşma (ölçek 1→8, hedef %50 / %16), parlaklık ve ışık artar, krem zemine erime | **Aynı evde, birbirinize uzak mı hissediyorsunuz?** |
 
 ## 4. Açıldığı site bölümü
 

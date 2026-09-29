@@ -92,10 +92,17 @@ Durağan fotoğraf + zoom sitede "fotoğraf" gibi algılanıyor; hedef film hiss
   - **loop:** sessiz, döngüde, sahne görünürken oynar (perde kıpırtısı, ekran ışığı, yağmur).
   - **scrub:** `video.currentTime = sahneİlerlemesi × süre`; kaydırdıkça ilerler, geri kaydırınca geri gider (kapı kapanır, vazo düşer, ışık odaya yayılır).
 - Mod ve hareket promptu her kare için görsel brief'inde (`07-AI-Gorsel/humentis/scroll-<hikaye>-brief.md` → "Hareket (video) promptları").
-- **Kodlama şartı:** scrub akıcı olsun diye videolar her karesi anahtar kare olacak şekilde yeniden kodlanır: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 22 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`. Loop videolar da aynı komutla küçültülür.
+- **Kodlama şartı:** scrub akıcı olsun diye videolar her karesi anahtar kare olacak şekilde yeniden kodlanır: `ffmpeg -i girdi.mp4 -an -c:v libx264 -crf 16 -g 1 -pix_fmt yuv420p -vf scale=1920:-2 -movflags +faststart cikti.mp4`. Loop videolar da aynı komutla küçültülür.
 - **Çözünürlük:** videolar en az **1080p**. Gemini uygulamasının 720p çıktısı sadece ön gösterim içindir; final için Google Flow (Veo) 1080p ya da yapay zekâ büyütme (Topaz vb.). ffmpeg ile büyütme detay eklemez, kullanılmaz.
 - **Hareket kuralı:** bir klipte sadece bir kişi hareket eder; sıralı hareketler ayrı kliplere bölünür ve her klip bir öncekinin son karesinden başlatılır. Ters oynatma geri adım için kullanılabilir.
 - Video yoksa bile sahne ölü durmaz: hayaletler/figürler CSS ile hafif süzülür (`suzul` animasyonu), ışıklar gradient ile hareket eder.
+
+
+### Video kalitesi (29 Eylül 2026, bağlayıcı)
+- **Kaynak:** Videolar Google Flow'da üretilip **1080p** indirilir. Gemini uygulaması 720p veriyor; büyütmek ayrıntı getirmez, kullanılmaz (Yarım Adım, Kapının İki Yüzü, Aynı Paragraf şu an 720p kaynaklı, yeniden üretilecek).
+- **Kasadaki kopya = orijinal.** Obsidian ham malzeme deposudur: videolar Flow'dan indiği gibi, hiç sıkıştırılmadan/kesilmeden konur. Kesilecek yer varsa hikâye dosyasında yazılır (ör. Kapının İki Yüzü: 0–6.5 sn).
+- **Scrub dönüşümü kodlama sırasında yapılır** (Furkan Bey): `ffmpeg -i X.mp4 -an -c:v libx264 -crf 18 -preset medium -g 1 -pix_fmt yuv420p -movflags +faststart X-scrub.mp4`.
+- **Canlı önizleme (artifact) kopyası** 16 MB dosya sınırı yüzünden daha sıkıştırılmıştır; kaliteyi o kopyadan değil kasadaki dosyadan değerlendir.
 
 ## 5. Tasarım tokenları
 

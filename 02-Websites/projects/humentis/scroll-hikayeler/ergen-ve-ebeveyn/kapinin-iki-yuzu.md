@@ -5,12 +5,24 @@ client: humentis
 slug: humentis-scroll-ergen-kapinin-iki-yuzu
 status: draft
 date: 2026-09-28
-url: ""
+url: "https://claude.ai/artifact/7NCrn295iuKUitL5X3tE8B"
 tags: [website, humentis, scroll, hikaye, ergen, ebeveyn]
 related: ["[[00-genel-bakis]]", "[[ergen-ve-ebeveyn]]", "[[teknik-spec]]", "[[scroll-kapinin-iki-yuzu-brief]]"]
 ---
 
 # Ergen ve Ebeveyn — "Kapının İki Yüzü"
+
+> **29 Eylül 2026 — sade sürüm, site hazır:** `02-Websites/projects/humentis/scroll-siteler/ergen-ve-ebeveyn/kapinin-iki-yuzu/`
+> Split ekran ve odanın içi (çizim defteri, yarım not) çıkarıldı. Tek video, **yazı yok**: baba kapının önünde durur, elini kaldırıp indirir, sonra çalar; kapı içeriden birkaç santim aralanır ve **aralık kalır** (video 6.5. saniyede, kapı yeniden kapanmadan kesildi). Kamera aralıktan sızan ışığa yaklaşır, site açılır. Kızın kendisi hiç görünmez. Aşağıdaki uzun sürüm arşiv olarak duruyor.
+>
+> | % | Ne oluyor |
+> |---|---|
+> | 0–8 | Baba kapıya yürür (`kapi-aralik` 0 sn) |
+> | 8–45 | Elini kaldırır, indirir; yeniden kaldırıp çalar (0→4.5 sn) |
+> | 45–70 | Kısa bekleyiş; kapı içeriden aralanır (4.5→6.5 sn) |
+> | 72–100 | Aralıktan sızan ışığa yaklaşma (ölçek 1→14, hedef %65.6 / %44), krem zemine erime → **Ergenle konuşmak: kapıyı zorlamadan** |
+>
+> Video: `03-Assets/images/humentis/scroll/ergen-ve-ebeveyn/kapinin-iki-yuzu/kapi-aralik.mp4` — **orijinal, 10 sn, 720p (Gemini)**. Sadece **0–6.5 sn** kullanılır; sonrasında kapı yeniden kapanıyor. Final için Flow'da 1080p yeniden üretilecek. Prompt: kapı önündeki baba, "knocks gently twice… the door opens just a few centimetres from the inside"; kızdan ve yüzden söz edilmemeli (çocuk/ergen tarifi Flow'da ihlal uyarısı verebiliyor).
 
 ## 1. Künye
 

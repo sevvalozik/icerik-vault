@@ -27,14 +27,14 @@ related: ["[[humentis-bulunma-hikayesi]]", "[[00-Musteriler/humentis/marka-brief
 | [[tukenmislik-ve-is-stresi]] | Motor Kapalı | Pazar Akşamı, Masadaki Bitki |
 | [[kaygi-ve-cok-dusunmek]] | Provalar, Her Şey Yolunda, Miras | Ya Olursa? |
 | [[iliskiler-ve-baglanma]] | Üç Nokta, Yarım Adım, Aynı Sahne (siteler hazır) | Okundu, Kusursuz Senaryo |
-| [[ergen-ve-ebeveyn]] | İki Oda, Kapının İki Yüzü (+ Miras) | — |
+| [[ergen-ve-ebeveyn]] | İki Oda, Kapının İki Yüzü (site hazır) (+ Miras) | — |
 | [[cocuk-gelisimi-ve-okula-hazirlik]] | Kule (site hazır) | — |
 | [[dikkat-ve-odaklanma]] | Altyazı (site hazır) | Yarım Kalanlar, Ödev Masası |
 | [[panik-ve-sosyal-kaygi]] | Boş Ekran (video bekleniyor) | Sıra Bende, Kapının Önü |
 | [[mukemmeliyetcilik-ve-erteleme]] | Tuval (video bekleniyor) | — |
 | [[evlilik-oncesi-ve-bosanma]] | Diş Fırçası, Yüzük (video bekleniyor) | — |
 | [[ayrilik-ve-iliski-sonrasi]] | Dolap, Bagaj, Yatak (video bekleniyor) | — |
-| [[aile-danismanligi]] | Sofra (video bekleniyor) | — |
+| [[aile-danismanligi]] | Sofra (site hazır) | — |
 | [[yas-ve-kayip]] | Çay Bardağı (video bekleniyor) | Yarım Kalan Fincan |
 | [[uyku-ve-stres]] | 04:12, Mutfak Işığı (video bekleniyor) | Saat 04:12 (eski fikir) |
 | [[ozguven]] | Fotoğraf, Kıyafetler, Mikrofon, Dans Pisti (video bekleniyor) | Ayna |

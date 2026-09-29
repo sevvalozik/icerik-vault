@@ -19,7 +19,7 @@ Hikâye her zaman **ebeveynin gözünden** anlatılır. Çocuk ya da ergen hiçb
 | Hikâye | Durum | Duygusal çekirdek | Geçiş | Açıldığı yer |
 |---|---|---|---|---|
 | [[iki-oda]] | ✅ Tam | Aynı anda yazıp silen anne ve oğul; aralarında bir duvar | Evin kesitinden geri çekilme, duvar sayfa olur | "Aynı evde, iki ayrı dünya" |
-| [[kapinin-iki-yuzu]] | ✅ Tam | Babanın hiç görmediği oda: çizimler, belge, yarım not | Kapı aralanır, iki ışık birleşir | "Ergenle konuşmak: kapıyı zorlamadan" |
+| [[kapinin-iki-yuzu]] | ✅ Tam + site hazır (sade, yazısız) | Babanın hiç görmediği oda: çizimler, belge, yarım not | Kapı aralanır, iki ışık birleşir | "Ergenle konuşmak: kapıyı zorlamadan" |
 | [[miras]] | ✅ Tam (kaygı klasöründe) | Kuşaktan kuşağa geçen "dikkat et" | Zincir yeni bir cümleyle kırılır | "Bazı kaygılar bize ait değildir" |
 
 İlk turdaki "Kapalı Kapı" ve "Okul Çantası" fikirleri bu hikâyelerle değiştirildi.
