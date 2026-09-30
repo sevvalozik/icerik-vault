@@ -48,6 +48,7 @@ olusturma: 2026-09-29
 ## Araştırma
 - [[R1 Rakip analizi CAN Psikoloji]]
 - [[R2 ai-marketing-claude denemesi]] — pazarlama paketiyle hızlı analiz ve ana sayfa metin önerileri (30.09)
+- [[seo-dongusu]] — P1-07/P1-10/P0-06 bitince uygulanacak haftalık SEO döngüsü (Humentis uyarlaması notun sonunda)
 - [[R3 Pazarlama denetimi 2026-09-30]] — tam pazarlama denetimi, 39/100; site planını doğruluyor, planda olmayan bulgular ve öncelik değişiklikleri (P1-07 → P0, P3-15 → P1) · veri: [[R3 veri - 2026-09-30]]
 
 ## Her görev için "bitti" tanımı

@@ -18,7 +18,7 @@ bagli:
 1. **Dinamik sitemap.** ASP.NET'ten üretilsin: sabit sayfalar, hizmet sayfaları, 17 uzman ve makaleler; gerçek `lastmod` ile.
 2. **Sitemap'e girmeyecekler:** `/giris`, `/admin`, `/sistem`, `/uzman/panel`, `/randevularim`.
 3. **Search Console:** Domain mülkü (Cloudflare'de DNS TXT kaydı) → sitemap gönder.
-4. **Bing Webmaster Tools:** Search Console'dan içe aktar → sitemap. Copilot ve kısmen ChatGPT araması Bing indeksinden besleniyor.
+4. **Bing Webmaster Tools:** Search Console'dan içe aktar → sitemap. Copilot ve kısmen ChatGPT araması Bing indeksinden besleniyor. Ek (30.09.2026): her yayında **IndexNow** bildirimi gönderilsin; ayrıntı [[seo-dongusu]].
 5. **Cloudflare → Caching → Configuration → Crawler Hints:** açık olsun (IndexNow ile değişiklik bildirimi).
 
 ## Kabul kriterleri

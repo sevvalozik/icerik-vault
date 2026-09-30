@@ -62,3 +62,7 @@ Hazır n8n iş akışı depolarının tam listesi: [[n8n-workflow-kaynaklari]]
 - Bizim işler için seçilmiş akışlar: [[otomasyon-secilmis-akislar]]
 - Kurulum, maliyet ve hesap gereksinimleri: [[n8n-baslangic]]
 - Açık kaynak video akışları (ComfyUI / Wan): [[comfyui-akislar]]
+
+## SEO yöntemi
+
+- [[seo-dongusu]] — Search Console'u okuyup oku → düzelt → yaz → ölç döngüsü (Neil Agarwal / Refix makalesinin analizi, 30.09.2026)
