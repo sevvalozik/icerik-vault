@@ -6,7 +6,7 @@ platform: instagram
 username: nefinbeauty
 profile_name: "Nefin Beauty"
 bio: "Kozmetik / cilt bakımı\nAnkara"
-avatar: 03-Assets/images/nefin-beauty/instagram/ekran-resmi-2026-09-21-20.21.14-2.png
+avatar: 03-Assets/images/nefin-beauty/instagram/whatsapp-image-2026-09-22-at-14.29.50.jpeg
 posts_count: 10
 followers: 0
 following: 0
@@ -31,28 +31,43 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 
 -
 
+## Hikayeler
+
+### 1 · gun08-cilt-testi-story
+- görsel: 03-Assets/images/nefin-beauty/instagram/gun08-cilt-testi-story.mp4
+- poster:
+- süre: 9
+- tarih: 2026-09-29
+- durum: planlandi
+- metin: Cildini tanı: hızlı test
+- bağlantı:
+
+### 2 · gun18-soru-kutusu-story
+- görsel: 03-Assets/images/nefin-beauty/instagram/gun18-soru-kutusu-story.mp4
+- poster:
+- süre: 6
+- tarih: 2026-10-09
+- durum: planlandi
+- metin: Sorularını bırak, cevaplayalım
+- bağlantı:
+
+### 3 · gun26-rutin-secimi-story
+- görsel: 03-Assets/images/nefin-beauty/instagram/gun26-rutin-secimi-story.mp4
+- poster:
+- süre: 12
+- tarih: 2026-10-17
+- durum: planlandi
+- metin: Sabah mı gece mi? Rutinini seç
+- bağlantı:
+
 ## Gönderiler
 
-### 1 · gemini-generated-video-13a483c4
-- görsel: 03-Assets/images/nefin-beauty/instagram/gemini-generated-video-13a483c4.mp4
-- tür: reels
-- ek görseller:
-- poster: 03-Assets/images/nefin-beauty/instagram/gemini-generated-video-13a483c4-poster.jpg
-- tarih:
-- durum: taslak
-- begeni: 0
-- yorum: 0
-- alt:
-- begenen:
-- yorum yazan:
-- yorum metni:
-
-### 2 · whatsapp-image-2026-09-21-at-20.38.56
-- görsel: 03-Assets/images/nefin-beauty/instagram/whatsapp-image-2026-09-21-at-20.38.56.jpeg
+### 1 · gemini-generated-image-vtwsimvtwsimvtws
+- görsel: 03-Assets/images/nefin-beauty/instagram/gemini-generated-image-vtwsimvtwsimvtws.jpeg
 - tür: post
 - ek görseller:
 - poster:
-- tarih:
+- tarih: 2026-10-15 19:28
 - durum: taslak
 - begeni: 0
 - yorum: 0
@@ -61,12 +76,26 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 - yorum yazan:
 - yorum metni:
 
-### 3 · whatsapp-image-2026-09-21-at-19.52.41
-- görsel: 03-Assets/images/nefin-beauty/instagram/whatsapp-image-2026-09-21-at-19.52.41.jpeg
+### 2 · use-the-uploaded-image-as-the
+- görsel: 03-Assets/images/nefin-beauty/instagram/use-the-uploaded-image-as-the-2.mp4
+- tür: reels
+- ek görseller:
+- poster:
+- tarih: 2026-10-13 19:28
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt:
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 3 · csugokote-datyfqwshvdwgyaqtni-zlqiznxek5499-2-uwbfuk6etb4heedi0n7kzypl1m6vyasc8zckvoevp60favr6djxm4rhdsst1qxdrszyeolbaoc-zsuufvfmdskl6nr1yofdcasbwdwhi18eefmaqlm5aqviksjapivwk4hyriapr9fdyzhlgxz
+- görsel: 03-Assets/images/nefin-beauty/instagram/csugokote-datyfqwshvdwgyaqtni-zlqiznxek5499-2-uwbfuk6etb4heedi0n7kzypl1m6vyasc8zckvoevp60favr6djxm4rhdsst1qxdrszyeolbaoc-zsuufvfmdskl6nr1yofdcasbwdwhi18eefmaqlm5aqviksjapivwk4hyriapr9fdyzhlgxz.jpeg
 - tür: post
 - ek görseller:
 - poster:
-- tarih:
+- tarih: 2026-10-10 19:28
 - durum: taslak
 - begeni: 0
 - yorum: 0
@@ -75,26 +104,12 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 - yorum yazan:
 - yorum metni:
 
-### 4 · use-the-uploaded-product-image-1
-- görsel: 03-Assets/images/nefin-beauty/instagram/use-the-uploaded-product-image-1.mp4
-- tür: reels
-- ek görseller:
-- poster: 03-Assets/images/nefin-beauty/instagram/use-the-uploaded-product-image-1-poster.jpg
-- tarih:
-- durum: taslak
-- begeni: 0
-- yorum: 0
-- alt:
-- begenen:
-- yorum yazan:
-- yorum metni:
-
-### 5 · whatsapp-image-2026-09-21-at-16.17.05
-- görsel: 03-Assets/images/nefin-beauty/instagram/whatsapp-image-2026-09-21-at-16.17.05.jpeg
+### 4 · nefin-temizleyici-2-1
+- görsel: 03-Assets/images/nefin-beauty/instagram/nefin-temizleyici-2-1.jpeg
 - tür: post
 - ek görseller:
 - poster:
-- tarih:
+- tarih: 2026-10-08 19:28
 - durum: taslak
 - begeni: 0
 - yorum: 0
@@ -103,12 +118,12 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 - yorum yazan:
 - yorum metni:
 
-### 6 · gemini-generated-video-ca8f342a
-- görsel: 03-Assets/images/nefin-beauty/instagram/gemini-generated-video-ca8f342a.mp4
+### 5 · use-the-uploaded-product-image
+- görsel: 03-Assets/images/nefin-beauty/instagram/use-the-uploaded-product-image.mp4
 - tür: reels
 - ek görseller:
-- poster: 03-Assets/images/nefin-beauty/instagram/gemini-generated-video-ca8f342a-poster.jpg
-- tarih:
+- poster:
+- tarih: 2026-10-06 19:28
 - durum: taslak
 - begeni: 0
 - yorum: 0
@@ -117,12 +132,12 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 - yorum yazan:
 - yorum metni:
 
-### 7 · whatsapp-image-2026-09-21-at-19.52.12
-- görsel: 03-Assets/images/nefin-beauty/instagram/whatsapp-image-2026-09-21-at-19.52.12.jpeg
+### 6 · 41050715-092a-4f4f-bc94-310054d7e32c
+- görsel: 03-Assets/images/nefin-beauty/instagram/41050715-092a-4f4f-bc94-310054d7e32c.png
 - tür: post
 - ek görseller:
 - poster:
-- tarih:
+- tarih: 2026-10-04 19:28
 - durum: taslak
 - begeni: 0
 - yorum: 0
@@ -131,41 +146,82 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]"]
 - yorum yazan:
 - yorum metni:
 
-### 8 · use-the-uploaded-image-as-the
-- görsel: 03-Assets/images/nefin-beauty/instagram/use-the-uploaded-image-as-the.mp4
-- tür: reels
-- ek görseller:
-- poster: 03-Assets/images/nefin-beauty/instagram/use-the-uploaded-image-as-the-poster.jpg
-- tarih:
-- durum: taslak
-- begeni: 0
-- yorum: 0
-- alt:
-- begenen:
-- yorum yazan:
-- yorum metni:
-> C vitamine
-
-### 9 · create-a-photorealistic-cinema
-- görsel: 03-Assets/images/nefin-beauty/instagram/create-a-photorealistic-cinema.mp4
-- tür: reels
-- ek görseller:
-- poster: 03-Assets/images/nefin-beauty/instagram/create-a-photorealistic-cinema-poster.jpg
-- tarih:
-- durum: taslak
-- begeni: 0
-- yorum: 0
-- alt:
-- begenen:
-- yorum yazan:
-- yorum metni:
-
-### 10 · whatsapp-image-2026-09-21-at-15.48.38
-- görsel: 03-Assets/images/nefin-beauty/instagram/whatsapp-image-2026-09-21-at-15.48.38.jpeg
+### 7 · nefin-krem-1
+- görsel: 03-Assets/images/nefin-beauty/instagram/nefin-krem-1.jpeg
 - tür: post
 - ek görseller:
 - poster:
-- tarih:
+- tarih: 2026-10-02 19:28
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt:
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 8 · gemini-generated-video-0acafdd7
+- görsel: 03-Assets/images/nefin-beauty/instagram/gemini-generated-video-0acafdd7-2.mp4
+- tür: reels
+- ek görseller:
+- poster:
+- tarih: 2026-09-30 19:28
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt:
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 9 · gemini-generated-image-2e98tz2e98tz2e98
+- görsel: 03-Assets/images/nefin-beauty/instagram/gemini-generated-image-2e98tz2e98tz2e98-2.jpeg
+- tür: post
+- ek görseller:
+- poster:
+- tarih: 2026-09-28 19:28
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt:
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 10 · 6
+- görsel: 03-Assets/images/nefin-beauty/instagram/6-2.png
+- tür: post
+- ek görseller:
+- poster:
+- tarih: 2026-09-26 19:28
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt:
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 11 · 24k-altin-serum
+- görsel: 03-Assets/images/nefin-beauty/instagram/24k-altin-serum-2.jpeg
+- tür: post
+- ek görseller:
+- poster:
+- tarih: 2026-09-26 19:28
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt:
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 12 · transform-the-provided-vertica
+- görsel: 03-Assets/images/nefin-beauty/instagram/transform-the-provided-vertica-2.mp4
+- tür: reels
+- ek görseller:
+- poster:
+- tarih: 2026-09-24 19:28
 - durum: taslak
 - begeni: 0
 - yorum: 0
