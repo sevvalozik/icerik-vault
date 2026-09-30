@@ -56,3 +56,14 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 `/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme` — yukarıdaki akışları tek komutla yürütür; argüman olarak müşteri slug'ı ve kampanya adı alır.
 
 Obsidian biçimi için (kepano/obsidian-skills, MIT): `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap` — not, Bases tablosu ve Canvas yazarken otomatik devreye girer. Ayrıntı: `99-Dashboard/claude-code-skilleri.md`.
+
+Pazarlama için (zubair-trabzada/ai-marketing-claude, MIT, kasaya uyarlandı): `/market` + 14 alt komut (`audit`, `quick`, `copy`, `seo`, `social`, `ads`, `competitors`, `proposal`, `report`…), 5 alt ajan `.claude/agents/`. Ayrıntı: `99-Dashboard/ai-marketing-claude-paketi.md`.
+
+## Dış skill paketleri (genel kural)
+
+Dışarıdan kurulan her skill paketi (pazarlama, SEO, tasarım, video…), belirli tek bir müşteri için yazılmamışsa **tüm müşteriler için ayrı ayrı** çalışır:
+
+1. İşin hangi müşteri için olduğunu belirle; `00-Musteriler/<slug>/marka-brief.md` oku. Yoksa sor, uydurma.
+2. Brief'teki **KESİNLİKLE OLMAYACAK** listesi, **Ses Tonu** ve **7. Yasal / Hassas Kurallar** paketin varsayılan önerilerinden üstündür. Paket bunlara ters bir şey önerirse uygulama, çıktıda "marka kuralı gereği uygulanmadı" diye belirt.
+3. Çıktı Türkçe; dosyalar kasadaki müşteri klasörüne (kök dizine değil), frontmatter ve ASCII kebab-case adla.
+4. Yeni paket kurarken: önce `SKILL.md` ve betikleri oku (veri dışarı gönderiyor mu?), sonra `99-Dashboard/claude-code-skilleri.md` notuna ekle.

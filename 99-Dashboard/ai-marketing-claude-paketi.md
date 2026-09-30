@@ -7,7 +7,7 @@ date: 2026-09-30
 # ai-marketing-claude paketi (Claude Code)
 
 **Depo:** [zubair-trabzada/ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude) · 2,7k⭐ · MIT lisans
-**Durum:** 30.09.2026'da bulut çalışma ortamına kurulup Humentis üzerinde denendi. Kasaya / bilgisayara henüz kurulmadı.
+**Durum:** 30.09.2026'da denendi ve **kasaya kuruldu** (`.claude/skills/market*`, `.claude/agents/market-*`). Kasaya göre uyarlandı: her komut önce müşterinin marka brief'ini okur, yasaklarına uyar, Türkçe yazar, çıktıyı müşteri klasörüne kaydeder.
 **Deneme sonucu:** [[R2 ai-marketing-claude denemesi]]
 
 ## Ne işe yarıyor?
@@ -40,16 +40,8 @@ Kurulum dosyası incelendi: sadece talimat dosyalarını `~/.claude/skills` ve `
 | `/market emails <konu>` | E-posta dizileri | Daha çok Nefin gibi e-ticaret |
 | `/market launch <ürün>` | Lansman planı | Nefin yeni ürün |
 
-## Psikoloji sitelerinde kullanırken (zorunlu)
+## Müşteri kuralları (tüm müşteriler)
 
-Paket genel pazarlama (SaaS / e-ticaret) mantığıyla yazılmış ve İngilizce. Komutu verirken şunu ekle: **"Çıktı Türkçe olsun; psikoloji / danışmanlık sitesi kurallarına uy."** Kurallar:
-
-- Aciliyet ve kıtlık yok ("son 3 randevu", "hemen başlayın").
-- Korku üzerinden başlık yok (PAS'ın "acıyı büyüt" adımı kullanılmaz).
-- Danışan yorumu, önce-sonra hikâyesi, sonuç vaadi önerilmez.
-- "İlk seans ücretsiz", "en iyi", "garanti", "tedavi", "hasta" yok.
-- "7/24 destek" gibi kriz beklentisi yaratan ifade yok; kriz hizmeti olmadığı açıkça yazılır.
-
-İleride kasaya kurulursa bu kurallar paketin `market/SKILL.md` dosyasının sonuna eklenmeli ki Furkan Bey de aynı sonucu alsın.
+Paket genel; hangi müşteri için çalışırsa o müşterinin `00-Musteriler/<slug>/marka-brief.md` yasaklarına uyar (kural: `CLAUDE.md` → "Dış skill paketleri"). Psikoloji / danışmanlık kuralları Humentis brief'inin **7. Yasal / Hassas Kurallar** bölümünde: aciliyet yok, korku başlığı yok, danışan yorumu yok, "ücretsiz ilk seans / en iyi / garanti / tedavi" yok, kriz beklentisi yaratan ifade yok.
 
 İlgili: [[claude-code-skilleri]] · [[ilham-linkleri]]

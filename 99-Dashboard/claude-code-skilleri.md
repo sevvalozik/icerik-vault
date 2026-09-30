@@ -24,7 +24,7 @@ Henüz kurulup denenenler ✅ ile işaretli. Diğer bilgiler depo sayfalarından
 
 `.claude/skills/` içinde: `gorsel-brief`, `icerik-paketi`, `instagram-onizleme`, `video-brief`.
 
-Ayrıca kasaya kurulu: **obsidian-skills** (30.09.2026) → `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap`.
+Ayrıca kasaya kurulu: **ai-marketing-claude** (30.09.2026, kasaya uyarlandı → `/market`) ve **obsidian-skills** (30.09.2026) → `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap`.
 
 ## Obsidian (kasa için)
 

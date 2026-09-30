@@ -117,6 +117,13 @@ Marka/İçerik (sıcak, editoryal) → Arama/Randevu (kompakt, işlevsel) → G�
 - Danışan hiçbir karede görünmez; çocuk odası çekimlerinde çocuk yok.
 - Teşhis/tedavi vaadi yok; "destek", "birlikte keşfetmek" dili.
 - Kriz içerikleri (intihar, şiddet) ayrı protokol — sosyal medyada işlenmez, yönlendirme yapılır.
+- **Pazarlama / reklam / site metni (30.09.2026 eklendi — pazarlama paketleri için):**
+  - Aciliyet ve kıtlık yok ("son 3 randevu", "hemen başlayın").
+  - Korku üzerinden başlık yok; sorunu büyüten (PAS "agitate") dil yok.
+  - Danışan yorumu, önce-sonra hikâyesi, sonuç vaadi önerilmez.
+  - "İlk seans ücretsiz", "en iyi", "garanti", "tedavi", "hasta" kullanılmaz.
+  - "7/24 destek" gibi kriz beklentisi yaratan ifade yok; kriz hizmeti olmadığı açıkça yazılır.
+  - Randevu/WhatsApp akışlarında danışanın şikâyeti veya tanısı kayda geçmez (KVKK özel nitelikli veri).
 - Marka sistemi README notu: isim tescili, hukuki/klinik kapsam, KVKK, erişilebilirlik incelemesi **henüz yapılmadı** — canlıya çıkmadan doğrulanacak.
 
 ## 8. Varlık Haritası
