@@ -152,6 +152,26 @@ Pozitif takviye cümlesi (denenecek): `"The product label, logo and typography m
 
 Kaynak: Nefin Sunscreen "doğal uygulama" videosu v1, bkz. `06-AI-Video/nefin-beauty/video-log.md` → Onaylı üretimler.
 
+## Otomotiv / ekspertiz (Otoekspertiz tipi)
+
+```text
+brand emblem, grille emblem, wheel center logo, badge, license plate, readable numbers, gauge display text, instrument cluster numbers, person, face, full body, car body morphing, deformed wheels, car floating, lift arms clipping through the car
+```
+
+Türkçe not (30 Eylül 2026): Otoekspertiz Keçiören "Gözle değil, doğru ekspertizle" v1 videosu Google Flow'da (Veo) üretildi. Üç hata, promptta açıkça yasaklanmış olmalarına rağmen çıktı:
+
+1. **Amblem:** "unbadged, no brand emblems" yazılmasına rağmen Veo gerçek bir modele benzeyen bir araç ve ızgara/jant göbeği amblemi çizdi. Pozitif takviye: `a smooth blank grille, plain black wheel centers`. Izgara da kadraja olabildiğince az sokulur (yan profil).
+2. **Ekran rakamları:** Boya ölçerin ekranı kameraya dönük tarif edilince model anlamsız yazı ve rakam üretti. Rakam içeren her şey (ölçer ekranı, gösterge paneli) ya gerçek çekimle ya da `the display faces away from the camera` / `the instrument cluster is never in frame` gibi cümlelerle kadraj dışında tutularak çözülür.
+3. **Kişi:** "only hands, never a face" denmesine rağmen lift sahnesinde yüzü görünen tam bir teknisyen çizildi. Pozitif takviye: `Only a technician's hands … appear; never a body or face.` Negatife `person, face, full body` eklenir.
+
+Ek not: Çok sahneli tek prompt Veo'da tek bir klibe (10 sn) sıkıştı. Veo'da sahne başına ayrı prompt kullanılır.
+
+v2 sahne sahne üretimde iki hata daha görüldü (30 Eylül 2026):
+- "smooth blank grille" yazılmasına rağmen araç Tesla'ya benzedi ve bir sahnede kaputa "T" amblemi çizildi. Aracın önü görünen çekimlerde kurguda büyütme/kırpma payı bırakılır.
+- Boya ölçer sahnesinde "the thin red LED line reflects faintly in the paint" cümlesi, ölçerden çıkan bir lazer çizgisine dönüştü. Gerçek ölçerlerde lazer yok. Bu sahnede kırmızı vurgu cümlesi yazılmaz; negatife `laser beam, laser line` eklenir.
+
+Kaynak: `06-AI-Video/otoekspertiz-kecioren/video-log.md` → Karma sonuçlu denemeler.
+
 ## Nasıl kullanılır
 
 1. Genel + sektör listesini birleştir (tekrarları sil).
