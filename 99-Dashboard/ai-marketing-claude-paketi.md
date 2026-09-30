@@ -52,4 +52,4 @@ Paket genel pazarlama (SaaS / e-ticaret) mantığıyla yazılmış ve İngilizce
 
 İleride kasaya kurulursa bu kurallar paketin `market/SKILL.md` dosyasının sonuna eklenmeli ki Furkan Bey de aynı sonucu alsın.
 
-İlgili: [[ilham-linkleri]]
+İlgili: [[claude-code-skilleri]] · [[ilham-linkleri]]

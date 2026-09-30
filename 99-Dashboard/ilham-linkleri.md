@@ -12,37 +12,18 @@ Web, mobil ve tanıtım sitesi tasarımı için Instagram'da bulunan rehber/örn
 - https://www.instagram.com/reel/DdBscjLqzfg/
 - https://www.instagram.com/reel/Dc_Sba2vlBb/
 - https://www.instagram.com/reel/Dctb9QEidxy/
-- https://www.instagram.com/reel/DclpZH7KQk1/ — `npx skills add emilkowalski/skill` kurulumunu gösteren rehber video (bkz. aşağıda emilkowal.ski/skill)
+- https://www.instagram.com/reel/DclpZH7KQk1/ — `npx skills add emilkowalski/skill` kurulumunu gösteren rehber video (bkz. [[claude-code-skilleri]])
 
 
-## Skill Kaynakları (GitHub / kişisel sayfa)
+## Claude Code Skill'leri
 
-hepsi gerçek ve kaliteli — özellikle Impeccable ve Taste-Skill tam da "AI gibi durmasın" isteğine birebir uyuyor:
-
-- **[emilkowal.ski/skill](https://emilkowal.ski/skill)** — Emil Kowalski'nin (tanınmış bir design engineer, animasyon konusunda uzman) kendi skill seti. UI animasyonu, animasyon kalitesini denetleme, tasarımda "motion" fırsatlarını bulma gibi 9 skill içeriyor. `npx skills add emilkowalski/skill` ile kuruluyor (doğrulandı, sitede de aynı komut yazıyor). Kurulumu gösteren rehber video: [Instagram reel](https://www.instagram.com/reel/DclpZH7KQk1/).
-- **[github.com/pbakaus/impeccable](https://github.com/pbakaus/impeccable)** — 67k yıldız. Anthropic'in kendi frontend-design skill'inden geliştirilmiş. AI'ın ürettiği tasarımdaki klişeleri (mor gradyan, iç içe kartlar, hep aynı fontlar vb.) 61 kuralla tespit edip düzeltiyor. Claude Code dahil birçok araçla çalışıyor.
-- **[github.com/leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill)** — 64.9k yıldız. AI'ın ürettiği arayüzlerin "şablon gibi" durmaması için tipografi/boşluk/hareket kurallarını güçlendiriyor; yumuşak/minimalist/brütalist gibi farklı stil varyantları var. React/Vue/Svelte ile uyumlu.
-- **[github.com/kylezantos/design-motion-principles](https://github.com/kylezantos/design-motion-principles)** — 1000 yıldız. Motion/animasyon için "Create" (amaçlı hareket ile bileşen üretme) ve "Audit" (mevcut animasyonu denetleme) modları var; Emil Kowalski, Jakub Krehel, Jhey Tompkins'in tasarım felsefelerini birleştiriyor, anti-AI-slop kontrol listesi içeriyor. `npx skills add kylezantos/design-motion-principles` ile kuruluyor.
+Tüm Claude Code skill paketleri (tasarım, pazarlama/SEO, video, Obsidian) ayrı notta: [[claude-code-skilleri]]
 
 ## Tasarım Referans Araçları (skill değil, doğrudan araç/kaynak)
 
 - **[Stitch (Google)](https://stitch.withgoogle.com/)** — Google'ın AI ile web/mobil arayüz tasarımı üreten aracı, hızlı tasarım fikri/ideation için.
 - **[Framer Plugin Marketplace](https://www.framer.com/marketplace/plugins/)** — Framer (no-code site oluşturucu) için hazır eklentiler.
 - **[Mobbin](https://mobbin.com/discover/apps/ios/latest)** — gerçek uygulamalardan (iOS/web) ekran görüntüsü arşivi, ilham/referans için. Beğenilen ekranların screenshot'ı alınıp buraya da eklenebilir.
-
-## Skill Depoları (GitHub, daha önce araştırılan)
-
-Web/mobil/tanıtım sitesi işleri için araştırdığımız, yıldız sayılarıyla:
-
-- **[rampstackco/claude-skills](https://github.com/rampstackco/claude-skills)** (502⭐) — tüm site sürecini kapsayan skill paketi: marka kimliği, landing page metni, çok adımlı form tasarımı (üyelik formu için birebir uyuyor)
-- **[nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)** (126k⭐) — en büyük/popüler olan; 79 UI stili, web + mobil (Flutter/SwiftUI dahil) destekliyor
-- **[ryanthedev/design-for-ai](https://github.com/ryanthedev/design-for-ai)** (258⭐) — tipografi/renk/kompozisyon temelleri
-- **[funboy322/avoid-ai-design](https://github.com/funboy322/avoid-ai-design)** (57⭐) — "AI gibi duran" klişeleri (mor gradyan, hep aynı fontlar vb.) denetleyip düzeltiyor
-- **[Koomook/claude-frontend-skills](https://github.com/Koomook/claude-frontend-skills)** (22⭐) — özgün/sıradan olmayan frontend tasarımı için
-
-### İleride (site yayına girdikten sonra)
-
-- **[mardab96/landing-pages-claude-skills](https://github.com/mardab96/landing-pages-claude-skills)** (1⭐) — 26 farklı dönüşüm denetimi skill'i (CTA netliği, form sürtünmesi, güven sinyalleri vb.) — ilk sürüm için değil, site canlıya alındıktan sonra optimize etmek için
 
 ## Mobbin Referansları (bağlandık, gerçek arama yapıldı)
 
@@ -74,15 +55,6 @@ Dernek yönetim sistemi (üyelik + haberleşme ağı modülleri) için daha isab
 ## Mobil (Android) UI Kaynakları
 
 - **[wasabeef/awesome-android-ui](https://github.com/wasabeef/awesome-android-ui)** — 56.5k yıldız. Android için hazır UI/UX kütüphaneleri kataloğu (layout, buton, liste, animasyon, Jetpack Compose dahil). Skill değil, doğrudan kullanılabilir kod kütüphaneleri listesi — mobil geliştirme tarafında referans.
-
-## Claude Code İş Paketleri (pazarlama / içerik)
-
-Claude Code'a hazır görevler öğreten paketler. Henüz kurulmadı ve denenmedi; bilgiler depo sayfalarından (30 Eylül 2026).
-
-- **[AgriciDaniel/claude-blog](https://github.com/AgriciDaniel/claude-blog)** (2k⭐) — blog için baştan sona sistem: konu planı, taslak, yazım, Google ve yapay zekâ aramalarına uygunluk kontrolü. Hocaların blog yazıları için uygun.
-- **[zubair-trabzada/ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude)** (2,7k⭐) — 15 görev: site denetimi, 30 günlük sosyal medya takvimi, müşteriye teklif, PDF rapor. **Denendi, işe yarıyor** → [[ai-marketing-claude-paketi]] (komutlar, psikoloji kuralları) · Humentis denemesi: [[R2 ai-marketing-claude denemesi]]
-- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** (74,4k⭐) — büyük liste; Instagram, TikTok, Canva otomasyonu, görsel iyileştirme paketleri var.
-- **[ithiria894/awesome-claude-code-workflows](https://github.com/ithiria894/awesome-claude-code-workflows)** (122⭐) — hazır iş akışı tarifleri; "Pazarlama ve içerik" bölümü var.
 
 ## Otomasyon (n8n)
 
