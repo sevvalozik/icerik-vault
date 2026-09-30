@@ -24,7 +24,7 @@ bagli:
 1. **Mobil sabit alt bar**, her sayfada ve çerez kararından bağımsız: `[Ara] [WhatsApp] [Randevu talebi]`.
 2. **Header:** tıklanabilir "0552 898 95 45" (mobilde ikon + numara).
 3. **Hero:** birincil CTA "WhatsApp'tan yazın", ikincil "Hemen arayın". "Uzmanları incele" üçüncü sıraya insin.
-4. **"Randevu al":** kısa talep formuna gitsin ([[P0-01 Randevu akisi bos takvim]]), `/uzmanlar` listesine değil.
+4. **"Randevu al":** kısa talep formuna gitsin ([[P0-01 Randevu akisi bos takvim]]), `/uzmanlar` listesine değil. ⚠️ *Düzeltme 30.09: randevu akışı uzman kartındaki pencereyle çalışıyor (P0-01 düzeltmesine bakın); bu madde yanlış varsayıma dayanıyor.*
 5. **Podcast bandı:** landing page'lerde ve ana sayfanın ilk ekranında gösterilmesin; footer'a taşınsın.
 6. **Kaynak takibi:** her sayfanın WhatsApp hazır metni farklı olsun ki Ahsen mesajın nereden geldiğini görsün.
    - Ana sayfa: `Merhaba, bilgi almak istiyorum. (web-ana)`

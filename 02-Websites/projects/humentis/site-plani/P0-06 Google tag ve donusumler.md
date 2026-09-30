@@ -28,7 +28,7 @@ bagli:
 |---|---|---|
 | `tel_click` | `a[href^="tel:"]` tıklaması | `page_path`, `placement` (header / dock / hero / sayfa) |
 | `whatsapp_click` | `a[href*="wa.me"]` tıklaması | `page_path`, `placement` |
-| `randevu_talebi` | talep API'si 2xx döndüğünde | `department` (genel / cocuk / cift / test), `mode` (online / yuzyuze) |
+| `randevu_talebi` ⚠️ *düzeltme 30.09: gerçek akış randevuyu doğrudan oluşturuyor; tetikleyici randevu penceresindeki "Randevuyu oluştur" isteğinin 2xx yanıtı olmalı* | talep API'si 2xx döndüğünde | `department` (genel / cocuk / cift / test), `mode` (online / yuzyuze) |
 | `iletisim_formu` | iletişim formu API'si 2xx döndüğünde | `page_path` |
 
 4. **Google Ads.** Hedefler → Dönüşümler: 4 event'i GA4'ten içe aktar ([[A2 Ads donusum ve ayarlar]]). GA4 ↔ Ads bağlantısını kur. GA4'te "Google sinyalleri" kapalı kalsın.

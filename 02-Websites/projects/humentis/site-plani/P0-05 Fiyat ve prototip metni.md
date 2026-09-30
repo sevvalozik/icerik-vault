@@ -11,6 +11,11 @@ bagli:
 
 # P0-05 · Fiyatlar ve "prototip" metni
 
+> [!warning] Düzeltme (30.09.2026, main kodu ve canlı API ile doğrulandı)
+> - Fiyat (`BookingSummary`, `BookingPage`) ve "bu prototipte" metni yalnızca `/randevu/<slug>` sayfasında görünüyor; bu sayfaya sitede link yok. 30.09'da ana sayfa, /uzmanlar, /hakkimizda, /iletisim, /ik/kariyer ve uzman profili tarandı: hiçbirinde ₺ ya da "prototip" yok. Yani normal ziyaretçi şu an sitede hiç fiyat görmüyor.
+> - "Prototip aşamasında 24 saat öncesine kadar ücretsiz iptal…" cümlesi ayrıca SSS verisinde (`institutionFaq`, FAQPage schema) duruyor; düzeltilmeli.
+> - Geçerli kalan: sitede fiyat gösterilip gösterilmeyeceği kararı.
+
 > [!danger] Sorun
 > - Randevu sayfalarındaki fiyatlar: ₺1.450 (çocuk gelişimi, 45 dk), ₺1.650, ₺1.800, ₺1.850, ₺1.950, ₺2.100 (50 dk). Kaynak: `/api/specialists` → `offerings[].totalPrice`.
 > - Telefonda söylenen ücret ₺3.000–4.000 aralığında. Siteden gelen kişi telefonda yaklaşık iki katını duyuyor.

@@ -7,10 +7,10 @@ olusturma: 2026-09-29
 
 > [!summary] Özet
 > Google Ads'ten gelen 175 tıklama yaklaşık 1 temasa dönüştü. Sebep reklam değil, site. 29.09.2026 gecesi yapılan taramada bulunanlar ([[Kanit - Site taramasi 2026-09-29]]):
-> 1. **Randevu takvimi boş.** 17 uzmanın hiçbirinde ileri tarihli saat yok; "Randevu al" butonu çıkmaz sokağa gidiyor.
+> 1. **Randevu takvimi boş.** 17 uzmanın hiçbirinde ileri tarihli saat yok; "Randevu al" butonu çıkmaz sokağa gidiyor. ⚠️ *Düzeltme 30.09: tarama `/randevu/<slug>` sayfasına ve eski `availability` alanına bakmış; bu sayfaya sitede link yok. Gerçek akış uzman kartındaki "Randevu al" penceresi ve saatleri `open-slots` API'sinden alıyor. Bkz. [[P0-01 Randevu akisi bos takvim]].*
 > 2. **Her açılışta ~5 sn gecikme.** 4,8 sn logo animasyonu, ardından içeriği kilitleyen tam ekran çerez penceresi geliyor.
 > 3. **Ara/WhatsApp geç görünüyor.** Butonlar ancak çerez seçiminden sonra çıkıyor; ana sayfa metninde telefon yok.
-> 4. **Fiyat ve metin yanlış.** Sitede ₺1.450–2.100 fiyat var (telefonda ₺3.000+ söyleniyor) ve randevu sayfasında canlıda "prototip" yazıyor.
+> 4. **Fiyat ve metin yanlış.** Sitede ₺1.450–2.100 fiyat var (telefonda ₺3.000+ söyleniyor) ve randevu sayfasında canlıda "prototip" yazıyor. ⚠️ *Düzeltme 30.09: fiyat ve "prototip" yalnızca linksiz `/randevu/<slug>` sayfasında; normal ziyaretçi sitede fiyat görmüyor. Bkz. [[P0-05 Fiyat ve prototip metni]].*
 > 5. **Ölçüm yok.** Sitede Google etiketi yok; dönüşüm ölçülemiyor.
 > 6. **Botlar sayfa ayırt edemiyor.** Ham HTML'de her sayfa aynı ve boş, canonical'lar ana sayfaya işaret ediyor. Hizmet sayfası ve bağlantılı uzman profili yok.
 

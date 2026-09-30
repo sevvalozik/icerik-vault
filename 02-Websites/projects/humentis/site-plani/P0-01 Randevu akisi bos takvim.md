@@ -13,6 +13,12 @@ bagli:
 
 # P0-01 · Randevu akışı: boş takvim (çıkmaz sokak)
 
+> [!warning] Düzeltme (30.09.2026, main kodu ve canlı API ile doğrulandı)
+> - Aşağıdaki "Randevu al → `/randevu/<slug>`" tespiti yanlış. Uzman kartlarındaki ve profildeki "Randevu al" bir pencere açıyor (`AppointmentRequestModal`): görüşme biçimi → bölüm → takvim → iletişim + KVKK → "Randevuyu oluştur". Ödeme adımı yok. Bu akış kodda 1 Eylül'den beri böyle. Header'daki "Randevu al" `/uzmanlar` listesine gidiyor.
+> - Pencere saatleri `/api/specialists/<slug>/open-slots`'tan alıyor. 30.09 itibarıyla 18 uzmanın her birinde 1 Ekim'den itibaren açık saat var. 29.09'da dolu olup olmadığı bilinmiyor.
+> - `/randevu/<slug>` sayfasına sitede hiçbir yerden link verilmiyor (robots.txt'de de kapalı). Tabloda kullanılan `availability` alanı bu eski sayfanın verisi.
+> - Kodda doğrulanan gerçek sorun: takvim her zaman içinde bulunulan ayda açılıyor; ay sonunda seçilebilir gün kalmayınca boş görünüyor (kullanıcı "›" ile sonraki aya geçmeli). Takvim ilk müsait günün ayında açılmalı. Linksiz `/randevu/<slug>` sayfası kaldırılmalı ya da `/uzmanlar`'a yönlendirilmeli.
+
 > [!danger] Sorun
 > - "Randevu al" butonu (header'da ve her uzman kartında) `/uzmanlar` → `/randevu/<slug>` takvimine gidiyor.
 > - 29.09.2026 itibarıyla **17 uzmanın hiçbirinde bugünden sonra slot yok.** 8 uzmanda yalnız geçmiş slot var (en yenisi 10 Eylül), 9 uzmanda hiç yok.

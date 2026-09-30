@@ -14,6 +14,16 @@ related: ["[[seo-dongusu]]", "[[00 Humentis Site Plani (MOC)]]", "[[R2 ai-market
 **İşletme türü:** Yerel hizmet işletmesi (aile danışma merkezi) + kurumsal hizmet (Çalışan Destek Programı)
 **Genel pazarlama puanı: 39/100 (Not: F — kritik)**
 
+> [!warning] Düzeltme (30.09.2026, main kodu ve canlı API ile doğrulandı)
+> Bu rapor yalnızca canlı siteden yazıldı. Kodla karşılaştırınca şunlar yanlış çıktı:
+> - **Randevu yolu:** "Randevu al → boş takvim → ödeme, 'prototip' notu" linksiz `/randevu/<slug>` sayfasına ait. Gerçek akış uzman kartındaki pencere; ödeme ve prototip yok, 30.09'da her uzmanda 1 Ekim'den itibaren açık saat var. Dönüşüm puanı ve yönetici özetindeki 1. sebep buna dayanıyor. Bkz. [[P0-01 Randevu akisi bos takvim]].
+> - **Meta ve schema:** JS çalıştıktan sonra her rotada title/description/canonical değişiyor; profillerde Person, genel sayfalarda FAQPage schema var. Sorun yalnızca ham HTML'de.
+> - **llms.txt / ai-catalog.json:** iki dosya da yok; adresler SPA HTML'ini döndürüyor.
+> - **Galeri:** boş değil, 6 fotoğraf var.
+> - **Fiyat:** yalnızca linksiz sayfada görünüyor; ziyaretçi sitede fiyat görmüyor ("şeffaf fiyat" avantajı fiilen yok).
+> - **Stack:** ASP.NET değil, Node.js/Express + IIS.
+> - Rakamlar: uzman 18, doğrulama kaydı olmayan 10, makale tarihleri 1–29 Ağustos.
+
 > [!note] Veri kaynakları ve sınırlar
 > - **Canlı site:** 30.09.2026 11:07–11:20 arası uygulamanın tarayıcısında açıldı (JavaScript çalışmış, gerçek ziyaretçinin gördüğü hâl). 15 sayfa, 16 makale, uzman API'si, sitemap/robots okundu. Form gönderilmedi.
 > - **Dış veri:** PageSpeed Insights (mobil), web araması (Google değil), 4 rakip sitesi, kasadaki site planı ve 29.09 taraması, Google Ads verisi (site planından).

@@ -20,7 +20,7 @@ bagli:
 >   - gövde metni yalnız "Ana içeriğe geç"
 > - JS birkaç saniye sonra bunları route'a göre değiştiriyor. Google, JS ile mevcut canonical'ı değiştirmenin "beklenmedik sonuçlara" yol açabileceği konusunda uyarıyor.
 > - JS çalıştırmayan botlar (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) 25 URL'nin hepsinde aynı boş sayfayı ve ana sayfaya işaret eden canonical'ı görüyor.
-> - Stack: React SPA (Vite) + ASP.NET + Cloudflare.
+> - Stack: React SPA (Vite) + ASP.NET + Cloudflare. ⚠️ *Düzeltme 30.09: Node.js/Express API + Windows IIS (ARR ile API'ye reverse proxy) + Cloudflare. `x-powered-by: ASP.NET` başlığı IIS'ten geliyor; API yanıtında `Express, ARR/3.0, ASP.NET` görünüyor. Uygulama ASP.NET değil. Aşağıdaki "ASP.NET" adımları IIS web.config kuralı (hazır HTML varsa onu ver, yoksa SPA fallback) ya da Express ile yapılmalı.*
 >
 > Ayrıntı: [[Kanit - Site taramasi 2026-09-29#Ham HTML (JS olmadan)]]
 

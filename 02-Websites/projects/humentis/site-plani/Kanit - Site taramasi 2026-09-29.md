@@ -14,7 +14,7 @@ saat: 02:40–03:05 TSİ
 
 ## Altyapı
 - React SPA (Vite build: `/assets/index-CQ9qytuY.js`, ~576 KB sıkıştırılmamış JS; ilk yüklemede ~904 KB transfer).
-- Backend ASP.NET (`x-powered-by: ASP.NET`). Önünde Cloudflare (`server: cloudflare`, Cloudflare Web Analytics beacon'ı var).
+- Backend ASP.NET (`x-powered-by: ASP.NET`). ⚠️ *Düzeltme 30.09: Node.js/Express API + Windows IIS (ARR ile API'ye reverse proxy) + Cloudflare. `x-powered-by: ASP.NET` başlığı IIS'ten geliyor; API yanıtında `Express, ARR/3.0, ASP.NET` görünüyor. Uygulama ASP.NET değil.* Önünde Cloudflare (`server: cloudflare`, Cloudflare Web Analytics beacon'ı var).
 - Herkese açık API: `/api/specialists`, `/api/organization`. Uzman paneli `/uzman/panel/<slug>`, müsaitlik `/api/specialist-panel/<slug>/hour-blocks`.
 
 ## Uzman takvimleri
