@@ -5,7 +5,7 @@ slug: humentis
 status: tamamlandi
 date: 2026-09-30
 tags: [humentis, arastirma, pazarlama-denetimi, ai-marketing-claude]
-related: ["[[00 Humentis Site Plani (MOC)]]", "[[R2 ai-marketing-claude denemesi]]", "[[R1 Rakip analizi CAN Psikoloji]]", "[[ai-marketing-claude-paketi]]"]
+related: ["[[seo-dongusu]]", "[[00 Humentis Site Plani (MOC)]]", "[[R2 ai-marketing-claude denemesi]]", "[[R1 Rakip analizi CAN Psikoloji]]", "[[ai-marketing-claude-paketi]]"]
 ---
 
 # R3 · Pazarlama denetimi: Humentis (humentis.com.tr)
@@ -157,8 +157,31 @@ Parasal karşılık: 175 tıklama başına ~₺1.500–9.200 ilk görüşme geli
 1. P0'ları (P0-01…P0-06) ve bu raporun "hızlı kazanımlar"ını birlikte canlıya almak; bunlar bitmeden reklam bütçesi artırılmasın.
 2. Prerender işini (P1-07) P0 önceliğine almak ve sitemap'i düzeltmek.
 3. Kurucuyla eski site ve dış listelemeler konusunu konuşmak; A1 reklam grubunu bununla birlikte açmak.
+4. Search Console, Bing ve ölçüm kurulunca haftalık SEO döngüsünü başlatmak (Ek: Haftalık SEO döngüsü).
 
 Önerilen devam komutları (kasada Claude Code ile): `/market copy` (bölüm ve profil metinleri), `/market funnel` (ölçüm kurulduktan sonra huni oranları), `/market competitors` (CAN verisinin güncellenmesi).
+
+## Ek: Haftalık SEO döngüsü (Refix makalesinden uyarlama)
+
+Furkan Bey'in paylaştığı Neil Agarwal (@regalstreak) makalesindeki yöntem ("oku → düzelt → yaz → ölç") bu raporun SEO önerilerini **nasıl sürdürüleceği** açısından tamamlıyor. Yöntemin tamamı: [[seo-dongusu]]. Makale yazarın kendi ürünü Refix'i tanıtıyor ve "2 haftada 47 kat" iddiası doğrulanmadı; yöntem elle, ücretsiz araçlarla uygulanabilir.
+
+**Ön koşullar (bu rapordaki öneriler):** Search Console + Bing (P1-10), prerender ve sayfa başına canonical (P1-07), açılış sayfasına göre dönüşüm ölçümü (P0-06). Bunlar olmadan döngünün "oku" ve "ölç" adımları çalışmaz.
+
+**Humentis'e eklenecekler**
+
+| # | Makaledeki ilke | Humentis'te karşılığı | Öncelik |
+|---|---|---|---|
+| 1 | Yönlendirmeleri önce düzelt (307 değil 301/308; yanlış canonical) | /merkez → /iletisim, /makaleler ve /icerik/makaleler → tek adres, /icerik/mesimsel-depresyon → düzeltilmiş adres, kurucunun eski sitesi → profil: hepsi **301**. Tüm sayfaların ana sayfayı canonical göstermesi aynı dersin ağır hâli (P1-07). | P0/P1 |
+| 2 | Tıklamayı sonuca bağla: dönüşümü ilk açılış sayfasına göre kır | GA4'te "açılış sayfası" boyutu × randevu talebi / WhatsApp / telefon olayları. Aylık KPI tablosuna "sayfa bazında tıklama → temas" satırı eklenir. 400 tıklayıp temas getirmeyen sayfa "sızıntı" sayılır. | P0-06 ile |
+| 3 | Search Console'da 6 sinyali haftalık oku | Haftalık kontrol: sıralaması 3–20 olan marka dışı sorgular; 500+ gösterim ve %0,5 altı tıklama oranı; haftalık %30 düşüş; hiçbir sayfanın hedeflemediği sorgular; sayfa ile niyeti uyuşmayan sorgular; 7+ kelimelik sorgular. n8n'deki haftalık Search Console raporu akışına filtre olarak eklenebilir ([[otomasyon-secilmis-akislar]]). | Search Console kurulunca |
+| 4 | Yazmadan önce düzelt | Önce uzman profilleri ve bölüm sayfaları: sorgu hangi sayfada görünüyorsa title, H1, ilk cümle ona göre. Yeni sayfa ancak sorgu mevcut sayfaya sığmıyorsa. | P1 |
+| 5 | Yapay zekânın baktığı yere yaz: 7+ kelimelik sorgular | Search Console filtresi `(\b\w+\b\s){7,}`. Boş 16 makale yerine gerçek uzun sorgulara ("eşimle sürekli aynı konuda tartışıyoruz ne yapmalıyım" tipi) cevap veren, uzman imzalı yazılar. | P2-12 ile |
+| 6 | Bing + IndexNow | Bing Webmaster Tools doğrulaması (P1-10'da var) + her yayında IndexNow bildirimi (P1-10'a eklendi). ChatGPT araması ve Copilot kısmen Bing indeksinden besleniyor. | P1 |
+| 7 | Kötü anahtar kelimeyi yazmadan ele | Yazmadan önce arama sonucuna bakılır; sonuçlarda psikiyatri/ilaç, iş ilanı ya da test siteleri çıkıyorsa o sorgu için sayfa yazılmaz. Hacim sadece sırayı belirler. | Sürekli |
+| 8 | Küçük partilerle yayın | Uzman profilleri ve yazılar 3–5'lik partilerle; her partiden sonra Search Console "Sayfalar" raporunda dizine girme izlenir. Günde çok sayfa basmak "keşfedildi, dizine eklenmedi"de bırakabilir. | P1–P2 |
+| 9 | En iyi sayfa en zayıfı taşısın | Tıklama alan sayfadan (ör. en çok aranan uzman profili) ilgili ama takılı kalmış bir bölüm/tema sayfasına link; ayda bir döndürülür. "Yaşam temaları" iç link önerisiyle birlikte. | P2 |
+
+**Humentis kuralları bu döngüde de geçerli:** "yanlış niyet" sinyali bir sorgu için test ya da tanı sayfası istese bile yazılmaz; başlıklara sorgu ne olursa olsun "tedavi", "en iyi" ya da aciliyet girmez. Refix gibi üçüncü taraf araçlar, sağlık verisi ve KVKK açısından incelenmeden siteye ya da Search Console'a bağlanmaz.
 
 ---
 
