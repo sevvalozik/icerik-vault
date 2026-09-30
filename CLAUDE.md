@@ -54,3 +54,5 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 ## Claude Code skill'leri (`.claude/skills/`)
 
 `/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme` — yukarıdaki akışları tek komutla yürütür; argüman olarak müşteri slug'ı ve kampanya adı alır.
+
+Obsidian biçimi için (kepano/obsidian-skills, MIT): `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap` — not, Bases tablosu ve Canvas yazarken otomatik devreye girer. Ayrıntı: `99-Dashboard/claude-code-skilleri.md`.

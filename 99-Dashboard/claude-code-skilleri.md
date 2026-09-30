@@ -24,9 +24,11 @@ Henüz kurulup denenenler ✅ ile işaretli. Diğer bilgiler depo sayfalarından
 
 `.claude/skills/` içinde: `gorsel-brief`, `icerik-paketi`, `instagram-onizleme`, `video-brief`.
 
+Ayrıca kasaya kurulu: **obsidian-skills** (30.09.2026) → `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap`.
+
 ## Obsidian (kasa için)
 
-- **[kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)** (49k⭐) — Obsidian'ın kurucusu Steph Ango'nun resmi paketi. Obsidian Markdown (`[[bağlantılar]]`, callout'lar), Bases (`.base` tablolar), JSON Canvas (`.canvas` panolar), Obsidian CLI; ayrıca Defuddle (web sayfasını temiz nota çevirir). Kasaya not yazdırırken hataları azaltır → **ilk kurulacak aday.** `npx skills add https://github.com/kepano/obsidian-skills`
+- ✅ **[kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)** (49k⭐) — Obsidian'ın kurucusu Steph Ango'nun resmi paketi. Obsidian Markdown (`[[bağlantılar]]`, callout'lar), Bases (`.base` tablolar), JSON Canvas (`.canvas` panolar), Obsidian CLI; ayrıca Defuddle (web sayfasını temiz nota çevirir). Kasaya not yazdırırken hataları azaltır. **Kasaya kuruldu (30.09.2026)**; `defuddle` ve `knap` ilk kullanımda `npm install -g` ister. `npx skills add https://github.com/kepano/obsidian-skills`
 
 ## Pazarlama, içerik ve SEO
 
