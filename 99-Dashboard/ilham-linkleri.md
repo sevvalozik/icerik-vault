@@ -74,3 +74,16 @@ Dernek yönetim sistemi (üyelik + haberleşme ağı modülleri) için daha isab
 ## Mobil (Android) UI Kaynakları
 
 - **[wasabeef/awesome-android-ui](https://github.com/wasabeef/awesome-android-ui)** — 56.5k yıldız. Android için hazır UI/UX kütüphaneleri kataloğu (layout, buton, liste, animasyon, Jetpack Compose dahil). Skill değil, doğrudan kullanılabilir kod kütüphaneleri listesi — mobil geliştirme tarafında referans.
+
+## Claude Code İş Paketleri (pazarlama / içerik)
+
+Claude Code'a hazır görevler öğreten paketler. Henüz kurulmadı ve denenmedi; bilgiler depo sayfalarından (30 Eylül 2026).
+
+- **[AgriciDaniel/claude-blog](https://github.com/AgriciDaniel/claude-blog)** (2k⭐) — blog için baştan sona sistem: konu planı, taslak, yazım, Google ve yapay zekâ aramalarına uygunluk kontrolü. Hocaların blog yazıları için uygun.
+- **[zubair-trabzada/ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude)** (2,7k⭐) — 15 görev: site denetimi, 30 günlük sosyal medya takvimi, müşteriye teklif, PDF rapor.
+- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** (74,4k⭐) — büyük liste; Instagram, TikTok, Canva otomasyonu, görsel iyileştirme paketleri var.
+- **[ithiria894/awesome-claude-code-workflows](https://github.com/ithiria894/awesome-claude-code-workflows)** (122⭐) — hazır iş akışı tarifleri; "Pazarlama ve içerik" bölümü var.
+
+## Otomasyon (n8n)
+
+Hazır n8n iş akışı depolarının tam listesi: [[n8n-workflow-kaynaklari]]
