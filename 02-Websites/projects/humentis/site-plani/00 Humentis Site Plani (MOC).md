@@ -47,6 +47,7 @@ olusturma: 2026-09-29
 
 ## Araştırma
 - [[R1 Rakip analizi CAN Psikoloji]]
+- [[R2 ai-marketing-claude denemesi]] — pazarlama paketiyle hızlı analiz ve ana sayfa metin önerileri (30.09)
 
 ## Her görev için "bitti" tanımı
 - Mobilde test edildi: 375×812, Chrome DevTools "Fast 4G" + CPU 4x yavaşlatma.

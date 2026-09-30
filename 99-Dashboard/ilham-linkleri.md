@@ -80,7 +80,7 @@ Dernek yönetim sistemi (üyelik + haberleşme ağı modülleri) için daha isab
 Claude Code'a hazır görevler öğreten paketler. Henüz kurulmadı ve denenmedi; bilgiler depo sayfalarından (30 Eylül 2026).
 
 - **[AgriciDaniel/claude-blog](https://github.com/AgriciDaniel/claude-blog)** (2k⭐) — blog için baştan sona sistem: konu planı, taslak, yazım, Google ve yapay zekâ aramalarına uygunluk kontrolü. Hocaların blog yazıları için uygun.
-- **[zubair-trabzada/ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude)** (2,7k⭐) — 15 görev: site denetimi, 30 günlük sosyal medya takvimi, müşteriye teklif, PDF rapor.
+- **[zubair-trabzada/ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude)** (2,7k⭐) — 15 görev: site denetimi, 30 günlük sosyal medya takvimi, müşteriye teklif, PDF rapor. **Denendi, işe yarıyor** → [[ai-marketing-claude-paketi]] (komutlar, psikoloji kuralları) · Humentis denemesi: [[R2 ai-marketing-claude denemesi]]
 - **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** (74,4k⭐) — büyük liste; Instagram, TikTok, Canva otomasyonu, görsel iyileştirme paketleri var.
 - **[ithiria894/awesome-claude-code-workflows](https://github.com/ithiria894/awesome-claude-code-workflows)** (122⭐) — hazır iş akışı tarifleri; "Pazarlama ve içerik" bölümü var.
 
