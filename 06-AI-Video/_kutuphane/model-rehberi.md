@@ -86,7 +86,7 @@ date: 2026-09-16
 
 ### Seedance (ByteDance — CapCut/Dreamina) ve Wan (Alibaba, açık kaynak)
 - Seedance: çoklu çekim tek promptta, prompt sadakati yüksek; CapCut içinde erişilebilir → reels akışıyla uyumlu.
-- Wan 2.x: açık kaynak, kendi sunucunda/ComfyUI'da; ses destekli sürümler var. Gizlilik gerektiren müşteri işlerinde seçenek.
+- Wan 2.x: açık kaynak, kendi sunucunda/ComfyUI'da; ses destekli sürümler var. Gizlilik gerektiren müşteri işlerinde seçenek. Hazır akışlar ve donanım notu: [[comfyui-akislar]].
 
 ## Google ekosistemi akışı (Nefin'de zaten kullanılan)
 

@@ -87,3 +87,6 @@ Claude Code'a hazır görevler öğreten paketler. Henüz kurulmadı ve denenmed
 ## Otomasyon (n8n)
 
 Hazır n8n iş akışı depolarının tam listesi: [[n8n-workflow-kaynaklari]]
+- Bizim işler için seçilmiş akışlar: [[otomasyon-secilmis-akislar]]
+- Kurulum, maliyet ve hesap gereksinimleri: [[n8n-baslangic]]
+- Açık kaynak video akışları (ComfyUI / Wan): [[comfyui-akislar]]

@@ -46,4 +46,4 @@ Not: Yıldız ve akış sayıları 30 Eylül 2026'da depo sayfalarından alınd�
 - [n8n.io — Sosyal medya akışları](https://n8n.io/workflows/categories/social-media/) — n8n'in kendi sitesinde 683 sosyal medya akışı
 - [Otomatik Instagram Reels akışı](https://n8n.io/workflows/5139-automated-instagram-reels-workflow/) — örnek
 
-İlgili: [[ilham-linkleri]]
+İlgili: [[otomasyon-secilmis-akislar]] (bizim işler için seçilenler) · [[n8n-baslangic]] (kurulum ve maliyet) · [[ilham-linkleri]]
