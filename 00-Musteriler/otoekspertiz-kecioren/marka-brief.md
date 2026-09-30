@@ -85,6 +85,13 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 > Şube arabam.com'un kimliğini kullanıyor. arabam.com'un resmi kurumsal kimlik kılavuzu elimizde yok ❓. Aşağıdakiler arabam.com CSS'inden ve Eylül postlarından okundu.
 
 ### Logo
+- **Resmi şube logosu (müşteriden geldi, 30 Eyl 2026). Şube içeriklerinde esas logo budur:** `03-Assets/logos/otoekspertiz-kecioren/arabam-oto-ekspertiz-kecioren-ovacik-sube-logosu.jpg`
+  - **İçeriği:** arabam.com logosu, altında beyaz "oto ekspertiz", ince sarı çizgi (≈ `#EBCF64`) ve beyaz "Keçiören Ovacık Şubesi"; hepsi koyu gri zemin (≈ `#383838`) üzerinde.
+  - **Dosya sınırları:** 480×264 piksel JPEG. Küçük ve zemini şeffaf değil. Büyütülmeden (1:1) kullanılır. Vektör ya da yüksek çözünürlüklü, şeffaf zeminli sürümü istenmeli ❓
+  - **Şeffaf sürüm (bizim türettiğimiz, 30 Eyl 2026, kullanıcının isteğiyle):** `arabam-oto-ekspertiz-kecioren-ovacik-sube-logosu-seffaf.png` (480×264 PNG).
+    - **Nasıl üretildi:** Koyu gri zemin ve köşelerdeki kart dışı alan kaldırıldı. arabam.com bloğu olduğu gibi opak tutuldu. Beyaz yazılar ve sarı çizgi, bölgesel ölçülen zeminden ayrıştırıldı; kenarlarda hale yok.
+    - **Kullanım:** Koyu zeminde kullanılır; açık zeminde beyaz yazılar okunmaz.
+    - **Durum:** Resmi dosya değil. Orijinal JPEG değiştirilmeden duruyor.
 - **arabam.com logosu:** kırmızı kutuda beyaz "arabam", sarı kutuda koyu "com", aralarında eğik bir ayraç, dışta ince beyaz çerçeve (koyu zeminde logonun etrafında beyaz kenar olarak görünür). Eylül'deki **bütün post ve videolarda** var: postlarda alt ortada, videolarda alt ya da üst ortada.
 - Sitede ayrıca "arabam.com | oto ekspertiz" logo kilidi kullanılıyor.
 - **Dosyalar** (`03-Assets/logos/otoekspertiz-kecioren/`, 28 Eyl 2026'da kullanıcı onayıyla arabam.com'dan indirildi):
@@ -105,6 +112,8 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 | Açık zemin | ≈ `#F3F2EE` – `#FAFAF8` (kırık beyaz) | açık postlar |
 | Metin (web) | `#1A1A1A` / `#414141` | arabam.com CSS |
 | Pasif gri (web) | `#B7B7B7` | arabam.com CSS (pakette olmayan özellik işareti) |
+| Şube logosu zemini | ≈ `#383838` (koyu gri) | resmi şube logosundan örneklendi (JPEG, yaklaşık) |
+| Şube logosundaki çizgi | ≈ `#EBCF64` (sarı / altın) | resmi şube logosundan örneklendi (yaklaşık); logo sarısıyla aynı aileden |
 
 ### Tipografi
 - **Web:** Open Sans (arabam.com CSS)
@@ -212,9 +221,10 @@ related: ["[[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti
 | Marka brief | `00-Musteriler/otoekspertiz-kecioren/marka-brief.md` |
 | Eylül 2026 içerik seti | [[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/eylul-2026-icerik-seti]] + `eylul-2026-post-seti.pdf` |
 | Video planlaması | [[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/video-planlamasi-1]] + `video-planlamasi-1.pdf` |
+| Ekim 2026 takvimi (öneri) | [[04-Sosyal-Medya-Icerik/otoekspertiz-kecioren/ekim-2026-icerik-takvimi]] |
 | Reels videoları | `03-Assets/videos/otoekspertiz-kecioren/2026-09-12-boya-olcum.mp4`, `2026-09-19-tramer-kaydi.mp4`, `2026-09-25-yag-kacagi.mp4`, `2026-09-30-yokus-kalkis-ve-kavrama.mp4` |
 | Instagram QR | `03-Assets/images/otoekspertiz-kecioren/instagram-qr.png` |
-| Logolar | `03-Assets/logos/otoekspertiz-kecioren/arabam-com-logo.svg` (esas), `arabam-com-logo.png`, `arabam-com-oto-ekspertiz-logo.png` |
+| Logolar | **Şube logosu (esas):** `03-Assets/logos/otoekspertiz-kecioren/arabam-oto-ekspertiz-kecioren-ovacik-sube-logosu.jpg` (orijinal) ve `…-seffaf.png` (bizim türettiğimiz şeffaf zeminli sürüm, koyu zemin için). arabam.com web logoları: `arabam-com-logo.svg`, `arabam-com-logo.png`, `arabam-com-oto-ekspertiz-logo.png` |
 | Sunumlar / website | `01-Presentations/active/otoekspertiz-kecioren-*.md` · `02-Websites/projects/otoekspertiz-kecioren/` |
 | AI video / AI görsel | `06-AI-Video/otoekspertiz-kecioren/` · `07-AI-Gorsel/otoekspertiz-kecioren/` |
 | Masaüstündeki orijinaller | `~/Desktop/otoekspertiz/` (kopyalandı, silinmedi) |
@@ -246,7 +256,7 @@ PRODUCT SHEET: a handheld paint thickness gauge pressed against a white car door
 - [x] Hizmet paketleri ve fiyatlar → arabam.com'un genel tablosu (§6); şubede geçerliliği ayrıca soruluyor
 - [x] Hitap → şube içeriklerinde "siz" (teyit bekliyor)
 - [x] Ekipman → boya kalınlık ölçer videoda görüldü; video planında lift sahnesi var
-- [x] Logo → arabam.com'un web logoları indirildi (1 SVG + 2 PNG, §5)
+- [x] Logo → arabam.com'un web logoları indirildi (1 SVG + 2 PNG, §5). **Resmi şube logosu müşteriden geldi (30 Eyl 2026, 480×264 JPEG).**
 - [x] Şube sayfası ve resmi şube adı → "Ankara Keçiören Ovacık Oto Ekspertiz Şubesi" (§1)
 - [x] Açık adres, çalışma saatleri, yol tarifi → şube sayfasından (§1)
 
@@ -258,10 +268,10 @@ PRODUCT SHEET: a handheld paint thickness gauge pressed against a white car door
 - [ ] Şubeye özel kampanya ya da fiyat var mı? (şube sayfası genel paket tablosuna yönlendiriyor)
 - [ ] Şubenin ekipman listesi (lift, dyno, fren/süspansiyon test cihazı, OBD) ve fiziki airbag kontrolü yapılıp yapılmadığı
 - [ ] TSE Hizmet Yeterlilik Belgesi (TS 12047) ve diğer belgeler
-- [ ] arabam.com kurumsal kimlik kılavuzu, baskı kalitesinde logo dosyaları (web logoları var; oto ekspertiz kilidinin vektörü ve koyu zemin sürümü yok) ve içerik onay süreci
+- [ ] arabam.com kurumsal kimlik kılavuzu, şube logosunun vektör ya da yüksek çözünürlüklü şeffaf sürümü (elimizdeki 480×264 JPEG) ve içerik onay süreci
 - [ ] Post başlık ve gövde fontlarının adları (tasarım dosyasından)
 - [ ] Eylül postlarının ve reels'lerin yayın tarihleri, yayında olup olmadıkları
 - [ ] 30 Eylül reels'i için plaka kontrolü ve SEAT logosu kararı
 - [ ] Süre bilgisi: içerikte "35-40 dk" mı, "30-45 dk" mı kullanılacak?
 - [ ] Rakipler ve beğenilen örnek hesaplar
-- [ ] Ekim ayı içerik talebi ve teslim tarihi
+- [ ] Ekim takvimi önerisi hazır ([[ekim-2026-icerik-takvimi]]); müşteri onayı ve teslim tarihleri bekleniyor
