@@ -1,6 +1,6 @@
 ---
 type: presentation
-client: humentis
+client: "Humentis"
 slug: humentis-sunum-2026-09
 status: active
 date: 2026-09-22
@@ -37,15 +37,17 @@ Konu: Humentis'teki her psikolog için kişisel web sitesi + kişisel sosyal med
 - Zeynep Baltacı içeriği takvimde yer alıyor, kontrol edilmeli.
 
 ## Dosyalar
-- Videolar: `03-Assets/videos/humentissunummp4/` (fikir-*.mp4, humentis-logo-animasyonu.mp4)
-- Görseller: `03-Assets/images/humentis-sunum/`
+- Videolar: `03-Assets/videos/humentis/sunum-2026-09/` (fikir-*.mp4, humentis-logo-animasyonu.mp4)
+- Görseller: `03-Assets/images/humentis/sunum-2026-09/`
 - Slayt kaynakları (HTML + deck.json): `01-Presentations/active/humentis-sunum-2026-09/kaynak/`
 - Renkler: petrol #284C51, krem #F6EFDD, altın #CEAB69, koyu altın #7A5C22, kömür #564E44. Yazı tipleri: Source Serif 4 (başlık), Manrope (metin).
 
 ## Animasyon kayıtları (26 sn'lik ekran kaydı, sessiz mp4)
-Slaytlardaki canlı animasyonlar sunum dışında izlenebilsin diye kaydedildi. Konum: `03-Assets/videos/humentissunummp4/`
+Slaytlardaki canlı animasyonlar sunum dışında izlenebilsin diye kaydedildi. Konum: `03-Assets/videos/humentis/sunum-2026-09/`
 - animasyon-site.mp4: site slaytı (Elif Silav profili turu)
 - animasyon-randevu.mp4: uzman listesi, "Profili incele", uzmanın kendi sitesine geçiş
 - animasyon-seo.mp4: "çift terapisi Ankara" araması ve sonuç
 - animasyon-rapor.mp4: aylık rapor kartı (örnek veri)
 Not: Kayıtlar yalnızca animasyon alanını içerir, slayt başlığı ve arka planı dışında kalır.
+
+> Not (30.09.2026): sunum dosyaları müşteri klasörüne taşındı — `humentissunummp4/` → `videos/humentis/sunum-2026-09/`, `images/humentis-sunum/` → `images/humentis/sunum-2026-09/`.

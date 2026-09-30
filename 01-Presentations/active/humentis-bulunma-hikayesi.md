@@ -1,6 +1,6 @@
 ---
 type: presentation
-client: humentis
+client: "Humentis"
 slug: humentis-bulunma-hikayesi
 status: draft
 date: 2026-09-28

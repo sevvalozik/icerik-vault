@@ -1,7 +1,7 @@
 ---
 type: website
 framework: html
-client: humentis
+client: "Humentis"
 slug: humentis-konu-sinav-ve-performans-kaygisi
 status: draft
 date: 2026-09-28

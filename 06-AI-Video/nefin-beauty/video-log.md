@@ -18,7 +18,7 @@ related: ["[[00-Musteriler/nefin-beauty/marka-brief]]", "[[c-vitamini-serum-kamp
 |---|---|---|---|---|---|---|---|---|
 | `c_vitamini_serumunu_havuzda_ta.mp4` | 1280×720 (16:9) | 10 sn | 24 | var (AAC) | Havuz kenarında Vitamin C Serum şişesi, el pipetten damla bırakıyor, portakal dilimleri, arka planda şezlong; etiket okunaklı ("NEFIN cosmetics VITAMIN C SERUM") | ❓ (dosya adı Türkçe prompt'un kısaltması: "C vitamini serumunu havuzda ta…" → büyük ihtimalle Gemini/Veo) | ❓ kaydedilmemiş | 4 — ışık ve kompozisyon iyi; 16:9 olduğu için reels'te kırpma gerekir; etiket AI üretimi |
 | `nefin_beauty_nin_c_vitamini_se.mp4` | 720×1280 (9:16) | 10 sn | 24 | var (AAC) | Makro: pipetten sarkan tek altın damla, krem zemin, sağ altta parıltı işareti (AI watermark benzeri) | ❓ (dosya adı: "Nefin Beauty'nin C vitamini se…") | ❓ | 4 — hook için ideal; sağ alttaki parıltı ikonunu post'ta kırp |
-| `Bu_görseli_gerçekçi_sinematik (1).mp4` | 1280×720 (16:9) | 10 sn | 24 | var (AAC) | Model yüzüne CC krem sürüyor, solda "KUSURSUZ KAPATMA" yazısı, sağda krem sürüntüsü | ❓ (dosya adı: "Bu görseli gerçekçi sinematik…" → bir görselden image-to-video) | ❓ | 3 — yazı AI tarafından basılmış (marka fontu değil), yüz tutarlılığı riskli, 16:9 |
+| `nefin-beauty-cc-cream-kusursuz-kapatma-v1.mp4` | 1280×720 (16:9) | 10 sn | 24 | var (AAC) | Model yüzüne CC krem sürüyor, solda "KUSURSUZ KAPATMA" yazısı, sağda krem sürüntüsü | ❓ (dosya adı: "Bu görseli gerçekçi sinematik…" → bir görselden image-to-video) | ❓ | 3 — yazı AI tarafından basılmış (marka fontu değil), yüz tutarlılığı riskli, 16:9 |
 | `VIDEO-2026-09-09-16-12-08.mp4` | 480×800 (3:5) | 10 sn | 24 | yok | Telefon mockup'ında "Nefin Cosmetics" WhatsApp sohbeti (bot demo: Ürünlerimizi Gör / Siparişimi Takip Et / Kampanyalar) | ❓ (ekran kaydı/animasyon) | — | 3 — düşük çözünürlük; WhatsApp satış botu demosu, ürün reklamı değil |
 
 ## Gözlemler (bir sonraki üretime taşınacak)
@@ -235,3 +235,5 @@ Aylık içerik planı sunumunda ([[01-Presentations/active/nefin-sunum]]) kullan
 | `gemini-generated-video-ca8f342a.mp4` | Gemini | ❓ | ❓ |
 | `nefin-cream.mp4` | ❓ | ❓ | ❓ |
 | `saniyeden-saniyeye-kada-1.mp4` | ❓ | ❓ | ❓ |
+
+> Not (30.09.2026): `Bu_görseli_gerçekçi_sinematik (1).mp4` dosyasının adı ASCII kurala uysun diye `nefin-beauty-cc-cream-kusursuz-kapatma-v1.mp4` yapıldı.

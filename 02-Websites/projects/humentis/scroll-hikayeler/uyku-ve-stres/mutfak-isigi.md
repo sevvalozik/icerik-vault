@@ -1,7 +1,7 @@
 ---
 type: website
 framework: html
-client: humentis
+client: "Humentis"
 slug: humentis-scroll-uyku-mutfak-isigi
 status: draft
 date: 2026-09-28

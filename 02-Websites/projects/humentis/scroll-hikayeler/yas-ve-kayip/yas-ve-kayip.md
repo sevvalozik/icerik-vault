@@ -1,7 +1,7 @@
 ---
 type: website
 framework: html
-client: humentis
+client: "Humentis"
 slug: humentis-konu-yas-ve-kayip
 status: draft
 date: 2026-09-28

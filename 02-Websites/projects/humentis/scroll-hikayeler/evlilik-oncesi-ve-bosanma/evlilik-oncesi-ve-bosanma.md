@@ -1,7 +1,7 @@
 ---
 type: website
 framework: html
-client: humentis
+client: "Humentis"
 slug: humentis-konu-evlilik-oncesi-ve-bosanma
 status: draft
 date: 2026-09-28

@@ -1,7 +1,7 @@
 ---
 type: website
 framework: html
-client: humentis
+client: "Humentis"
 slug: humentis-konu-ergen-ve-ebeveyn
 status: draft
 date: 2026-09-28

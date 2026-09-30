@@ -1,7 +1,7 @@
 ---
 type: website
 framework: html
-client: humentis
+client: "Humentis"
 slug: humentis-konu-cocuk-gelisimi-ve-okula-hazirlik
 status: draft
 date: 2026-09-28
