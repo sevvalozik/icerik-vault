@@ -353,6 +353,74 @@ Square 1:1 composition.
   3. Daire boyutu için: `"All circular ingredient callout icons must be rendered at exactly the same diameter and aligned to a single vertical grid — no size variation between them."`
 - **Genel marka kuralı (brief'e eklendi):** "Web sitesi için üretilecek tüm AI görsellerinde yazı tipi tek ve tutarlı olmalı" — bkz. marka brief → Tipografi.
 
+### Daily Moisture Cream — keten üzerinde yatay şişe, Instagram postu (1 Ekim 2026)
+
+- **Dosya (kaynak):** `03-Assets/images/nefin-beauty/karma/nefin-beauty-daily-moisture-cream-linen-v1.jpg` — 825×1024, JPEG; ❓ model/prompt kaydedilmedi (sohbete hazır görsel olarak geldi).
+- **Instagram çıktısı:** `03-Assets/images/nefin-beauty/instagram/nefin-beauty-daily-moisture-cream-linen-ig-1080x1350.jpg` — 4:5'e ortadan kırpma (825→819 px genişlik, sadece kenardan 3'er px), Lanczos ile 1080×1350'ye büyütme (×1,32), hafif unsharp mask (r 1.0 / %45 / eşik 2), JPEG q95 4:4:4, sRGB profili korundu. Renk/ton değiştirilmedi.
+- **Claude'un görsel tespiti:** Kompozisyon, ışık ve grade marka yönüyle uyumlu (krem keten, sıcak yumuşak gün ışığı). Ama etiket yazısı AI hatalı: "DAILY" yerine **"IMILY"** okunuyor (D/A harfleri bozuk) ve alt satırlar "Hydration / Comfort / Nourishment" yerine anlamsız ("Hydraeion Corpfort Nocrishment"). Büyütme/keskinleştirme bunu düzeltemez.
+- **Puan:** Karma — görsel güzel, etiket düzeltilmeden marka hesabında yayın riski var.
+- **Bir dahaki sefere:** Gerçek ürün fotoğrafını (`nefin_daily_moisture_cream.jpg`) referans verip görsel düzenleme ile sadece etiket yazısını düzelttir; yazıyı kelimeyle tarif ettirme.
+- **v2 — etiket düzeltmesi (1 Ekim 2026):** Gemini'de gerçek ürün fotoğrafı referansıyla etiket düzelttirildi → `03-Assets/images/nefin-beauty/karma/nefin-beauty-daily-moisture-cream-linen-v2.jpg` (928×1152, JPEG ~q80). Instagram çıktısı: `03-Assets/images/nefin-beauty/instagram/nefin-beauty-daily-moisture-cream-linen-v2-ig-1080x1350.jpg` (aynı işlem: 4:5 kırpma 928→922 px, Lanczos ×1,17, unsharp r 1.0 / %35 / eşik 2, q95 4:4:4, sRGB). v1'in Instagram çıktısı silindi (etiket hatalı olduğu için yanlışlıkla paylaşılmasın diye; kaynak `karma/` içinde duruyor).
+  - **Düzelenler:** "DAILY MOISTURE CREAM", "cosmetics", "Hydration", "Comfort".
+  - **Hâlâ hatalı:** "Nourishment" yerine **"Nouriehment"** (s yerine e). Logodaki yaprak dalı ikonu **yıldız/kar tanesi** gibi bir işarete dönmüş (gerçek logoda yaprak var).
+  - **Puan:** Karma — v1'den çok daha iyi; feed'de okunmaz ama yakınlaştırınca hata görünür.
+- **v3 için önerilen düzeltme (1 Ekim 2026):** Tek prompt'la iki düzeltme istenince Gemini etiketi yeniden çizip logoyu bozuyor ve "Nourishment" düzelmiyor. Bu yüzden iki ayrı adım: önce yazı, sonra logo. Kaynak olarak v2 kullanılır. Gemini'ye yükleme sırası: (1) v2 görseli, (2) `03-Assets/images/nefin-beauty/referans/nefin-beauty-daily-moisture-cream-etiket-referans.jpg`, (3) `03-Assets/images/nefin-beauty/referans/nefin-beauty-logo-yaprak-referans.jpg` (ikisi de gerçek ürün fotoğrafından kırpıldı). Gerçek logodaki işaret: N'nin sağ üst köşesinden çıkan, tek ince çizgiyle çizilmiş, içi boş 3 yapraklı dal (üstte V açan 2 yaprak, sağ altta 1 küçük yaprak).
+
+```text
+ADIM 1 — YAZI
+Image 1 is the photo to edit. Image 2 is a close-up of the real product label. Use Image 2 only as a lettering reference; ignore its background and color cast.
+
+TASK: Fix one spelling mistake on the bottle label in Image 1. Change nothing else.
+
+At the bottom of the label there are three short lines of small text. The third line currently reads "Nouriehment", which is wrong. It must read "Nourishment".
+
+Correct spelling, letter by letter: N - o - u - r - i - s - h - m - e - n - t (11 letters). The 6th letter is a lowercase "s", not an "e". The word ends with a lowercase "t", not a bracket.
+
+The three lines must read, top to bottom:
+Hydration
+Comfort
+Nourishment
+
+TEXT STYLE: match the small text in Image 2: a clean, simple sans-serif in the same bronze-gold color, with the same size and weight as "Hydration" and "Comfort" above it. Keep the current position and alignment, follow the angle of the bottle, and keep the text printed flat on the curved label. No accents or marks above any letter.
+
+KEEP EXACTLY THE SAME: the "NEFIN cosmetics" logo, "DAILY MOISTURE CREAM", the gold cap, the bottle's shape, angle and position, the light, shadows and reflections, the linen fabric, the framing, the image size and the colors. Do not regenerate or redraw the image. Edit only these letters.
+```
+
+```text
+ADIM 2 — LOGO
+Image 1 is the photo to edit. Image 3 is a close-up of the real NEFIN logo. Use Image 3 only as a reference for the logo mark; ignore its background and color cast.
+
+TASK: Fix the small symbol next to the word "NEFIN" on the bottle label in Image 1. Change nothing else.
+
+Right now a star / snowflake / asterisk-shaped symbol follows the last letter "N". That is wrong. Replace it with the real NEFIN leaf sprig from Image 3:
+- a tiny botanical sprig drawn with one thin gold line: outline only, hollow, not filled
+- one thin curved stem that grows diagonally up and to the right out of the top-right corner of the last "N"
+- three small, pointed, almond-shaped leaves on that stem: two leaves at the top that open into a "V" shape, and one smaller leaf lower down on the right
+- overall about half the height of the letter "N", rising slightly above the top of the letters
+- the same gold color as the letters, with a line as thin as the thinnest strokes of the letters
+- it touches the "N" and does not float away from it
+
+It must NOT be a star, snowflake, asterisk, sparkle, sun, flower or filled leaf.
+
+"NEFIN" and "cosmetics" stay exactly as they are: the same serif letters, spacing, size and gold color.
+
+KEEP EXACTLY THE SAME: "DAILY MOISTURE CREAM", the three lines of small text at the bottom of the label, the gold cap, the bottle's shape, angle and position, the light, shadows and reflections, the linen fabric, the framing, the image size and the colors. Do not regenerate or redraw the image. Edit only this symbol.
+```
+
+- **v3 — Gemini sonucu (1 Ekim 2026), reddedildi:** `03-Assets/images/nefin-beauty/reddedilen/nefin-beauty-daily-moisture-cream-linen-v3-gemini.jpg`. Yaprak artık yaprak şeklinde ama çok büyük; "cosmetics" bozulmuş; alt satırlar daha da kötüleşmiş ("Hrdration / Comfort / Neurtehment"). **Öğrenilen:** Gemini bu boyuttaki (~9 px büyük harf) etiket yazısını ve logo işaretini güvenilir şekilde düzeltemiyor. Her düzeltme turu etiketin başka bir yerini bozuyor.
+- **FINAL — post-prodüksiyon düzeltmesi (1 Ekim 2026), onaya hazır:** v2 üzerinde Claude piksel düzeyinde düzeltme yaptı:
+  - Alt 3 satır silindi (şişe ekseni boyunca enterpolasyon) ve **Calibri Regular** ile yeniden yazıldı. Calibri, marka brief'indeki gövde fontu; ölçüler v2 ile neredeyse birebir tuttu.
+  - Yıldız işareti silindi. N'nin sağ sapı ve serifi korunarak yeniden oluşturuldu.
+  - Gerçek logodaki **3 yapraklı, içi boş, ince çizgi dal** vektörel olarak çizildi. Ölçüler N büyük harf yüksekliğine göre, `nefin_daily_moisture_cream.jpg` üzerinden alındı.
+  - Dosyalar: kaynak `03-Assets/images/nefin-beauty/nefin-beauty-daily-moisture-cream-linen-final.png` (928×1152). Instagram çıktısı `03-Assets/images/nefin-beauty/instagram/nefin-beauty-daily-moisture-cream-linen-final-ig-1080x1350.jpg` (aynı 4:5 işlemi). Etiketi hatalı olduğu için v2'nin Instagram çıktısı silindi.
+  - **Bir dahaki sefere:** Gerçek ürünün etiket yazısı veya logosu AI'de bozulursa Gemini'de 1 turdan fazla uğraşma, doğrudan post-prodüksiyonda düzelt. Kalıcı çözüm için müşteriden logo SVG'si alınmalı (bkz. marka brief → Logo dosyaları).
+  - **Güncelleme (1 Ekim 2026), logo SVG'si geldi:** Elle çizilen yaprak dalı kaldırıldı. Yerine resmi yaprak işareti (`03-Assets/logos/nefin-beauty/nefin-beauty-logo-yaprak-gold.svg`) birebir vektörden yerleştirildi:
+    - Ölçek N büyük harf yüksekliğinden alındı (25 px ↔ 189 logo birimi).
+    - Konum resmi logodaki N–yaprak ilişkisine göre ayarlandı.
+    - Yaprak etiket kenarına yakın olduğu için şişenin silindir eğimi (r≈65 px) hesaba katıldı.
+    - Renk etiketteki altının ışık altındaki tonundan örneklendi.
+    - `final.png` ve `final-ig-1080x1350.jpg` aynı adla güncellendi. Etiketteki "NEFIN" ve "cosmetics" AI'nin çizdiği haliyle kaldı. Resmi logoda "cosmetics" serif; bu boyutta (~5 px) fark edilmiyor.
+
 ## Reddedilen denemeler
 
 ### "Gold Tonic — sabah ritüeli" görseli (16 Eylül 2026)

@@ -54,6 +54,12 @@ related: ["[[nefin-beauty-sunum]]", "[[nefin-sunum]]", "[[aylik-icerik-takvimi]]
 
 ### Logo dosyaları
 - ❓ **Vault'ta Nefin logosunun vektör/PNG dosyası YOK.** Ürün etiketlerinde görülen wordmark: "NEFIN" (ince serif/geometrik büyük harf, N'de yaprak/zeytin dalı motifi) + altta küçük "cosmetics". Müşteriden SVG/PNG istenip `03-Assets/logos/nefin-beauty/` altına konacak. O zamana kadar AI'ye logo ürettirilmez; logo post-prodüksiyonda eklenir.
+- ✅ **Güncelleme (1 Ekim 2026): logo SVG'leri geldi**, yukarıdaki eksik kapandı:
+  - `03-Assets/logos/nefin-beauty/nefin-beauty-logo-gold.svg`: tam logo, altın **`#B59E5F`**.
+  - `03-Assets/logos/nefin-beauty/nefin-beauty-logo-black.svg`: aynı geometri, siyah.
+  - `03-Assets/logos/nefin-beauty/nefin-beauty-logo-yaprak-gold.svg`: sadece yaprak işareti (tam logodan ayıklandı).
+  - **Logonun yapısı:** "NEFIN" geniş aralıklı serif büyük harf. Altında çok geniş aralıklı **serif** küçük harf "cosmetics" (AI görsellerinde bu satır sans-serif çıkıyor, dikkat). Son N'nin sağ üst köşesinden çıkan yaprak işareti: içi boş, damarlı 3 yaprak (üstte 2 büyük, sağ altta 1 küçük) ve aşağı-sola kıvrılan sap. Yaprak işaretinin genişliği yaklaşık N büyük harf yüksekliği kadar.
+  - Logo hâlâ AI'ye ürettirilmez; görsellere post-prodüksiyonda bu SVG'lerden eklenir.
 
 ### Renk paleti (Desert Rose — `01-Presentations/_themes/desert-rose.css`, gerçek sunumdan çıkarıldı)
 
@@ -160,7 +166,7 @@ PRODUCT SHEET (hero): a 30 ml amber glass dropper bottle with a brushed gold col
 
 ## 11. Açık Sorular / Eksikler
 
-- [ ] Logo dosyası (SVG/PNG) — `03-Assets/logos/nefin-beauty/`
+- [x] Logo dosyası (SVG/PNG) — `03-Assets/logos/nefin-beauty/` (1 Ekim 2026: altın + siyah SVG + yaprak işareti)
 - [ ] Gerçek ürün fotoğrafları (krem zeminde, yeni stil) — image-to-video için şart
 - [ ] Tam ürün listesi + INCI + fiyat
 - [ ] Onaylı slogan
