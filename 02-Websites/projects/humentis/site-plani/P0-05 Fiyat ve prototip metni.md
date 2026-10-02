@@ -9,29 +9,25 @@ bagli:
   - "[[O1 Operasyon musaitlik ve kayit]]"
 ---
 
-# P0-05 · Fiyatlar ve "prototip" metni
-
-> [!warning] Düzeltme (30.09.2026, main kodu ve canlı API ile doğrulandı)
-> - Fiyat (`BookingSummary`, `BookingPage`) ve "bu prototipte" metni yalnızca `/randevu/<slug>` sayfasında görünüyor; bu sayfaya sitede link yok. 30.09'da ana sayfa, /uzmanlar, /hakkimizda, /iletisim, /ik/kariyer ve uzman profili tarandı: hiçbirinde ₺ ya da "prototip" yok. Yani normal ziyaretçi şu an sitede hiç fiyat görmüyor.
-> - "Prototip aşamasında 24 saat öncesine kadar ücretsiz iptal…" cümlesi ayrıca SSS verisinde (`institutionFaq`, FAQPage schema) duruyor; düzeltilmeli.
-> - Geçerli kalan: sitede fiyat gösterilip gösterilmeyeceği kararı.
+# P0-05 · Ücret bilgisi ve "prototip" metni
 
 > [!danger] Sorun
-> - Randevu sayfalarındaki fiyatlar: ₺1.450 (çocuk gelişimi, 45 dk), ₺1.650, ₺1.800, ₺1.850, ₺1.950, ₺2.100 (50 dk). Kaynak: `/api/specialists` → `offerings[].totalPrice`.
-> - Telefonda söylenen ücret ₺3.000–4.000 aralığında. Siteden gelen kişi telefonda yaklaşık iki katını duyuyor.
-> - Randevu özetinde canlıda şu metin var: "…ücretsiz iptal varsayımı **bu prototipte** gösterilmektedir; nihai kurum politikası ayrıca onaylanmalıdır."
+> - Ziyaretçi sitede hiçbir yerde ücret görmüyor (ana sayfa, /uzmanlar, profiller, /hakkimizda, /iletisim tarandı). Fiyat yalnız linksiz eski `/randevu/<slug>` sayfasında. API'deki ücretler: ₺1.450 (çocuk gelişimi, 45 dk), ₺1.650, ₺1.800, ₺1.850, ₺1.950, ₺2.100 (50 dk).
+> - Seans süresi, ücret mantığı ve iptal/değişiklik kuralı da hiçbir yerde yazmıyor.
+> - SSS'te "Randevumu iptal edebilir miyim?" cevabı canlıda: "Prototip aşamasında 24 saat öncesine kadar ücretsiz iptal gösterilir…" (`apps/web/src/data/institution.ts:345`; FAQPage schema'sına da giriyor).
+> - Telefonda söylenen ücretin ₺3.000+ olduğu bilgisi doğrulanamadı.
 
 ## Yapılacaklar
-1. **Karar (kurucular): sitede fiyat gösterilecek mi?**
-   - Evet → güncel fiyat listesiyle birebir aynı olsun.
-   - Hayır → fiyat alanını kaldır; yerine "Ücret bilgisi için arayın / yazın" koy.
-2. "prototip" geçen tüm metinleri kaldır; kurumun onayladığı iptal politikasını yaz.
-3. Fiyat tek kaynaktan yönetilsin: uzman başına değil, hizmet tablosundan.
+1. **Karar (kurucular): sitede ücret gösterilecek mi?** İncelenen 4 rakibin hiçbiri fiyat göstermiyor.
+   - Evet → güncel liste ile birebir aynı, tek kaynaktan (hizmet tablosu).
+   - Hayır → fiyat yazmadan kısa bir "Ücret ve görüşme koşulları" bloğu: seans süresi, ücretin nasıl öğrenileceği, iptal/değişiklik kuralı.
+2. SSS'teki "Prototip…" cevabını değiştir: "İptal ve değişiklik koşulları randevunuz netleştirilirken sizinle paylaşılır." (kurum onaylı iptal politikası gelene kadar).
+3. Linksiz `/randevu/<slug>` sayfası kaldırılınca fiyat ve "prototip" metni koddan da çıkar ([[P0-01 Randevu akisi]]).
 
 > [!warning] Not
-> Gösterilen fiyatla istenen fiyatın farklı olması hem güveni bozar hem tüketici mevzuatı açısından risk yaratır.
+> Gösterilen ücretle telefonda söylenenin farklı olması güveni bozar ve tüketici mevzuatı açısından risk yaratır. "İlk seans ücretsiz" gibi teşvikler marka brief §7 gereği kullanılmaz.
 
 ## Kabul kriterleri
-- [ ] Sitedeki her fiyat güncel listeyle aynı ya da fiyat alanı tamamen kaldırılmış
+- [ ] Ücret kararı yazılı; sitede ya güncel liste ya da "ücret ve görüşme koşulları" bloğu var
 - [ ] Build çıktısında ve API yanıtlarında "prototip" kelimesi yok (`grep -ri prototip dist/`)
 - [ ] İptal politikası metni kurucular tarafından onaylanmış

@@ -8,7 +8,7 @@ date: 2026-09-30
 
 **Depo:** [zubair-trabzada/ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude) · 2,7k⭐ · MIT lisans
 **Durum:** 30.09.2026'da denendi ve **kasaya kuruldu** (`.claude/skills/market*`, `.claude/agents/market-*`). Kasaya göre uyarlandı: her komut önce müşterinin marka brief'ini okur, yasaklarına uyar, Türkçe yazar, çıktıyı müşteri klasörüne kaydeder.
-**Deneme sonucu:** [[R2 ai-marketing-claude denemesi]]
+**Humentis denetimi (paketin tamamı, kod doğrulamalı):** [[R4 Pazarlama denetimi kod dogrulamali 2026-09-30]]
 
 ## Ne işe yarıyor?
 

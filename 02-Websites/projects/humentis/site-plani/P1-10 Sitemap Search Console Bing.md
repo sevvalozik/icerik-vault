@@ -15,7 +15,7 @@ bagli:
 > `sitemap.xml` 25 URL içeriyor: `lastmod` yok, hizmet ve uzman sayfaları yok.
 
 ## Yapılacaklar
-1. **Dinamik sitemap.** ASP.NET'ten üretilsin (⚠️ *düzeltme 30.09: uygulama ASP.NET değil; build sırasında ya da Express API'den üretilmeli*): sabit sayfalar, hizmet sayfaları, 17 uzman ve makaleler; gerçek `lastmod` ile.
+1. **Dinamik sitemap.** Build sırasında ya da Express API'den üretilsin: sabit sayfalar, hizmet sayfaları, 18 uzman ve makaleler; gerçek `lastmod` ile.
 2. **Sitemap'e girmeyecekler:** `/giris`, `/admin`, `/sistem`, `/uzman/panel`, `/randevularim`.
 3. **Search Console:** Domain mülkü (Cloudflare'de DNS TXT kaydı) → sitemap gönder.
 4. **Bing Webmaster Tools:** Search Console'dan içe aktar → sitemap. Copilot ve kısmen ChatGPT araması Bing indeksinden besleniyor. Ek (30.09.2026): her yayında **IndexNow** bildirimi gönderilsin; ayrıntı [[seo-dongusu]].

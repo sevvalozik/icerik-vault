@@ -1,7 +1,7 @@
 ---
 tags: [humentis, site, p0, hiz]
 oncelik: P0
-durum: yapilacak
+durum: karar-verildi
 sahip: site-ekibi
 tahmini_sure: "1 saat"
 son_tarih: 2026-10-01
@@ -10,6 +10,9 @@ bagli:
 ---
 
 # P0-02 · Açılış animasyonu (4,8 sn)
+
+> [!success] Ekip kararı (30.09.2026)
+> Animasyon kalacak; bu görev uygulanmayacak. Bulgu kayıt için duruyor.
 
 > [!danger] Sorun
 > - Her tam sayfa yüklemesinde `page-transition` logo animasyonu oynuyor: `var gn=4800` → `durationMs`, `useState(!0)`. Yedek zamanlayıcı 7,3 sn.

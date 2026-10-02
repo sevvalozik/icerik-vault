@@ -6,7 +6,7 @@ sahip: Ahsen + uzmanlar
 tahmini_sure: "30 dk + haftalık"
 son_tarih: 2026-10-01
 bagli:
-  - "[[P0-01 Randevu akisi bos takvim]]"
+  - "[[P0-01 Randevu akisi]]"
   - "[[P0-05 Fiyat ve prototip metni]]"
 ---
 
@@ -29,5 +29,5 @@ bagli:
 4. **Yanıt süresi hedefi.** Mesai içinde ≤15 dk; mesai dışı gelen talepler ertesi gün 10:00'a kadar.
 
 ## Kabul kriterleri
-- [ ] 17 uzmanın takviminde en az 14 günlük ileri slot var
+- [ ] 18 uzmanın takviminde en az 14 günlük ileri slot var
 - [ ] Kayıt tablosu açıldı ve her temas giriliyor

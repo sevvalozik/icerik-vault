@@ -14,36 +14,16 @@ saat: 02:40–03:05 TSİ
 
 ## Altyapı
 - React SPA (Vite build: `/assets/index-CQ9qytuY.js`, ~576 KB sıkıştırılmamış JS; ilk yüklemede ~904 KB transfer).
-- Backend ASP.NET (`x-powered-by: ASP.NET`). ⚠️ *Düzeltme 30.09: Node.js/Express API + Windows IIS (ARR ile API'ye reverse proxy) + Cloudflare. `x-powered-by: ASP.NET` başlığı IIS'ten geliyor; API yanıtında `Express, ARR/3.0, ASP.NET` görünüyor. Uygulama ASP.NET değil.* Önünde Cloudflare (`server: cloudflare`, Cloudflare Web Analytics beacon'ı var).
+- Backend Node.js/Express API, Windows IIS üzerinde (ARR reverse proxy). `x-powered-by: ASP.NET` başlığı IIS'ten geliyor; API yanıtında `Express, ARR/3.0, ASP.NET`. Önünde Cloudflare (`server: cloudflare`, Cloudflare Web Analytics beacon'ı var).
 - Herkese açık API: `/api/specialists`, `/api/organization`. Uzman paneli `/uzman/panel/<slug>`, müsaitlik `/api/specialist-panel/<slug>/hour-blocks`.
 
 ## Uzman takvimleri
-`/api/specialists` yanıtı (29.09.2026 ~02:50). 17 uzman; **ileri tarihli slot: 0**. 8 uzmanda yalnız geçmiş slot var (en yenisi 10.09), 9 uzmanda hiç slot yok.
+> [!info] Neye bakıldı, gerçek akış ne
+> Bu bölüm `/api/specialists` içindeki eski `availability` alanını ve linksiz `/randevu/<slug>` sayfasını ölçüyor. Sitedeki gerçek randevu akışı bu veriyi kullanmıyor: uzman kartındaki "Randevu al" penceresi saatleri `/api/specialists/<slug>/open-slots`'tan alıyor (30.09 itibarıyla her uzmanda 1 Ekim'den itibaren ~860 açık saat). 29.09'da `open-slots` ölçülmedi. Ayrıntı: [[P0-01 Randevu akisi]].
 
-| Uzman | Unvan | Slug | Sitedeki fiyat (₺) | Slot sayısı | Son slot | İleri tarihli slot |
-|---|---|---|---|---|---|---|
-| Müge Ertuğrul | Çocuk Gelişimi Uzmanı | `psikolog-muge-ertugrul` | 1.450 | 2 | 30.08 16:30 | 0 |
-| Zuhal Alver | Psikolog | `zuhal-alver` | 1.800 | 0 | - | 0 |
-| Burcu Kayacan | Klinik Psikolog, Aile Danışmanı | `uzm-klinik-psk-burcu-kayacan` | 2.100 | 2 | 01.09 15:00 | 0 |
-| Başak Kale | Psikolog & Aile Danışmanı | `basak-kale` | 1.800 | 0 | - | 0 |
-| Solmaz Şenyüz | Klinik Psikolog, Aile Danışmanı | `klinik-psk-solmaz-senyuz` | 1.950 | 2 | 02.09 16:00 | 0 |
-| Barış Can Kolçak | Psikolojik Danışman, Aile Danışmanı | `psik-dan-baris-can-kolcak` | 1.850 | 3 | 29.08 11:00 | 0 |
-| Göknur Yaman | Psikolog, Aile Danışmanı | `psikolog-goknur-yaman` | 1.650 | 2 | 29.08 14:30 | 0 |
-| Elif Silav | Kurucu Psikolog & Aile Danışmanı | `elif-silav` | 1.850 | 2 | 03.09 14:00 | 0 |
-| Elif Köden | Uzman Psikolog, Aile Danışmanı | `elif-koden` | 1.800 | 0 | - | 0 |
-| Simge Kaya | Çocuk Gelişimi Uzmanı | `simge-kaya` | 1.450 | 2 | 10.09 14:00 | 0 |
-| Irmak Tara Sığırcı | Uzman Psikolog & Aile Danışmanı | `irmak-tara-sigirci` | 1.800 | 0 | - | 0 |
-| Zeynep Baltacı | Psikolog | `zeynep-baltaci` | 1.800 | 0 | - | 0 |
-| Sena Şimşek | Psikolog & Aile Danışmanı | `sena-simsek` | 1.800 | 0 | - | 0 |
-| Ali Karaömerlioğlu | Uzman Psikolog / Aile Danışmanı | `ali-karaomerlioglu` | 1.800 | 0 | - | 0 |
-| Aybala Görkem Polat | Klinik Psikolog & Aile Danışmanı | `klinik-psk-aybala-gorkem-polat` | 1.850 | 2 | 04.09 15:00 | 0 |
-| Beliz Kafalı | Psikolog - Aile Danışmanı | `beliz-kafali` | 1.800 | 0 | - | 0 |
-| Hatice Kıykım | Psikolog & Aile Danışmanı | `hatice-kiykim` | 1.800 | 0 | - | 0 |
-
-`/randevu/elif-silav` sayfasında yalnız **3 Eylül Perşembe 10:00 (Online) / 14:00 (Yüz yüze)** seçilebiliyor. Özet kutusunda: "50 dk · ₺1.850".
-
-Randevu özetindeki canlı metin:
-> "Randevudan 24 saat öncesine kadar ücretsiz iptal varsayımı bu prototipte gösterilmektedir; nihai kurum politikası ayrıca onaylanmalıdır."
+- 29.09 ~02:50, `availability` alanı: 17 uzman; 8 uzmanda yalnız geçmiş tarihli kayıt (en yenisi 10.09), 9 uzmanda hiç kayıt yok.
+- API'deki hizmet ücretleri (`offerings[].totalPrice`): ₺1.450 (Müge Ertuğrul, Simge Kaya), ₺1.650 (Göknur Yaman), ₺1.850 (Barış Can Kolçak, Elif Silav, Aybala Görkem Polat), ₺1.950 (Solmaz Şenyüz), ₺2.100 (Burcu Kayacan), diğerleri ₺1.800. Bu ücretler ziyaretçiye açık hiçbir sayfada gösterilmiyor; yalnız linksiz `/randevu/<slug>` sayfasında.
+- Linksiz `/randevu/elif-silav` sayfasında eski kayıtlar (3 Eylül 10:00 / 14:00), "50 dk · ₺1.850" özeti ve "…ücretsiz iptal varsayımı bu prototipte gösterilmektedir…" metni var.
 
 ## Açılış animasyonu (kod)
 - `var gn=4800` → `En=gn` → `(Dn,{playId:0,durationMs:En,onComplete:()=>u(!1)})`
@@ -80,7 +60,7 @@ Randevu özetindeki canlı metin:
 **Hizmet sayfası yok.** `/bolumlerimiz` toplam 169 kelime; 4 bölüm başlığının altında yalnız "Bu bölümdeki uzmanlar" yazıyor. MOXO ve WISC yalnız uzman biyografilerinde geçiyor.
 
 ## Uzman listesi
-`/uzmanlar`'da 17 uzman kartı `<button>`. `<a href="/uzmanlar/...">` yok.
+`/uzmanlar`'da uzman kartları `<button>` (29.09: 17, 30.09: 18 uzman). `<a href="/uzmanlar/...">` yok.
 
 ## Ölçüm
 HTML'de, bundle'da ve `specialist-calendar-live.js`'te `googletagmanager`, `gtag`, `GTM-`, `G-`, `AW-` yok.

@@ -2,7 +2,7 @@
 type: readme
 tags: [seo, search-console, geo, icerik, yontem]
 date: 2026-09-30
-related: ["[[00 Humentis Site Plani (MOC)]]", "[[R3 Pazarlama denetimi 2026-09-30]]", "[[otomasyon-secilmis-akislar]]", "[[claude-code-skilleri]]"]
+related: ["[[00 Humentis Site Plani (MOC)]]", "[[R4 Pazarlama denetimi kod dogrulamali 2026-09-30]]", "[[otomasyon-secilmis-akislar]]", "[[claude-code-skilleri]]"]
 ---
 
 # SEO döngüsü: oku → düzelt → yaz → ölç
@@ -83,7 +83,7 @@ Tıklama alan güçlü bir sayfadan takılı kalmış ilgili sayfaya link ver; o
 ### Humentis
 Bu döngü Humentis'te **bugün çalışamaz**; önce ön koşullar:
 1. **Search Console + Bing** (site planı [[P1-10 Sitemap Search Console Bing]]) — veri olmadan "oku" adımı yok. Bing maddesine IndexNow eklenmeli.
-2. **Prerender + her sayfanın kendi canonical'ı** ([[P1-07 Prerender ve meta]]) — yazarın 307/canonical dersi Humentis'te daha ağır hâliyle var: tüm sayfalar ana sayfayı canonical gösteriyor ([[R3 Pazarlama denetimi 2026-09-30]]).
+2. **Prerender + her sayfanın kendi canonical'ı** ([[P1-07 Prerender ve meta]]) — yazarın 307/canonical dersi Humentis'te daha ağır hâliyle var: ham HTML'de tüm sayfalar ana sayfayı canonical gösteriyor ([[R4 Pazarlama denetimi kod dogrulamali 2026-09-30]]).
 3. **Ölçüm** ([[P0-06 Google tag ve donusumler]]) — 3. adım (tıklama → dönüşüm) için randevu talebi, WhatsApp ve telefon olaylarının **ilk açılış sayfasına göre** raporlanması gerekiyor. GA4'te "Açılış sayfası" boyutu + dönüşüm olayları.
 
 Sonra döngü: haftalık 6 sinyal kontrolü → önce uzman profilleri ve bölüm sayfaları düzeltilir → 16 boş makale yerine, 7+ kelimelik gerçek sorgulara ("eşimle sürekli aynı konuda tartışıyoruz ne yapmalıyım" gibi) cevap veren uzman imzalı yazılar, küçük partilerle.

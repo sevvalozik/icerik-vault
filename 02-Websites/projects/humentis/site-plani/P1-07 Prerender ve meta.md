@@ -20,7 +20,7 @@ bagli:
 >   - gövde metni yalnız "Ana içeriğe geç"
 > - JS birkaç saniye sonra bunları route'a göre değiştiriyor. Google, JS ile mevcut canonical'ı değiştirmenin "beklenmedik sonuçlara" yol açabileceği konusunda uyarıyor.
 > - JS çalıştırmayan botlar (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) 25 URL'nin hepsinde aynı boş sayfayı ve ana sayfaya işaret eden canonical'ı görüyor.
-> - Stack: React SPA (Vite) + ASP.NET + Cloudflare. ⚠️ *Düzeltme 30.09: Node.js/Express API + Windows IIS (ARR ile API'ye reverse proxy) + Cloudflare. `x-powered-by: ASP.NET` başlığı IIS'ten geliyor; API yanıtında `Express, ARR/3.0, ASP.NET` görünüyor. Uygulama ASP.NET değil. Aşağıdaki "ASP.NET" adımları IIS web.config kuralı (hazır HTML varsa onu ver, yoksa SPA fallback) ya da Express ile yapılmalı.*
+> - Stack: React SPA (Vite) + Node.js/Express API, Windows IIS (ARR ile API'ye reverse proxy) + Cloudflare. IIS kuralları repoda `scripts/fix-webconfig-https.ps1` şablonunda; sunucudaki web.config deploy sırasında korunuyor, yani elle güncellenmeli.
 >
 > Ayrıntı: [[Kanit - Site taramasi 2026-09-29#Ham HTML (JS olmadan)]]
 
@@ -28,10 +28,10 @@ bagli:
 1. **Build-time prerender (önerilen)**
    - Public route'lar için build'de statik HTML üret: `/`, hizmet sayfaları, `/uzmanlar`, `/uzmanlar/<slug>`, `/bolumlerimiz`, `/iletisim`, `/sss`, makaleler.
    - Araç: Vite prerender eklentisi ya da Playwright ile kendi script'iniz. Route listesi sabit route'lar + `/api/specialists`'ten gelsin.
-   - ASP.NET, istek path'ine karşılık gelen prerender HTML'i serve etsin; yoksa SPA fallback.
+   - IIS web.config: istek path'i için hazır HTML varsa onu versin, yoksa SPA fallback; bilinmeyen path gerçek 404 ([[P3-15 Soft 404]]).
    - React `hydrateRoot` ile devralsın.
 2. **Ara çözüm (~1 gün)**
-   - ASP.NET middleware `index.html`'i route'a göre şablonlasın: `<title>`, description, canonical, `og:*`, JSON-LD ve kısa bir statik içerik bloğu (H1 + 2 paragraf + iletişim).
+   - Express (ya da IIS'in önünde küçük bir Node katmanı) `index.html`'i route'a göre şablonlasın: `<title>`, description, canonical, `og:*`, JSON-LD ve kısa bir statik içerik bloğu (H1 + 2 paragraf + iletişim).
    - Meta sorununu çözer; AI botları için içerik yine sınırlı kalır.
 3. **Tam SSR** (Next.js ya da React Router framework mode): büyük refactor, şimdilik gerekmiyor.
 

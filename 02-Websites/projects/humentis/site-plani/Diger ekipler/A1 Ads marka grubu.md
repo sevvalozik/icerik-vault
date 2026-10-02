@@ -7,7 +7,7 @@ tahmini_sure: "1 saat"
 son_tarih: 2026-10-03
 bagli:
   - "[[P1-09 Uzman profil sayfalari]]"
-  - "[[P0-01 Randevu akisi bos takvim]]"
+  - "[[P0-01 Randevu akisi]]"
 ---
 
 # A1 · Ads: ANK_Marka reklam grubu
@@ -18,7 +18,7 @@ bagli:
 > - Marka araması en yüksek niyetli arama; TBM düşük, Kalite Puanı yüksek olur.
 
 > [!warning] Zamanlama
-> P0-01, P0-03 ve P0-04 canlıya çıkmadan açma. Açılırsa marka tıklamaları da boş takvime gider.
+> P0-03 (çerez kilidi) ve P0-04 (Ara/WhatsApp ilk ekranda) canlıya çıkmadan açma; açılırsa marka tıklamaları da kilitli ilk ekrana düşer. Ölçüm için P0-06 önerilir.
 
 ## Anahtar kelimeler
 - **Marka, Tam eşleme:** [humentis], [humentis psikoloji], [humentis aile danışma merkezi], [özel humentis aile danışma merkezi], [humentis ankara]
@@ -34,7 +34,7 @@ bagli:
 - Yüz Yüze ve Online Görüşme (26 kr.)
 - WhatsApp'tan Randevu Talebi (27 kr.)
 - Psikolog ve Aile Danışmanları (29 kr.)
-- 17 Uzmandan Oluşan Kadro (24 kr.)
+- 18 Uzmandan Oluşan Kadro (24 kr.)
 - Çankaya, Ankara (15 kr.)
 - **Açıklamalar** (≤90 karakter):
 - Özel Humentis Aile Danışma Merkezi: psikolog ve aile danışmanlarıyla görüşme. (77 kr.)

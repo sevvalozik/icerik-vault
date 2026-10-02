@@ -14,7 +14,7 @@ Binlerce hazır akış arasından müşterilerimize doğrudan uyanlar. Hepsi n8n
 - [Klinik randevusu: WhatsApp, Google Calendar, Gmail](https://n8n.io/workflows/16680-book-and-confirm-clinic-appointments-with-whatsapp-google-calendar-and-gmail) — talep gelir, randevu numarası üretir, online ise Meet linki / yüz yüze ise adres ekler, uzmanın takvimine yazar, danışana ve uzmana onay atar, 24 saat önce hatırlatır. WhatsApp için Twilio gerekiyor.
 - [Google Sheets'ten günlük WhatsApp hatırlatması](https://n8n.io/workflows/17000-send-daily-appointment-reminders-from-google-sheets-to-whatsapp) — daha basit: randevular tabloda, her gün hatırlatma gider.
 - [WhatsApp randevu planlama + Google Calendar](https://n8n.io/workflows/5855-whatsapp-appointment-scheduling-with-google-calendar/)
-- İlgili sorun: [[P0-01 Randevu akisi bos takvim]] — sitedeki takvim boşken WhatsApp talebini tabloya düşürmek geçici çözüm olabilir.
+- İlgili: [[P0-01 Randevu akisi]] — WhatsApp ve telefon taleplerini tabloya düşürmek temas kaydını ([[O1 Operasyon musaitlik ve kayit]]) kolaylaştırabilir.
 
 **2. Google yorumlarına yanıt taslağı (onaylı)**
 - [Google yorum yanıtı üret ve onaya sun](https://n8n.io/workflows/14360-generate-and-approve-google-review-replies-with-groq-ai-and-slack/) — yapay zekâ taslak yazar, biri onaylamadan yayınlanmaz.
