@@ -12,7 +12,7 @@ Ajansın müşteri işlerini (sunum, website, sosyal medya metni, AI video/görs
 - `00-Inbox/` — hızlı notlar, henüz kategorize edilmemiş
 - `00-Musteriler/<slug>/marka-brief.md` — **her müşterinin tek doğruluk kaynağı** (kimlik, ton, palet, font, ürün kartları, yasaklar, AI Brief Bloğu). Şablon: `_templates/marka-brief-template.md`
 - `01-Presentations/` — sunumlar (`_templates`, `_themes` [12 Marp CSS + Keynote .kth], `active`, `archive`)
-- `02-Websites/` — website notları (`_templates`, `projects/<slug>/`, `snippets`, `dist` — build sonrası)
+- `02-Websites/` — website notları (`_templates`, `projects/<slug>/`, `snippets`, `dist` — build sonrası) ve `_kutuphane/seo-geo/` (her sitede uygulanan SEO + GEO standardı; komut `/seo-geo`)
 - `03-Assets/{images,logos,videos}/<slug>/` — gerçek dosyalar: logolar, ürün fotoğrafları, üretilen klipler
 - `04-Sosyal-Medya-Icerik/<slug>/` — reels/post metinleri, çekim notları (`_templates` içinde zaman kodlu şablon) ve `instagram-feed.md` (yayın öncesi profil önizlemesi; `dist/` build çıktısı)
 - `05-Kod-Projeleri/<slug>/` — kod projelerinin **özet notu**; kod vault'a konmaz
@@ -23,7 +23,7 @@ Ajansın müşteri işlerini (sunum, website, sosyal medya metni, AI video/görs
 - `_templater/` — Templater komutları: **Yeni Müşteri · Yeni Video Brief · Yeni Görsel Brief · Yeni Sosyal Medya İçeriği · Yeni Kod Projesi · Yeni Sunum · Yeni Website · Yeni Rapor**
 - `scripts/` — `build-site.js` (site notlarını HTML'e derler), `vault-check.js` (frontmatter + büyük dosya + kırık görsel kontrolü), `instagram-studio.js` (Instagram profil önizleme stüdyosu), `build-instagram.js` (müşteriye gönderilecek tek dosya HTML), `lib/` (ortak yardımcılar), `instagram/` (önizleme arayüzü)
 - `CLAUDE.md` / `AGENTS.md` — AI ajanları için talimat (Claude Code otomatik okur; Cowork'te ilk mesajda "CLAUDE.md'yi oku" de)
-- `.claude/skills/` — Claude Code komutları: `/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme`
+- `.claude/skills/` — Claude Code komutları: `/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme`, `/seo-geo`
 
 ## Kurulum (bir kereye mahsus)
 

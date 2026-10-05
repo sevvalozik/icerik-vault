@@ -9,7 +9,7 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | `00-Inbox/` | kategorize edilmemiş hızlı notlar | — |
 | `00-Musteriler/<slug>/marka-brief.md` | **her müşterinin tek doğruluk kaynağı** (palet, font, ton, ürün kartları, yasaklar, AI Brief Bloğu) | `musteri` |
 | `01-Presentations/` | Marp/Keynote sunumlar; `_themes/` CSS temaları, `active/`, `archive/` | `presentation` |
-| `02-Websites/` | site notları `projects/<slug>/`, `snippets/`, `dist/` (build çıktısı) | `website`, `snippet` |
+| `02-Websites/` | site notları `projects/<slug>/`, `snippets/`, `dist/` (build çıktısı); `_kutuphane/seo-geo/` (**SEO + GEO standardı**, her site için) | `website`, `snippet`, `kutuphane` |
 | `03-Assets/{images,logos,videos}/<slug>/` | gerçek dosyalar (logo SVG, ürün fotoğrafı, üretilen klipler) | — |
 | `04-Sosyal-Medya-Icerik/<slug>/` | reels/post metinleri, çekim notları, `instagram-feed.md` (profil önizlemesi) | `sosyal-medya-icerik`, `instagram-feed` |
 | `05-Kod-Projeleri/<slug>/` | kod projelerinin **özet notu** (kod vault'ta değil) | `kod-projesi` |
@@ -24,9 +24,10 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 
 1. `00-Musteriler/<slug>/marka-brief.md` oku. Yoksa önce onu oluştur (`00-Musteriler/_templates/marka-brief-template.md`) ve bilinmeyenleri `❓ doğrulanacak` bırak — **asla uydurma**.
 2. İş türüne göre şablonu oku: video → `06-AI-Video/_templates/video-brief-template.md`; görsel → `07-AI-Gorsel/_templates/gorsel-brief-template.md`; reels metni → `04-Sosyal-Medya-Icerik/_templates/sosyal-medya-icerik-template.md`; sunum → `01-Presentations/_templates/sunum-template.md`; site → `02-Websites/_templates/website-template.md`.
-3. Video/görsel işinde kütüphaneyi oku: `06-AI-Video/_kutuphane/prompt-formulu.md` (zorunlu), ilgili sektör reçetesi, `negatif-promptlar.md`, `tutarlilik-rehberi.md`. Model seçimi için `model-rehberi.md`.
-4. Müşterinin mevcut işlerine bak: `99-Dashboard/musteri-katalogu.md` mantığıyla `01…07` altındaki `<slug>` klasörleri; `video-log.md` / `gorsel-log.md` içindeki "Öğrenilenler".
-5. Örnek dolu brief'ler: `06-AI-Video/nefin-beauty/c-vitamini-serum-kampanya-brief.md`, `06-AI-Video/humentis/klinik-broll-brief.md`.
+3. **Site işinde** (yeni site, revize, landing, devralınan site, "Google'da / ChatGPT'de çıkmıyoruz"): `02-Websites/_kutuphane/seo-geo/00-seo-geo-standardi.md` varsayılan standarttır; site, oradaki "Bitti" kontrol listesinden geçmeden bitmiş sayılmaz. Komut: `/seo-geo <slug> <site-url> [repo-yolu]`.
+4. Video/görsel işinde kütüphaneyi oku: `06-AI-Video/_kutuphane/prompt-formulu.md` (zorunlu), ilgili sektör reçetesi, `negatif-promptlar.md`, `tutarlilik-rehberi.md`. Model seçimi için `model-rehberi.md`.
+5. Müşterinin mevcut işlerine bak: `99-Dashboard/musteri-katalogu.md` mantığıyla `01…07` altındaki `<slug>` klasörleri; `video-log.md` / `gorsel-log.md` içindeki "Öğrenilenler".
+6. Örnek dolu brief'ler: `06-AI-Video/nefin-beauty/c-vitamini-serum-kampanya-brief.md`, `06-AI-Video/humentis/klinik-broll-brief.md`.
 
 ## Üretirken
 
@@ -50,12 +51,13 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | "X için site / landing" | marka brief + `02-Websites/_templates/website-template.md` + `snippets/`; Claude Design kullanılacaksa **AI Brief Bloğu**'nu prompt başına yapıştır |
 | "X'in feed'i nasıl duracak / yayın öncesi önizleme / müşteriye göstereceğim" | `node scripts/instagram-studio.js <slug>` (stüdyo) → görsel/video sürükle, sırala, tarih ver, logoyu avatardan değiştir; müşteri dosyası için `node scripts/build-instagram.js <slug>`. Skill: `/instagram-onizleme`. **İçerik üretme**, sadece yerleştir |
 | "yeni müşteri" | `00-Musteriler/<slug>/marka-brief.md` oluştur + `03-Assets/{images,logos,videos}/<slug>/` klasörleri |
+| "X sitesinin SEO / GEO'su", "X'in sitesini Google ve ChatGPT'de görünür yap", "ismimizle aratınca çıkmıyoruz" | `/seo-geo <slug> <site-url> [repo-yolu]` → `02-Websites/_kutuphane/seo-geo/` (00 standart + 01–09) → rapor `08-Raporlar/<slug>/seo-geo-denetim-<tarih>.md`; örnek: `08-Raporlar/humentis/seo-geo-uygulama-2026-10-05.md` |
 | "X için SEO / pazarlama / rakip raporu" (veya `/market audit`) | marka brief oku → Templater `Yeni Rapor` ya da `08-Raporlar/_templates/rapor-template.md` → `08-Raporlar/<slug>/<konu>-<tarih>.md`; `type: arastirma`. Liste: `99-Dashboard/arastirma-katalogu.md` |
 | "vault'u kontrol et" | `node scripts/vault-check.js` |
 
 ## Claude Code skill'leri (`.claude/skills/`)
 
-`/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme` — yukarıdaki akışları tek komutla yürütür; argüman olarak müşteri slug'ı ve kampanya adı alır.
+`/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme` — yukarıdaki akışları tek komutla yürütür; argüman olarak müşteri slug'ı ve kampanya adı alır. `/seo-geo` — bir müşteri sitesinde ileri seviye SEO + GEO + backlink çalışması (denetim → uygulama → güvenli yayın → dizine ekleme).
 
 Obsidian biçimi için (kepano/obsidian-skills, MIT): `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap` — not, Bases tablosu ve Canvas yazarken otomatik devreye girer. Ayrıntı: `99-Dashboard/claude-code-skilleri.md`.
 

@@ -22,7 +22,7 @@ Henüz kurulup denenenler ✅ ile işaretli. Diğer bilgiler depo sayfalarından
 
 ## Kasada kendi yazdığımız skill'ler
 
-`.claude/skills/` içinde: `gorsel-brief`, `icerik-paketi`, `instagram-onizleme`, `video-brief`.
+`.claude/skills/` içinde: `gorsel-brief`, `icerik-paketi`, `instagram-onizleme`, `video-brief`, `seo-geo` (05.10.2026; her müşteri sitesinde ileri seviye SEO + GEO + backlink → [[00-seo-geo-standardi]]).
 
 Ayrıca kasaya kurulu: **ai-marketing-claude** (30.09.2026, kasaya uyarlandı → `/market`) ve **obsidian-skills** (30.09.2026) → `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `obsidian-cli`, `defuddle`, `knap`.
 

@@ -90,6 +90,8 @@ Sonra döngü: haftalık 6 sinyal kontrolü → önce uzman profilleri ve bölü
 
 **Humentis kuralları geçerli:** sorgu ne olursa olsun başlıklarda "tedavi", "en iyi", aciliyet yok; tanı koyan sayfa tipi (ör. "depresyon testi") yazılmaz — "yanlış niyet" sinyali böyle bir sayfa istese de ([[ai-marketing-claude-paketi]], marka brief §7).
 
+> **Durum (05.10.2026):** 2. ön koşul (sunucu HTML'i, sayfa başına canonical, gerçek 404, 301'ler) 03.10.2026'da canlıya alındı; sitemap, IndexNow ve llms.txt hazır. Search Console'da dizine ekleme istekleri ve Bing içe aktarma bekliyor. Kayıt: [[seo-geo-uygulama-2026-10-05]]. Tüm müşteriler için genel standart: [[00-seo-geo-standardi]].
+
 ### Nefin ve diğer müşteriler
 Aynı döngü e-ticaret ve yerel işletmelerde de geçerli; "dönüşüm" Nefin'de satın alma, Otoekspertiz'de randevu/arama.
 

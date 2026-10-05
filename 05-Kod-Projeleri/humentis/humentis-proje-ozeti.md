@@ -81,3 +81,9 @@ README'de açıkça belirtiliyor: bu çalışma marka/ürün tasarım yönü, he
 ## Durum
 
 Marka temeli onaylanmış ve tamamlanmış. Sıradaki aşama: bu temeli ürün UI sistemine uygulamak (ana sayfa tasarım sistemi, uzman kartı/profili, randevu akışı, form/buton/durum component sistemi).
+
+## SEO / GEO (Ekim 2026)
+
+- **Güncel kod reposu:** `OmerBirol/humentis` (özel), SEO çalışması `seo-geo-ileri-seviye` branch'inde; repo içi belgeler `docs/seo/` ve `docs/SEO-GEO-RUNBOOK.md`. (Yukarıdaki `biinci/Psikoloji` ilk kurulumdaki repo adıdır; not 05.10.2026'da eklendi.)
+- **Canlıda (03–05.10.2026):** sunucu HTML'i (ham HTML = React), sayfa başına başlık/canonical, gerçek 404 ve 301'ler, tek `@graph` schema, dinamik sitemap + llms.txt, uzman profillerinde uzmana özel SSS ve Person `sameAs`, IndexNow.
+- **Rapor ve açık işler:** [[seo-geo-uygulama-2026-10-05]] · Genel standart: [[00-seo-geo-standardi]]
