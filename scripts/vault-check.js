@@ -17,7 +17,7 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const CONTENT_DIRS = [
   "00-Musteriler", "01-Presentations", "02-Websites", "04-Sosyal-Medya-Icerik",
-  "05-Kod-Projeleri", "06-AI-Video", "07-AI-Gorsel",
+  "05-Kod-Projeleri", "06-AI-Video", "07-AI-Gorsel", "08-Raporlar",
 ];
 const REQUIRED = {
   musteri: ["client", "slug", "status", "date"],
@@ -30,6 +30,7 @@ const REQUIRED = {
   "gorsel-brief": ["client", "slug", "kampanya", "status", "date"],
   "gorsel-log": ["client", "slug", "date"],
   "instagram-feed": ["client", "slug", "status", "date"],
+  arastirma: ["client", "status", "date"],
 };
 const SKIP_DIRS = new Set([".git", ".obsidian", "node_modules", "dist", "_export", ".trash"]);
 const WARN_FILE_MB = 90;   // uyarı: GitHub sınırına yaklaşıyor

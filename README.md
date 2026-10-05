@@ -18,8 +18,9 @@ Ajansın müşteri işlerini (sunum, website, sosyal medya metni, AI video/görs
 - `05-Kod-Projeleri/<slug>/` — kod projelerinin **özet notu**; kod vault'a konmaz
 - `06-AI-Video/` — AI video üretim sistemi: `_kutuphane/` (prompt formülü, kamera/ışık sözlüğü, model rehberi, negatif promptlar, tutarlılık rehberi, sektör reçeteleri, kalite kontrol), `_templates/video-brief-template.md`, `<slug>/` brief'ler + `video-log.md`
 - `07-AI-Gorsel/` — aynı yapı görsel için (`gorsel-prompt-formulu.md`, `gorsel-brief-template.md`, `<slug>/gorsel-log.md`)
-- `99-Dashboard/` — Dataview katalogları (müşteri, sunum, website, video, içerik, tema), çalışma prensipleri, bulut depolama, ilham linkleri
-- `_templater/` — Templater komutları: **Yeni Müşteri · Yeni Video Brief · Yeni Görsel Brief · Yeni Sosyal Medya İçeriği · Yeni Kod Projesi · Yeni Sunum · Yeni Website**
+- `08-Raporlar/<slug>/` — SEO, pazarlama, rakip ve teknik denetim raporları (`type: arastirma`); şablon `_templates/rapor-template.md`
+- `99-Dashboard/` — Dataview katalogları (müşteri, sunum, website, video, içerik, tema, araştırma/rapor), çalışma prensipleri, bulut depolama, ilham linkleri
+- `_templater/` — Templater komutları: **Yeni Müşteri · Yeni Video Brief · Yeni Görsel Brief · Yeni Sosyal Medya İçeriği · Yeni Kod Projesi · Yeni Sunum · Yeni Website · Yeni Rapor**
 - `scripts/` — `build-site.js` (site notlarını HTML'e derler), `vault-check.js` (frontmatter + büyük dosya + kırık görsel kontrolü), `instagram-studio.js` (Instagram profil önizleme stüdyosu), `build-instagram.js` (müşteriye gönderilecek tek dosya HTML), `lib/` (ortak yardımcılar), `instagram/` (önizleme arayüzü)
 - `CLAUDE.md` / `AGENTS.md` — AI ajanları için talimat (Claude Code otomatik okur; Cowork'te ilk mesajda "CLAUDE.md'yi oku" de)
 - `.claude/skills/` — Claude Code komutları: `/video-brief`, `/gorsel-brief`, `/icerik-paketi`, `/instagram-onizleme`

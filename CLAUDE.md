@@ -15,8 +15,9 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | `05-Kod-Projeleri/<slug>/` | kod projelerinin **özet notu** (kod vault'ta değil) | `kod-projesi` |
 | `06-AI-Video/` | `_kutuphane/` (prompt formülü, kamera sözlüğü, model rehberi, negatifler, tutarlılık, sektör reçeteleri, QC) · `_templates/` · `<slug>/` brief + `video-log.md` | `video-brief`, `video-log`, `kutuphane` |
 | `07-AI-Gorsel/` | aynı yapı, görsel için | `gorsel-brief`, `gorsel-log` |
+| `08-Raporlar/<slug>/` | SEO / pazarlama / rakip / teknik **denetim ve araştırma raporları** (dış skill paketlerinin çıktısı da buraya); `_templates/rapor-template.md`. Eski raporlar yerinde kalabilir, katalog `type`'a bakar | `arastirma` |
 | `99-Dashboard/` | Dataview katalogları, çalışma prensipleri, ilham linkleri | `dashboard`, `readme` |
-| `_templater/` | Obsidian Templater komutları (Yeni Müşteri / Video Brief / Görsel Brief / Sosyal Medya / Kod Projesi / Sunum / Website) | — |
+| `_templater/` | Obsidian Templater komutları (Yeni Müşteri / Video Brief / Görsel Brief / Sosyal Medya / Kod Projesi / Sunum / Website / Rapor) | — |
 | `scripts/` | `build-site.js`, `vault-check.js`, `instagram-studio.js`, `build-instagram.js`, `lib/`, `instagram/` | — |
 
 ## Bir işe başlamadan önce (sırayla)
@@ -33,7 +34,7 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 - **Prompt kuralları:** tek çekim = tek aksiyon; ürün/mekan/karakter kartı brief'ten **birebir**; kamera hareketi + lens + ışık + grade satırı + `no text, no logos` + negatif liste; 60–120 kelime (Runway I2V: 20–50). Marka brief'teki "KESİNLİKLE OLMAYACAK" listesi negatif prompt'a girer.
 - **Gerçek ürün/logo varsa** image-to-video / görsel düzenleme önerilir; kelimeyle tarif ettirme. Logo/yazı/ekran içeriği her zaman post-prodüksiyon.
 - **Yasal:** kozmetikte tedavi iddiası yok; klinikte danışan/çocuk yok, hastane görünümü yok; gerçek kişi benzerliği istenmez. Brief'in 7. bölümü bağlayıcı.
-- **Dosya yerleşimi:** çıktı notu `0X-<tür>/<slug>/` altına; frontmatter'da `type`, `client`, `slug`, `status`, `date`, `tags`, `related` zorunlu. Dosya adları ASCII kebab-case.
+- **Dosya yerleşimi:** çıktı notu `0X-<tür>/<slug>/` altına (rapor/denetim → `08-Raporlar/<slug>/`); frontmatter'da `type`, `client`, `slug`, `status`, `date`, `tags`, `related` zorunlu. Dosya adları ASCII kebab-case.
 - **Log:** ürettiğin/önerdiğin her prompt brief'in "Shot promptları" bölümüne; üretilen dosya "Üretim logu"na ve `<slug>/video-log.md` (veya `gorsel-log.md`) tablosuna.
 - **Mevcut bilgiye zarar verme:** notları yeniden yazma, ekle. Bir bilgiyi değiştiriyorsan neden değiştiğini aynı notta bir satırla belirt.
 - **Vault'a konmayacaklar:** kod repoları (sadece özet), 90 MB üstü dosyalar (Google Drive → `99-Dashboard/bulut-depolama.md`), `.obsidian/workspace.json`.
@@ -49,6 +50,7 @@ Bu klasör bir Obsidian vault'u: bir tasarım/içerik ajansının müşteri işl
 | "X için site / landing" | marka brief + `02-Websites/_templates/website-template.md` + `snippets/`; Claude Design kullanılacaksa **AI Brief Bloğu**'nu prompt başına yapıştır |
 | "X'in feed'i nasıl duracak / yayın öncesi önizleme / müşteriye göstereceğim" | `node scripts/instagram-studio.js <slug>` (stüdyo) → görsel/video sürükle, sırala, tarih ver, logoyu avatardan değiştir; müşteri dosyası için `node scripts/build-instagram.js <slug>`. Skill: `/instagram-onizleme`. **İçerik üretme**, sadece yerleştir |
 | "yeni müşteri" | `00-Musteriler/<slug>/marka-brief.md` oluştur + `03-Assets/{images,logos,videos}/<slug>/` klasörleri |
+| "X için SEO / pazarlama / rakip raporu" (veya `/market audit`) | marka brief oku → Templater `Yeni Rapor` ya da `08-Raporlar/_templates/rapor-template.md` → `08-Raporlar/<slug>/<konu>-<tarih>.md`; `type: arastirma`. Liste: `99-Dashboard/arastirma-katalogu.md` |
 | "vault'u kontrol et" | `node scripts/vault-check.js` |
 
 ## Claude Code skill'leri (`.claude/skills/`)

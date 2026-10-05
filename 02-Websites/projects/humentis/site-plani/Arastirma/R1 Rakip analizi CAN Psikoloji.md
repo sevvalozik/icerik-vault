@@ -1,6 +1,12 @@
 ---
+type: arastirma
+client: "Humentis"
+slug: humentis
+rapor_turu: rakip
+status: tamamlandi
+date: 2026-09-29
 tags: [humentis, arastirma, rakip]
-tarih: 2026-09-29
+related: ["[[00 Humentis Site Plani (MOC)]]"]
 ---
 
 # R1 · Rakip analizi: CAN Psikoloji (canpsikolojim.com)
