@@ -1,0 +1,37 @@
+/* any4 tasarım token'ları — kaynak: fsumbul/any4-web, assets/css/main.css (sevval/duzenlemeler, 19 Ekim 2026)
+   İlk ilke: her şey sade, şık ve lüks hissettirmeli.
+   Yazı tipleri: Newsreader (başlık, opsz ekseni, ağırlık 400) + Geist (metin/arayüz). Dosyalar repoda assets/fonts/ (woff2, açık lisans). */
+
+:root {
+  --bg: #FFFFFF;
+  --bg-2: #F1F4F4;          /* sis: yüzey adımı */
+  --surface: #FFFFFF;
+  --ink: #0E1B20;           /* petrolden türetilmiş mürekkep */
+  --ink-2: #44535A;
+  --ink-3: #66757B;
+  --line: rgba(14, 27, 32, .12);
+  --line-2: rgba(14, 27, 32, .26);
+  --accent: #1F5568;        /* petrol */
+  --accent-deep: #163F4D;
+  --accent-2: #4E8A9C;
+  --mist: #E3ECEE;
+  --night: #0E1B20;
+  --on-night: #FFFFFF;
+  --on-night-2: #B9C7CB;
+  --night-line: rgba(255, 255, 255, .18);
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fs-hero: clamp(56px, 8.6vw, 156px);
+  --fs-h2: clamp(40px, 5.4vw, 86px);
+  --fs-stmt: clamp(26px, 2.6vw, 36px);
+  --max: 1320px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --header-h: 96px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --ease-io: cubic-bezier(.7, 0, .2, 1);
+  --section-gap: clamp(56px, 7vw, 104px); /* tüm bölümler arası */
+  --btn-dot: 48px;                       /* buton dairesi */
+}
+
+@media (max-width: 960px) { :root { --header-h: 72px; } }

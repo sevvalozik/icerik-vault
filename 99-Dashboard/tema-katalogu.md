@@ -30,6 +30,7 @@ Yukarıdaki tablo sunum (Marp/Keynote) temaları için. Web projelerinde kullan�
 | Proje | Dosya | Konum |
 |---|---|---|
 | Humentis | `humentis-tokens.css` | `03-Assets/logos/humentis/` — renk, font, spacing, radius, shadow, motion tokenları, uygulamaya hazır |
+| any4 | `any4-tokens.css` | `03-Assets/logos/any4/` — renk (beyaz + mürekkep + tek vurgu petrol #1F5568), Newsreader + Geist, tip ölçeği, ızgara, easing; ikonlar `ikonlar/` |
 
 ## Kaynak
 
