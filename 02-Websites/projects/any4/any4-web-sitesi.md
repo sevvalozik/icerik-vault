@@ -5,7 +5,7 @@ client: "any4"
 slug: any4
 status: active
 date: 2026-10-19
-url: "https://github.com/fsumbul/any4-web"
+url: "https://any4labs.com"
 tags: [website, kurumsal, statik, motion, any4]
 related: ["[[00-Musteriler/any4/marka-brief]]", "[[05-Kod-Projeleri/any4/any4-web-proje-ozeti]]"]
 ---
@@ -52,7 +52,7 @@ Tam sayfa görüntüler:
 
 ## Footer
 
-- merhaba@any4.app
+- merhaba@any4labs.com (alan adı any4labs.com)
 - "Türkiye, uzaktan her yerde"
 - TR / EN
 - Marka kiti bağlantısı

@@ -17,7 +17,7 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[02-Websites/projects/any4/any
 
 - Furkan Bey'in `main` dalı ilk sürüm (eski adıyla Verihane'den dönüşen sayfa). Tüm düzenlemeler ayrı dalda: **`sevval/duzenlemeler`**. `main`'e 27 commit önde, hepsi GitHub'a pushlandı. Son commit `f3323cd`: yeni logo.
 - Merge kararı Furkan Bey'de. Fotoğraflar ve yazı tipleri repoda, dış bağlantı yok; dal olduğu gibi açılınca yerelde de birebir görünür.
-- Yayında değil (alan adı yok).
+- Yayında değil. Alan adı: **any4labs.com** (19 Ekim 2026'da kesinleşti).
 
 ## Yığın
 
@@ -68,6 +68,10 @@ cd ~/any4-web && python3 -m http.server 4173   # http://localhost:4173
   - OG görselleri TR/EN, 1200×630
 - **Form.** `data-endpoint` boşken e-posta uygulamasını açar. Formspree ya da backend bağlanınca doğrudan gönderir.
 
+## Yayın öncesi kontrol (19 Ekim 2026)
+
+20 maddelik "yayına hazır mı" listesine göre bakıldı. Var: özel 404 (yeni tasarımla yenilendi), meta title/description, ilk ekranda CTA, favicon, robots.txt, sitemap.xml, OG görselleri, mobil uyum, iletişim bilgileri, optimize görseller. Eklendi: işlerdeki fotoğraflara alt metin, form hata mesajları (alanın altında, sitenin fontuyla), "Gönderiliyor…" durumu, aydınlatma metni taslağı (TR/EN, `noindex`). Bilerek yok: sabit mobil CTA (lüks hissini bozar), çerez banner'ı (site çerez kullanmıyor). Bekleyen: analytics kararı (çerezsiz araç seçilirse banner gerekmez), kullanım koşulları (zorunlu değil).
+
 ## Karşılaşılan sorunlar ve çözümler
 
 - **`.flow` ve `.st` sınıf çakışmaları** mobilde yatay taşmaya yol açtı. Sınıflar `.strip` ve `.pstep` olarak yeniden adlandırıldı.
@@ -78,10 +82,10 @@ cd ~/any4-web && python3 -m http.server 4173   # http://localhost:4173
 
 ## Yapılacaklar
 
-- [ ] Alan adı (`any4.app` yer tutucu): `grep -rl "any4\.app" . | xargs sed -i '' 's/any4\.app/yeni.com/g'`
-- [ ] Form uç noktası, KVKK bağlantısı, sosyal medya (`sameAs`)
+- [x] Alan adı **any4labs.com** işlendi (canonical, hreflang, sitemap, robots, JSON-LD, llms.txt, security.txt, e-postalar) — 19 Ekim 2026
+- [ ] Form uç noktası, sosyal medya (`sameAs`)
+- [ ] Aydınlatma metni taslağındaki sarı boşluklar (unvan, adres, MERSİS, sağlayıcılar, saklama süresi) + hukukçu onayı; sonra `noindex` kaldırılır
 - [ ] Konsept işleri gerçek işlerle değiştirmek
-- [ ] `llms.txt` ve README'deki eski logo / buton tarifini güncellemek
 - [ ] Kullanılmayan Schibsted yazı tipi dosyalarını silmek
 - [ ] Yayın sonrası: `02-Websites/_kutuphane/seo-geo/00-seo-geo-standardi.md` kontrol listesi, Search Console, Bing
 

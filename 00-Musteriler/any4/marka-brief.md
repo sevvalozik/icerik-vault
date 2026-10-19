@@ -28,7 +28,7 @@ related: ["[[05-Kod-Projeleri/any4/any4-web-proje-ozeti]]", "[[02-Websites/proje
 | Kuruluş | 2026 |
 | Karar verici | Furkan Bey (repo sahibi: fsumbul) |
 | Ajans tarafı sorumlu | Şevval |
-| Web | any4.app (yer tutucu, alan adı kesinleşmedi) · merhaba@any4.app |
+| Web | **any4labs.com** (19 Ekim 2026'da kesinleşti; önce any4.app yer tutucuydu) · merhaba@any4labs.com |
 
 ## 2. Konumlandırma ve vaat
 
@@ -154,9 +154,9 @@ Avoid: eyebrow labels, single-word highlights in headlines, gradients, busy layo
 
 ## 11. Açık sorular / eksikler
 
-- [ ] Alan adı (any4.app yer tutucu)
+- [x] Alan adı: any4labs.com (19 Ekim 2026). Sitede her yere işlendi; merhaba@ ve guvenlik@any4labs.com posta kutuları açılmalı
 - [ ] Form uç noktası (Formspree ya da Furkan Bey'in backend'i)
-- [ ] KVKK aydınlatma metni bağlantısı
+- [ ] KVKK aydınlatma metni: sayfa taslağı sitede (`aydinlatma-metni/`, `en/privacy/`); unvan, adres, MERSİS, servis sağlayıcılar ve saklama süresi any4'ten bekleniyor, sonra hukukçu onayı
 - [ ] Sosyal medya hesapları
 - [ ] Seçili işler (Ada, Rota, Asistan) konsept; gerçek işlerle değiştirilecek
 - [ ] `llms.txt` hâlâ eski logoyu ("üs 4, any⁴") anlatıyor; yeni logoya göre güncellenmeli
