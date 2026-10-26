@@ -70,3 +70,4 @@ Kaynak: `fsumbul/generalkilit-web` (özel repo, Şevval'in GitHub hesabından ok
 - Uçtan uca: giriş → 2FA kurulumu → tüm panel ekranları 200, ürün ve yazı kaydı, GSC meta sitede, IndexNow anahtar dosyası, kullanıcı oluşturma, talep formu.
 - Kod Şevval'in Mac'inde: `~/Projects/otelkapikilidi-web` (node_modules/.next/data hariç). Kurulum: README.
 - 26.10.2026 15:20 — Tam içe aktarma Şevval'in Mac'inde tamamlandı: 21 ürün, 54 yazı (9 belge), 3 sayfa, 10 spam kategori 410. Düzeltilen iki hata: tablo dönüştürücü (turndown NodeList) ve PDF'lerin yazıya değil medya kütüphanesine bağlı olması (dosya adından belge yazısına eşleniyor; eşleşmeyen 7 PDF /belgeler/ "Diğer belgeler"de). ❓ TSE.pdf → TS EN 14846 yazısı eşleşmesi kontrol edilecek. Eski yazılarda kapak görseli yok.
+- 26.10.2026 15:31 — TSE.pdf kontrol edildi: TSE uygunluk belgesi, ilgili standart TS EN 14846 (15.07.2013) → eşleşme doğru, ❓ kapandı.
