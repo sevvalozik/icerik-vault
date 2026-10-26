@@ -1,0 +1,18 @@
+/* Telcom — otelkapikilidi.com tasarım tokenları (26.10.2026)
+   Kaynak: kod reposu app/globals.css. Marka brief: 00-Musteriler/telcom/marka-brief.md */
+:root {
+  --paper: #f6f7f8;
+  --white: #ffffff;
+  --steel-50: #eef0f2;
+  --steel-100: #e3e7ea;
+  --line: #d2d8dd;
+  --steel-500: #5f6a74;
+  --steel-700: #3a434b;
+  --graphite: #1b2026;
+  --red: #c8102e;      /* Telcom kırmızısı: yalnız marka + teklif eylemi */
+  --red-ink: #a00d25;
+  --led-green: #18a058; /* yalnız "kapı açık" durumu */
+  --font: "Manrope Variable", "Manrope", system-ui, sans-serif;
+  --radius-s: 6px;
+  --radius-door: 22px 22px 6px 6px; /* kapı oranlı ürün çerçevesi */
+}
