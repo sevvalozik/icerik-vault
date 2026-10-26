@@ -17,14 +17,15 @@ related: ["[[02-Websites/projects/telcom/otelkapikilidi-web-sitesi]]", "[[05-Kod
 
 | Alan | Değer |
 |---|---|
-| Resmi ad | ❓ doğrulanacak: logoda **Telcom Savunma ve Teknoloji San. Tic. A.Ş.**, kurumsal sayfa metninde **Telcom Bilişim San. Tic. A.Ş.** |
+| Resmi ad | **Telcom Teknoloji Sanayi ve Ticaret A.Ş.** (otelkapikilidi.com.tr şirket künyesi: MERSİS 0689 2633 798, Bodrum Ticaret Sicili 10499, eski unvan Telcom Bilişim…) — ❓ Furkan Bey teyit edecek. *(26.10 faz 2: künyede bulunduğu için güncellendi; önceki not: logoda "Telcom Savunma ve Teknoloji San. Tic. A.Ş.", kurumsal metinde "Telcom Bilişim San. Tic. A.Ş.")* |
 | Kısa ad / slug | `telcom` (site: otelkapikilidi.com) |
 | Sektör | Kartlı otel kapı kilidi, DND/MUR doorbell, energy saver, şifreli/kartlı dolap kilidi, otel otomasyonu — üretim, satış, montaj, servis |
-| Konum | Konacık Mah. Pamir İş Merkezi C4 Blok No:114, Konacık, 48400 Bodrum/Muğla (iletişim sayfası). Footer: Bodrum - Muğla - İzmir - İstanbul - Gürcistan |
+| Konum | Konacık Mah. Pamir İş Merkezi C4 Blok No:114, Konacık, 48400 Bodrum/Muğla (iletişim sayfası). Footer: Bodrum - Muğla - İzmir - İstanbul - Gürcistan. ⚠️ Künyedeki yazım farklı: "Konacık Beldesi Merkez Mah. Atatürk Bulvarı Pamir İş Merkezi No:114/C4" — NAP'ta tek yazım seçilmeli ❓ (yeni site şimdilik iletişim sayfasındakini kullanıyor) |
 | Kurucu / karar verici | Osman Yücel — Yönetim Kurulu Başkanı (kurumsal sayfa) |
 | Kuruluş | 1996 |
 | Telefon / e-posta | 444 11 80 · info@telcom.com.tr · WhatsApp 0532 134 75 32 (rehber yazılarında) |
 | Web / sosyal | otelkapikilidi.com, telcom.com.tr (referanslar sayfası), generalkilit.com; instagram.com/telcomturkiye; facebook.com/generalkilit (sitede ikinci bir FB profili de var: profile.php?id=100063789126570 ❓ hangisi resmi); youtube.com/@telcoma.s5729 |
+| Kardeş siteler (aynı firma) | telcom.com.tr, generalkilit.com, sifrelidolapkilidi.com, otelkapikilidi.com.tr, kartlikilit.com.tr (Furkan Bey'in "diğer siteler"i, 26.10) |
 | Markalar | Telcom, General (otel kilitleri). Modeller: General, General Black, Coral, Coral Black, Pios; ID serisi (telefonla açma) |
 | Ajans tarafı sorumlu | Şevval |
 
@@ -56,6 +57,7 @@ related: ["[[02-Websites/projects/telcom/otelkapikilidi-web-sitesi]]", "[[05-Kod
 
 ### Logo dosyaları
 - ❓ Vault'a henüz eklenmedi. Kaynak: `https://www.otelkapikilidi.com/wp-content/uploads/2024/02/telcom.png` (1104×447 PNG, kırmızı "TELCOM" + ® + "Savunma ve Teknoloji San. Tic. A.Ş." alt yazısı), `.../2024/02/www.otelkapikilidi.comrrr.png` (623×623), PDF: `.../2025/12/General-Logo.pdf`. İçe aktarıcı bunları `data/uploads/` içine indirir; oradan `03-Assets/logos/telcom/`'a kopyalanmalı. **SVG yok** → müşteriden vektör istenecek.
+- *(26.10 faz 2, Furkan Bey: "logoyu siteden çekebilirsin")* Yeni site logoyu **telcom.com.tr**'den alır: `telcom.png` (renkli) ve `telcombeyaz.png` (beyaz, koyu zemin). İçe aktarıcı indirip Firma bilgileri → Logo alanlarına yazar. Vault'a kopya: ❓ içe aktarma Şevval'in Mac'inde çalışınca `data/uploads/kardes/telcom.com.tr/` → `03-Assets/logos/telcom/`.
 
 ### Renk paleti (yeni site — logodaki kırmızıdan ve ürünün kendi malzemesinden)
 
@@ -97,12 +99,15 @@ Ortak teknik değerler (eski ürün sayfalarındaki metinden, tüm kapı kilidi 
 
 ### Diğer sistemler (eski sitede ayrı ürün sayfası yok; yeni sitede hub sayfası açıldı, içerik yazılınca indekse girer)
 - Otel DND / Doorbell (DND, MUR, kapı zili), Energy Saver (kartlı enerji kontrol ünitesi), şifreli ve kartlı dolap kilitleri, otel otomasyonu.
+- *(26.10 faz 2, Furkan Bey: "bunları da diğer sitelerden çekebilirsin")* Kardeş sitelerden **16 ürün** alındı (`otelkapikilidi-web/fixtures/kardes-site-urunleri.json`, her üründe kaynak URL): 6 doorbell/DND modeli (WOULD, …), Energy Saver, varlık sensörü, DK111–DK119 şifreli/kartlı dolap kilitleri. Fiyat alınmadı. sifrelidolapkilidi.com'daki ek modeller (General Gold, Coral Dark, DK113/DK119 OA, ding-dong zil) ve fiyatlar **alınmadı** ❓ eklensin mi?
+- Ürün açıklamalarında müşterinin kendi karşılaştırmalı iddiaları var ("en güvenli" vb.); aynen taşındı, schema'ya iddia konmadı.
 
 ## 7. Yasal / Hassas Kurallar
 
 - Sertifika iddiaları yalnız PDF'i sitede olan belgeler için (ISO 9001, 10002, 14001, 45001, 26000 ref., 31000 ref., TSE / TS EN 14846, TS EN 1906, CE, RoHS, Doğaya Saygı). Belgenin kapsamı/geçerlilik tarihi ❓ PDF'ten kontrol edilmeli.
 - Fiyat: proje bazlı; sitede rakam yazılmaz (müşteri onayı olmadan).
 - KVKK: yeni sitede teklif formu var → **KVKK aydınlatma metni müşteriden alınmalı** (sayfa boş, noindex).
+- *(26.10 faz 2, Furkan Bey: "kvkk'yı diğer sitelerden örnek alıp çevirelim")* `/kvkk/` artık dolu: generalkilit-web'deki metin bu sitenin gerçek davranışına çevrildi (teklif formu, çerezsiz ziyaret sayımı, çerez yok; veri sorumlusu Firma bilgilerinden). sifrelidolapkilidi'ninki doldurulmamış şablon ("[ADRESİNİZ]"), otelkapikilidi.com.tr'ninki e-ticaret/pazarlama çerezlerini anlatıyor → kullanılmadı. ❓ **Hukuk onayı gerekli.**
 - Kişi görünürlüğü: Osman Yücel adı/fotoğrafı eski kurumsal sayfada vardı, aynen taşındı.
 
 ## 8. Varlık Haritası
@@ -136,13 +141,14 @@ PRODUCT SHEET: a hotel RFID card door lock with a tall brushed stainless steel e
 
 ## 11. Açık Sorular / Eksikler
 
-- [ ] Resmi unvan hangisi? (Savunma ve Teknoloji / Bilişim)
+- [ ] Resmi unvan: künyedeki "Telcom Teknoloji Sanayi ve Ticaret A.Ş." doğru mu? (Furkan Bey öğrenecek)
+- [ ] NAP adres yazımı (iletişim sayfası mı, künye mi?)
 - [ ] Vektör logo (SVG/PDF) ve logo kullanım kuralları
 - [ ] Google İşletme Profili var mı? CID linki
 - [ ] Resmi Facebook hesabı hangisi? LinkedIn var mı?
 - [ ] Modeller arası teknik farklar (hepsinde aynı metin yazıyor)
-- [ ] DND, Energy Saver, dolap kilidi ürün sayfaları için teknik bilgi ve fotoğraf
-- [ ] KVKK aydınlatma metni
+- [x] DND, Energy Saver, dolap kilidi ürün bilgisi — kardeş sitelerden alındı (26.10)
+- [x] KVKK aydınlatma metni — taslak hazır, [ ] hukuk onayı
 - [ ] Referans listesi (telcom.com.tr/referanslar) yeni siteye taşınacak mı?
 - [ ] Çalışma saatleri
 - [ ] "Sektör lideri", "beş kıtada yüzlerce proje" iddialarının kanıtı

@@ -15,6 +15,8 @@ related: ["[[00-Musteriler/telcom/marka-brief]]", "[[02-Websites/projects/telcom
 
 ## Yığın
 
+> ⚠️ Faz 2'de (26.10, Furkan Bey: "admin panellerinin hepsini generalkilit-web formatında yapalım") yığın değişti; geçerli hali en alttaki **Faz 2** bölümünde. Aşağıdaki ilk hali kayıt için duruyor.
+
 - **Next.js 16** (App Router, sunucu tarafı HTML; her sayfa JS kapalıyken tam okunur) + **SQLite** (`better-sqlite3`, `data/site.db`).
 - Yüklenen dosyalar `data/uploads/` (public/ değil; Next build sonrası eklenen dosyaları public'ten sunmaz) → `/uploads/[...path]` route'u.
 - Panel oturumu: `ADMIN_USERS` (e-posta:bcrypt) + `AUTH_SECRET` (JWT çerezi, 8 saat). Giriş denemesi sınırı.
@@ -31,7 +33,7 @@ related: ["[[00-Musteriler/telcom/marka-brief]]", "[[02-Websites/projects/telcom
 ## Komutlar
 
 ```bash
-npm install && cp .env.example .env.local && npm run admin:hash -- "parola"
+npm install && cp .env.example .env.local && npm run admin:create -- e-posta "Ad" admin   # faz 2 (admin:hash kaldırıldı)
 npm run import:wp      # canlı siteden (ağ gerekir)   | npm run seed: deneme verisi
 npm run dev            # localhost:3000, panel /admin/
 npm test               # 11 birim testi
@@ -48,3 +50,22 @@ npm run check:seo -- http://localhost:3000   # Bitti listesinin otomatik kısmı
 - Build temiz; yerel denemede `check:seo` yalnız "ürünlere ≥5 sayfadan iç link" uyarısı verdi (deneme verisinde 1 rehber var; tam içe aktarmada ~35 rehberden link gelir — tekrar ölçülecek).
 - Panel uçtan uca denendi: giriş, hatalı giriş, ürün kaydetme, slug değişince 301 ve geri alma, teklif formu → talep listesi.
 - Yayında değil. Barındırma ❓.
+
+## Faz 2 — generalkilit-web panel formatı (26.10.2026)
+
+Kaynak: `fsumbul/generalkilit-web` (özel repo, Şevval'in GitHub hesabından okundu). Ajansın panel standardı: [[02-Websites/_kutuphane/admin-panel-standardi]].
+
+- **Veritabanı:** `node:sqlite` (Node 22.5+), şema `lib/schema.sql` — generalkilit tabloları (users, sessions, leads, articles, visits, audit, settings) + bu siteye özel products, pages, redirects, media. `better-sqlite3`, `jose`, `bcryptjs`, `marked` kaldırıldı.
+- **Oturum:** scrypt parola + TOTP 2FA (zorunlu), oturum DB'de (`ok_admin` çerezi), roller admin/editor/sales, denetim kaydı. Kullanıcı: `npm run admin:create` ya da panel → Kullanıcılar (geçici parola URL'de değil, 120 sn'lik çerezde gösterilir).
+- **Panel modülleri:** Pano (+ Site sağlığı), Talepler (durum/atanan/not/CSV), Ziyaretçiler (çerezsiz sayım + dünya haritası), Rehber ve belgeler (Markdown editörü + SEO kapısı + SERP önizleme), Ürünler, Sayfalar, Medya, Arama motorları, Firma bilgileri, Yönlendirmeler, WordPress'ten aktar, Kullanıcılar, Hesabım.
+- **Arama motorları ekranı** (Furkan Bey: "search console, bing master, indexnow, yandex webmaster … herkes hazırladığı sitenin ayarlarını bu panellerden yapacak"): GSC / Bing / Yandex doğrulama kodları → `<head>` meta, IndexNow anahtarı + tüm siteyi/tek adresi gönder + gönderim kaydı, canlı kontroller (site, robots, sitemap, 3 meta, anahtar dosyası, GPTBot erişimi). Ekip rehberi: [[02-Websites/_kutuphane/arama-motoru-panelleri]].
+- **KVKK:** `lib/legal.ts` (kod sayfası, Firma bilgilerinden veri sorumlusu).
+- **Kardeş site ürünleri:** `fixtures/kardes-site-urunleri.json` (16 ürün, kaynak URL'li); görseller içe aktarmada `data/uploads/kardes/<host>/` altına iner. Logolar telcom.com.tr'den.
+- **generalkilit'ten bilinçli farklar:** düz adresler (`/<slug>/`, eski WP adresleri korunsun); yayındaki yazı kapı engeli yüzünden taslağa düşmez (uyarı olarak kalır); ürünler kodda değil DB'de; tek dil.
+
+### Doğrulama (26.10.2026, yerel)
+
+- `npm run build` temiz, `npm test` 11/11.
+- `check:seo`: sitemap 24 adres, 404, 301, robots, AI botları, llms-full (38 KB), eski adres 301/410 tamam. 4 uyarı: General/Coral/Pios'a 4, Energy Saver'a 2 sayfadan iç link (hedef ≥5) — tam içe aktarmada ~35 rehber gelince tekrar ölçülecek.
+- Uçtan uca: giriş → 2FA kurulumu → tüm panel ekranları 200, ürün ve yazı kaydı, GSC meta sitede, IndexNow anahtar dosyası, kullanıcı oluşturma, talep formu.
+- Kod Şevval'in Mac'inde: `~/Projects/otelkapikilidi-web` (node_modules/.next/data hariç). Kurulum: README.

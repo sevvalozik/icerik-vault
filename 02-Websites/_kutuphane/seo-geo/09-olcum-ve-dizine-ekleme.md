@@ -60,3 +60,5 @@ Kod ne kadar iyi olursa olsun **Google sayfayı yeniden taramadan hiçbir şey d
 | Kuruma link veren dış profil | | |
 | AI testinde doğru bilgiyle geçen soru | | |
 | Organik giriş → temas/randevu | | |
+
+> **26.10.2026 eki:** Panel tarafı ve ekip adımları için [[arama-motoru-panelleri]]; her site panelinde "Arama motorları" ekranı ([[admin-panel-standardi]]).

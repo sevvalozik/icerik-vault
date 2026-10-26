@@ -102,3 +102,18 @@ related: ["[[00-Musteriler/telcom/marka-brief]]", "[[00-seo-geo-standardi]]", "[
 
 - Eski başlıktaki "Otel Kapı Kilit Sistemleri **Lideri**" yeni ana sayfa başlığında kullanılmadı (kanıt yok). Eski kurumsal metin müşterinin kendi cümlesi olarak aynen taşındı.
 - Fiyat yazıları (ör. "Kartlı Kilit Sistemi Fiyatı (Aralık 2025)") içerik olarak taşındı; schema'ya fiyat eklenmedi.
+
+## Ek — faz 2 bulguları (26.10.2026)
+
+**Kardeş siteler taraması** (telcom.com.tr, generalkilit.com, sifrelidolapkilidi.com, otelkapikilidi.com.tr, kartlikilit.com.tr):
+
+- **Unvan çelişkisi:** logoda "Savunma ve Teknoloji", kurumsal metinde "Bilişim"; otelkapikilidi.com.tr künyesinde **Telcom Teknoloji Sanayi ve Ticaret A.Ş.** (MERSİS 0689 2633 798, eski unvan Telcom Bilişim). Yeni sitede künyedeki kullanıldı; Furkan Bey teyit edecek. Tutarsız unvan varlık (entity) sinyalini bölüyor → tüm kardeş sitelerde tek unvan önerilir.
+- **NAP adres yazımı iki türlü** (iletişim sayfası ve künye). Tek yazım seçilip tüm sitelerde ve GBP'de aynı yazılmalı (standart 05).
+- **KVKK:** sifrelidolapkilidi.com'daki metin doldurulmamış şablon ("[ADRESİNİZ]" kalmış) — o sitede de düzeltilmeli. otelkapikilidi.com.tr'deki e-ticaret/pazarlama çerezlerini anlatıyor; bu sitenin davranışına uymuyor.
+- **Kopya içerik riski:** aynı ürün metinleri 3–4 kardeş sitede. Yeni sitede ürünler `sources` alanıyla kayıtlı; uzun vadede her sitenin kendi odağıyla yeniden yazılması önerilir (otelkapikilidi.com = otel sistemleri).
+- sifrelidolapkilidi.com'da fiyat ve ek modeller var (General Gold, Coral Dark, DK113/DK119 OA, ding-dong zil) — alınmadı, müşteriye soruldu.
+- kartlikilit.com.tr temiz WordPress kopyası (spam yok).
+
+**Yeni sitede faz 2:** KVKK dolu; arama motoru paneli (GSC/Bing/Yandex meta + IndexNow + canlı kontrol); 16 ürün daha → `check:seo` yerelde temiz, 4 iç link uyarısı (General/Coral/Pios 4, Energy Saver 2; hedef ≥5).
+
+**Marka kuralı gereği uygulanmadı:** yazı kapısına "sektör lideri / lider marka / pazar lideri" yasak kelimeleri eklendi (kanıtsız iddia).
