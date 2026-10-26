@@ -13,6 +13,8 @@ related: []
 
 > **Kaynak:** canlı site [decaventure.com](https://decaventure.com/) (Anasayfa + /Model), 28 Eylül 2026'da tarandı. Renkler ve font, sitenin CSS'inden birebir okundu. Kaynağı olmayan her şey `❓ doğrulanacak`.
 >
+> **Ad değişikliği (26 Ekim 2026, Şevval):** marka adı **Deca Ventures → Deca Girişim** oldu. Yeni logo ve site açılış animasyonu: [[02-Websites/projects/deca-ventures/logo-ve-acilis-animasyonu]]. Aşağıdaki §5 palet/font eski decaventure.com sitesinden; yeni kimliğin paleti o notta. Slug `deca-ventures` olarak kaldı.
+>
 > **`deca-teknoloji` ile ilişki (28 Eyl 2026, müşteri teyidi):** **resmi bir ilişki YOK.** Kayıtlı adres aynı görünse de iki şirket bağımsız. Bu iki müşteri için üretilen içerikleri, palet-ton-kimlik olarak **birbirinden ayrı tut**, çapraz referans verme.
 
 ## 1. Kimlik
@@ -64,6 +66,7 @@ related: []
 ### Logo dosyaları
 - `03-Assets/logos/deca-ventures/` — henüz vektör yok. Sitede kullanılan wordmark: **`DecaVentures®`** + solda triangüler "D" ikonu (beyaz).
 - İstenecek: SVG (birincil) + PNG şeffaf (koyu zemin beyaz varyant, açık zemin siyah varyant), tam brand kılavuzu.
+- **Yeni (26 Ekim 2026):** Deca Girişim wordmark'ı (DECA + GİRİŞİM, A'da elmas detayı) SVG + PNG olarak eklendi — dikey/yatay, fildişi (koyu zemin) ve lacivert (açık zemin). Hangi dosya nerede: [[02-Websites/projects/deca-ventures/logo-ve-acilis-animasyonu]] §1. Müşteri onayı ❓ doğrulanacak.
 
 ### Renk paleti (siteden birebir okundu)
 
