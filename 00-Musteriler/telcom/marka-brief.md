@@ -25,6 +25,7 @@ related: ["[[02-Websites/projects/telcom/otelkapikilidi-web-sitesi]]", "[[05-Kod
 | Kuruluş | 1996 |
 | Telefon / e-posta | 444 11 80 · info@telcom.com.tr · WhatsApp 0532 134 75 32 (rehber yazılarında) |
 | Web / sosyal | otelkapikilidi.com, telcom.com.tr (referanslar sayfası), generalkilit.com; instagram.com/telcomturkiye; facebook.com/generalkilit (sitede ikinci bir FB profili de var: profile.php?id=100063789126570 ❓ hangisi resmi); youtube.com/@telcoma.s5729 |
+| Ofisler (TELCOM 2026 Ekim kataloğu) | Bodrum (merkez): Atatürk Bulvarı Pamir İş Merkezi C4, Konacık · İstanbul: Perpa Ticaret Merkezi B Blok Kat:11 No:1640 Okmeydanı-Şişli · İzmir: Anadolu Cad. No:41 Megapol Tower Kat:10 No:17 Bayraklı · Muğla: Emir Beyazıd Mah. Hasan Ali Cad. No:18/2 Menteşe · Gürcistan: Nizharadze Sk. No:23 Batum. Telefon ayrıca 0 850 44 111 44. ⚠️ Bodrum adresinin üçüncü yazımı — NAP tek yazım ❓ |
 | Kardeş siteler (aynı firma) | telcom.com.tr, generalkilit.com, sifrelidolapkilidi.com, otelkapikilidi.com.tr, kartlikilit.com.tr (Furkan Bey'in "diğer siteler"i, 26.10) |
 | Markalar | Telcom, General (otel kilitleri). Modeller: General, General Black, Coral, Coral Black, Pios; ID serisi (telefonla açma) |
 | Ajans tarafı sorumlu | Şevval |
@@ -149,6 +150,6 @@ PRODUCT SHEET: a hotel RFID card door lock with a tall brushed stainless steel e
 - [ ] Modeller arası teknik farklar (hepsinde aynı metin yazıyor)
 - [x] DND, Energy Saver, dolap kilidi ürün bilgisi — kardeş sitelerden alındı (26.10)
 - [x] KVKK aydınlatma metni — taslak hazır, [ ] hukuk onayı
-- [ ] Referans listesi (telcom.com.tr/referanslar) yeni siteye taşınacak mı?
+- [x] Referanslar — Furkan Bey PDF'leri verdi, "hepsi güncel", görseller telcom.com.tr'den (26.10)
 - [ ] Çalışma saatleri
 - [ ] "Sektör lideri", "beş kıtada yüzlerce proje" iddialarının kanıtı
