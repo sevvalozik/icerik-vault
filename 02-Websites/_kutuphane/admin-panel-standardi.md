@@ -57,3 +57,28 @@ Yeni yazı şu kontrollerden geçmeden yayına çıkmaz: başlık ≤60, açıkl
 - [ ] `npm run admin:create` ile ekip kullanıcıları, herkes 2FA kurdu
 - [ ] Arama motorları ekranında dört bağlantı yeşil ([[arama-motoru-panelleri]])
 - [ ] README'de kurulum, yayın, yedek
+
+## Ek — 27.10.2026: makale yazım asistanı ve otomatik algılama (Furkan Bey'in isteği)
+
+Furkan Bey: "Sitelerin admin panellerinde makale oluşturma kısmına OpenAI chatbot bağlayalım, mesajlaşma kısmı yapalım. Key'i ileteceğim, .env'e girersiniz, chate yazmayalım." · "SSS algılansın, meta algılansın, snippet çeşitleri makalelerde önemli."
+
+İlk uygulama: otelkapikilidi-web (v7 paketi). Her yeni sitede aynı dosyalar taşınır:
+
+| Dosya | Ne |
+|---|---|
+| `lib/content-detect.ts` | Saf fonksiyonlar: gövdedeki SSS (soru başlığı + cevap, `S:/C:`, kalın soru), meta açıklama önerisi, hedef sorgunun başlık/açıklama/giriş/H2'de yeri, snippet türleri (40–60 kelime paragraf, soru başlığı altında kısa cevap, "nasıl" için numaralı adım, liste, tablo, "X nedir" tanımı) |
+| `lib/ai.ts` + `app/admin/ai/route.ts` | Sunucuda OpenAI Chat Completions akışı; yalnız admin/editör, aynı köken, kullanıcı başına 10 dk'da 40 istek, audit kaydı. Sistem mesajında marka kuralları (yasak ifadeler, uydurma yok, fiyat yok, "(doğrulanmalı)") |
+| `components/admin/AiAssistant.tsx` | Editör yanında sohbet: Taslak yaz · Metni iyileştir · SSS öner · Meta açıklama · Kısaca · Başlık öner; yanıt tek tıkla gövdeye/SSS'ye/açıklamaya/Kısaca'ya |
+| `lib/article-seo.ts` | Yayın kapısı "(doğrulanmalı)" kalıntısını engeller |
+
+**Anahtar kuralı:** `OPENAI_API_KEY` yalnız sunucuda `app\.env` (Windows/IIS) ya da ortam değişkeni; sohbete, e-postaya, panele, veritabanına, repoya girmez. Windows'ta `kurulum\openai-anahtar.ps1` gizli sorar, dosyayı Yöneticiler+SYSTEM'e kilitler. Model `OPENAI_MODEL` (varsayılan gpt-5-mini), test/Azure için `OPENAI_BASE_URL`.
+
+**Neden HowTo/FAQ şeması değil:** Google 2023'ten beri HowTo zengin sonucu göstermiyor, FAQ zengin sonucu yalnız resmî/sağlık sitelerinde. Adım ve SSS biçimi sayfada görünür içerik olarak önerilir (snippet ve yapay zekâ alıntısı için); FAQPage yalnız SSS alanından üretilir.
+
+## Ek — 27.10.2026: paylaşılan Windows/IIS sunucusu dersleri (94.73.180.208)
+
+- Sunucuda 20+ müşteri sitesi, çok sayıda Node süreci var (3000–3070, 3100, 3101, 3200 dolu). Her siteye **kendi portu** (otelkapikilidi: 3140); kurulum betiği port doluysa hiçbir şey değiştirmeden durmalı.
+- Betik **yalnız kendi sürecini** tanımalı: `node "%~dp0server.js"` (tam yol) ve komut satırında o yolu arayarak durdurma. "server.js içeren her node" filtresi başka siteleri kapatır.
+- Sunucu geneli ARR ayarlarına (`preserveHostHeader`, `responseBufferLimit`) dokunulmaz. Alan adı uygulamaya `X-Forwarded-Host` sunucu değişkeniyle (web.config) iletilir; uygulamada Host karşılaştıran her yer (yönlendirme, yükleme köken kontrolü, www→çıplak) önce `x-forwarded-host`'a bakmalı.
+- Next.js `NextResponse.redirect(new URL(p, req.url))` proxy arkasında iç adrese (127.0.0.1:port) yönlendirir; adres SITE_URL alan adıyla kurulmalı.
+- Ayarlar/gizli değerler `app\.env`'de; güncelleme betiği `.env` ve `data\`yı korur, `baslat.cmd`'yi yeniler.
