@@ -153,3 +153,5 @@ PRODUCT SHEET: a hotel RFID card door lock with a tall brushed stainless steel e
 - [x] Referanslar — Furkan Bey PDF'leri verdi, "hepsi güncel", görseller telcom.com.tr'den (26.10)
 - [ ] Çalışma saatleri
 - [ ] "Sektör lideri", "beş kıtada yüzlerce proje" iddialarının kanıtı
+
+> **Güncelleme 27.10.2026 (site yönü değişti):** otelkapikilidi.com'un yeni sitesinde palet ve yazı tipi yukarıdakinden farklı. Sebep: Furkan Bey/Şevval "sade, şık, lüks otellere hizmet veren kaliteli site; generalkilit.com'u referans al ama aynısını yapma". Yeni değerler: zemin beyaz, bölüm zemini açık taş `#f4f3f1`, koyu ton Telcom laciverti `#13263d` / `#0e1a29`, ince vurgu pirinç `#a8875a` (yalnız küçük işaretler), kırmızı `#c8102e` yalnız logoda; yazı tipi **DM Sans** (başlıklar 300, gövde 400; generalkilit ile aynı aile). Görsel yön: sessiz lüks otel fotoğrafı (ceviz kapı, sıcak akşam ışığı, fırçalanmış çelik), brief: [[07-AI-Gorsel/telcom/otelkapikilidi-site-gorselleri-brief]]. Yukarıdaki Manrope/kırmızı paleti eski öneri olarak kalıyor.
