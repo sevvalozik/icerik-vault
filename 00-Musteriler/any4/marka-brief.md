@@ -155,6 +155,7 @@ Avoid: eyebrow labels, single-word highlights in headlines, gradients, busy layo
 ## 11. Açık sorular / eksikler
 
 - [x] Alan adı: any4labs.com (19 Ekim 2026). Sitede her yere işlendi; merhaba@ ve guvenlik@any4labs.com posta kutuları açılmalı
+- [x] Site yayında: https://any4labs.com (2 Kasım 2026)
 - [ ] Form uç noktası (Formspree ya da Furkan Bey'in backend'i)
 - [ ] KVKK aydınlatma metni: sayfa taslağı sitede (`aydinlatma-metni/`, `en/privacy/`); unvan, adres, MERSİS, servis sağlayıcılar ve saklama süresi any4'ten bekleniyor, sonra hukukçu onayı
 - [ ] Sosyal medya hesapları

@@ -2,8 +2,8 @@
 type: kod-projesi
 client: "any4"
 slug: any4
-status: active
-date: 2026-10-19
+status: live
+date: 2026-11-02
 repo: "https://github.com/fsumbul/any4-web (dal: sevval/duzenlemeler)"
 tags: [kod-projesi, website, statik, html-css-js, motion, any4]
 related: ["[[00-Musteriler/any4/marka-brief]]", "[[02-Websites/projects/any4/any4-web-sitesi]]"]
@@ -18,6 +18,23 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[02-Websites/projects/any4/any
 - Furkan Bey'in `main` dalı ilk sürüm (eski adıyla Verihane'den dönüşen sayfa). Tüm düzenlemeler ayrı dalda: **`sevval/duzenlemeler`**. `main`'e 27 commit önde, hepsi GitHub'a pushlandı. Son commit `f3323cd`: yeni logo.
 - Merge kararı Furkan Bey'de. Fotoğraflar ve yazı tipleri repoda, dış bağlantı yok; dal olduğu gibi açılınca yerelde de birebir görünür.
 - Yayında değil. Alan adı: **any4labs.com** (19 Ekim 2026'da kesinleşti).
+
+## Yayın (2 Kasım 2026) — https://any4labs.com
+
+| | |
+|---|---|
+| Sunucu | 94.73.180.208 · Windows Server · IIS (paylaşılan; DECA, verihane.info vb. de burada) |
+| IIS sitesi | `any4labs.com` — kendi uygulama havuzu (.NET yok), klasör `C:\inetpub\any4labs.com` |
+| Adresler | any4labs.com + www (A kaydı → 94.73.180.208). http ve www, 301 ile `https://any4labs.com`'a (web.config, URL Rewrite) |
+| SSL | Let's Encrypt (win-acme, `C:\wacs`), iletişim e-postası fsumbul@gmail.com, SNI. İlk sertifika 31.01.2027'ye kadar; yenileme 27.12.2026'dan sonra otomatik |
+| Yenileme bağlaması | win-acme yeni sertifikayı siteye bağlamıyor (DECA'daki gibi) → zamanlanmış görev "any4labs.com sertifika baglama" her gün 05:15 `C:\inetpub\_any4-araclar\sertifika-bagla.ps1` çalıştırır, kayıt `sertifika-bagla.log` |
+| Kurulum yolu | Repo `iis/`: `web.config`, `kur.ps1` (`-Kontrol` / kurulum / `-Https`), `sertifika-bagla.ps1`, `yayinla.sh`. Şevval'in Mac'inde SSH ayarı yok; paket (`bash iis/yayinla.sh paket`) RDP (Windows App) ile sunucuya kopyalanıp Yönetici PowerShell'de çalıştırıldı |
+
+**Güncelleme:** son commit'ten paket → sunucuya kopyala → `kur.ps1` (klasör `/MIR` ile eşitlenir, kendi duman testini yapar). Yayın dalı şimdilik `sevval/duzenlemeler`; `main`'e alınması Furkan Bey'de.
+
+Kurulumda karşılaşılanlar:
+- RDP'de zip'i sürükle-bırak / kopyala-yapıştır pencereyi dondurdu; ikinci denemede kopyalandı. Sağlam yol: Windows App → Düzenle → Klasörler ile Mac klasörünü yönlendirmek.
+- win-acme çıktısında kurulum adımı yok ("Store with CertificateStore"), https bağlamalarını betik ekledi.
 
 ## Yığın
 
