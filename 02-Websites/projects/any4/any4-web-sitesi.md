@@ -35,6 +35,7 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[05-Kod-Projeleri/any4/any4-we
 6. Footer.
 
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-02-isler.jpg]]
+![[03-Assets/images/any4/ekran-goruntuleri/masaustu-02b-isler.jpg]]
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-03-hizmetler.jpg]]
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-04-surec.jpg]]
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-05-neden-any4.jpg]]
@@ -67,3 +68,8 @@ Tam sayfa görüntüler:
 - İlk yazı tipleri "hata mesajı gibi" bulundu. Seçenek C seçildi: Newsreader + Geist.
 - Bölümler arası boşluklar eşitlendi; iletişim satırlarındaki çizgiler kaldırıldı.
 - Logo: 4 artık "any"nin üstüne zıplamıyor; top yanına yuvarlanıp taban çizgisinde duruyor (19 Ekim 2026).
+- Seçili işler fotoğrafları değişti (2 Kasım 2026, yayın öncesi): eski fotoğraflarda yüzü tanınan kişiler ve laptopta Samsung logosu vardı; model izni olmadan "bu kişiler uygulamamızı kullanıyor" gibi okunabileceği için yüzsüz, logosuz, koyu/sinematik bir set seçildi. Hepsi Unsplash ücretsiz lisans:
+  - Ada: https://unsplash.com/photos/woman-running-on-rocky-trail-I1EWTM5mFEM
+  - Rota: https://unsplash.com/photos/person-cycling-on-city-street-8i9ETArAeto
+  - Asistan: https://unsplash.com/photos/person-using-smartphone-BjhUu6BpUZA
+  - Kurye için ilk beğenilen fotoğrafın çantasında teslimat firması logosu olduğu için alınmadı.
