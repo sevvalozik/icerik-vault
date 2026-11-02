@@ -21,7 +21,7 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[05-Kod-Projeleri/any4/any4-we
 ## Hero
 
 - **Başlık:** Her gün açılan / uygulamalar.
-- **Alt başlık:** any4 bir dijital ürün stüdyosu. Tasarımı, yazılımı ve yapay zekâyı tek ekipte topluyor, fikrinizi mağazaya kadar taşıyoruz.
+- **Alt başlık:** any4 bir mobil uygulama geliştirme ve dijital ürün stüdyosu. Tasarımı, yazılımı ve yapay zekâyı tek ekipte topluyor, fikrinizi mağazaya kadar taşıyoruz.
 - **CTA:** Projenizi konuşalım (header'da: Proje başlat)
 - **Görsel:** sola akan genel fotoğraf şeridi (11 Unsplash fotoğrafı)
 
@@ -33,8 +33,9 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[05-Kod-Projeleri/any4/any4-we
 2. Ne yapıyoruz: hover ile açılan akordiyon.
 3. Dört adımda yayına: Keşif, Tasarım, Geliştirme, Lansman; toplam 9–22 hafta.
 4. Neden any4.
-5. İletişim: form + e-posta şeridi.
-6. Footer.
+5. Sık sorulanlar: 7 soru, akordiyon (2 Kasım 2026, SEO/GEO için).
+6. İletişim: form + e-posta şeridi.
+7. Footer.
 
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-02-isler.jpg]]
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-02b-isler.jpg]]

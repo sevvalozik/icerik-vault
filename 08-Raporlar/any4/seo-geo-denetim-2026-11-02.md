@@ -38,7 +38,7 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[00-seo-geo-standardi]]", "[[0
 | 7 | Search Console / Bing Webmaster mülkü yok; site hiç bildirilmedi | `site:any4labs.com` boş | Yüksek | ⏳ Furkan Bey'in hesabıyla |
 | 8 | Kurumda `sameAs`, `legalName`, Google İşletme Profili yok | JSON-LD `Organization` | Orta | ⏳ Unvan ve sosyal hesaplar Furkan Bey'den bekleniyor |
 | 9 | Kurum türü `Organization` (LocalBusiness değil) | JSON-LD | — | Bilinçli: adres ve telefon yok, uzaktan çalışan stüdyo. Adres gelirse `ProfessionalService`'e geçilebilir |
-| 10 | Aydınlatma metni taslak hâliyle yayında | `/aydinlatma-metni/` sarı boşluklar | Yüksek (yasal) | ⏳ `noindex`; unvan/adres/MERSİS bekleniyor |
+| 10 | Aydınlatma metni taslak hâliyle yayında | `/aydinlatma-metni/` sarı boşluklar | Yüksek (yasal) | ✅ Unvan değişikliği olmadığı için şirket bilgisi yazılmadan tamamlandı (veri sorumlusu "any4" + e-posta); taslak uyarısı kaldırıldı. Unvan netleşince eklenecek; hukukçu kontrolü önerilir |
 
 ## "Bitti" kontrol listesi (02.11.2026 durumu)
 
@@ -112,3 +112,19 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[00-seo-geo-standardi]]", "[[0
 
 - "En iyi + yıl" sayfası ve iddialı karşılaştırma: brief §4 abartılı vaat yasağı.
 - Konsept işler için `CreativeWork`/vaka schema'sı: gerçek müşteri işi gibi okunmaması için eklenmedi (§7).
+
+## Ek — Furkan Bey'in SEO + GEO raporu (2 Kasım 2026) ve uygulananlar
+
+Furkan Bey ayrıca bir analiz raporu gönderdi (puanlar: teknik 9, AI erişimi 10, yapısal veri 6, performans 7, sayfa içi 4, içerik 2, E-E-A-T 2, otorite 0). Bot erişimini (GPTBot, ClaudeBot, PerplexityBot, Googlebot hepsi 200) o rapor doğruladı. Ondan gelen ve aynı gün uygulanan maddeler (sunucuya `any4-yayin-paketi-3.zip` ile):
+
+- Başlık anahtar kelimeyle: TR "Mobil Uygulama Geliştirme · iOS, Android, Flutter | any4" (56), EN "Mobile App Development · iOS, Android, Flutter | any4" (53); açıklamalar ≤155.
+- **Görünen başlık H1'in kendisi** (önceki sr-only H1 + aria-hidden satırlar kaldırıldı; tasarım aynı). Hero açıklamasına "mobil uygulama geliştirme".
+- Vaka penceresindeki Ada/Rota/Asistan h2'leri kaldırıldı (`role="heading"`), başlık tekrarı yok.
+- **Sık sorulanlar** bölümü (7 soru, TR/EN) + `FAQPage` şeması; `llms-full.txt`'ye de eklendi. "yapay zeka" (şapkasız) yazımı soruda geçiyor. MVP süresi süreçle tutarlı hâle getirildi (9–22 hafta; MVP ~2–3 ay).
+- Görseller WebP (`<picture>`, JPEG yedekli), işlerde `srcset` + `width/height`; şeridin ikinci kopyası hep `lazy`. Fotoğraf yükü ~1,7 MB → ~0,5 MB (WebP).
+- `/index.html` ve `/en/index.html` → 301 `/`, `/en/`; `favicon.ico`; CSS/JS/font önbelleği 1 yıl `immutable`, fotoğraflar 7 gün.
+
+Bilinçli olarak yapılmayan / sonraya kalan:
+- `x-default` TR'de kaldı (Türkiye pazarı öncelikli).
+- 30/90 günlük içerik planı (hizmet sayfaları, /hakkimizda/, /mobil-uygulama-maliyeti/, rehberler, dizin kayıtları): gerçek fiyat aralığı, ekip ve unvan bilgisi Furkan Bey'den gelince.
+- E-posta: sunucuya mail sunucusu kurulmadı (yeni IP'den giden posta spama düşer, paylaşılan sunucuda bakım yükü). Gmail tabanlı çözüm (Google Workspace / Zoho / yönlendirme) Şevval'de; MX + SPF + DKIM + DMARC kayıtları seçimden sonra.
