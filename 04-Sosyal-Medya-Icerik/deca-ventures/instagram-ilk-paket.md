@@ -78,7 +78,7 @@ Slaytlar: `deca-post3-01…08` — kapak, 6 aşama (siteyle aynı adlar ve cüml
 
 ## 2b. Reels (9:16, 10 sn) — "Açılış"
 
-Dosya: `03-Assets/videos/deca-ventures/deca-reels-acilis-9x16.mp4` (1080×1920, 30 fps, sessiz; müzik/ses uygulamada eklenir). Kaynak: logo açılış animasyonu ([[02-Websites/projects/deca-ventures/logo-ve-acilis-animasyonu]]) — 0–5,5 sn logo çizilir, 4,4 sn'de "Sıradaki girişimi birlikte kuralım.", 6,2 sn'de "Girişimini anlat ↓" belirir. Önerilen yayın: Perşembe 5 Kas 18:00.
+Dosya: `03-Assets/videos/deca-ventures/deca-reels-acilis-9x16.mp4` (1080×1920, 30 fps, sessiz; müzik/ses uygulamada eklenir). Kaynak: logo açılış animasyonu ([[02-Websites/projects/deca-ventures/logo-ve-acilis-animasyonu]]) — 0–5 sn logo çizilir ve kaybolur (4,7 sn), ardından ortada kelime kelime "Sıradaki girişimi / birlikte kuralım." (5,5–6,4 sn), "Girişimini anlat ↓" (7,6 sn) ve altta küçük logo imzası (8,3 sn). Değişiklik: ilk sürümde yazı logonun altındaydı; "logonun altında durmamış" geri bildirimiyle (3 Kas) yazı ortaya alındı. Önerilen yayın: Perşembe 5 Kas 18:00.
 
 **Caption:**
 > Yeni adımızla yola çıktık: Deca Girişim.
@@ -87,7 +87,7 @@ Dosya: `03-Assets/videos/deca-ventures/deca-reels-acilis-9x16.mp4` (1080×1920, 
 >
 > #girişim #girişimcilik #startup #venturestudio
 
-**Kapak:** `deca-reels-acilis-poster.jpg` (son kare; profil ızgarasında 4:5 kırpılır, logo ortada kalır).
+**Kapak:** `deca-reels-acilis-poster.jpg` (son kare: yazı ortada, küçük logo altta; profil ızgarasında 4:5 kırpılır).
 **Ses:** logo animasyonuna uygun sakin bir enstrümantal; telifli müzik kullanılmaz (Instagram'ın ücretsiz kütüphanesinden seçilir).
 
 ## 3. Story seti (1080×1920)
