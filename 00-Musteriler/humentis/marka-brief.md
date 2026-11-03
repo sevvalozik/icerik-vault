@@ -135,6 +135,7 @@ Marka/İçerik (sıcak, editoryal) → Arama/Randevu (kompakt, işlevsel) → G�
 | Logolar + tokenlar | `03-Assets/logos/humentis/` |
 | Logo animasyonu | `03-Assets/videos/humentis/humentis-logo-animasyonu.mp4` |
 | Sosyal medya metinleri | `04-Sosyal-Medya-Icerik/humentis/humentis-klinik-icerikleri.md` |
+| Uzman fotoğrafları + tanıtım kartları | `03-Assets/images/humentis/uzmanlar/` (sitedeki 18 profil fotoğrafı), kartlar `03-Assets/images/humentis/uzman-tanitim/`, not [[uzman-tanitim-kartlari]] *(21 Ekim 2026)* |
 | AI video brief + log | `06-AI-Video/humentis/` |
 | Sunum / website | henüz yok |
 | Repo (vault dışı) | https://github.com/biinci/Psikoloji — `brand/brand-strategy.md`, `LOGO-GUIDELINES.md`, `IMAGE-DIRECTION.md`, `brand-board.html` |
@@ -163,5 +164,5 @@ LOCATION SHEET: a calm private counselling room: a soft sage-green armchair, war
 
 - [ ] Web/sosyal adresleri, telefon (video kapanış kartı için)
 - [ ] Gerçek klinik fotoğrafları (AI B-roll'un gerçek mekana benzemesi için 5–10 referans kare)
-- [ ] Terapist portreleri (onaylı) — reels kapakları için
+- [ ] Terapist portreleri (onaylı) — reels kapakları için *(21 Ekim 2026: sitedeki 18 profil fotoğrafı `03-Assets/images/humentis/uzmanlar/` altına alındı; sosyal medyada kullanım onayı hâlâ açık.)*
 - [ ] Logo animasyonuna ses (müzik/SFX) eklenecek mi?

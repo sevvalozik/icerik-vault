@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<base href="../../../">
+<meta charset="utf-8">
+<meta name="boyut" content="1080x1350">
+<title>Humentis — uzman tanıtım kartları</title>
+<!-- ŞABLON: Humentis uzman tanıtım kartı, 1080×1350 (4:5 feed). 21 Eki 2026.
+  Hesaptaki terapist kapağının (petrol zemin, kemer çerçeveli gerçek fotoğraf, altın unvan) feed sürümü;
+  isim marka başlık fontu Source Serif 4, gövde Manrope (marka brief §5).
+  Slayt tipleri:
+    uzman_kart {ad, unvan, alanlar: [..], foto, boyut: [g, y], yuz: [x, y, g, y], kadraj?: {k, ust}}
+      foto: GERÇEK uzman fotoğrafı (AI yüz yok). yuz: fotoğraftaki yüz kutusu, 0–1 arası, sol-üst kökenli
+      (Apple Vision ile ölçülür). Kadraj yüze göre kurulur: yüz yüksekliği kemerin k'sı (varsayılan .25),
+      yüzün üstü kemerin ust'ü kadar aşağıda (varsayılan .22). Fotoğraf kemeri her zaman doldurur.
+    kadro_kart {baslik?, alt?, etiket?, sira?: [ad, ..]}  aynı dosyadaki uzman_kart slaytlarını 6 sütunlu ızgarada toplar.
+      sira verilirse yalnızca o adlar, o sırayla girer (1 Kas 2026); bulunamayan ad kırmızı kesikli boş kare olur.
+      Küçük kemerde uzman_kart'ın kadraj'ı kullanılmaz; gerekirse kadraj_mini: {k, ust} (varsayılan k .3, ust .24).
+  Metin işaretleri: **kalın**  \n -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=block" rel="stylesheet">
+<style>
+  :root{ --petrol:#073F41; --petrol-1:#0B4446; --petrol-0:#062F31; --petrol-2:#1C5A57;
+    --gold:#CEAB69; --cream:#F6EFDD; --sage:#557871; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#cfc8c1;font-family:'Manrope',sans-serif;color:var(--cream);-webkit-font-smoothing:antialiased}
+  #deck{display:flex;gap:40px;padding:40px;flex-wrap:wrap;align-items:flex-start}
+  body.solo #deck{padding:0;gap:0}
+  body.solo .slide{display:none}
+  body.solo .slide.on{display:block}
+  [data-tasma]{outline:6px dashed #e40030}
+  .slide{width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:radial-gradient(120% 75% at 85% 0%, var(--petrol-2) 0%, var(--petrol-1) 45%, var(--petrol-0) 100%)}
+  .slide > *{position:absolute}
+  .fit{overflow:hidden}
+  /* ince kâğıt dokusu (hesaptaki kâğıt dilinin koyu zemindeki karşılığı) */
+  .slide::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:50;opacity:.55;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .97  0 0 0 0 .9  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .krem-filtre{filter:brightness(0) invert(94%) sepia(12%) saturate(320%) hue-rotate(345deg)}
+
+  /* ortak üst ve alt */
+  .logo{left:56px;top:40px;height:100px}
+  .etiket{right:60px;top:78px;font:700 17px/1 'Manrope';letter-spacing:.28em;color:var(--gold)}
+  .filigran{right:-150px;bottom:-60px;width:620px;opacity:.06}
+  .alt-cizgi{left:60px;right:60px;top:1236px;height:1px;background:rgba(206,171,105,.35)}
+  .alt-sol,.alt-sag{top:1262px;font:600 22px/1 'Manrope';color:rgba(246,239,221,.86);letter-spacing:.02em}
+  .alt-sol{left:60px}
+  .alt-sag{right:60px}
+  .alt-sag span{color:var(--gold)}
+
+  /* uzman kartı */
+  .kemer-iz{left:270px;top:168px;width:576px;height:720px;border-radius:288px 288px 26px 26px;border:2px solid rgba(206,171,105,.75)}
+  .kemer{left:252px;top:150px;width:576px;height:720px;border-radius:288px 288px 26px 26px;overflow:hidden;background:#2E6461;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+  .kemer img{position:absolute;max-width:none;filter:saturate(.92) contrast(1.02)}
+  .kemer::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 72%,rgba(6,47,49,.32) 100%)}
+  .bos{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:600 28px/1.3 'Manrope';color:rgba(246,239,221,.6)}
+  .ad{left:60px;right:60px;top:910px;height:96px;text-align:center;font:600 76px/1.2 'Source Serif 4';color:var(--cream);white-space:nowrap}
+  .unvan{left:60px;right:60px;top:1014px;height:34px;text-align:center;font:700 22px/1.4 'Manrope';letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+  .susle{left:0;right:0;top:1066px;display:flex;justify-content:center;align-items:center;gap:12px}
+  .susle i{display:block;width:64px;height:1px;background:rgba(206,171,105,.7)}
+  .susle b{display:block;width:8px;height:8px;transform:rotate(45deg);background:var(--gold)}
+  .alan-baslik{left:0;right:0;top:1092px;text-align:center;font:700 15px/1 'Manrope';letter-spacing:.26em;color:rgba(246,239,221,.6)}
+  .alanlar{left:60px;right:60px;top:1124px;height:56px;display:flex;justify-content:center;gap:12px}
+  .alanlar span{display:block;padding:12px 24px;border:1.5px solid rgba(206,171,105,.6);border-radius:999px;background:rgba(246,239,221,.05);
+    font:600 21px/1.2 'Manrope';color:var(--cream);white-space:nowrap}
+
+  /* kadro kartı */
+  .k-baslik{left:60px;right:60px;top:158px;text-align:center;font:600 84px/1.1 'Source Serif 4';color:var(--cream)}
+  .k-alt{left:120px;right:120px;top:268px;text-align:center;font:500 25px/1.4 'Manrope';color:rgba(246,239,221,.82)}
+  .izgara{left:60px;right:60px;top:364px;display:grid;grid-template-columns:repeat(6,1fr);row-gap:40px}
+  .hucre{display:flex;flex-direction:column;align-items:center}
+  .mini{position:relative;width:146px;height:184px;border-radius:73px 73px 12px 12px;overflow:hidden;background:#2E6461;
+    outline:1.5px solid rgba(206,171,105,.65);outline-offset:5px}
+  .mini img{position:absolute;max-width:none;filter:saturate(.92) contrast(1.02)}
+  .hucre p{margin-top:16px;height:46px;text-align:center;font:700 17.5px/1.3 'Manrope';color:var(--cream);white-space:nowrap}
+</style>
+</head>
+<body>
+<script id="veri" type="application/json">
+{
+ "baslik": "Humentis — uzman tanıtım kartları (21 Ekim 2026, Kitap1.xlsx listesi)",
+ "marka": {
+  "web": "humentis.com.tr",
+  "telefon": "0552 898 95 45",
+  "logo_yatay": "03-Assets/logos/humentis/humentis-lockup-horizontal-mono.svg",
+  "logo_isaret": "03-Assets/logos/humentis/humentis-mark-mono.svg"
+ },
+ "slaytlar": [
+  {
+   "tip": "uzman_kart",
+   "ad": "Aybala Görkem Polat",
+   "unvan": "Klinik Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/aybala-gorkem-polat.jpg",
+   "boyut": [3808, 3602],
+   "yuz": [0.3952, 0.2139, 0.169, 0.1787],
+   "_site": "https://humentis.com.tr/uzmanlar/aybala-gorkem-polat",
+   "_site_unvan": "Klinik Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Elif Silav",
+   "unvan": "Kurucu Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/elif-silav.jpg",
+   "boyut": [2753, 4896],
+   "yuz": [0.365, 0.3382, 0.3321, 0.1867],
+   "_site": "https://humentis.com.tr/uzmanlar/elif-silav",
+   "_site_unvan": "Kurucu Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Solmaz Şenyüz",
+   "unvan": "Klinik Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/solmaz-senyuz.jpg",
+   "boyut": [682, 1024],
+   "yuz": [0.3771, 0.1619, 0.3011, 0.2006],
+   "_site": "https://humentis.com.tr/uzmanlar/solmaz-senyuz",
+   "_site_unvan": "Klinik Psikolog, Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Barış Can Kolçak",
+   "unvan": "Psikolojik Danışman & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/baris-can-kolcak.jpg",
+   "boyut": [1600, 898],
+   "yuz": [0.4415, 0.1759, 0.1207, 0.2151],
+   "_site": "https://humentis.com.tr/uzmanlar/baris-can-kolcak",
+   "_site_unvan": "Psikolojik Danışman, Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Nurşen Arıcı",
+   "unvan": "Uzman Klinik Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/nursen-arici.jpg",
+   "boyut": [2048, 2048],
+   "yuz": [0.4164, 0.272, 0.1142, 0.1142],
+   "_site": "https://humentis.com.tr/uzmanlar/nursen-arici",
+   "_site_unvan": "Uzman Klinik Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Nazlı Şentürk",
+   "unvan": "Klinik Psikolog",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen"],
+   "foto": "03-Assets/images/humentis/uzmanlar/nazli-senturk.jpg",
+   "boyut": [1358, 1358],
+   "yuz": [0.3981, 0.1639, 0.1842, 0.1842],
+   "_site": "https://humentis.com.tr/uzmanlar/nazli-senturk",
+   "_site_unvan": "Klinik Psikolog"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Ayşegül Keskingöz",
+   "unvan": "Uzman Klinik Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/aysegul-keskingoz.jpg",
+   "boyut": [2325, 3100],
+   "yuz": [0.53, 0.1945, 0.1915, 0.1436],
+   "_site": "https://humentis.com.tr/uzmanlar/aysegul-keskingoz",
+   "_site_unvan": "Uzman Klinik Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Simge Kaya",
+   "unvan": "Çocuk Gelişimi Uzmanı",
+   "alanlar": ["Çocuk ve Ergen"],
+   "foto": "03-Assets/images/humentis/uzmanlar/simge-kaya-oyun-odasi.jpg",
+   "boyut": [1125, 2000],
+   "yuz": [0.5744, 0.3885, 0.1448, 0.0814],
+   "kadraj": {"k": 0.17, "ust": 0.2},
+   "_site": "https://humentis.com.tr/uzmanlar/simge-kaya",
+   "_site_unvan": "Çocuk Gelişimi Uzmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Müge Ertuğrul",
+   "unvan": "Çocuk Gelişimi Uzmanı",
+   "alanlar": ["Çocuk ve Ergen"],
+   "foto": "03-Assets/images/humentis/uzmanlar/muge-ertugrul.jpg",
+   "boyut": [768, 1024],
+   "yuz": [0.3028, 0.2707, 0.2711, 0.2033],
+   "_site": "https://humentis.com.tr/uzmanlar/muge-ertugrul",
+   "_site_unvan": "Çocuk Gelişimi Uzmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Hatice Kıykım",
+   "unvan": "Psikolog",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/hatice-kiykim.jpg",
+   "boyut": [900, 1121],
+   "yuz": [0.2915, 0.416, 0.1601, 0.1286],
+   "_site": "https://humentis.com.tr/uzmanlar/hatice-kiykim",
+   "_site_unvan": "Psikolog"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Irmak Tara Sığırcı",
+   "unvan": "Uzman Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/irmak-tara-sigirci.png",
+   "boyut": [1145, 1374],
+   "yuz": [0.2975, 0.272, 0.379, 0.3159],
+   "_site": "https://humentis.com.tr/uzmanlar/irmak-tara-sigirci",
+   "_site_unvan": "Uzman Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Sena Şimşek",
+   "unvan": "Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/sena-simsek.jpg",
+   "boyut": [3024, 4032],
+   "yuz": [0.4866, 0.4035, 0.1122, 0.0841],
+   "_site": "https://humentis.com.tr/uzmanlar/sena-simsek",
+   "_site_unvan": "Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Başak Kale",
+   "unvan": "Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/basak-kale.png",
+   "boyut": [1440, 1920],
+   "yuz": [0.2902, 0.2584, 0.3962, 0.2971],
+   "_site": "https://humentis.com.tr/uzmanlar/basak-kale",
+   "_site_unvan": "Psikolog & Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Burcu Kayacan",
+   "unvan": "Klinik Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/burcu-kayacan.jpg",
+   "boyut": [743, 1024],
+   "yuz": [0.3401, 0.1865, 0.3098, 0.2248],
+   "_site": "https://humentis.com.tr/uzmanlar/burcu-kayacan",
+   "_site_unvan": "Klinik Psikolog, Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Zeynep Baltacı",
+   "unvan": "Psikolog",
+   "alanlar": ["Yetişkin"],
+   "foto": "03-Assets/images/humentis/uzmanlar/zeynep-baltaci.png",
+   "boyut": [1122, 1402],
+   "yuz": [0.2795, 0.3194, 0.3436, 0.275],
+   "_site": "https://humentis.com.tr/uzmanlar/zeynep-baltaci",
+   "_site_unvan": "Psikolog"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Zuhal Alver",
+   "unvan": "Psikolog",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/zuhal-alver.jpg",
+   "boyut": [1366, 2048],
+   "yuz": [0.3441, 0.2448, 0.2423, 0.1616],
+   "_site": "https://humentis.com.tr/uzmanlar/zuhal-alver",
+   "_site_unvan": "Psikolog"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Ali Karaömerlioğlu",
+   "unvan": "Uzman Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/ali-karaomerlioglu.jpg",
+   "boyut": [1254, 1254],
+   "yuz": [0.3062, 0.2383, 0.3868, 0.3868],
+   "_site": "https://humentis.com.tr/uzmanlar/ali-karaomerlioglu",
+   "_site_unvan": "Uzman Psikolog / Aile Danışmanı"
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Miray Erciyas",
+   "unvan": "Psikolog",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen"],
+   "foto": "03-Assets/images/humentis/uzmanlar/miray-erciyas.png",
+   "boyut": [1086, 1448],
+   "yuz": [0.3336, 0.3107, 0.2957, 0.2218],
+   "_site": "https://humentis.com.tr/uzmanlar/miray-erciyas",
+   "_site_unvan": "Uzman"
+  },
+  {
+   "tip": "kadro_kart",
+   "_not": "1 Kas 2026: Zuhal Alver çıkarıldı (sitede artık yok), Elif Köden eklendi, sıra kullanıcının isteğiyle değişti.",
+   "sira": ["Elif Silav", "Nazlı Şentürk", "Nurşen Arıcı", "Burcu Kayacan", "Ayşegül Keskingöz", "Aybala Görkem Polat", "Solmaz Şenyüz", "Barış Can Kolçak", "Simge Kaya", "Müge Ertuğrul", "Hatice Kıykım", "Irmak Tara Sığırcı", "Sena Şimşek", "Başak Kale", "Zeynep Baltacı", "Ali Karaömerlioğlu", "Miray Erciyas", "Elif Köden"]
+  },
+  {
+   "tip": "uzman_kart",
+   "ad": "Elif Köden",
+   "unvan": "Uzman Psikolog & Aile Danışmanı",
+   "alanlar": ["Yetişkin", "Çocuk ve Ergen", "Çift, Aile ve Evlilik"],
+   "foto": "03-Assets/images/humentis/uzmanlar/elif-koden.jpg",
+   "boyut": [640, 641],
+   "yuz": [0.3943, 0.221, 0.2426, 0.2422],
+   "_site": "https://humentis.com.tr/uzmanlar/elif-koden",
+   "_site_unvan": "Uzman Psikolog, Aile Danışmanı",
+   "_not": "28 Ekim 2026'da eklendi; Excel listesinde yoktu. Kadronun arkasına (slayt 20) kondu ki eski numaralar (19 = kadro) değişmesin."
+  }
+ ]
+}
+</script>
+<div id="deck"></div>
+<script src="04-Sosyal-Medya-Icerik/_sablonlar/_ortak/sablon.js"></script>
+<script>
+const buyuk = (s) => String(s || "").toLocaleUpperCase("tr-TR");
+// Fotoğrafı yüz kutusuna göre W×H kutuya yerleştirir; kutu her zaman dolar.
+function kadraj(s, W, H, k0, ust0) {
+  const [iw, ih] = s.boyut || [1, 1];
+  const [fx, fy, fw, fh] = s.yuz || [0.35, 0.2, 0.3, 0.25];
+  const k = (s.kadraj && s.kadraj.k) || k0, ust = (s.kadraj && s.kadraj.ust) || ust0;
+  const sc = Math.max((k * H) / (fh * ih), W / iw, H / ih);
+  const dw = iw * sc, dh = ih * sc;
+  const left = Math.min(0, Math.max(W - dw, W / 2 - (fx + fw / 2) * dw));
+  const top = Math.min(0, Math.max(H - dh, ust * H - fy * dh));
+  return `width:${dw.toFixed(1)}px;height:${dh.toFixed(1)}px;left:${left.toFixed(1)}px;top:${top.toFixed(1)}px`;
+}
+const ortak = (c, sag) => `
+  <img class="filigran krem-filtre" src="${c.M.logo_isaret}" alt="">
+  <img class="logo krem-filtre" src="${c.M.logo_yatay}" alt="">
+  <div class="etiket">${c.esc(buyuk(sag))}</div>
+  <div class="alt-cizgi"></div>
+  <div class="alt-sol">${c.esc(c.M.web || "")}</div>
+  <div class="alt-sag">Randevu için <span>${c.esc(c.M.telefon || "")}</span></div>`;
+const TIPLER = {
+  uzman_kart(s, c) {
+    const foto = s.foto ? `<img src="${c.esc(s.foto)}" style="${kadraj(s, 576, 720, 0.25, 0.22)}" alt="">` : `<div class="bos">GERÇEK FOTOĞRAF<br>EKLENECEK</div>`;
+    return `${ortak(c, "Uzman kadromuz")}
+      <div class="kemer-iz"></div>
+      <div class="kemer">${foto}</div>
+      <div class="ad fit">${c.esc(s.ad || "")}</div>
+      <div class="unvan fit">${c.esc(buyuk(s.unvan))}</div>
+      <div class="susle"><i></i><b></b><i></i></div>
+      ${(s.alanlar || []).length ? `<div class="alan-baslik">${buyuk("Danışmanlık alanları")}</div>
+      <div class="alanlar">${s.alanlar.map((a) => `<span>${c.esc(a)}</span>`).join("")}</div>` : ""}`;
+  },
+  kadro_kart(s, c) {
+    const hepsi = c.V.slaytlar.filter((x) => x.tip === "uzman_kart");
+    const kisiler = Array.isArray(s.sira) ? s.sira.map((ad) => hepsi.find((x) => x.ad === ad) || { ad, _yok: true }) : hepsi;
+    const hucre = (u) => {
+      const p = String(u.ad || "").trim().split(/\s+/), son = p.pop();
+      const foto = u.foto ? `<img src="${c.esc(u.foto)}" style="${kadraj({ ...u, kadraj: u.kadraj_mini || null }, 146, 184, 0.3, 0.24)}" alt="">` : "";
+      if (u._yok) return `<div class="hucre"><div class="mini" data-tasma="1"></div><p>${c.esc(p.join(" "))}<br>${c.esc(son)}</p></div>`;
+      return `<div class="hucre"><div class="mini">${foto}</div><p>${c.esc(p.join(" "))}<br>${c.esc(son)}</p></div>`;
+    };
+    return `${ortak(c, s.etiket || "Ankara · Çankaya")}
+      <div class="k-baslik">${c.md(s.baslik || "Uzman Kadromuz")}</div>
+      <div class="k-alt">${c.md(s.alt || "Yetişkin, çocuk, ergen, çift ve aile danışmanlığı aynı çatı altında.")}</div>
+      <div class="izgara">${kisiler.map(hucre).join("")}</div>`;
+  },
+};
+Sablon.kur(TIPLER);
+</script>
+</body>
+</html>

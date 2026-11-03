@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<base href="../../../">
+<meta charset="utf-8">
+<meta name="boyut" content="1080x1350">
+<title>Humentis — uzman tanıtım kartı şablonu</title>
+<!-- ŞABLON: Humentis uzman tanıtım kartı, 1080×1350 (4:5 feed). 21 Eki 2026.
+  Hesaptaki terapist kapağının (petrol zemin, kemer çerçeveli gerçek fotoğraf, altın unvan) feed sürümü;
+  isim marka başlık fontu Source Serif 4, gövde Manrope (marka brief §5).
+  Slayt tipleri:
+    uzman_kart {ad, unvan, alanlar: [..], foto, boyut: [g, y], yuz: [x, y, g, y], kadraj?: {k, ust}}
+      foto: GERÇEK uzman fotoğrafı (AI yüz yok). yuz: fotoğraftaki yüz kutusu, 0–1 arası, sol-üst kökenli
+      (Apple Vision ile ölçülür). Kadraj yüze göre kurulur: yüz yüksekliği kemerin k'sı (varsayılan .25),
+      yüzün üstü kemerin ust'ü kadar aşağıda (varsayılan .22). Fotoğraf kemeri her zaman doldurur.
+    kadro_kart {baslik?, alt?, etiket?, sira?: [ad, ..]}  aynı dosyadaki uzman_kart slaytlarını 6 sütunlu ızgarada toplar.
+      sira verilirse yalnızca o adlar, o sırayla girer (1 Kas 2026); bulunamayan ad kırmızı kesikli boş kare olur.
+      Küçük kemerde uzman_kart'ın kadraj'ı kullanılmaz; gerekirse kadraj_mini: {k, ust} (varsayılan k .3, ust .24).
+  Metin işaretleri: **kalın**  \n -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=block" rel="stylesheet">
+<style>
+  :root{ --petrol:#073F41; --petrol-1:#0B4446; --petrol-0:#062F31; --petrol-2:#1C5A57;
+    --gold:#CEAB69; --cream:#F6EFDD; --sage:#557871; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#cfc8c1;font-family:'Manrope',sans-serif;color:var(--cream);-webkit-font-smoothing:antialiased}
+  #deck{display:flex;gap:40px;padding:40px;flex-wrap:wrap;align-items:flex-start}
+  body.solo #deck{padding:0;gap:0}
+  body.solo .slide{display:none}
+  body.solo .slide.on{display:block}
+  [data-tasma]{outline:6px dashed #e40030}
+  .slide{width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:radial-gradient(120% 75% at 85% 0%, var(--petrol-2) 0%, var(--petrol-1) 45%, var(--petrol-0) 100%)}
+  .slide > *{position:absolute}
+  .fit{overflow:hidden}
+  /* ince kâğıt dokusu (hesaptaki kâğıt dilinin koyu zemindeki karşılığı) */
+  .slide::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:50;opacity:.55;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .97  0 0 0 0 .9  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .krem-filtre{filter:brightness(0) invert(94%) sepia(12%) saturate(320%) hue-rotate(345deg)}
+
+  /* ortak üst ve alt */
+  .logo{left:56px;top:40px;height:100px}
+  .etiket{right:60px;top:78px;font:700 17px/1 'Manrope';letter-spacing:.28em;color:var(--gold)}
+  .filigran{right:-150px;bottom:-60px;width:620px;opacity:.06}
+  .alt-cizgi{left:60px;right:60px;top:1236px;height:1px;background:rgba(206,171,105,.35)}
+  .alt-sol,.alt-sag{top:1262px;font:600 22px/1 'Manrope';color:rgba(246,239,221,.86);letter-spacing:.02em}
+  .alt-sol{left:60px}
+  .alt-sag{right:60px}
+  .alt-sag span{color:var(--gold)}
+
+  /* uzman kartı */
+  .kemer-iz{left:270px;top:168px;width:576px;height:720px;border-radius:288px 288px 26px 26px;border:2px solid rgba(206,171,105,.75)}
+  .kemer{left:252px;top:150px;width:576px;height:720px;border-radius:288px 288px 26px 26px;overflow:hidden;background:#2E6461;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+  .kemer img{position:absolute;max-width:none;filter:saturate(.92) contrast(1.02)}
+  .kemer::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 72%,rgba(6,47,49,.32) 100%)}
+  .bos{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:600 28px/1.3 'Manrope';color:rgba(246,239,221,.6)}
+  .ad{left:60px;right:60px;top:910px;height:96px;text-align:center;font:600 76px/1.2 'Source Serif 4';color:var(--cream);white-space:nowrap}
+  .unvan{left:60px;right:60px;top:1014px;height:34px;text-align:center;font:700 22px/1.4 'Manrope';letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+  .susle{left:0;right:0;top:1066px;display:flex;justify-content:center;align-items:center;gap:12px}
+  .susle i{display:block;width:64px;height:1px;background:rgba(206,171,105,.7)}
+  .susle b{display:block;width:8px;height:8px;transform:rotate(45deg);background:var(--gold)}
+  .alan-baslik{left:0;right:0;top:1092px;text-align:center;font:700 15px/1 'Manrope';letter-spacing:.26em;color:rgba(246,239,221,.6)}
+  .alanlar{left:60px;right:60px;top:1124px;height:56px;display:flex;justify-content:center;gap:12px}
+  .alanlar span{display:block;padding:12px 24px;border:1.5px solid rgba(206,171,105,.6);border-radius:999px;background:rgba(246,239,221,.05);
+    font:600 21px/1.2 'Manrope';color:var(--cream);white-space:nowrap}
+
+  /* kadro kartı */
+  .k-baslik{left:60px;right:60px;top:158px;text-align:center;font:600 84px/1.1 'Source Serif 4';color:var(--cream)}
+  .k-alt{left:120px;right:120px;top:268px;text-align:center;font:500 25px/1.4 'Manrope';color:rgba(246,239,221,.82)}
+  .izgara{left:60px;right:60px;top:364px;display:grid;grid-template-columns:repeat(6,1fr);row-gap:40px}
+  .hucre{display:flex;flex-direction:column;align-items:center}
+  .mini{position:relative;width:146px;height:184px;border-radius:73px 73px 12px 12px;overflow:hidden;background:#2E6461;
+    outline:1.5px solid rgba(206,171,105,.65);outline-offset:5px}
+  .mini img{position:absolute;max-width:none;filter:saturate(.92) contrast(1.02)}
+  .hucre p{margin-top:16px;height:46px;text-align:center;font:700 17.5px/1.3 'Manrope';color:var(--cream);white-space:nowrap}
+</style>
+</head>
+<body>
+<script id="veri" type="application/json">
+{
+  "baslik": "Humentis — örnek uzman tanıtım kartı",
+  "marka": {"web": "humentis.com.tr", "telefon": "0552 898 95 45", "logo_yatay": "03-Assets/logos/humentis/humentis-lockup-horizontal-mono.svg", "logo_isaret": "03-Assets/logos/humentis/humentis-mark-mono.svg"},
+  "slaytlar": [
+    {"tip": "uzman_kart", "ad": "Uzman Adı", "unvan": "Klinik Psikolog & Aile Danışmanı", "alanlar": ["Yetişkin", "Çift, Aile ve Evlilik"], "foto": ""},
+    {"tip": "kadro_kart"}
+  ]
+}
+</script>
+<div id="deck"></div>
+<script src="04-Sosyal-Medya-Icerik/_sablonlar/_ortak/sablon.js"></script>
+<script>
+const buyuk = (s) => String(s || "").toLocaleUpperCase("tr-TR");
+// Fotoğrafı yüz kutusuna göre W×H kutuya yerleştirir; kutu her zaman dolar.
+function kadraj(s, W, H, k0, ust0) {
+  const [iw, ih] = s.boyut || [1, 1];
+  const [fx, fy, fw, fh] = s.yuz || [0.35, 0.2, 0.3, 0.25];
+  const k = (s.kadraj && s.kadraj.k) || k0, ust = (s.kadraj && s.kadraj.ust) || ust0;
+  const sc = Math.max((k * H) / (fh * ih), W / iw, H / ih);
+  const dw = iw * sc, dh = ih * sc;
+  const left = Math.min(0, Math.max(W - dw, W / 2 - (fx + fw / 2) * dw));
+  const top = Math.min(0, Math.max(H - dh, ust * H - fy * dh));
+  return `width:${dw.toFixed(1)}px;height:${dh.toFixed(1)}px;left:${left.toFixed(1)}px;top:${top.toFixed(1)}px`;
+}
+const ortak = (c, sag) => `
+  <img class="filigran krem-filtre" src="${c.M.logo_isaret}" alt="">
+  <img class="logo krem-filtre" src="${c.M.logo_yatay}" alt="">
+  <div class="etiket">${c.esc(buyuk(sag))}</div>
+  <div class="alt-cizgi"></div>
+  <div class="alt-sol">${c.esc(c.M.web || "")}</div>
+  <div class="alt-sag">Randevu için <span>${c.esc(c.M.telefon || "")}</span></div>`;
+const TIPLER = {
+  uzman_kart(s, c) {
+    const foto = s.foto ? `<img src="${c.esc(s.foto)}" style="${kadraj(s, 576, 720, 0.25, 0.22)}" alt="">` : `<div class="bos">GERÇEK FOTOĞRAF<br>EKLENECEK</div>`;
+    return `${ortak(c, "Uzman kadromuz")}
+      <div class="kemer-iz"></div>
+      <div class="kemer">${foto}</div>
+      <div class="ad fit">${c.esc(s.ad || "")}</div>
+      <div class="unvan fit">${c.esc(buyuk(s.unvan))}</div>
+      <div class="susle"><i></i><b></b><i></i></div>
+      ${(s.alanlar || []).length ? `<div class="alan-baslik">${buyuk("Danışmanlık alanları")}</div>
+      <div class="alanlar">${s.alanlar.map((a) => `<span>${c.esc(a)}</span>`).join("")}</div>` : ""}`;
+  },
+  kadro_kart(s, c) {
+    const hepsi = c.V.slaytlar.filter((x) => x.tip === "uzman_kart");
+    const kisiler = Array.isArray(s.sira) ? s.sira.map((ad) => hepsi.find((x) => x.ad === ad) || { ad, _yok: true }) : hepsi;
+    const hucre = (u) => {
+      const p = String(u.ad || "").trim().split(/\s+/), son = p.pop();
+      const foto = u.foto ? `<img src="${c.esc(u.foto)}" style="${kadraj({ ...u, kadraj: u.kadraj_mini || null }, 146, 184, 0.3, 0.24)}" alt="">` : "";
+      if (u._yok) return `<div class="hucre"><div class="mini" data-tasma="1"></div><p>${c.esc(p.join(" "))}<br>${c.esc(son)}</p></div>`;
+      return `<div class="hucre"><div class="mini">${foto}</div><p>${c.esc(p.join(" "))}<br>${c.esc(son)}</p></div>`;
+    };
+    return `${ortak(c, s.etiket || "Ankara · Çankaya")}
+      <div class="k-baslik">${c.md(s.baslik || "Uzman Kadromuz")}</div>
+      <div class="k-alt">${c.md(s.alt || "Yetişkin, çocuk, ergen, çift ve aile danışmanlığı aynı çatı altında.")}</div>
+      <div class="izgara">${kisiler.map(hucre).join("")}</div>`;
+  },
+};
+Sablon.kur(TIPLER);
+</script>
+</body>
+</html>
