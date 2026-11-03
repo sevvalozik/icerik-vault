@@ -91,3 +91,13 @@ Menü, hero başlığı, açıklama ve buton metinleri **yer tutucu** — gerçe
 - [ ] Sitenin gerçek metinleri (menü, hero, açıklama, buton)
 - [ ] Sitenin hangi altyapıda yapılacağı (React / düz HTML / WordPress) — kod ona göre uyarlanacak
 - [ ] Yeni ad "Deca Girişim" — alan adı ve LinkedIn de değişecek mi? ❓
+
+## 6. Güncel (son) hali — 2026-11-03
+
+Animasyon son haline getirildi (çizgi → D'ye dönüşüm → DECA kelime işareti, "girişim" sağ altta hizalı). Sitenin SEO'sunu geride bırakmasın diye siteden çıkarılıp LinkedIn/sosyal medya için video olarak saklandı. Bu bölüm 2. bölümdeki eski animasyon tarifinin yerine geçer: eski sürüm (köşeli D sembolü) artık güncel değil.
+
+- Yatay video 1920×1080: [[03-Assets/videos/deca-ventures/deca-logo-animasyon-wide.mp4]]
+- Kare video 1080×1080: [[03-Assets/videos/deca-ventures/deca-logo-animasyon-sq.mp4]]
+- Tarayıcıda oynayan HTML: [[03-Assets/videos/deca-ventures/deca-logo-animasyonu.html]]
+- Süre: 3 sn animasyon + 2,5 sn son kare bekleme.
+- Not: Sitedeki açılış animasyonunun kaldırılıp kaldırılmayacağı henüz netleşmedi (Şevval karar verecek).
