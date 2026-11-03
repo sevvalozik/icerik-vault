@@ -128,3 +128,18 @@ Bilinçli olarak yapılmayan / sonraya kalan:
 - `x-default` TR'de kaldı (Türkiye pazarı öncelikli).
 - 30/90 günlük içerik planı (hizmet sayfaları, /hakkimizda/, /mobil-uygulama-maliyeti/, rehberler, dizin kayıtları): gerçek fiyat aralığı, ekip ve unvan bilgisi Furkan Bey'den gelince.
 - E-posta: sunucuya mail sunucusu kurulmadı (yeni IP'den giden posta spama düşer, paylaşılan sunucuda bakım yükü). Gmail tabanlı çözüm (Google Workspace / Zoho / yönlendirme) Şevval'de; MX + SPF + DKIM + DMARC kayıtları seçimden sonra.
+
+## Güncelleme — 3 Kasım 2026
+
+**Kurulum ve bildirim (kanıt):**
+- Paket 15 sunucuya kuruldu; `kur.ps1 -Kontrol` temiz, duman testi 17/17 (ana sayfa başlığı ve SSS, yönlendirmeler, 404, `llms.txt`, `llms-full.txt`, `sitemap.xml`).
+- IndexNow: `https://any4labs.com/` → 202, `/en/` → 200.
+- Önceki "Düzeltme paketini sunucuya kurmak" ve "IndexNow bildirimi" maddeleri tamam.
+
+**Google sonucu için (Furkan Bey'in ekran görüntüsü, alt bağlantılar):** `<link rel="icon" href="/favicon.ico" sizes="48x48">` eklendi; WebSite şemasına `alternateName` ["any4labs", "any4labs.com"]. Site adı, favicon ve alt bağlantılar Google'ın tarama sonrası kararıdır; zorlanamaz, Search Console'dan yeniden tarama istenebilir.
+
+**İçerik değişiklikleri:** SSS 7 → 5 soru (FAQPage şeması da 5); "Native mi Flutter mı" ve "yapay zekâ eklenebilir mi" çıkarıldı. Süreç bölümündeki "toplam 9–22 hafta" satırı kalktı. `sitemap.xml` lastmod, `llms-full.txt` ve şema `dateModified` 2026-11-03. `llms.txt`'de çıkarılan "Native or cross-platform?" satırı hâlâ duruyor (sonraki pakette temizlenebilir).
+
+**Hâlâ açık (Furkan Bey):** Search Console Domain mülkü (DNS TXT), sitemap gönderimi, "/" ve "/en/" için dizine ekleme isteği, Bing Webmaster içe aktarma, mail kararı (MX/SPF/DKIM/DMARC), `legalName` ve sosyal hesaplar (`sameAs`), Google İşletme Profili.
+**Bir hafta sonra (Şevval):** `any4` ve `site:any4labs.com` aramalarına bakıp sonucu bu rapora eklemek.
+

@@ -36,6 +36,16 @@ Kurulumda karşılaşılanlar:
 - RDP'de zip'i sürükle-bırak / kopyala-yapıştır pencereyi dondurdu; ikinci denemede kopyalandı. Sağlam yol: Windows App → Düzenle → Klasörler ile Mac klasörünü yönlendirmek.
 - win-acme çıktısında kurulum adımı yok ("Store with CertificateStore"), https bağlamalarını betik ekledi.
 
+## Güncelleme (3 Kasım 2026) — paket 15 yayında
+
+- Google sonucu için: `favicon.ico` bağlantısı, WebSite `alternateName` (any4labs, any4labs.com). Site adı ve favicon Google'ın tarama sonrası kararıdır, zorlanamaz.
+- SEO/GEO tarihleri (sitemap `lastmod`, `llms-full.txt` son güncelleme, şema `dateModified`) 2026-11-03. `mk_llmsfull.py` tarihi 2 Kasım'a sıfırlıyor; çalıştırınca elle düzeltmek gerekir.
+- Vaka panelleri, canlı iş kartları, hizmet sahneleri, "Neden any4" sadeleştirmesi, bölüm sırası, silinen 2 SSS (aşağıda Sayfa yapısı).
+- Şevval'in ilkesi bugün netleşti: emoji ve gösterişli hareket fazla olmasın, klasik ve ölçülü kalsın; nokta/animasyon motifi tekrarlanmasın; mümkün olan yerde az yazı.
+- Sunucuya kurulum: `any4-yayin-paketi-15.zip`, `kur.ps1 -Kontrol` temiz, duman testi 17/17. IndexNow: TR `/` 202, EN `/en/` 200. Kod GitHub'da (`sevval/duzenlemeler`, PR #2 Furkan Bey'in onayında).
+- `llms.txt` içinde hâlâ "Native or cross-platform?" satırı ve SSS yanıtında "9–22 hafta" var; site metninden kalktığı için istenirse temizlenir.
+- Sahnelerde duran ölü kod/CSS (`.why__*`, `TV`, `WV`) temizlenebilir.
+
 ## Yığın
 
 - Saf HTML + CSS + JavaScript. Framework, derleme adımı ve `npm install` yok.
@@ -57,15 +67,18 @@ cd ~/any4-web && python3 -m http.server 4173   # http://localhost:4173
 
 ## Sayfa yapısı
 
+**Bölüm sırası (3 Kasım 2026):** Hero → Seçili işler → Süreç → Ne yapıyoruz → Neden any4 → Sık sorulanlar → İletişim. Menü: İşler, Süreç, Hizmetler, İletişim. Tablo sırası eski; güncel sıra bu satırdadır.
+
 | Bölüm | Ne yapıyor |
 |---|---|
 | Açılış (intro) | Oturumda bir kez: "any" yükselir, petrol top sağdan yuvarlanıp yanında durur, salınıp oturur, logo header'a uçar (~3,7 sn). Tıklama/tuş ile atlanır |
 | Header | Büyük logo, ortada menü, TR / EN, "Proje başlat". Aşağı kaydırınca gizlenir, yukarıda geri gelir. Menü tıklaması başlığı tam hizalar |
 | Hero | Kenetlenen iki satır "Her gün açılan / uygulamalar." + kısa açıklama + buton. Altında sola akan fotoğraf şeridi: kaydırınca hızlanır, sürüklenebilir |
-| Seçili işler | Ada, Rota, Asistan (konsept). Fotoğraf + konuyu kapatmayan küçük telefon ekranı; tıklayınca detay paneli (`#ada` vb.) |
-| Ne yapıyoruz | Sade akordiyon; fareyle üstüne gelince açılır (180 ms niyet gecikmesi), tıklama da çalışır, tek satır açık |
-| Süreç | Dört sütun (Keşif, Tasarım, Geliştirme, Lansman) + süreler; üstteki çizgi görününce dolar, üstüne gelinen adıma kadar dolar; "Yayına kadar toplam 9–22 hafta" |
-| Neden any4 | Başlık + kaydırdıkça kelime kelime dolan "aynı masada" cümlesi + iki madde |
+| Seçili işler | Ada, Rota, Asistan (konsept). Fotoğraflar yavaşça kayar; üstteki telefon ekranları canlı (dolu, hafifçe süzülür). Tıklayınca detay paneli: tek cümlelik hikâye, kendiliğinden oynayan mini demo (halka / rota / sohbet; dokununca durur), tek satır teknik not |
+| Ne yapıyoruz | Akordiyon (hover/tıklama). Her panelde kısa cümle + araç çipleri + koyu, kendiliğinden oynayan üç sahne (mobil, tasarım, yapay zekâ). Kapalı panelde animasyon durur |
+| Süreç | Dört sütun (Keşif, Tasarım, Geliştirme, Lansman) + süreler; üstteki çizgi görününce dolar. "Toplam 9–22 hafta" satırı kaldırıldı (3 Kasım) |
+| Neden any4 | Üç küçük yuvarlak köşeli yazı kutusu (yalnız metin, görsel/animasyon yok): Aynı masada. · Her hafta yeni sürüm. · Kod sizin. Önceki denemeler (kelime kelime dolan cümle, görselli kartlar, hikâye bandı) beğenilmediği için sadeleştirildi |
+| Sık sorulanlar | 5 soru, akordiyon + FAQPage şeması. Çıkarılanlar (3 Kasım): "Native mi Flutter mı?", "Uygulamaya yapay zekâ eklenir mi?" |
 | İletişim | Petrol zemin, imleci izleyen yumuşak ışık, çizgisiz bilgi satırları, alt çizgili form, akan e-posta şeridi |
 | Footer | Aynı petrol ton; büyük logo, top döngüsü (gel, 4,5 sn bekle, çık), üç kısa sütun |
 

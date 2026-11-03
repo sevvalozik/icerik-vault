@@ -35,7 +35,7 @@ related: ["[[05-Kod-Projeleri/any4/any4-web-proje-ozeti]]", "[[02-Websites/proje
 - **Tek cümle:** "any4 bir dijital ürün stüdyosu. Tasarımı, yazılımı ve yapay zekâyı tek ekipte topluyor, fikrinizi mağazaya kadar taşıyoruz."
 - **Hero başlığı:** "Her gün açılan uygulamalar."
 - **Farkı:** Strateji, tasarım ve yazılım aynı masada; haftalık demo; kaynak kod ve fikri mülkiyet müşteriye devredilir.
-- **Süreç:** Keşif (1–2 hf) → Tasarım (2–4 hf) → Geliştirme (6–16 hf) → Lansman (sürekli). Yayına kadar toplam 9–22 hafta.
+- **Süreç:** Keşif (1–2 hf) → Tasarım (2–4 hf) → Geliştirme (6–16 hf) → Lansman (sürekli). Yayına kadar toplam 9–22 hafta. (Sitenin süreç bölümünde bu toplam satırı artık yok; süre yalnız SSS yanıtında ve brief'te.)
 
 ## 3. Hedef kitle
 

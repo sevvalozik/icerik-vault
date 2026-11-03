@@ -4,7 +4,7 @@ framework: html
 client: "any4"
 slug: any4
 status: live
-date: 2026-11-02
+date: 2026-11-03
 url: "https://any4labs.com"
 tags: [website, kurumsal, statik, motion, any4]
 related: ["[[00-Musteriler/any4/marka-brief]]", "[[05-Kod-Projeleri/any4/any4-web-proje-ozeti]]"]
@@ -27,13 +27,13 @@ related: ["[[00-Musteriler/any4/marka-brief]]", "[[05-Kod-Projeleri/any4/any4-we
 
 ![[03-Assets/images/any4/ekran-goruntuleri/masaustu-01-hero.jpg]]
 
-## Bölümler
+## Bölümler (3 Kasım 2026 sırası)
 
-1. Seçili işler: Ada (sağlık), Rota (kurye), Asistan (yapay zekâ destek). Konsept.
-2. Ne yapıyoruz: hover ile açılan akordiyon.
-3. Dört adımda yayına: Keşif, Tasarım, Geliştirme, Lansman; toplam 9–22 hafta.
-4. Neden any4.
-5. Sık sorulanlar: 7 soru, akordiyon (2 Kasım 2026, SEO/GEO için).
+1. Seçili işler: Ada (sağlık), Rota (kurye), Asistan (yapay zekâ destek). Konsept. Fotoğraflar yavaşça kayar, telefon ekranları canlı; detay panelinde kendiliğinden oynayan mini demo.
+2. Dört adımda yayına: Keşif, Tasarım, Geliştirme, Lansman. Toplam süre satırı yok.
+3. Ne yapıyoruz: hover ile açılan akordiyon, araç çipleri ve üç koyu animasyon sahnesi.
+4. Neden any4: üç küçük yazı kutusu (Aynı masada. / Her hafta yeni sürüm. / Kod sizin.).
+5. Sık sorulanlar: 5 soru, akordiyon.
 6. İletişim: form + e-posta şeridi.
 7. Footer.
 
@@ -76,3 +76,14 @@ Tam sayfa görüntüler:
   - Rota: https://unsplash.com/photos/person-cycling-on-city-street-8i9ETArAeto
   - Asistan: https://unsplash.com/photos/person-using-smartphone-BjhUu6BpUZA
   - Kurye için ilk beğenilen fotoğrafın çantasında teslimat firması logosu olduğu için alınmadı.
+
+## Tasarım kararları (Şevval ile, 3 Kasım 2026)
+
+- Vaka panelindeki bilgi "çok yapay zekâ gibi" bulundu; yerine tek cümlelik hikâye + kendiliğinden oynayan demo ve tek satır teknik not geldi. Kullanıcı düğmeye basıldığını anlamayabilir diye demo otomatik başlar.
+- İş kartlarında fotoğraflar sabit ve telefonlar boş durmasın istendi: fotoğraflar yavaşça kayıyor, telefonlar dolu ve canlı.
+- "Ne yapıyoruz" panelleri kısaldı (tek cümle + araç çipleri) ve üç animasyonlu sahne eklendi.
+- Bölüm sırası değişti: Süreç, "Ne yapıyoruz"un önüne alındı; art arda yazı bölümleri (Süreç + Neden any4) arasına görsel bölüm girsin diye.
+- "Neden any4" dört kez yeniden yapıldı (kelime kelime dolan cümle, görselli kartlar, hikâye bandı). Sonuç: yalnız metinli üç küçük kutu. Dersi: bu bölümde görsel/animasyon istenmiyor.
+- SSS'ten "Native mi Flutter mı?" ve "Uygulamaya yapay zekâ eklenebilir mi?" çıkarıldı; "Yayına kadar toplam 9–22 hafta" satırı da kalktı.
+- Genel ilke: emoji ve aşırı hareket yok, klasik ve ölçülü; nokta/animasyon motifi tekrarlanmaz.
+- Hero şeridinde yüzü tanınan 5 fotoğraf var (strip-02, 04, 05, 06, 11). Şevval şimdilik önemsemedi; ileride yüzsüz Unsplash fotoğraflarıyla değiştirilebilir, kaynak bağlantıları kaydedilmeli.
