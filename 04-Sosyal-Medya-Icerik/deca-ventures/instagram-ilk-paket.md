@@ -76,6 +76,20 @@ Slaytlar: `deca-post3-01…08` — kapak, 6 aşama (siteyle aynı adlar ve cüml
 >
 > #girişim #girişimcilik #startup #venturestudio #teknoloji
 
+## 2b. Reels (9:16, 10 sn) — "Açılış"
+
+Dosya: `03-Assets/videos/deca-ventures/deca-reels-acilis-9x16.mp4` (1080×1920, 30 fps, sessiz; müzik/ses uygulamada eklenir). Kaynak: logo açılış animasyonu ([[02-Websites/projects/deca-ventures/logo-ve-acilis-animasyonu]]) — 0–5,5 sn logo çizilir, 4,4 sn'de "Sıradaki girişimi birlikte kuralım.", 6,2 sn'de "Girişimini anlat ↓" belirir. Önerilen yayın: Perşembe 5 Kas 18:00.
+
+**Caption:**
+> Yeni adımızla yola çıktık: Deca Girişim.
+>
+> Sıradaki girişimi birlikte kuralım. Başvuru için biyografideki bağlantıya tıkla.
+>
+> #girişim #girişimcilik #startup #venturestudio
+
+**Kapak:** `deca-reels-acilis-poster.jpg` (son kare; profil ızgarasında 4:5 kırpılır, logo ortada kalır).
+**Ses:** logo animasyonuna uygun sakin bir enstrümantal; telifli müzik kullanılmaz (Instagram'ın ücretsiz kütüphanesinden seçilir).
+
 ## 3. Story seti (1080×1920)
 
 | # | Dosya | Ne zaman | Metin | Sticker (uygulamada eklenir) |
@@ -108,6 +122,6 @@ Güvenli alan: üst 250 px ve alt 340 px boş bırakıldı (Instagram arayüzü)
 
 ## 7. Sonraki içerik fikirleri (üretilmedi)
 
-- Reels: logo açılış animasyonu (`03-Assets/videos/deca-ventures/deca-logo-animasyon-sq.mp4`, kare) — ilk Reels olarak kullanılabilir
+- Reels 2: "Klasik VC ve biz" — tek başına kurucu, yanına gelen ekip (AI video; brief `06-AI-Video/deca-ventures/` altında açılır; üretilmedi)
 - Karusel: "Başvuru süreci nasıl işler?", "8 hizmet alanı", "Girişimler neden başarısız olur?" (yüzdeler doğrulanmadan yayınlanmaz)
 - Portföy tanıtımları: her şirketten yazılı izin sonrası

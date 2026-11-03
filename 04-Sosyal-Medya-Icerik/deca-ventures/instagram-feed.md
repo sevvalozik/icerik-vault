@@ -7,7 +7,7 @@ username: decagirisim
 profile_name: "Deca Girişim"
 bio: "Girişim stüdyosu · Ankara & İstanbul\nSadece yatırım değil, uçtan uca ortaklık.\nGirişimini anlat ↓"
 avatar: 03-Assets/images/deca-ventures/instagram/deca-avatar.png
-posts_count: 3
+posts_count: 4
 followers: 0
 following: 0
 verified: false
@@ -110,6 +110,20 @@ related: ["[[00-Musteriler/deca-ventures/marka-brief]]", "[[04-Sosyal-Medya-Icer
 - begeni: 0
 - yorum: 0
 - alt: Deca Girişim — yola ciktik gönderisi
+- begenen:
+- yorum yazan:
+- yorum metni:
+
+### 4 · deca-reels-acilis
+- görsel: 03-Assets/videos/deca-ventures/deca-reels-acilis-9x16.mp4
+- tür: reels
+- ek görseller:
+- poster: 03-Assets/images/deca-ventures/instagram/deca-reels-acilis-poster.jpg
+- tarih: 2026-11-05 18:00
+- durum: taslak
+- begeni: 0
+- yorum: 0
+- alt: Deca Girişim logosu açılış animasyonu ve "Sıradaki girişimi birlikte kuralım." yazısı
 - begenen:
 - yorum yazan:
 - yorum metni:
