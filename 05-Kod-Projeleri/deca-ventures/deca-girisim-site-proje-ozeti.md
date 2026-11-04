@@ -14,8 +14,8 @@ related: ["[[seo-geo-denetim-2026-11-04]]", "[[instagram-ilk-paket]]"]
 
 Deca Ventures'ın yeni adı Deca Girişim için yeni kurumsal site. 4 Kasım 2026'da müşterinin kendi Windows/IIS sunucusunda yayına alındı. Eski ASP.NET sitesinin (`decaventure`) yerine geçti; eski site silinmeden yedek olarak duruyor.
 
-**Repo (kod, vault'ta DEĞİL):** henüz bir Git reposunda değil. Kaynak, Şevval'e verilen `deca-site-kaynak.zip` dosyasında (statik HTML + Python üretici betikler). ❓ Bir GitHub reposu açılıp oraya konması önerilir. Not: `biinci/deca` adlı özel repo, adından eski ASP.NET Deca sitesine ait olabilir; kontrol edilmedi.
-**Yerel konum:** zip'in içindeki `README.md` güncelleme akışını anlatır.
+**Repo (kod, vault'ta DEĞİL):** https://github.com/sevvalozik/deca-girisim-site (özel; 4 Kasım 2026'da `main` dalına yüklendi). Not: `biinci/deca` adlı ayrı özel repo adından eski ASP.NET Deca sitesine ait olabilir; kontrol edilmedi.
+**Yerel konum:** repoyu klonla; `README.md` güncelleme akışını anlatır. (Repo yüklenmeden önceki zip: `deca-site-kaynak.zip`.)
 **Canlı klasör:** sunucuda `C:\decagirisim` (IIS sitesi `decagirisim`, uygulama havuzu `decagirisim`).
 
 ## Özellikler
