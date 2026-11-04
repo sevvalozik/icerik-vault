@@ -16,6 +16,7 @@ related: ["[[00-Musteriler/deca-ventures/marka-brief]]", "[[02-Websites/_kutupha
 
 ## Özet
 
+- **Alan adı (4 Kas 2026, müşteri):** **decagirisim.com**. Tüm canonical/sitemap/llms/IndexNow bu alanla üretildi. **Eski decaventure.com'dan yeni siteye sayfa sayfa 301 şart** (ad değişikliği; eski sitenin değerini taşır).
 - **Durum:** Yeni site (TR + EN, 5 sayfa) **yayına hazır hâle getirildi**: sayfa başına başlık/açıklama/canonical, TR↔EN `hreflang`, Open Graph, tek `@graph` JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt` + `llms-full.txt`, 404 sayfası, IndexNow anahtar dosyası. Sayfaların görünür metni değişmedi (önce/sonra karşılaştırma eşit).
 - **Önemli bulgular:** (1) Eski head'de her sayfada yalnızca "X — Deca Girişim" başlığı ve açıklama vardı; canonical, hreflang, schema, OG yoktu. (2) Haberler sayfası örnek içerik (kurgusal yazar/tarih, tek tek yazı sayfası yok): **noindex** yapıldı. (3) Canlı alan adı ve adres/e-posta teyitleri bekliyor.
 - **İlk yapılacak 3 iş (yayın günü):** ① alan adını teyit et (`seo.py` → `SITE`) ve dosyaları yayına al; ② sunucuda `.html` → temiz URL 301'leri, olmayan adreste gerçek 404, `www`/`http` 301; ③ Search Console + Bing + IndexNow bildirimi.
@@ -94,21 +95,21 @@ related: ["[[00-Musteriler/deca-ventures/marka-brief]]", "[[02-Websites/_kutupha
 ## Yayın günü komutları (canlıdan sonra)
 
 ```bash
-SITE=https://decaventure.com   # ❓ alan adı teyit
+SITE=https://decagirisim.com
 UA="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
 for p in / /model /portfoy /iletisim /en/ /en/model; do echo "== $p"; curl -s -A "$UA" "$SITE$p" | grep -oE '<title>[^<]*</title>|<link rel="canonical"[^>]*>|<meta name="robots"[^>]*>|<h1[^>]*>[^<]*'; done
 curl -s -o /dev/null -w "404 testi: %{http_code}\n" "$SITE/olmayan-sayfa-123"
 curl -sI "https://www.${SITE#https://}/" | grep -iE "^HTTP|^location"; curl -sI "http://${SITE#https://}/" | grep -iE "^HTTP|^location"
 for b in GPTBot/1.2 OAI-SearchBot/1.0 ClaudeBot/1.0 Claude-SearchBot/1.0 PerplexityBot/1.0; do printf "%s " $b; curl -s -o /dev/null -w "%{http_code}\n" -A "Mozilla/5.0 (compatible; $b)" $SITE/llms.txt; done
 curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' \
-  -d '{"host":"decaventure.com","key":"a40767e17f525e4e07f3bf8c468c346a","keyLocation":"https://decaventure.com/a40767e17f525e4e07f3bf8c468c346a.txt","urlList":["https://decaventure.com/","https://decaventure.com/model","https://decaventure.com/portfoy","https://decaventure.com/iletisim","https://decaventure.com/en/","https://decaventure.com/en/model","https://decaventure.com/en/portfoy","https://decaventure.com/en/iletisim"]}'
+  -d '{"host":"decagirisim.com","key":"a40767e17f525e4e07f3bf8c468c346a","keyLocation":"https://decagirisim.com/a40767e17f525e4e07f3bf8c468c346a.txt","urlList":["https://decagirisim.com/","https://decagirisim.com/model","https://decagirisim.com/portfoy","https://decagirisim.com/iletisim","https://decagirisim.com/en/","https://decagirisim.com/en/model","https://decagirisim.com/en/portfoy","https://decagirisim.com/en/iletisim"]}'
 ```
 
 ## Site dışı işler (kimde)
 
 | İş | Kim | Not |
 |---|---|---|
-| Alan adı teyidi (`decaventure.com` mu yeni alan mı) | Müşteri (İbrahim Bey) / Şevval | `seo.py` → `SITE`, sonra `python3 build.py && python3 build_en.py && python3 build_seo_files.py` |
+| Alan adı teyidi (`decagirisim.com` yeni alan mı) | Müşteri (İbrahim Bey) / Şevval | `seo.py` → `SITE`, sonra `python3 build.py && python3 build_en.py && python3 build_seo_files.py` |
 | Eski sitedeki URL'ler → yeni URL 301 haritası | Geliştirici | eski sitede /Model gibi adresler olabilir; eski adres listesi gerekli ❓ |
 | Search Console Domain mülkü (DNS TXT), Bing, IndexNow ping | Şevval + DNS sahibi | önce `dig +short TXT decaventure.com` ile mevcut doğrulama var mı bak |
 | Google İşletme Profili + Bing Places (adres tek yazım) | Müşteri | fiziksel ofis var (Çankaya); kategori: girişim sermayesi / danışmanlık ❓ |
@@ -135,7 +136,7 @@ curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/
 
 ## Müşteriye / ekibe açık sorular
 
-- [ ] Canlı alan adı: `decaventure.com` mu? (brief: tek resmi alan; ad değişince değişti mi?)
+- [ ] Canlı alan adı: `decagirisim.com`? (brief: tek resmi alan; ad değişince değişti mi?)
 - [ ] Hukuki ünvan: footer "Deca Girişim A.Ş." (müşteri isteği) mı, brief'teki "Deca İleri Teknolojiler A.Ş." mi? (`legalName` şu an Deca Girişim A.Ş.)
 - [ ] Posta kodu, telefon, İstanbul ofis adresi; `ventures@` ve `investors@` adresleri doğru ve aktif mi?
 - [ ] Eski sitenin (ASP.NET Razor) URL listesi: hangi adresler 301 olacak?
