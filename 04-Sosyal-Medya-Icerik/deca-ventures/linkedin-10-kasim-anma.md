@@ -14,7 +14,8 @@ related: ["[[00-Musteriler/deca-ventures/marka-brief]]"]
 
 > **İstek (10 Kas 2026, Şevval):** Deca Girişim LinkedIn sayfası için 10 Kasım gönderisi, tek görsel. 10 Kasım Atatürk'ü Anma Günü olduğu için sade bir anma gönderisi hazırlandı; ürün/tanıtım, "sen" dili ve slogan **bilerek yok** (marka brief'indeki canlı ton bu gün için uygulanmadı, kurumsal sakin dil kullanıldı).
 
-**Görsel:** `03-Assets/images/deca-ventures/linkedin/deca-linkedin-10-kasim-anma.png` (1080×1350, 4:5). Tipografik tasarım: antrasit/lacivert zemin, çizgi "10", Deca Girişim logosu, tek aksan buz mavisi. Fotoğraf/portre **kullanılmadı**.
+**Görsel:** `03-Assets/images/deca-ventures/linkedin/deca-linkedin-10-kasim-ataturk.png` (1080×1350, 4:5). Şevval'in verdiği siyah-beyaz Atatürk portresi üstte (yalnız ölçeklendi, tek tonlandı ve koyu bir geçişle zemine karıştırıldı; yüze rötuş yok), altında koyu zemin, "Saygı, minnet ve özlemle." başlığı, tarih ve Deca Girişim logosu. Kaynak fotoğraf vault'a konmadı (kaynak: Şevval'in sağladığı dosya, resmî arşiv olduğu ❓ doğrulanacak).
+*Değişiklik (10 Kas, Şevval isteği):* ilk sürüm fotoğrafsız tipografik "10" tasarımıydı; "10" yazısı ve Atatürk görselinin olmaması uygun bulunmadı, bu yüzden fotoğraflı sürümle değiştirildi.
 
 ## Gönderi metni
 
@@ -26,7 +27,7 @@ related: ["[[00-Musteriler/deca-ventures/marka-brief]]"]
 >
 > #10Kasım #Atatürk #DecaGirişim
 
-**Alt metin (erişilebilirlik):** Koyu lacivert zeminde büyük çizgi "10" rakamı; altında "Saygı, minnet ve özlemle." yazısı ve Deca Girişim logosu.
+**Alt metin (erişilebilirlik):** Siyah-beyaz Atatürk portresi; altında koyu zeminde "Saygı, minnet ve özlemle." yazısı ve Deca Girişim logosu.
 
 ## Yayın
 
